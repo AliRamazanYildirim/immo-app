@@ -9,9 +9,9 @@
 # testing
 /coverage
 
-# next.js
-/.next/
-/out/
+# Next.js build output
+.next/
+out/
 
 # Environment files
 .env
