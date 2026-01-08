@@ -14,8 +14,8 @@ export default function Header4({ scroll, isMobileMenu, handleMobileMenu, isSide
                         <div className="main-header-four__top-inner">
                             <div className="header-contact-box">
                                 <ul>
-                                    <li><Link href="tel:123456789">1(800)234-34-45</Link></li>
-                                    <li><Link href="mailto:yourmail@email.com">xafrancompany@gmail.com</Link></li>
+                                    <li><Link href="tel:49 15167145187">+49 15167145187</Link></li>
+                                    <li><Link href="mailto:aliramazanyildirim@gmail.com">aliramazanyildirim@gmail.com</Link></li>
                                 </ul>
                             </div>
 
