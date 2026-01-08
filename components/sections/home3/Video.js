@@ -13,13 +13,13 @@ export default function video() {
                 <div className="scrolling-text-one">
                     <div className="scrolling-text-one__wrap">
                         <div className="scrolling-text-one__title">
-                            <h2>XAFRAN CREATIVE ARCHITECTURE SOLUTION</h2>
+                            <h2>ARY CREATIVE ARCHITECTURE SOLUTION</h2>
                         </div>
                         <div className="scrolling-text-one__title">
-                            <h2>XAFRAN CREATIVE ARCHITECTURE SOLUTION</h2>
+                            <h2>ARY CREATIVE ARCHITECTURE SOLUTION</h2>
                         </div>
                         <div className="scrolling-text-one__title">
-                            <h2>XAFRAN CREATIVE ARCHITECTURE SOLUTION</h2>
+                            <h2>ARY CREATIVE ARCHITECTURE SOLUTION</h2>
                         </div>
                     </div>
                 </div>

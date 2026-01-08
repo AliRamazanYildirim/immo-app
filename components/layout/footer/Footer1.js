@@ -113,7 +113,7 @@ export default function Footer1() {
                     <div className="container">
                         <div className="footer-bottom__inner">
                             <div className="footer-bottom__text text-center">
-                                <p>Copyright © 2025 Xafran by <Link href="https://themeforest.net/user/starplate">Starplate.</Link> All Rights Reserved</p>
+                                 <p>Copyright © 2026 <a target="_blank" href="https://dev-portfolio-eight-khaki.vercel.app/">by ARY Tech Solutions</a> All Rights Reserved</p>
                             </div>
                         </div>
                     </div>
