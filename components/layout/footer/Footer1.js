@@ -31,8 +31,9 @@ export default function Footer1() {
                   <div className="footer-widget__about-inner">
                     <div className="text-box">
                       <p>
-                        Address 301 Princes Street, Ei class <br />
-                        Mahall Damietta Egypt-104{" "}
+                        Address 301 Princes Street, Ei class
+                        <br />
+                        Mahall Damietta Egypt-104
                       </p>
                     </div>
                     <div className="number-box">
