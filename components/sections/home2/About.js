@@ -40,7 +40,7 @@ export default function About() {
                         <div className="about-two__content">
                             <div className="sec-title">
                                 <div className="sub-title">
-                                    <h5>KNOW ABOUT XAFRAN</h5>
+                                    <h5>KNOW ABOUT ARY GROUP</h5>
                                 </div>
                                 <h2>We Take Care of <br/>
                                     Everything for Your Goals</h2>

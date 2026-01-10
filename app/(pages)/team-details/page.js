@@ -16,7 +16,7 @@ export default function Home() {
                         <div className="col-xl-6 col-lg-6">
                             <div className="team-details__top-img">
                                 <div className="big-title">
-                                    <h2>XAFRAN</h2>
+                                    <h2>ARY GROUP</h2>
                                 </div>
                                 <div className="inner">
                                     <img src="assets/img/team/team-details-img1.jpg" alt="" />
@@ -36,8 +36,8 @@ export default function Home() {
                                 <div className="team-details__top-content-text">
                                     <p><span>Department:</span> Web Design</p>
                                     <p><span>Experience:</span> 15 Years</p>
-                                    <p><span>Email:</span> <Link href="mailto:xafrancompany@gmail.com">xafrancompany@gmail.com</Link></p>
-                                    <p><span>Phone:</span> <Link href="tel:+1900938495743">+1-900-938-4957-43</Link></p>
+                                    <p><span>Email:</span> <Link href="mailto:aliramazanyildirim@gmail.com">aliramazanyildirim@gmail.com</Link></p>
+                                    <p><span>Phone:</span> <Link href="tel:+49 15167145187">+49 15167145187</Link></p>
                                 </div>
 
                                 <div className="social-links">

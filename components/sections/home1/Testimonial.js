@@ -12,7 +12,7 @@ export default function Testimonial() {
                         <div className="sub-title">
                             <h5>OUR CLIENT TESTIMONIALS</h5>
                         </div>
-                        <h2>What Client Say About Xafran</h2>
+                        <h2>What Client Say About ARY GROUP</h2>
                     </div>
 
                     <div className="row">

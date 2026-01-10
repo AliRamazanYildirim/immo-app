@@ -246,7 +246,7 @@ export default function Home() {
                                 <h5>OUR TEAM MEMBER</h5>
                             </div>
                             <h2>Our Talented Team <br/>
-                                Member Behind Xafran</h2>
+                                Member Behind ARY GROUP</h2>
                         </div>
                         <div className="row">
                             {/*Start Team Two Single */}

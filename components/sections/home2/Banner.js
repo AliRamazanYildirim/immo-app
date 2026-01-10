@@ -56,7 +56,7 @@ export default function Banner() {
                             <div className="main-slider-two__single">
                                 <div className="main-slider-two__content">
                                     <div className="big-title">
-                                        <h2>XAFRAN</h2>
+                                        <h2>ARY GROUP</h2>
                                     </div>
                                     <h2>Architecture is <br/>
                                         Inhabited Sculpture</h2>
@@ -97,7 +97,7 @@ export default function Banner() {
                             <div className="main-slider-two__single">
                                 <div className="main-slider-two__content">
                                     <div className="big-title">
-                                        <h2>XAFRAN</h2>
+                                        <h2>ARY GROUP</h2>
                                     </div>
                                     <h2>Architecture is <br/>
                                         Inhabited Sculpture</h2>
@@ -139,7 +139,7 @@ export default function Banner() {
                             <div className="main-slider-two__single">
                                 <div className="main-slider-two__content">
                                     <div className="big-title">
-                                        <h2>XAFRAN</h2>
+                                        <h2>ARY GROUP</h2>
                                     </div>
                                     <h2>Architecture is <br/>
                                         Inhabited Sculpture</h2>
