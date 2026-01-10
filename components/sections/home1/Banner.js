@@ -84,7 +84,7 @@ export default function Banner() {
                           <span className="icon-pin"></span>
                         </div>
                         <div className="text-box">
-                          <p>465 NT Road. North West, England</p>
+                          <p>Hebelstraße 1, 77880 Sasbach Germany</p>
                         </div>
                       </li>
 
@@ -166,7 +166,7 @@ export default function Banner() {
                           <span className="icon-pin"></span>
                         </div>
                         <div className="text-box">
-                          <p>465 NT Road. North West, England</p>
+                          <p>Hebelstraße 1, 77880 Sasbach Germany</p>
                         </div>
                       </li>
 
@@ -251,7 +251,7 @@ export default function Banner() {
                           <span className="icon-pin"></span>
                         </div>
                         <div className="text-box">
-                          <p>465 NT Road. North West, England</p>
+                          <p>Hebelstraße 1, 77880 Sasbach Germany</p>
                         </div>
                       </li>
 
