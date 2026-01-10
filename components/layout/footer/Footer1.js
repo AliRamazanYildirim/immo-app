@@ -37,7 +37,7 @@ export default function Footer1() {
                       </p>
                     </div>
                     <div className="number-box">
-                      <Link href="tel:123456789">+1 343 5335 3545</Link>
+                      <Link href="tel:+49 15167145187">+49 15167145187</Link>
                     </div>
                     <div className="footer-social-link">
                       <Link href="#">tw</Link>
