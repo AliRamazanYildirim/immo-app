@@ -31,9 +31,9 @@ export default function Footer1() {
                   <div className="footer-widget__about-inner">
                     <div className="text-box">
                       <p>
-                        Address 301 Princes Street, Ei class
+                        Hebelstraße 1,
                         <br />
-                        Mahall Damietta Egypt-104
+                        77880 Sasbach Germany
                       </p>
                     </div>
                     <div className="number-box">
