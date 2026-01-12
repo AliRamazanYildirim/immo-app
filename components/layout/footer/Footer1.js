@@ -1,6 +1,6 @@
 import Link from "next/link";
 import siteConfig, { getTelLink } from "@/lib/siteConfig";
-import { FooterSocialLinks } from "@/components/elements/ContactInfo";
+import { SocialLinks } from "@/components/elements/ContactInfo";
 
 export default function Footer1() {
   return (
@@ -35,13 +35,16 @@ export default function Footer1() {
                       <p>
                         {siteConfig.address.street},
                         <br />
-                        {siteConfig.address.zipCode} {siteConfig.address.city} {siteConfig.address.country}
+                        {siteConfig.address.zipCode} {siteConfig.address.city}{" "}
+                        {siteConfig.address.country}
                       </p>
                     </div>
                     <div className="number-box">
-                      <Link href={getTelLink()}>{siteConfig.contact.phone}</Link>
+                      <Link href={getTelLink()}>
+                        {siteConfig.contact.phone}
+                      </Link>
                     </div>
-                    <FooterSocialLinks />
+                    <SocialLinks className="footer-social-link" />
                   </div>
                 </div>
               </div>
