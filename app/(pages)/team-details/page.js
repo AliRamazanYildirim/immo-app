@@ -1,6 +1,8 @@
 import React from 'react';
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
+import siteConfig, { getMailtoLink, getTelLink } from "@/lib/siteConfig";
+
 export default function Home() {
 
     return (
@@ -36,16 +38,16 @@ export default function Home() {
                                 <div className="team-details__top-content-text">
                                     <p><span>Department:</span> Web Design</p>
                                     <p><span>Experience:</span> 15 Years</p>
-                                    <p><span>Email:</span> <Link href="mailto:aliramazanyildirim@gmail.com">aliramazanyildirim@gmail.com</Link></p>
-                                    <p><span>Phone:</span> <Link href="tel:+49 15167145187">+49 15167145187</Link></p>
+                                    <p><span>Email:</span> <Link href={getMailtoLink()}>{siteConfig.contact.email}</Link></p>
+                                    <p><span>Phone:</span> <Link href={getTelLink()}>{siteConfig.contact.phone}</Link></p>
                                 </div>
 
                                 <div className="social-links">
                                     <ul>
-                                        <li><Link href="#"><span className="icon-facebook"></span></Link></li>
-                                        <li><Link className="tw" href="#"><span className="icon-twitter"></span></Link></li>
-                                        <li><Link className="ins" href="#"><span className="icon-instagram"></span></Link></li>
-                                        <li><Link className="in" href="#"><span className="icon-linkedin-big-logo"></span></Link></li>
+                                        <li><Link href={siteConfig.social.facebook}><span className="icon-facebook"></span></Link></li>
+                                        <li><Link className="tw" href={siteConfig.social.twitter}><span className="icon-twitter"></span></Link></li>
+                                        <li><Link className="ins" href={siteConfig.social.instagram}><span className="icon-instagram"></span></Link></li>
+                                        <li><Link className="in" href={siteConfig.social.linkedin}><span className="icon-linkedin-big-logo"></span></Link></li>
                                     </ul>
                                 </div>
                             </div>

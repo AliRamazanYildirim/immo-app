@@ -1,4 +1,6 @@
 import Link from "next/link";
+import siteConfig, { getTelLink } from "@/lib/siteConfig";
+import { FooterSocialLinks } from "@/components/elements/ContactInfo";
 
 export default function Footer1() {
   return (
@@ -24,27 +26,22 @@ export default function Footer1() {
                 <div className="single-footer-widget footer-widget__about">
                   <div className="logo-box">
                     <Link href="/">
-                      <img src="assets/img/resource/logo-1.png" alt="" />
+                      <img src={siteConfig.logos.main} alt="" />
                     </Link>
                   </div>
 
                   <div className="footer-widget__about-inner">
                     <div className="text-box">
                       <p>
-                        Hebelstraße 1,
+                        {siteConfig.address.street},
                         <br />
-                        77880 Sasbach Germany
+                        {siteConfig.address.zipCode} {siteConfig.address.city} {siteConfig.address.country}
                       </p>
                     </div>
                     <div className="number-box">
-                      <Link href="tel:+49 15167145187">+49 15167145187</Link>
+                      <Link href={getTelLink()}>{siteConfig.contact.phone}</Link>
                     </div>
-                    <div className="footer-social-link">
-                      <Link href="#">tw</Link>
-                      <Link href="#">in</Link>
-                      <Link href="#">db</Link>
-                      <Link href="#">ig</Link>
-                    </div>
+                    <FooterSocialLinks />
                   </div>
                 </div>
               </div>
@@ -165,12 +162,12 @@ export default function Footer1() {
             <div className="footer-bottom__inner">
               <div className="footer-bottom__text text-center">
                 <p>
-                  Copyright © 2026{" "}
+                  Copyright © {siteConfig.company.copyrightYear}{" "}
                   <a
                     target="_blank"
                     href="https://dev-portfolio-eight-khaki.vercel.app/"
                   >
-                    by ARY Tech Solutions
+                    by {siteConfig.company.name}
                   </a>{" "}
                   All Rights Reserved
                 </p>

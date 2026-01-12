@@ -6,6 +6,7 @@ import React from "react";
 import Link from "next/link";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { SliderContactInfo, SocialLinks } from "@/components/elements/ContactInfo";
 
 const swiperOptions = {
   modules: [Autoplay, Pagination, Navigation],
@@ -77,46 +78,8 @@ export default function Banner() {
                       </a>
                     </div>
                   </div>
-                  <div className="contact-info">
-                    <ul>
-                      <li>
-                        <div className="icon-box">
-                          <span className="icon-pin"></span>
-                        </div>
-                        <div className="text-box">
-                          <p>Hebelstraße 1, 77880 Sasbach Germany</p>
-                        </div>
-                      </li>
-
-                      <li>
-                        <div className="icon-box">
-                          <span className="icon-envelope"></span>
-                        </div>
-                        <div className="text-box">
-                          <p>
-                            <Link href="mailto:aliramazanyildirim@gmail.com">
-                              aliramazanyildirim@gmail.com
-                            </Link>
-                          </p>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div className="social-links">
-                    <Link href="#">
-                      <span className="icon-facebook"></span>
-                    </Link>
-                    <Link href="#">
-                      <span className="icon-instagram"></span>
-                    </Link>
-                    <Link href="#">
-                      <span className="icon-tik-tok"></span>
-                    </Link>
-                    <Link href="#">
-                      <span className="icon-youtube"></span>
-                    </Link>
-                  </div>
+                  <SliderContactInfo />
+                  <SocialLinks />
                 </div>
               </div>
             </div>
@@ -159,46 +122,8 @@ export default function Banner() {
                       </a>
                     </div>
                   </div>
-                  <div className="contact-info">
-                    <ul>
-                      <li>
-                        <div className="icon-box">
-                          <span className="icon-pin"></span>
-                        </div>
-                        <div className="text-box">
-                          <p>Hebelstraße 1, 77880 Sasbach Germany</p>
-                        </div>
-                      </li>
-
-                      <li>
-                        <div className="icon-box">
-                          <span className="icon-envelope"></span>
-                        </div>
-                        <div className="text-box">
-                          <p>
-                            <Link href="mailto:aliramazanyildirim@gmail.com">
-                              aliramazanyildirim@gmail.com
-                            </Link>
-                          </p>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div className="social-links">
-                    <Link href="#">
-                      <span className="icon-facebook"></span>
-                    </Link>
-                    <Link href="#">
-                      <span className="icon-instagram"></span>
-                    </Link>
-                    <Link href="#">
-                      <span className="icon-tik-tok"></span>
-                    </Link>
-                    <Link href="#">
-                      <span className="icon-youtube"></span>
-                    </Link>
-                  </div>
+                  <SliderContactInfo />
+                  <SocialLinks />
                 </div>
               </div>
             </div>
@@ -244,48 +169,8 @@ export default function Banner() {
                       </a>
                     </div>
                   </div>
-                  <div className="contact-info">
-                    <ul>
-                      <li>
-                        <div className="icon-box">
-                          <span className="icon-pin"></span>
-                        </div>
-                        <div className="text-box">
-                          <p>Hebelstraße 1, 77880 Sasbach Germany</p>
-                        </div>
-                      </li>
-
-                      <li>
-                        <div className="icon-box">
-                          <span className="icon-envelope"></span>
-                        </div>
-                        <div className="text-box">
-                          <p>
-                            <Link
-                              href="mailto:aliramazanyildirim@gmail.com"
-                            >
-                              aliramazanyildirim@gmail.com
-                            </Link>
-                          </p>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div className="social-links">
-                    <Link href="#">
-                      <span className="icon-facebook"></span>
-                    </Link>
-                    <Link href="#">
-                      <span className="icon-instagram"></span>
-                    </Link>
-                    <Link href="#">
-                      <span className="icon-tik-tok"></span>
-                    </Link>
-                    <Link href="#">
-                      <span className="icon-youtube"></span>
-                    </Link>
-                  </div>
+                  <SliderContactInfo />
+                  <SocialLinks />
                 </div>
               </div>
             </div>
