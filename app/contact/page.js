@@ -32,7 +32,7 @@ export default function Home() {
 
                                                         <div className="content-box">
                                                             <h4>Address</h4>
-                                                            <p>254, North City, Bulex Center, New York</p>
+                                                            <p>Hebelstraße 1, 77880 Sasbach Germany</p>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -45,8 +45,7 @@ export default function Home() {
 
                                                         <div className="content-box">
                                                             <h4>Phone</h4>
-                                                            <p><a href="tel:123456789">09 (354) 587 874</a> or <a
-                                                                    href="tel:123456789">10 (698) 852 741</a></p>
+                                                            <p><a href="tel:+49 151 67145187">+49 151 67145187</a> </p>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -59,8 +58,8 @@ export default function Home() {
 
                                                         <div className="content-box">
                                                             <h4>Email</h4>
-                                                            <p><a href="mailto:yourmail@email.com">info@example.com</a>
-                                                                or <a href="mailto:yourmail@email.com">info@example.com</a>
+                                                            <p><a href="mailto:aliramazanyildirim@gmail.com">aliramazanyildirim@gmail.com</a>
+                                                               
                                                             </p>
                                                         </div>
                                                     </div>
