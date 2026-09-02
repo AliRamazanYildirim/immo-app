@@ -10,7 +10,7 @@ export default function Footer1() {
         <div className="shape1">
           <img
             className="float-bob-y"
-            src="assets/img/shape/footer-v1-shape1.png"
+            src="/assets/img/shape/footer-v1-shape1.png"
             alt=""
           />
         </div>
