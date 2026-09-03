@@ -51,12 +51,6 @@ export default function Header1({
                       <div className="header-search-box" onClick={handlePopup}>
                         <a className="main-menu__search search-toggler icon-search-interface-symbol"></a>
                       </div>
-
-                      <div className="header-shopping-cart">
-                        <Link href="#">
-                          <span className="icon-shopping-cart"></span>
-                        </Link>
-                      </div>
                     </div>
                   </div>
                 </nav>

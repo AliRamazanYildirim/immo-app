@@ -96,12 +96,6 @@ export default function Header4({
                             className="main-menu__search search-toggler icon-search-interface-symbol"
                           ></Link>
                         </div>
-
-                        <div className="header-shopping-cart">
-                          <Link href="#">
-                            <span className="icon-shopping-cart"></span>
-                          </Link>
-                        </div>
                       </div>
                     </div>
                   </nav>

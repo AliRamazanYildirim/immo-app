@@ -110,11 +110,6 @@ export default function MobileMenu({
                     </Link>
                   </li>
                   <li>
-                    <Link href="/uiux-designing" onClick={handleMobileMenu}>
-                      UiUx Designing
-                    </Link>
-                  </li>
-                  <li>
                     <Link
                       href="/building-renovation"
                       onClick={handleMobileMenu}
@@ -197,44 +192,11 @@ export default function MobileMenu({
                   <span className="fa fa-angle-right" />
                 </div>
               </li>
-              <li className="menu-item-has-children" onClick={handleMobileMenu}>
-                <Link href="#">Shop</Link>
-                <ul style={{ display: isActive.key === 4 ? "block" : "none" }}>
-                  <li>
-                    <Link href="/shop" onClick={handleMobileMenu}>
-                      Shop
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/shop-details" onClick={handleMobileMenu}>
-                      Shop Details
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/cart" onClick={handleMobileMenu}>
-                      Cart
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="checkout" onClick={handleMobileMenu}>
-                      Checkout
-                    </Link>
-                  </li>
-                </ul>
-                <div
-                  className={
-                    isActive.key === 4 ? "dropdown-btn open" : "dropdown-btn"
-                  }
-                  onClick={() => handleToggle(4)}
-                >
-                  <span className="fa fa-angle-right" />
-                </div>
-              </li>
               <li className="menu-item-has-children">
                 <Link href="#" onClick={handleMobileMenu}>
                   Blog
                 </Link>
-                <ul style={{ display: isActive.key === 5 ? "block" : "none" }}>
+                <ul style={{ display: isActive.key === 4 ? "block" : "none" }}>
                   <li>
                     <Link href="/blog" onClick={handleMobileMenu}>
                       Blog
@@ -253,9 +215,9 @@ export default function MobileMenu({
                 </ul>
                 <div
                   className={
-                    isActive.key === 5 ? "dropdown-btn open" : "dropdown-btn"
+                    isActive.key === 4 ? "dropdown-btn open" : "dropdown-btn"
                   }
-                  onClick={() => handleToggle(5)}
+                  onClick={() => handleToggle(4)}
                 >
                   <span className="fa fa-angle-right" />
                 </div>

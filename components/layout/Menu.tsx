@@ -34,9 +34,6 @@ export default function Menu() {
               <Link href="/interior-design">Interior Design</Link>
             </li>
             <li>
-              <Link href="/uiux-designing">UiUx Designing</Link>
-            </li>
-            <li>
               <Link href="/building-renovation">Building Renovation</Link>
             </li>
             <li>
@@ -73,23 +70,6 @@ export default function Menu() {
             </li>
             <li>
               <Link href="/error">Error</Link>
-            </li>
-          </ul>
-        </li>
-        <li className="menu-item-has-children">
-          <Link href="#">Shop</Link>
-          <ul className="sub-menu">
-            <li>
-              <Link href="/shop">Shop</Link>
-            </li>
-            <li>
-              <Link href="/shop-details">Shop Details</Link>
-            </li>
-            <li>
-              <Link href="/cart">Cart</Link>
-            </li>
-            <li>
-              <Link href="/checkout">Checkout</Link>
             </li>
           </ul>
         </li>

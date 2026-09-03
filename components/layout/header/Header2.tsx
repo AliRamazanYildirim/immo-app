@@ -46,12 +46,6 @@ export default function Header2({
                         <a className="main-menu__search search-toggler icon-search-interface-symbol"></a>
                       </div>
 
-                      <div className="header-shopping-cart">
-                        <Link href="#">
-                          <span className="icon-shopping-cart"></span>
-                        </Link>
-                      </div>
-
                       <div
                         className="nav-sidebar__toggler"
                         onClick={handleSidebar}

@@ -105,9 +105,6 @@ export default function Footer1() {
                         <Link href="/contact">Clients</Link>
                       </li>
                       <li>
-                        <Link href="/shop">Shop</Link>
-                      </li>
-                      <li>
                         <Link href="/projects">Portfolio</Link>
                       </li>
                     </ul>
