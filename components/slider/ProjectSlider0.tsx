@@ -63,18 +63,7 @@ export default function ProjectSlider0() {
           </div>
         </SwiperSlide>
         <SwiperSlide className="swiper-slide">
-          <div>
-            <img src="assets/img/project/project-v2-img2.jpg" alt="#" />
-            <div className="overlay-content">
-              <p>San Fransisco</p>
-              <h2>
-                <a href="#">Hotel Joshna Villa</a>
-              </h2>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="swiper-slide">
-          <img src="assets/img/project/project-v2-img3.jpg" alt="#" />
+          <img src="assets/img/project/project-v2-img2.jpg" alt="#" />
           <div className="overlay-content">
             <p>San Fransisco</p>
             <h2>
@@ -100,26 +89,7 @@ export default function ProjectSlider0() {
             </h2>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="swiper-slide">
-          <img src="assets/img/project/project-v2-img3.jpg" alt="#" />
-          <div className="overlay-content">
-            <p>San Fransisco</p>
-            <h2>
-              <a href="#">Hotel Joshna Villa</a>
-            </h2>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="swiper-slide">
-          <img src="assets/img/project/project-v2-img3.jpg" alt="#" />
-          <div className="overlay-content">
-            <p>San Fransisco</p>
-            <h2>
-              <a href="#">Hotel Joshna Villa</a>
-            </h2>
-          </div>
-        </SwiperSlide>
       </Swiper>
     </>
   );
 }
-

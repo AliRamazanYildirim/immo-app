@@ -49,22 +49,21 @@ export default function Home() {
                     </div>
 
                     <div className="text-box1">
-                      <h2>Building Renovation</h2>
+                      <h2>Building Renovation & Modernization</h2>
                       <p className="text1">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Maecenas varius tortor nibh, sit amet tempor nibh
-                        finibus et. Aenean eu enim justo. Vestibulum aliquam
-                        hendrerit molestie. Mauris malesuada nisi sit amet augue
-                        accumsan tincidunt. Maecenas tincidunt, velit ac
-                        porttitor pulvinar, tortor eros facilisis libero, vitae
-                        commodo nunc quam et ligula
+                        We revitalize existing residential, commercial, and
+                        historic buildings, transforming aging structures into
+                        high-performance, energy-efficient, and contemporary
+                        architectural spaces. Our renovation team combines deep
+                        structural expertise with sensitive preservation
+                        craftsmanship.
                       </p>
 
                       <p className="text2">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Maecenas varius tortor nibh, sit amet tempor nibh
-                        finibus et. Aenean eu enim justo. Vestibulum aliquam
-                        hendrerit molestie.
+                        Whether upgrading an urban apartment building,
+                        modernizing an executive office property, or restoring a
+                        protected heritage villa, we extend building lifecycles
+                        while maximizing long-term asset value.
                       </p>
 
                       <ul>
@@ -74,8 +73,9 @@ export default function Home() {
                           </div>
                           <div className="text">
                             <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. Maecenas varius.
+                              Deep energetic retrofits achieving top KfW
+                              efficiency standards and drastically reducing
+                              heating costs.
                             </p>
                           </div>
                         </li>
@@ -86,8 +86,8 @@ export default function Home() {
                           </div>
                           <div className="text">
                             <p>
-                              Exercitation ullamco laboris
-                              consequat.reprehenderit in voluptate
+                              Historic monument preservation (Denkmalschutz)
+                              respecting authentic architectural heritage.
                             </p>
                           </div>
                         </li>
@@ -96,35 +96,33 @@ export default function Home() {
 
                     <div className="text-box2">
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Maecenas varius tortor nibh, sit amet tempor nibh
-                        finibus et. Aenean eu enim justo. Vestibulum aliquam
-                        hendrerit molestie. Mauris malesuada nisi sit amet augue
-                        accumsan tincidunt. Maecenas tincidunt, velit ac
-                        porttitor pulvinar, tortor eros facilisis libero, vitae
-                        commodo nunc quam et ligula
+                        Successful renovation requires forensic diagnosis before
+                        demolition begins. We thoroughly inspect building
+                        foundations, load-bearing masonry, timber structures,
+                        and moisture barriers to engineer solutions that
+                        remediate hidden deficiencies and future-proof the
+                        building.
                       </p>
 
                       <ul>
                         <li>
                           <p>
-                            Excepteur sint occaecat cupidatat non proident, sunt
-                            in culpa qui officia deserunt
+                            Comprehensive structural, thermal, and moisture
+                            building diagnostics.
                           </p>
                         </li>
 
                         <li>
                           <p>
-                            {" "}
-                            Sed ut perspiciatis unde omnis iste natus error sit
-                            voluptatem accusantium
+                            Facade revitalization, high-performance triple
+                            glazing, and roof conversions.
                           </p>
                         </li>
 
                         <li>
                           <p>
-                            Neque porro quisquam est, qui dolorem ipsum quia
-                            dolor sit amet, consectetur,
+                            Modern HVAC, heat pump integration, floor heating,
+                            and smart home retrofitting.
                           </p>
                         </li>
                       </ul>
@@ -139,22 +137,18 @@ export default function Home() {
 
                     <div className="text-box3">
                       <p className="text1">
-                        Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollanim id est laborum. Sed
-                        ut perspiciatis unde omnis iste natus error voluptatem
-                        accusantium doloremque laudantium, totam rem
-                        aperiam,{" "}
+                        Our engineering and craft teams work under rigorous
+                        quality and safety supervision. We utilize dust-tight
+                        partition barriers, negative-pressure air scrubbers, and
+                        organized logistics to allow renovation work even in
+                        partially occupied properties.
                       </p>
 
                       <p className="text2">
-                        Duis aute irure dolor in reprehenderit in voluptate
-                        velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa quisit ,officia deserunt mollit anim id est
-                        laborum. Sed ut perspiciatis unde omnis is amet natus
-                        error sit voluptatem accusantium doloremque laudantium,
-                        totam reaperia eaque ipsa quae ab ilnventore veritatis
-                        et quasi architecto beatae vitae dicta sunt{" "}
+                        We also handle all municipal permitting, heritage board
+                        negotiations, and government energy subsidy applications
+                        (BAFA / KfW), ensuring your modernization investment
+                        receives maximum financial incentive support.
                       </p>
                     </div>
 
@@ -172,7 +166,10 @@ export default function Home() {
                                 </div>
 
                                 <div className="text-box">
-                                  <p>icon-check-mark</p>
+                                  <p>
+                                    Radical reduction in building energy
+                                    consumption
+                                  </p>
                                 </div>
                               </li>
 
@@ -182,7 +179,10 @@ export default function Home() {
                                 </div>
 
                                 <div className="text-box">
-                                  <p>Lorem ipsum dolor sit dgdr</p>
+                                  <p>
+                                    Structural stabilization & complete moisture
+                                    remediation
+                                  </p>
                                 </div>
                               </li>
 
@@ -192,7 +192,10 @@ export default function Home() {
                                 </div>
 
                                 <div className="text-box">
-                                  <p>Maecenas varius tortor</p>
+                                  <p>
+                                    Preserving historical soul with contemporary
+                                    luxury
+                                  </p>
                                 </div>
                               </li>
                             </ul>
@@ -206,10 +209,13 @@ export default function Home() {
                             </div>
                             <div className="text">
                               <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit. Maecenas varius tortor nibh,
-                                sit amet tempor finibus et. Aenean eu enim
-                                justo. Vestibulum
+                                Uncovering unforeseen structural defects in
+                                older masonry or timber and harmonizing strict
+                                heritage preservation rules with modern fire
+                                safety and insulation standards. Our
+                                multidisciplinary engineering team solves these
+                                through innovative, non-invasive restoration
+                                techniques.
                               </p>
                             </div>
                           </div>
@@ -231,7 +237,8 @@ export default function Home() {
                         >
                           <div className="accrodion-title">
                             <h3>
-                              I'm a total beginner. Can I still follow along?
+                              Can renovation work be carried out while parts of
+                              the building are occupied?
                             </h3>
                           </div>
                           <div
@@ -243,10 +250,11 @@ export default function Home() {
                           >
                             <div className="inner">
                               <p>
-                                Your applicant may have limited help desk
-                                wexperience. In that case, look for applicants
-                                who are motivated to grow and have some
-                                transferable{" "}
+                                Yes. Through phased scheduling, sealed dust
+                                protection walls, controlled working hours, and
+                                planned utility cutovers, we ensure minimal
+                                disruption to tenants or business operations
+                                during renovation.
                               </p>
                             </div>
                           </div>
@@ -261,7 +269,9 @@ export default function Home() {
                           onClick={() => handleToggle(2)}
                         >
                           <div className="accrodion-title">
-                            <h3>Which technical skills would you improve?</h3>
+                            <h3>
+                              What energy subsidies and grants can we apply for?
+                            </h3>
                           </div>
                           <div
                             className={
@@ -272,10 +282,11 @@ export default function Home() {
                           >
                             <div className="inner">
                               <p>
-                                Your applicant may have limited help desk
-                                wexperience. In that case, look for applicants
-                                who are motivated to grow and have some
-                                transferable{" "}
+                                We assist clients in securing attractive
+                                government energy subsidies (such as KfW and
+                                BAFA programs), covering thermal facade
+                                insulation, triple-pane window replacements,
+                                heat pump retrofits, and roof insulation.
                               </p>
                             </div>
                           </div>
@@ -290,7 +301,10 @@ export default function Home() {
                           onClick={() => handleToggle(3)}
                         >
                           <div className="accrodion-title">
-                            <h3>What do Logical Drives do?</h3>
+                            <h3>
+                              How do you handle heritage preservation
+                              (Denkmalschutz) regulations?
+                            </h3>
                           </div>
                           <div
                             className={
@@ -301,10 +315,11 @@ export default function Home() {
                           >
                             <div className="inner">
                               <p>
-                                Your applicant may have limited help desk
-                                wexperience. In that case, look for applicants
-                                who are motivated to grow and have some
-                                transferable{" "}
+                                Our team collaborates closely with monument
+                                protection authorities, utilizing approved
+                                breathable lime plasters, authentic wood
+                                moldings, and reversible interior insulation
+                                systems that satisfy strict preservation laws.
                               </p>
                             </div>
                           </div>
@@ -319,7 +334,10 @@ export default function Home() {
                           onClick={() => handleToggle(4)}
                         >
                           <div className="accrodion-title">
-                            <h3>What about our safety measures ? </h3>
+                            <h3>
+                              How is the structural safety of an older building
+                              verified?
+                            </h3>
                           </div>
                           <div
                             className={
@@ -330,10 +348,12 @@ export default function Home() {
                           >
                             <div className="inner">
                               <p>
-                                Your applicant may have limited help desk
-                                wexperience. In that case, look for applicants
-                                who are motivated to grow and have some
-                                transferable{" "}
+                                We perform comprehensive non-destructive
+                                diagnostics, including foundation soil core
+                                sampling, masonry ultrasound tests, timber beam
+                                moisture analysis, and static load
+                                recalculations prior to any construction
+                                intervention.
                               </p>
                             </div>
                           </div>

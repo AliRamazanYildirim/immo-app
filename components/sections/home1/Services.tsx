@@ -33,15 +33,16 @@ export default function Pricing() {
                 <div className="service-one__single-inner">
                   <div className="count-text">01</div>
                   <div className="icon-box">
-                    <span className="icon-engineer"></span>
+                    <span className="icon-blueprint"></span>
                   </div>
                   <div className="content-box">
                     <h2>
-                      <Link href="/architecture">General Contracting</Link>
+                      <Link href="/architecture">Architecture & Planning</Link>
                     </h2>
                     <p>
-                      Through a unique combination of construction and design
-                      disciplines expertise, Concor and delivers world class
+                      Forward-thinking architectural concepts, 3D BIM modeling,
+                      structural engineering, and complete statutory permit
+                      approvals.
                     </p>
                     <div className="btn-box">
                       <Link href="/architecture">EXPLORE SERVICE</Link>
@@ -64,18 +65,19 @@ export default function Pricing() {
                 <div className="service-one__single-inner">
                   <div className="count-text">02</div>
                   <div className="icon-box">
-                    <span className="icon-construction-machine"></span>
+                    <span className="icon-interior-design"></span>
                   </div>
                   <div className="content-box">
                     <h2>
-                      <Link href="/architecture">Machine Design</Link>
+                      <Link href="/interior-design">Interior Design</Link>
                     </h2>
                     <p>
-                      Through a unique combination of construction and design
-                      disciplines expertise, Concor and delivers world class
+                      Bespoke spatial design, high-end material selection,
+                      custom millwork details, and tailored turnkey interior
+                      styling.
                     </p>
                     <div className="btn-box">
-                      <Link href="/architecture">EXPLORE SERVICE</Link>
+                      <Link href="/interior-design">EXPLORE SERVICE</Link>
                     </div>
                   </div>
                 </div>
@@ -95,18 +97,21 @@ export default function Pricing() {
                 <div className="service-one__single-inner">
                   <div className="count-text">03</div>
                   <div className="icon-box">
-                    <span className="icon-check-list"></span>
+                    <span className="icon-solution"></span>
                   </div>
                   <div className="content-box">
                     <h2>
-                      <Link href="/architecture">Project Planing</Link>
+                      <Link href="/building-renovation">
+                        Building Renovation
+                      </Link>
                     </h2>
                     <p>
-                      Through a unique combination of construction and design
-                      disciplines expertise, Concor and delivers world class
+                      Energetic modernization, historic building restoration,
+                      structural remediation, and high-efficiency facade
+                      retrofits.
                     </p>
                     <div className="btn-box">
-                      <Link href="/architecture">EXPLORE SERVICE</Link>
+                      <Link href="/building-renovation">EXPLORE SERVICE</Link>
                     </div>
                   </div>
                 </div>
@@ -126,18 +131,21 @@ export default function Pricing() {
                 <div className="service-one__single-inner">
                   <div className="count-text">04</div>
                   <div className="icon-box">
-                    <span className="icon-interior-design"></span>
+                    <span className="icon-construction"></span>
                   </div>
                   <div className="content-box">
                     <h2>
-                      <Link href="/architecture">Interior Design</Link>
+                      <Link href="/construction-site">
+                        Construction Management
+                      </Link>
                     </h2>
                     <p>
-                      Through a unique combination of construction and design
-                      disciplines expertise, Concor and delivers world class
+                      Full-scope general contracting, site supervision, trade
+                      coordination, strict safety protocols, and on-time project
+                      handover.
                     </p>
                     <div className="btn-box">
-                      <Link href="/architecture">EXPLORE SERVICE</Link>
+                      <Link href="/construction-site">EXPLORE SERVICE</Link>
                     </div>
                   </div>
                 </div>

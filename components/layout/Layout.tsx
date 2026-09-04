@@ -17,6 +17,7 @@ export interface LayoutProps {
   footerStyle?: number;
   headTitle?: string;
   breadcrumbTitle?: string;
+  breadcrumbBg?: string;
   children: React.ReactNode;
   wrapperCls?: string;
 }
@@ -26,6 +27,7 @@ export default function Layout({
   footerStyle,
   headTitle,
   breadcrumbTitle,
+  breadcrumbBg,
   children,
   wrapperCls,
 }: LayoutProps) {
@@ -122,7 +124,12 @@ export default function Layout({
 
         <SearchPopup isPopup={isPopup} handlePopup={handlePopup} />
 
-        {breadcrumbTitle && <Breadcrumb breadcrumbTitle={breadcrumbTitle} />}
+        {breadcrumbTitle && (
+          <Breadcrumb
+            breadcrumbTitle={breadcrumbTitle}
+            breadcrumbBg={breadcrumbBg}
+          />
+        )}
 
         {children}
 

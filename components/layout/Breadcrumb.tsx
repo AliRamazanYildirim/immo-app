@@ -2,9 +2,13 @@ import Link from "next/link";
 
 export interface BreadcrumbProps {
   breadcrumbTitle: string;
+  breadcrumbBg?: string;
 }
 
-export default function Breadcrumb({ breadcrumbTitle }: BreadcrumbProps) {
+export default function Breadcrumb({
+  breadcrumbTitle,
+  breadcrumbBg,
+}: BreadcrumbProps) {
   return (
     <>
       {/*Start Page Header */}
@@ -12,7 +16,7 @@ export default function Breadcrumb({ breadcrumbTitle }: BreadcrumbProps) {
         <div
           className="page-header__bg"
           style={{
-            backgroundImage: "url(assets/img/background/page-header-bg.jpg)",
+            backgroundImage: `url(${breadcrumbBg || "assets/img/background/page-header-bg.jpg"})`,
           }}
         ></div>
 

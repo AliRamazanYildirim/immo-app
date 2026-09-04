@@ -32,15 +32,18 @@ export default function Home() {
                       }}
                     ></div>
                     <div className="service-two__single-icon">
-                      <span className="icon-construction-machine"></span>
+                      <span className="icon-blueprint"></span>
                     </div>
                     <div className="service-two__single-text">
                       <h2>
-                        <Link href="/architecture">Machine Design</Link>
+                        <Link href="/architecture">
+                          Architecture & Planning
+                        </Link>
                       </h2>
                       <p>
-                        Through a unique coN construction and design disciplines
-                        expertise Concor and delivers{" "}
+                        Visionary architectural concepts, sustainable building
+                        plans, and precise 3D BIM coordination for modern
+                        living.
                       </p>
                     </div>
 
@@ -75,16 +78,19 @@ export default function Home() {
                     </div>
                     <div className="service-two__single-text">
                       <h2>
-                        <Link href="/architecture">General Contracting</Link>
+                        <Link href="/construction-site">
+                          General Contracting
+                        </Link>
                       </h2>
                       <p>
-                        Through a unique coN construction and design disciplines
-                        expertise Concor and delivers{" "}
+                        Full-scope site supervision, technical execution, and
+                        turnkey construction with uncompromising quality
+                        standards.
                       </p>
                     </div>
 
                     <div className="btn-box">
-                      <Link href="/architecture">EXPLORE SERVICE</Link>
+                      <Link href="/construction-site">EXPLORE SERVICE</Link>
                     </div>
                   </div>
                 </div>
@@ -114,16 +120,17 @@ export default function Home() {
                     </div>
                     <div className="service-two__single-text">
                       <h2>
-                        <Link href="/architecture">Interior Design</Link>
+                        <Link href="/interior-design">Interior Design</Link>
                       </h2>
                       <p>
-                        Through a unique coN construction and design disciplines
-                        expertise Concor and delivers{" "}
+                        Harmonious interior spaces combining ergonomic comfort,
+                        refined materials, and custom bespoke architectural
+                        millwork.
                       </p>
                     </div>
 
                     <div className="btn-box">
-                      <Link href="/architecture">EXPLORE SERVICE</Link>
+                      <Link href="/interior-design">EXPLORE SERVICE</Link>
                     </div>
                   </div>
                 </div>
@@ -218,10 +225,11 @@ export default function Home() {
                             <span className="icon-office-building"></span>
                           </div>
                           <div className="content-box">
-                            <h2>Architecture Design</h2>
+                            <h2>Architectural Design</h2>
                             <p>
-                              Through a unique coN construction and design
-                              discipl nes expertise Concor and delivers{" "}
+                              Innovative structural concepts crafted with
+                              sustainable materials, smart space utilization,
+                              and bioclimatic design principles.
                             </p>
                           </div>
                         </div>
@@ -233,10 +241,11 @@ export default function Home() {
                             <span className="icon-bed"></span>
                           </div>
                           <div className="content-box">
-                            <h2>The Joy of Best Living</h2>
+                            <h2>Interior Spatial Harmony</h2>
                             <p>
-                              Through a unique coN construction and design
-                              discipl nes expertise Concor and delivers{" "}
+                              Curated living environments combining ergonomic
+                              comfort, timeless materiality, and bespoke
+                              lighting arrangements.
                             </p>
                           </div>
                         </div>
@@ -248,10 +257,11 @@ export default function Home() {
                             <span className="icon-targeted"></span>
                           </div>
                           <div className="content-box">
-                            <h2>Professional Planning</h2>
+                            <h2>Precision Project Planning</h2>
                             <p>
-                              Through a unique coN construction and design
-                              discipl nes expertise Concor and delivers{" "}
+                              Rigorous cost estimation, timeline scheduling,
+                              regulatory compliance, and seamless execution
+                              management.
                             </p>
                           </div>
                         </div>
@@ -296,16 +306,18 @@ export default function Home() {
                     <div className="service-one__single-inner">
                       <div className="count-text">01</div>
                       <div className="icon-box">
-                        <span className="icon-engineer"></span>
+                        <span className="icon-blueprint"></span>
                       </div>
                       <div className="content-box">
                         <h2>
-                          <Link href="/architecture">General Contracting</Link>
+                          <Link href="/architecture">
+                            Architecture & Planning
+                          </Link>
                         </h2>
                         <p>
-                          Through a unique combination of construction and
-                          design disciplines expertise, Concor and delivers
-                          world class
+                          Forward-thinking architectural concepts, 3D BIM
+                          modeling, structural engineering, and complete
+                          statutory permit approvals.
                         </p>
                         <div className="btn-box">
                           <Link href="/architecture">EXPLORE SERVICE</Link>
@@ -331,19 +343,19 @@ export default function Home() {
                     <div className="service-one__single-inner">
                       <div className="count-text">02</div>
                       <div className="icon-box">
-                        <span className="icon-construction-machine"></span>
+                        <span className="icon-interior-design"></span>
                       </div>
                       <div className="content-box">
                         <h2>
-                          <Link href="/architecture">Machine Design</Link>
+                          <Link href="/interior-design">Interior Design</Link>
                         </h2>
                         <p>
-                          Through a unique combination of construction and
-                          design disciplines expertise, Concor and delivers
-                          world class
+                          Bespoke spatial design, high-end material selection,
+                          custom millwork details, and tailored turnkey interior
+                          styling.
                         </p>
                         <div className="btn-box">
-                          <Link href="/architecture">EXPLORE SERVICE</Link>
+                          <Link href="/interior-design">EXPLORE SERVICE</Link>
                         </div>
                       </div>
                     </div>
@@ -366,19 +378,23 @@ export default function Home() {
                     <div className="service-one__single-inner">
                       <div className="count-text">03</div>
                       <div className="icon-box">
-                        <span className="icon-check-list"></span>
+                        <span className="icon-solution"></span>
                       </div>
                       <div className="content-box">
                         <h2>
-                          <Link href="/architecture">Project Planing</Link>
+                          <Link href="/building-renovation">
+                            Building Renovation
+                          </Link>
                         </h2>
                         <p>
-                          Through a unique combination of construction and
-                          design disciplines expertise, Concor and delivers
-                          world class
+                          Energetic modernization, historic building
+                          restoration, structural remediation, and
+                          high-efficiency facade retrofits.
                         </p>
                         <div className="btn-box">
-                          <Link href="/architecture">EXPLORE SERVICE</Link>
+                          <Link href="/building-renovation">
+                            EXPLORE SERVICE
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -401,19 +417,21 @@ export default function Home() {
                     <div className="service-one__single-inner">
                       <div className="count-text">04</div>
                       <div className="icon-box">
-                        <span className="icon-interior-design"></span>
+                        <span className="icon-construction"></span>
                       </div>
                       <div className="content-box">
                         <h2>
-                          <Link href="/architecture">Interior Design</Link>
+                          <Link href="/construction-site">
+                            Construction Management
+                          </Link>
                         </h2>
                         <p>
-                          Through a unique combination of construction and
-                          design disciplines expertise, Concor and delivers
-                          world class
+                          Full-scope general contracting, site supervision,
+                          trade coordination, strict safety protocols, and
+                          on-time project handover.
                         </p>
                         <div className="btn-box">
-                          <Link href="/architecture">EXPLORE SERVICE</Link>
+                          <Link href="/construction-site">EXPLORE SERVICE</Link>
                         </div>
                       </div>
                     </div>
@@ -463,10 +481,11 @@ export default function Home() {
 
                     <div className="text-box">
                       <p>
-                        Arki features minimal and stylish design. The theme is
-                        well crafted for all the modern architect and interior
-                        design website. With Arki, it makes your website look
-                        even more attractive and impressive to
+                        We deliver innovative, sustainable architectural
+                        designs, bespoke interior atmospheres, and robust
+                        construction management. Our integrated team combines
+                        visionary creativity with precise engineering to bring
+                        exceptional spaces to life.
                       </p>
                     </div>
                     <div className="btn-box">

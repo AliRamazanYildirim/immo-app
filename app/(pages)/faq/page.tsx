@@ -46,7 +46,10 @@ export default function Home() {
                       onClick={() => handleToggle(1)}
                     >
                       <div className="accrodion-title">
-                        <h3>I'm a total beginner. Can I still follow along?</h3>
+                        <h3>
+                          How long does the architectural design and approval
+                          process take?
+                        </h3>
                       </div>
                       <div
                         className={
@@ -57,10 +60,10 @@ export default function Home() {
                       >
                         <div className="inner">
                           <p>
-                            Your applicant may have limited help desk
-                            wexperience. In that case, look for applicants who
-                            are motivated to grow and have some
-                            transferable{" "}
+                            Concept and preliminary design typically take 4 to 8
+                            weeks. Municipal building permit reviews generally
+                            require 2 to 4 months depending on local authority
+                            schedules and project scale.
                           </p>
                         </div>
                       </div>
@@ -75,7 +78,10 @@ export default function Home() {
                       onClick={() => handleToggle(2)}
                     >
                       <div className="accrodion-title">
-                        <h3>Which technical skills would you improve?</h3>
+                        <h3>
+                          Do you provide turnkey construction and general
+                          contracting?
+                        </h3>
                       </div>
                       <div
                         className={
@@ -86,10 +92,10 @@ export default function Home() {
                       >
                         <div className="inner">
                           <p>
-                            Your applicant may have limited help desk
-                            wexperience. In that case, look for applicants who
-                            are motivated to grow and have some
-                            transferable{" "}
+                            Yes. We offer complete turnkey delivery — managing
+                            excavation, shell construction, building envelope,
+                            MEP engineering, and interior finishes under a
+                            single, accountable contract.
                           </p>
                         </div>
                       </div>
@@ -104,7 +110,10 @@ export default function Home() {
                       onClick={() => handleToggle(3)}
                     >
                       <div className="accrodion-title">
-                        <h3>What do Logical Drives do?</h3>
+                        <h3>
+                          What is included in your interior architecture
+                          services?
+                        </h3>
                       </div>
                       <div
                         className={
@@ -115,10 +124,10 @@ export default function Home() {
                       >
                         <div className="inner">
                           <p>
-                            Your applicant may have limited help desk
-                            wexperience. In that case, look for applicants who
-                            are motivated to grow and have some
-                            transferable{" "}
+                            We provide spatial flow optimization, bespoke
+                            millwork and cabinetry design, lighting plans,
+                            tactile material sourcing, photorealistic 3D
+                            renders, and full turnkey furniture installation.
                           </p>
                         </div>
                       </div>
@@ -133,7 +142,10 @@ export default function Home() {
                       onClick={() => handleToggle(4)}
                     >
                       <div className="accrodion-title">
-                        <h3>What about our safety measures ? </h3>
+                        <h3>
+                          How do you ensure budget compliance and prevent cost
+                          overruns?
+                        </h3>
                       </div>
                       <div
                         className={
@@ -144,10 +156,11 @@ export default function Home() {
                       >
                         <div className="inner">
                           <p>
-                            Your applicant may have limited help desk
-                            wexperience. In that case, look for applicants who
-                            are motivated to grow and have some
-                            transferable{" "}
+                            We utilize detailed bills of quantities (BoQ),
+                            competitive trade tenders, and
+                            guaranteed-maximum-price contracts, backed by
+                            transparent weekly variance audits against milestone
+                            budgets.
                           </p>
                         </div>
                       </div>
@@ -169,7 +182,10 @@ export default function Home() {
                       onClick={() => handleToggle(5)}
                     >
                       <div className="accrodion-title">
-                        <h3>I'm a total beginner. Can I still follow along?</h3>
+                        <h3>
+                          Can you renovate older or historic heritage buildings
+                          (Denkmalschutz)?
+                        </h3>
                       </div>
                       <div
                         className={
@@ -180,10 +196,10 @@ export default function Home() {
                       >
                         <div className="inner">
                           <p>
-                            Your applicant may have limited help desk
-                            wexperience. In that case, look for applicants who
-                            are motivated to grow and have some
-                            transferable{" "}
+                            Yes. We have specialized expertise in energetic
+                            modernizations and historic monument restorations,
+                            balancing heritage authority regulations with modern
+                            thermal efficiency and luxury living.
                           </p>
                         </div>
                       </div>
@@ -198,7 +214,10 @@ export default function Home() {
                       onClick={() => handleToggle(6)}
                     >
                       <div className="accrodion-title">
-                        <h3>Which technical skills would you improve?</h3>
+                        <h3>
+                          How does 3D BIM technology benefit the building
+                          process?
+                        </h3>
                       </div>
                       <div
                         className={
@@ -209,10 +228,10 @@ export default function Home() {
                       >
                         <div className="inner">
                           <p>
-                            Your applicant may have limited help desk
-                            wexperience. In that case, look for applicants who
-                            are motivated to grow and have some
-                            transferable{" "}
+                            Building Information Modeling creates a federated 3D
+                            model combining architecture, structure, and MEP
+                            systems to eliminate spatial clashes before
+                            construction, accelerating the build schedule.
                           </p>
                         </div>
                       </div>
@@ -227,7 +246,10 @@ export default function Home() {
                       onClick={() => handleToggle(7)}
                     >
                       <div className="accrodion-title">
-                        <h3>What do Logical Drives do?</h3>
+                        <h3>
+                          What energy efficiency standards do your buildings
+                          achieve?
+                        </h3>
                       </div>
                       <div
                         className={
@@ -238,10 +260,10 @@ export default function Home() {
                       >
                         <div className="inner">
                           <p>
-                            Your applicant may have limited help desk
-                            wexperience. In that case, look for applicants who
-                            are motivated to grow and have some
-                            transferable{" "}
+                            We design and build according to stringent energy
+                            standards (KfW 40, Passivhaus, DGNB), incorporating
+                            geothermal heat pumps, solar arrays, and
+                            high-performance thermal building envelopes.
                           </p>
                         </div>
                       </div>
@@ -256,7 +278,10 @@ export default function Home() {
                       onClick={() => handleToggle(8)}
                     >
                       <div className="accrodion-title">
-                        <h3>What about our safety measures ? </h3>
+                        <h3>
+                          Do you manage statutory building permits and
+                          structural engineering?
+                        </h3>
                       </div>
                       <div
                         className={
@@ -267,10 +292,10 @@ export default function Home() {
                       >
                         <div className="inner">
                           <p>
-                            Your applicant may have limited help desk
-                            wexperience. In that case, look for applicants who
-                            are motivated to grow and have some
-                            transferable{" "}
+                            Yes. We coordinate all required engineering
+                            disciplines — including soil tests, structural
+                            statics, fire safety concepts, and direct liaison
+                            with municipal building control departments.
                           </p>
                         </div>
                       </div>
@@ -285,7 +310,9 @@ export default function Home() {
                       onClick={() => handleToggle(9)}
                     >
                       <div className="accrodion-title">
-                        <h3>I'm a total beginner. Can I still follow along?</h3>
+                        <h3>
+                          What warranty and aftercare guarantees do you provide?
+                        </h3>
                       </div>
                       <div
                         className={
@@ -296,10 +323,11 @@ export default function Home() {
                       >
                         <div className="inner">
                           <p>
-                            Your applicant may have limited help desk
-                            wexperience. In that case, look for applicants who
-                            are motivated to grow and have some
-                            transferable{" "}
+                            All completed works are handed over with formal
+                            acceptance protocols and comprehensive legal
+                            structural warranties (VOB/BGB), accompanied by
+                            organized digital operations manuals for building
+                            maintenance.
                           </p>
                         </div>
                       </div>

@@ -35,15 +35,15 @@ export default function Services() {
                   }}
                 ></div>
                 <div className="service-two__single-icon">
-                  <span className="icon-construction-machine"></span>
+                  <span className="icon-blueprint"></span>
                 </div>
                 <div className="service-two__single-text">
                   <h2>
-                    <Link href="/architecture">Machine Design</Link>
+                    <Link href="/architecture">Architecture & Planning</Link>
                   </h2>
                   <p>
-                    Through a unique coN construction and design disciplines
-                    expertise Concor and delivers{" "}
+                    Visionary architectural concepts, sustainable building
+                    plans, and precise 3D BIM coordination for modern living.
                   </p>
                 </div>
 
@@ -75,16 +75,16 @@ export default function Services() {
                 </div>
                 <div className="service-two__single-text">
                   <h2>
-                    <Link href="/architecture">General Contracting</Link>
+                    <Link href="/construction-site">General Contracting</Link>
                   </h2>
                   <p>
-                    Through a unique coN construction and design disciplines
-                    expertise Concor and delivers{" "}
+                    Full-scope site supervision, technical execution, and
+                    turnkey construction with uncompromising quality standards.
                   </p>
                 </div>
 
                 <div className="btn-box">
-                  <Link href="/architecture">EXPLORE SERVICE</Link>
+                  <Link href="/construction-site">EXPLORE SERVICE</Link>
                 </div>
               </div>
             </div>
@@ -111,16 +111,17 @@ export default function Services() {
                 </div>
                 <div className="service-two__single-text">
                   <h2>
-                    <Link href="/architecture">Machine Design</Link>
+                    <Link href="/interior-design">Interior Design</Link>
                   </h2>
                   <p>
-                    Through a unique coN construction and design disciplines
-                    expertise Concor and delivers{" "}
+                    Harmonious interior spaces combining ergonomic comfort,
+                    refined materials, and custom bespoke architectural
+                    millwork.
                   </p>
                 </div>
 
                 <div className="btn-box">
-                  <Link href="/architecture">EXPLORE SERVICE</Link>
+                  <Link href="/interior-design">EXPLORE SERVICE</Link>
                 </div>
               </div>
             </div>

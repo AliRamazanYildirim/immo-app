@@ -49,22 +49,21 @@ export default function Home() {
                     </div>
 
                     <div className="text-box1">
-                      <h2>Building Architecture</h2>
+                      <h2>Building Architecture & Planning</h2>
                       <p className="text1">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Maecenas varius tortor nibh, sit amet tempor nibh
-                        finibus et. Aenean eu enim justo. Vestibulum aliquam
-                        hendrerit molestie. Mauris malesuada nisi sit amet augue
-                        accumsan tincidunt. Maecenas tincidunt, velit ac
-                        porttitor pulvinar, tortor eros facilisis libero, vitae
-                        commodo nunc quam et ligula
+                        We deliver innovative, sustainable, and tailor-made
+                        architectural solutions for residential estates, modern
+                        commercial complexes, and urban living spaces. Our
+                        holistic planning methodology unites visionary design
+                        with functional efficiency, structural precision, and
+                        environmental responsibility.
                       </p>
 
                       <p className="text2">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Maecenas varius tortor nibh, sit amet tempor nibh
-                        finibus et. Aenean eu enim justo. Vestibulum aliquam
-                        hendrerit molestie.
+                        From initial spatial feasibility studies to detailed 3D
+                        BIM modeling, we guide your project through every phase
+                        of architectural creation. We translate your lifestyle
+                        or business identity into enduring built reality.
                       </p>
 
                       <ul>
@@ -74,8 +73,8 @@ export default function Home() {
                           </div>
                           <div className="text">
                             <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. Maecenas varius.
+                              Sustainable bioclimatic design optimizing natural
+                              light, ventilation, and energy performance.
                             </p>
                           </div>
                         </li>
@@ -86,8 +85,8 @@ export default function Home() {
                           </div>
                           <div className="text">
                             <p>
-                              Exercitation ullamco laboris
-                              consequat.reprehenderit in voluptate
+                              State-of-the-art 3D BIM modeling ensuring
+                              clash-free engineering and cost efficiency.
                             </p>
                           </div>
                         </li>
@@ -96,35 +95,33 @@ export default function Home() {
 
                     <div className="text-box2">
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Maecenas varius tortor nibh, sit amet tempor nibh
-                        finibus et. Aenean eu enim justo. Vestibulum aliquam
-                        hendrerit molestie. Mauris malesuada nisi sit amet augue
-                        accumsan tincidunt. Maecenas tincidunt, velit ac
-                        porttitor pulvinar, tortor eros facilisis libero, vitae
-                        commodo nunc quam et ligula
+                        Every architectural masterpiece begins with
+                        understanding the unique character of the site and the
+                        aspirations of its future occupants. We analyze
+                        topographical orientations, urban zoning regulations,
+                        and microclimates to craft structures that age
+                        gracefully and provide timeless spatial value.
                       </p>
 
                       <ul>
                         <li>
                           <p>
-                            Excepteur sint occaecat cupidatat non proident, sunt
-                            in culpa qui officia deserunt
+                            Comprehensive concept design, photorealistic
+                            renderings, and physical scale mockups.
                           </p>
                         </li>
 
                         <li>
                           <p>
-                            {" "}
-                            Sed ut perspiciatis unde omnis iste natus error sit
-                            voluptatem accusantium
+                            Full statutory permitting documentation and
+                            proactive municipal authority management.
                           </p>
                         </li>
 
                         <li>
                           <p>
-                            Neque porro quisquam est, qui dolorem ipsum quia
-                            dolor sit amet, consectetur,
+                            Detailed execution blueprints, technical
+                            specifications, and contractor tender packages.
                           </p>
                         </li>
                       </ul>
@@ -139,22 +136,20 @@ export default function Home() {
 
                     <div className="text-box3">
                       <p className="text1">
-                        Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollanim id est laborum. Sed
-                        ut perspiciatis unde omnis iste natus error voluptatem
-                        accusantium doloremque laudantium, totam rem
-                        aperiam,{" "}
+                        Our architectural studio blends creative artistic
+                        expression with rigorous technical German engineering
+                        standards. We coordinate all specialist planners —
+                        including structural engineers, MEP designers, and
+                        building physicists — to deliver harmonious
+                        architectural forms.
                       </p>
 
                       <p className="text2">
-                        Duis aute irure dolor in reprehenderit in voluptate
-                        velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa quisit ,officia deserunt mollit anim id est
-                        laborum. Sed ut perspiciatis unde omnis is amet natus
-                        error sit voluptatem accusantium doloremque laudantium,
-                        totam reaperia eaque ipsa quae ab ilnventore veritatis
-                        et quasi architecto beatae vitae dicta sunt{" "}
+                        Throughout construction, our architects provide
+                        dedicated artistic and quality supervision on site. This
+                        ensures that every shadow gap, material transition, and
+                        spatial dimension matches the design intent with
+                        millimeter precision.
                       </p>
                     </div>
 
@@ -172,7 +167,10 @@ export default function Home() {
                                 </div>
 
                                 <div className="text-box">
-                                  <p>icon-check-mark</p>
+                                  <p>
+                                    Net-zero energy efficiency (KfW 40 /
+                                    Passivhaus)
+                                  </p>
                                 </div>
                               </li>
 
@@ -182,7 +180,10 @@ export default function Home() {
                                 </div>
 
                                 <div className="text-box">
-                                  <p>Lorem ipsum dolor sit dgdr</p>
+                                  <p>
+                                    Timeless aesthetic longevity & spatial
+                                    harmony
+                                  </p>
                                 </div>
                               </li>
 
@@ -192,7 +193,10 @@ export default function Home() {
                                 </div>
 
                                 <div className="text-box">
-                                  <p>Maecenas varius tortor</p>
+                                  <p>
+                                    Transparent budgeting & rigorous timeline
+                                    control
+                                  </p>
                                 </div>
                               </li>
                             </ul>
@@ -206,10 +210,12 @@ export default function Home() {
                             </div>
                             <div className="text">
                               <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit. Maecenas varius tortor nibh,
-                                sit amet tempor finibus et. Aenean eu enim
-                                justo. Vestibulum
+                                Navigating complex municipal zoning laws, tight
+                                urban plot boundaries, and rigorous
+                                environmental building codes. We solve these
+                                through proactive authority liaison, precision
+                                site surveys, and intelligent space-saving
+                                structural designs.
                               </p>
                             </div>
                           </div>
@@ -231,7 +237,8 @@ export default function Home() {
                         >
                           <div className="accrodion-title">
                             <h3>
-                              I'm a total beginner. Can I still follow along?
+                              How long does the architectural design and
+                              approval process take?
                             </h3>
                           </div>
                           <div
@@ -243,10 +250,11 @@ export default function Home() {
                           >
                             <div className="inner">
                               <p>
-                                Your applicant may have limited help desk
-                                wexperience. In that case, look for applicants
-                                who are motivated to grow and have some
-                                transferable{" "}
+                                Conceptual and detailed design typically
+                                requires 4 to 8 weeks. Municipal building permit
+                                approvals generally take between 2 to 4 months
+                                depending on the local building authority and
+                                project scale.
                               </p>
                             </div>
                           </div>
@@ -261,7 +269,10 @@ export default function Home() {
                           onClick={() => handleToggle(2)}
                         >
                           <div className="accrodion-title">
-                            <h3>Which technical skills would you improve?</h3>
+                            <h3>
+                              Do you handle building permit applications and
+                              regulatory approvals?
+                            </h3>
                           </div>
                           <div
                             className={
@@ -272,10 +283,11 @@ export default function Home() {
                           >
                             <div className="inner">
                               <p>
-                                Your applicant may have limited help desk
-                                wexperience. In that case, look for applicants
-                                who are motivated to grow and have some
-                                transferable{" "}
+                                Yes, we provide end-to-end statutory permitting
+                                services, including official building
+                                applications (Bauantrag), structural
+                                calculations, fire protection concepts, and
+                                direct coordination with local authorities.
                               </p>
                             </div>
                           </div>
@@ -290,7 +302,10 @@ export default function Home() {
                           onClick={() => handleToggle(3)}
                         >
                           <div className="accrodion-title">
-                            <h3>What do Logical Drives do?</h3>
+                            <h3>
+                              How does 3D BIM (Building Information Modeling)
+                              benefit my project?
+                            </h3>
                           </div>
                           <div
                             className={
@@ -301,10 +316,11 @@ export default function Home() {
                           >
                             <div className="inner">
                               <p>
-                                Your applicant may have limited help desk
-                                wexperience. In that case, look for applicants
-                                who are motivated to grow and have some
-                                transferable{" "}
+                                BIM creates a unified digital 3D model combining
+                                architectural, structural, and MEP systems. This
+                                detects physical trade collisions before
+                                construction begins, minimizing costly site
+                                revisions and ensuring precise cost forecasts.
                               </p>
                             </div>
                           </div>
@@ -319,7 +335,10 @@ export default function Home() {
                           onClick={() => handleToggle(4)}
                         >
                           <div className="accrodion-title">
-                            <h3>What about our safety measures ? </h3>
+                            <h3>
+                              Can you design custom energy-efficient and passive
+                              house buildings?
+                            </h3>
                           </div>
                           <div
                             className={
@@ -330,10 +349,11 @@ export default function Home() {
                           >
                             <div className="inner">
                               <p>
-                                Your applicant may have limited help desk
-                                wexperience. In that case, look for applicants
-                                who are motivated to grow and have some
-                                transferable{" "}
+                                Absolutely. We specialize in high-efficiency
+                                concepts including KfW 40, Passivhaus, and DGNB
+                                standards. We integrate geothermal heat pumps,
+                                photovoltaic solar systems, and intelligent
+                                thermal envelope solutions.
                               </p>
                             </div>
                           </div>

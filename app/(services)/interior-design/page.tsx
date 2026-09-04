@@ -1,307 +1,447 @@
-'use client'
-import Layout from "@/components/layout/Layout"
-import Link from "next/link"
-import { useState } from 'react'
+"use client";
+import Layout from "@/components/layout/Layout";
+import Link from "next/link";
+import { useState } from "react";
 interface AccordionState {
-    status: boolean;
-    key?: number;
+  status: boolean;
+  key?: number;
 }
 
 export default function Home() {
-    const [isActive, setIsActive] = useState<AccordionState>({
+  const [isActive, setIsActive] = useState<AccordionState>({
+    status: false,
+    key: 1,
+  });
+
+  const handleToggle = (key: number) => {
+    if (isActive.key === key) {
+      setIsActive({
         status: false,
-        key: 1,
-    })
-
-    const handleToggle = (key: number) => {
-        if (isActive.key === key) {
-            setIsActive({
-                status: false,
-            })
-        } else {
-            setIsActive({
-                status: true,
-                key,
-            })
-        }
+      });
+    } else {
+      setIsActive({
+        status: true,
+        key,
+      });
     }
+  };
 
-    return (
-        <>
-            <Layout headerStyle={4} footerStyle={1} breadcrumbTitle="Interior Design">
-                <div>
-                {/*Start Services Details */}
-                <section className="services-details">
-                    <div className="container">
-                        <div className="row">
-                            {/*Start Services Details Content */}
-                            <div className="col-xl-8">
-                                <div className="services-details__content">
-                                    <div className="services-details__content-img1">
-                                        <img src="assets/img/service/services-details-img3.jpg" alt="#"/>
-                                    </div>
-
-                                    <div className="text-box1">
-                                        <h2>Interior Design</h2>
-                                        <p className="text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-                                            varius tortor nibh, sit amet tempor nibh finibus et. Aenean eu enim justo.
-                                            Vestibulum aliquam hendrerit molestie. Mauris malesuada nisi sit amet augue accumsan
-                                            tincidunt. Maecenas tincidunt, velit ac porttitor pulvinar, tortor eros facilisis
-                                            libero, vitae commodo nunc quam et ligula</p>
-
-                                        <p className="text2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-                                            varius tortor nibh, sit amet tempor nibh finibus et. Aenean eu enim justo.
-                                            Vestibulum aliquam hendrerit molestie.</p>
-
-                                        <ul>
-                                            <li>
-                                                <div className="icon">
-                                                    <span className="icon-check-mark"></span>
-                                                </div>
-                                                <div className="text">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-                                                        varius.
-                                                    </p>
-                                                </div>
-                                            </li>
-
-                                            <li>
-                                                <div className="icon">
-                                                    <span className="icon-check-mark"></span>
-                                                </div>
-                                                <div className="text">
-                                                    <p>Exercitation ullamco laboris consequat.reprehenderit in voluptate
-                                                    </p>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div className="text-box2">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-                                            varius tortor nibh, sit amet tempor nibh finibus et. Aenean eu enim justo.
-                                            Vestibulum aliquam hendrerit molestie. Mauris malesuada nisi sit amet augue accumsan
-                                            tincidunt. Maecenas tincidunt, velit ac porttitor pulvinar, tortor eros facilisis
-                                            libero, vitae commodo nunc quam et ligula</p>
-
-                                        <ul>
-                                            <li>
-                                                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                                                    deserunt
-                                                </p>
-                                            </li>
-
-                                            <li>
-                                                <p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-
-                                                </p>
-                                            </li>
-
-                                            <li>
-                                                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,</p>
-
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div className="services-details__content-img2">
-                                        <img src="assets/img/service/services-details-img2.jpg" alt="#"/>
-                                    </div>
-
-                                    <div className="text-box3">
-                                        <p className="text1">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                                            officia deserunt
-                                            mollanim id est laborum. Sed ut perspiciatis unde omnis iste natus error voluptatem
-                                            accusantium doloremque laudantium, totam rem aperiam, </p>
-
-                                        <p className="text2">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                                            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                                            sunt in culpa quisit ,officia deserunt mollit anim id est laborum. Sed ut
-                                            perspiciatis unde omnis is amet natus error sit voluptatem accusantium doloremque
-                                            laudantium, totam reaperia eaque ipsa quae ab ilnventore veritatis et quasi
-                                            architecto beatae vitae dicta sunt </p>
-                                    </div>
-
-                                    <div className="text-box4">
-                                        <div className="row">
-                                            <div className="col-xl-5 col-md-6">
-                                                <div className="text-box4-single">
-                                                    <div className="title-box">
-                                                        <h2>Our Goals</h2>
-                                                    </div>
-                                                    <ul>
-                                                        <li>
-                                                            <div className="icon-box">
-                                                                <span className="icon-check-mark"></span>
-                                                            </div>
-
-                                                            <div className="text-box">
-                                                                <p>icon-check-mark</p>
-                                                            </div>
-                                                        </li>
-
-                                                        <li>
-                                                            <div className="icon-box">
-                                                                <span className="icon-check-mark"></span>
-                                                            </div>
-
-                                                            <div className="text-box">
-                                                                <p>Lorem ipsum dolor sit dgdr</p>
-                                                            </div>
-                                                        </li>
-
-                                                        <li>
-                                                            <div className="icon-box">
-                                                                <span className="icon-check-mark"></span>
-                                                            </div>
-
-                                                            <div className="text-box">
-                                                                <p>Maecenas varius tortor</p>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-
-                                                </div>
-                                            </div>
-
-                                            <div className="col-xl-7 col-md-6">
-                                                <div className="text-box4-single">
-                                                    <div className="title-box">
-                                                        <h2>The Challenges</h2>
-                                                    </div>
-                                                    <div className="text">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-                                                            varius tortor nibh, sit amet tempor finibus et. Aenean eu enim
-                                                            justo. Vestibulum</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="services-details__accordion">
-                                    <ul className="accrodion-grp faq-one__accrodion" data-grp-name="faq-one-accrodion">
-                                    {/*Start Faq One Single */}
-                                    <li className={isActive.key == 1 ? "accrodion active" : "accrodion"} onClick={() => handleToggle(1)}>
-                                        <div className="accrodion-title">
-                                            <h3>I'm a total beginner. Can I still follow along?</h3>
-                                        </div>
-                                        <div className={isActive.key == 1 ? "accrodion-content current" : "accrodion-content"}>
-                                            <div className="inner">
-                                                <p>Your applicant may have limited help desk wexperience. In that case, look for
-                                                    applicants who are motivated to grow and have some transferable </p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    {/*End Faq One Single */}
-
-                                    {/*Start Faq One Single */}
-                                    <li className={isActive.key == 2 ? "accrodion active" : "accrodion"} onClick={() => handleToggle(2)}>
-                                        <div className="accrodion-title">
-                                            <h3>Which technical skills would you improve?</h3>
-                                        </div>
-                                        <div className={isActive.key == 2 ? "accrodion-content current" : "accrodion-content"}>
-                                            <div className="inner">
-                                                <p>Your applicant may have limited help desk wexperience. In that case, look for
-                                                    applicants who are motivated to grow and have some transferable </p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    {/*End Faq One Single */}
-
-                                    {/*Start Faq One Single */}
-                                    <li className={isActive.key == 3 ? "accrodion active" : "accrodion"} onClick={() => handleToggle(3)}>
-                                        <div className="accrodion-title">
-                                            <h3>What do Logical Drives do?</h3>
-                                        </div>
-                                        <div className={isActive.key == 3 ? "accrodion-content current" : "accrodion-content"}>
-                                            <div className="inner">
-                                                <p>Your applicant may have limited help desk wexperience. In that case, look for
-                                                    applicants who are motivated to grow and have some transferable </p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    {/*End Faq One Single */}
-
-                                    {/*Start Faq One Single */}
-                                    <li className={isActive.key == 4 ? "accrodion active" : "accrodion"} onClick={() => handleToggle(4)}>
-                                        <div className="accrodion-title">
-                                            <h3>What about our safety measures ? </h3>
-                                        </div>
-                                        <div className={isActive.key == 4 ? "accrodion-content current" : "accrodion-content"}>
-                                            <div className="inner">
-                                                <p>Your applicant may have limited help desk wexperience. In that case, look for
-                                                    applicants who are motivated to grow and have some transferable </p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    {/*End Faq One Single */}
-                                </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            {/*End Services Details Content */}
-
-                            {/*Start Sidebar */}
-                            <div className="col-xl-4">
-                                <div className="sidebar">
-                                    {/*Start Sidebar Single */}
-                                    <div className="sidebar__single sidebar__category">
-                                        <h3 className="sidebar__title">Categories</h3>
-
-                                        <ul className="sidebar__category-list">
-                                            <li><Link href="/architecture">Architecture <span
-                                                        className="icon-left-arrow"></span></Link></li>
-                                            <li><Link className="active" href="#">Interior Design <span
-                                                        className="icon-left-arrow"></span></Link></li>
-                                            <li><Link href="/building-renovation">Building Renovation <span
-                                                        className="icon-left-arrow"></span></Link></li>
-                                            <li><Link href="/construction-site">Construction Site <span
-                                                        className="icon-left-arrow"></span></Link></li>
-                                        </ul>
-                                    </div>
-                                    {/*End Sidebar Single */}
-
-                                    {/*Start Sidebar Single */}
-                                    <div className="sidebar__single sidebar__support">
-                                        <div className="sidebar__support-bg"
-                                            style={{backgroundImage: 'url(assets/img/resource/sidebar-support-bg.jpg)'}}></div>
-                                        <div className="sidebar__support__inner text-center">
-                                            <h2>Need Any Types <br/>
-                                                of Service <br/>
-                                                from us</h2>
-                                            <div className="btn-box">
-                                                <Link className="thm-btn" href="#">
-                                                    <span className="txt">FIND SOLUTION</span>
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    {/*End Sidebar Single */}
-
-                                    {/*Start Sidebar Single */}
-                                    <div className="sidebar__single sidebar__contact">
-                                        <div className="sidebar__contact-inner">
-                                            <div className="icon-box">
-                                                <span className="icon-phone"></span>
-                                            </div>
-
-                                            <div className="text-box">
-                                                <p>You can call anytime </p>
-                                                <h4>Free <Link href="tel:123456789">+99 (786) 8765</Link></h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    {/*End Sidebar Single */}
-                                </div>
-                            </div>
-                            {/* End Sidebar*/}
-                        </div>
+  return (
+    <>
+      <Layout headerStyle={4} footerStyle={1} breadcrumbTitle="Interior Design">
+        <div>
+          {/*Start Services Details */}
+          <section className="services-details">
+            <div className="container">
+              <div className="row">
+                {/*Start Services Details Content */}
+                <div className="col-xl-8">
+                  <div className="services-details__content">
+                    <div className="services-details__content-img1">
+                      <img
+                        src="assets/img/service/services-details-img3.jpg"
+                        alt="#"
+                      />
                     </div>
-                </section>
-                {/*End Services Details */}
+
+                    <div className="text-box1">
+                      <h2>Interior Architecture & Spatial Design</h2>
+                      <p className="text1">
+                        We create bespoke, refined interior spaces that elevate
+                        everyday living and reflect distinctive personal or
+                        commercial identities. Our interior architecture
+                        approach harmonizes spatial proportions, natural light,
+                        organic materiality, and tailored artisan furnishings.
+                      </p>
+
+                      <p className="text2">
+                        From private luxury residences and penthouses to
+                        boutique hotels and modern executive workplaces, we
+                        sculpt atmospheres that balance aesthetic sophistication
+                        with effortless everyday functionality.
+                      </p>
+
+                      <ul>
+                        <li>
+                          <div className="icon">
+                            <span className="icon-check-mark"></span>
+                          </div>
+                          <div className="text">
+                            <p>
+                              Tailor-made spatial planning optimizing flow,
+                              sightlines, and natural illumination.
+                            </p>
+                          </div>
+                        </li>
+
+                        <li>
+                          <div className="icon">
+                            <span className="icon-check-mark"></span>
+                          </div>
+                          <div className="text">
+                            <p>
+                              Bespoke cabinetry, custom architectural millwork,
+                              and curated luxury materiality.
+                            </p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div className="text-box2">
+                      <p>
+                        Every interior concept is developed through intimate
+                        dialogue with our clients. We curate tactile color
+                        palettes, layered architectural lighting, and acoustic
+                        treatments to craft sensory environments that feel warm,
+                        timeless, and completely individual.
+                      </p>
+
+                      <ul>
+                        <li>
+                          <p>
+                            Concept mood boards, tactile material palettes, and
+                            photorealistic 3D renders.
+                          </p>
+                        </li>
+
+                        <li>
+                          <p>
+                            Comprehensive technical joinery drawings, lighting
+                            plans, and electrical layouts.
+                          </p>
+                        </li>
+
+                        <li>
+                          <p>
+                            Turnkey FF&E procurement, artisan coordination, and
+                            meticulous on-site styling.
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div className="services-details__content-img2">
+                      <img
+                        src="assets/img/service/services-details-img2.jpg"
+                        alt="#"
+                      />
+                    </div>
+
+                    <div className="text-box3">
+                      <p className="text1">
+                        Our team manages the entire procurement and installation
+                        process, collaborating with master craftsmen, stone
+                        fabricators, and renowned European furniture ateliers.
+                        We ensure every stitch, seam, and joint meets the
+                        highest benchmark of artisanal quality.
+                      </p>
+
+                      <p className="text2">
+                        During installation, our interior architects supervise
+                        every phase directly on site — coordinating specialty
+                        contractors, overseeing custom millwork fitting, and
+                        arranging art, accessories, and lighting for a flawless
+                        turnkey handover.
+                      </p>
+                    </div>
+
+                    <div className="text-box4">
+                      <div className="row">
+                        <div className="col-xl-5 col-md-6">
+                          <div className="text-box4-single">
+                            <div className="title-box">
+                              <h2>Our Goals</h2>
+                            </div>
+                            <ul>
+                              <li>
+                                <div className="icon-box">
+                                  <span className="icon-check-mark"></span>
+                                </div>
+
+                                <div className="text-box">
+                                  <p>
+                                    Harmonious spatial flow & ergonomic
+                                    excellence
+                                  </p>
+                                </div>
+                              </li>
+
+                              <li>
+                                <div className="icon-box">
+                                  <span className="icon-check-mark"></span>
+                                </div>
+
+                                <div className="text-box">
+                                  <p>
+                                    Artisanal millwork & sustainable luxury
+                                    materiality
+                                  </p>
+                                </div>
+                              </li>
+
+                              <li>
+                                <div className="icon-box">
+                                  <span className="icon-check-mark"></span>
+                                </div>
+
+                                <div className="text-box">
+                                  <p>
+                                    Atmospheric architectural lighting &
+                                    acoustic comfort
+                                  </p>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <div className="col-xl-7 col-md-6">
+                          <div className="text-box4-single">
+                            <div className="title-box">
+                              <h2>The Challenges</h2>
+                            </div>
+                            <div className="text">
+                              <p>
+                                Seamlessly integrating modern building services,
+                                smart home automation, and acoustic requirements
+                                without disturbing the clean, elegant visual
+                                lines of the interior architecture.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="services-details__accordion">
+                      <ul
+                        className="accrodion-grp faq-one__accrodion"
+                        data-grp-name="faq-one-accrodion"
+                      >
+                        {/*Start Faq One Single */}
+                        <li
+                          className={
+                            isActive.key == 1 ? "accrodion active" : "accrodion"
+                          }
+                          onClick={() => handleToggle(1)}
+                        >
+                          <div className="accrodion-title">
+                            <h3>
+                              What does your comprehensive interior design
+                              service include?
+                            </h3>
+                          </div>
+                          <div
+                            className={
+                              isActive.key == 1
+                                ? "accrodion-content current"
+                                : "accrodion-content"
+                            }
+                          >
+                            <div className="inner">
+                              <p>
+                                Our full-service scope covers conceptual mood
+                                boards, spatial layout plans, 3D photorealistic
+                                renderings, custom millwork detail drawings,
+                                lighting and electrical schematics, furniture
+                                curation, and turnkey on-site styling.
+                              </p>
+                            </div>
+                          </div>
+                        </li>
+                        {/*End Faq One Single */}
+
+                        {/*Start Faq One Single */}
+                        <li
+                          className={
+                            isActive.key == 2 ? "accrodion active" : "accrodion"
+                          }
+                          onClick={() => handleToggle(2)}
+                        >
+                          <div className="accrodion-title">
+                            <h3>
+                              Can you redesign interiors within an existing
+                              building structure?
+                            </h3>
+                          </div>
+                          <div
+                            className={
+                              isActive.key == 2
+                                ? "accrodion-content current"
+                                : "accrodion-content"
+                            }
+                          >
+                            <div className="inner">
+                              <p>
+                                Absolutely. We specialize in high-end
+                                transformations of existing apartments,
+                                historical residences, and boutique commercial
+                                spaces, optimizing layouts while respecting
+                                structural load-bearing elements.
+                              </p>
+                            </div>
+                          </div>
+                        </li>
+                        {/*End Faq One Single */}
+
+                        {/*Start Faq One Single */}
+                        <li
+                          className={
+                            isActive.key == 3 ? "accrodion active" : "accrodion"
+                          }
+                          onClick={() => handleToggle(3)}
+                        >
+                          <div className="accrodion-title">
+                            <h3>
+                              Do you handle custom furniture and bespoke
+                              cabinetry design?
+                            </h3>
+                          </div>
+                          <div
+                            className={
+                              isActive.key == 3
+                                ? "accrodion-content current"
+                                : "accrodion-content"
+                            }
+                          >
+                            <div className="inner">
+                              <p>
+                                Yes. Our team produces detailed fabrication
+                                drawings for custom kitchens, dressing rooms,
+                                integrated shelving, and paneling, collaborating
+                                with master joiners and craftsmen to ensure
+                                perfection.
+                              </p>
+                            </div>
+                          </div>
+                        </li>
+                        {/*End Faq One Single */}
+
+                        {/*Start Faq One Single */}
+                        <li
+                          className={
+                            isActive.key == 4 ? "accrodion active" : "accrodion"
+                          }
+                          onClick={() => handleToggle(4)}
+                        >
+                          <div className="accrodion-title">
+                            <h3>
+                              How do you present design concepts before
+                              procurement?
+                            </h3>
+                          </div>
+                          <div
+                            className={
+                              isActive.key == 4
+                                ? "accrodion-content current"
+                                : "accrodion-content"
+                            }
+                          >
+                            <div className="inner">
+                              <p>
+                                We present comprehensive physical material
+                                sample trays, custom finish swatches, and
+                                photorealistic 3D virtual walkthroughs so you
+                                experience every texture, color, and lighting
+                                mood before making investment decisions.
+                              </p>
+                            </div>
+                          </div>
+                        </li>
+                        {/*End Faq One Single */}
+                      </ul>
+                    </div>
+                  </div>
                 </div>
-            </Layout>
-        </>
-    )
+                {/*End Services Details Content */}
+
+                {/*Start Sidebar */}
+                <div className="col-xl-4">
+                  <div className="sidebar">
+                    {/*Start Sidebar Single */}
+                    <div className="sidebar__single sidebar__category">
+                      <h3 className="sidebar__title">Categories</h3>
+
+                      <ul className="sidebar__category-list">
+                        <li>
+                          <Link href="/architecture">
+                            Architecture{" "}
+                            <span className="icon-left-arrow"></span>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link className="active" href="#">
+                            Interior Design{" "}
+                            <span className="icon-left-arrow"></span>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/building-renovation">
+                            Building Renovation{" "}
+                            <span className="icon-left-arrow"></span>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/construction-site">
+                            Construction Site{" "}
+                            <span className="icon-left-arrow"></span>
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                    {/*End Sidebar Single */}
+
+                    {/*Start Sidebar Single */}
+                    <div className="sidebar__single sidebar__support">
+                      <div
+                        className="sidebar__support-bg"
+                        style={{
+                          backgroundImage:
+                            "url(assets/img/resource/sidebar-support-bg.jpg)",
+                        }}
+                      ></div>
+                      <div className="sidebar__support__inner text-center">
+                        <h2>
+                          Need Any Types <br />
+                          of Service <br />
+                          from us
+                        </h2>
+                        <div className="btn-box">
+                          <Link className="thm-btn" href="#">
+                            <span className="txt">FIND SOLUTION</span>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                    {/*End Sidebar Single */}
+
+                    {/*Start Sidebar Single */}
+                    <div className="sidebar__single sidebar__contact">
+                      <div className="sidebar__contact-inner">
+                        <div className="icon-box">
+                          <span className="icon-phone"></span>
+                        </div>
+
+                        <div className="text-box">
+                          <p>You can call anytime </p>
+                          <h4>
+                            Free{" "}
+                            <Link href="tel:123456789">+99 (786) 8765</Link>
+                          </h4>
+                        </div>
+                      </div>
+                    </div>
+                    {/*End Sidebar Single */}
+                  </div>
+                </div>
+                {/* End Sidebar*/}
+              </div>
+            </div>
+          </section>
+          {/*End Services Details */}
+        </div>
+      </Layout>
+    </>
+  );
 }

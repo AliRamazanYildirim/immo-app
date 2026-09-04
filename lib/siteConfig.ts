@@ -76,7 +76,7 @@ const siteConfig: SiteConfig = {
     name: "ARY Tech Solutions",
     slogan: "Creative Architecture",
     description:
-      "A vast majority of the app marketers mainly concent post-launch app marketing techniques and measures while completely missing pre-launch campaign.",
+      "Delivering excellence in contemporary architecture, luxury interior design, and turnkey construction management across Germany and Europe.",
     foundedYear: 2020,
     copyrightYear: new Date().getFullYear(),
   },
