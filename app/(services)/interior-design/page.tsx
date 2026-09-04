@@ -254,13 +254,9 @@ export default function Home() {
                                                         className="icon-left-arrow"></span></Link></li>
                                             <li><Link className="active" href="#">Interior Design <span
                                                         className="icon-left-arrow"></span></Link></li>
-                                            <li><Link href="/uiux-designingl">Ui/Ux Designing <span
-                                                        className="icon-left-arrow"></span></Link></li>
                                             <li><Link href="/building-renovation">Building Renovation <span
                                                         className="icon-left-arrow"></span></Link></li>
                                             <li><Link href="/construction-site">Construction Site <span
-                                                        className="icon-left-arrow"></span></Link></li>
-                                            <li><Link href="/security-system">Security System <span
                                                         className="icon-left-arrow"></span></Link></li>
                                         </ul>
                                     </div>

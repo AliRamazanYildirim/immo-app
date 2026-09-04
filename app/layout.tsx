@@ -23,7 +23,7 @@ export default function RootLayout({
       className={`${dM_Sans.variable}`}
       data-scroll-behavior="smooth"
     >
-      <body>{children}</body>
+      <body suppressHydrationWarning={true} >{children}</body>
     </html>
   );
 }

@@ -122,11 +122,6 @@ export default function MobileMenu({
                       Construction Site
                     </Link>
                   </li>
-                  <li>
-                    <Link href="/security-system" onClick={handleMobileMenu}>
-                      Security System
-                    </Link>
-                  </li>
                 </ul>
                 <div
                   className={
@@ -165,11 +160,6 @@ export default function MobileMenu({
                   <li>
                     <Link href="/testimonials" onClick={handleMobileMenu}>
                       Testimonials
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/pricing" onClick={handleMobileMenu}>
-                      Pricing
                     </Link>
                   </li>
                   <li>

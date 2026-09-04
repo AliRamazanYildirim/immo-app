@@ -39,9 +39,6 @@ export default function Menu() {
             <li>
               <Link href="/construction-site">Construction Site</Link>
             </li>
-            <li>
-              <Link href="/security-system">Security System</Link>
-            </li>
           </ul>
         </li>
         <li className="menu-item-has-children">
@@ -61,9 +58,6 @@ export default function Menu() {
             </li>
             <li>
               <Link href="/testimonials">Testimonials</Link>
-            </li>
-            <li>
-              <Link href="/pricing">Pricing</Link>
             </li>
             <li>
               <Link href="/faq">Faq</Link>
