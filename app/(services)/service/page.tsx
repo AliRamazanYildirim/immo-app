@@ -6,7 +6,12 @@ import { useState } from "react";
 export default function Home() {
   return (
     <>
-      <Layout headerStyle={4} footerStyle={1} breadcrumbTitle="Service Page">
+      <Layout
+        headerStyle={4}
+        footerStyle={1}
+        breadcrumbTitle="Service Page"
+        breadcrumbBg="assets/img/service/page-header-bg.jpg"
+      >
         <div>
           {/*Start Service Two */}
           <section className="service-two">
@@ -14,7 +19,7 @@ export default function Home() {
               <div className="row">
                 {/*Start Service Two Single */}
                 <div
-                  className="col-xl-4 col-lg-4 wow animated fadeInUp"
+                  className="col-xl-3 col-lg-6 wow animated fadeInUp"
                   data-wow-delay="0.1s"
                 >
                   <div className="service-two__single">
@@ -28,7 +33,7 @@ export default function Home() {
                       className="service-two__single-bg"
                       style={{
                         backgroundImage:
-                          "url(assets/img/service/service-v2-single-bg.jpg)",
+                          "url(assets/img/service/service-v2-bg-architecture.jpg)",
                       }}
                     ></div>
                     <div className="service-two__single-icon">
@@ -56,7 +61,7 @@ export default function Home() {
 
                 {/*Start Service Two Single */}
                 <div
-                  className="col-xl-4 col-lg-4 wow animated fadeInUp"
+                  className="col-xl-3 col-lg-6 wow animated fadeInUp"
                   data-wow-delay="0.3s"
                 >
                   <div className="service-two__single">
@@ -70,7 +75,7 @@ export default function Home() {
                       className="service-two__single-bg"
                       style={{
                         backgroundImage:
-                          "url(assets/img/service/service-v2-single-bg.jpg)",
+                          "url(assets/img/service/service-v2-bg-construction.jpg)",
                       }}
                     ></div>
                     <div className="service-two__single-icon">
@@ -98,7 +103,7 @@ export default function Home() {
 
                 {/*Start Service Two Single */}
                 <div
-                  className="col-xl-4 col-lg-4 wow animated fadeInUp"
+                  className="col-xl-3 col-lg-6 wow animated fadeInUp"
                   data-wow-delay="0.5s"
                 >
                   <div className="service-two__single">
@@ -112,7 +117,7 @@ export default function Home() {
                       className="service-two__single-bg"
                       style={{
                         backgroundImage:
-                          "url(assets/img/service/service-v2-single-bg.jpg)",
+                          "url(assets/img/service/service-v2-bg-interior.jpg)",
                       }}
                     ></div>
                     <div className="service-two__single-icon">
@@ -134,6 +139,47 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+                {/*End Service Two Single */}
+
+                {/*Start Service Two Single */}
+                <div
+                  className="col-xl-3 col-lg-6 wow animated fadeInUp"
+                  data-wow-delay="0.7s"
+                >
+                  <div className="service-two__single">
+                    <div className="shape2">
+                      <img
+                        src="assets/img/shape/service-v2-shape2.png"
+                        alt=""
+                      />
+                    </div>
+                    <div
+                      className="service-two__single-bg"
+                      style={{
+                        backgroundImage:
+                          "url(assets/img/service/service-v2-bg-renovation.jpg)",
+                      }}
+                    ></div>
+                    <div className="service-two__single-icon">
+                      <span className="icon-solution"></span>
+                    </div>
+                    <div className="service-two__single-text">
+                      <h2>
+                        <Link href="/building-renovation">
+                          Building Renovation
+                        </Link>
+                      </h2>
+                      <p>
+                        Energetic modernization, historic building restoration,
+                        and high-efficiency structural facade retrofits.
+                      </p>
+                    </div>
+
+                    <div className="btn-box">
+                      <Link href="/building-renovation">EXPLORE SERVICE</Link>
+                    </div>
+                  </div>
+                </div>
                 {/*End Service Two Single- */}
               </div>
             </div>
@@ -141,19 +187,22 @@ export default function Home() {
           {/*End Service Two */}
 
           {/*Start Call To Action One */}
-          <section className="call-to-action-one">
+          <section className="call-to-action-one call-to-action-one--highlight">
             <div
               className="call-to-action-one__bg"
               style={{
-                backgroundImage:
-                  "url(assets/img/background/call-to-action-v1-bg.jpg)",
+                backgroundImage: "url(assets/img/service/service-cta-bg.jpg)",
               }}
             ></div>
             <div className="container">
               <div className="call-to-action-one__inner">
                 <div className="call-to-action-one__content text-center">
-                  <h2>Have a Project in Your Mind</h2>
-                  <h3>Don’t Hesitate to Say Hello </h3>
+                  <h2>
+                    <span>Have a Project in Your Mind</span>
+                  </h2>
+                  <h3>
+                    <span>Don’t Hesitate to Say Hello</span>
+                  </h3>
                   <div className="btn-box">
                     <a className="thm-btn" href="#">
                       <span className="txt">LET’S TALK WITH US</span>
@@ -183,17 +232,11 @@ export default function Home() {
                   data-wow-delay="0.1s"
                 >
                   <div className="why-choose-us-one__img">
-                    <div className="shape1">
-                      <img
-                        src="assets/img/shape/why-choose-us-v1-shape1.png"
-                        alt=""
-                      />
-                    </div>
                     <ul>
                       <li>
                         <div className="img-box">
                           <img
-                            src="assets/img/resource/why-choose-us-v1-img1.jpg"
+                            src="assets/img/service/service-why-choose-img1.jpg"
                             alt=""
                           />
                         </div>
@@ -202,7 +245,7 @@ export default function Home() {
                       <li>
                         <div className="img-box">
                           <img
-                            src="assets/img/resource/why-choose-us-v1-img2.jpg"
+                            src="assets/img/service/service-why-choose-img2.jpg"
                             alt=""
                           />
                         </div>
@@ -458,7 +501,7 @@ export default function Home() {
                   <div className="feauture-three__img">
                     <div className="inner clearfix">
                       <img
-                        src="assets/img/resource/feauture-v3-img1.jpg"
+                        src="assets/img/service/service-feauture-img1.jpg"
                         alt=""
                       />
                     </div>

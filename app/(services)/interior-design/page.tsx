@@ -28,7 +28,12 @@ export default function Home() {
 
   return (
     <>
-      <Layout headerStyle={4} footerStyle={1} breadcrumbTitle="Interior Design">
+      <Layout
+        headerStyle={4}
+        footerStyle={1}
+        breadcrumbTitle="Interior Design"
+        breadcrumbBg="assets/img/service/page-header-bg-interior.jpg"
+      >
         <div>
           {/*Start Services Details */}
           <section className="services-details">
@@ -123,7 +128,7 @@ export default function Home() {
 
                     <div className="services-details__content-img2">
                       <img
-                        src="assets/img/service/services-details-img2.jpg"
+                        src="assets/img/service/services-details-interior-img2.jpg"
                         alt="#"
                       />
                     </div>
@@ -398,7 +403,7 @@ export default function Home() {
                         className="sidebar__support-bg"
                         style={{
                           backgroundImage:
-                            "url(assets/img/resource/sidebar-support-bg.jpg)",
+                            "url(assets/img/service/sidebar-support-bg.jpg)",
                         }}
                       ></div>
                       <div className="sidebar__support__inner text-center">

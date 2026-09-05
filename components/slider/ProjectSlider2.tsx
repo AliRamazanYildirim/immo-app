@@ -1,12 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { SwiperOptions } from "swiper/types";
 
 const swiperOptions: SwiperOptions = {
-  modules: [Autoplay, Pagination, Navigation],
+  modules: [Autoplay, Navigation],
   slidesPerView: 1,
   autoplay: {
     delay: 2500,
@@ -18,12 +18,6 @@ const swiperOptions: SwiperOptions = {
   navigation: {
     nextEl: ".h1n",
     prevEl: ".h1p",
-  },
-
-  // Pagination
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
   },
 
   breakpoints: {
@@ -51,7 +45,10 @@ const swiperOptions: SwiperOptions = {
 export default function ProjectSlider2() {
   return (
     <>
-      <Swiper {...swiperOptions} className="thm-swiper__slider swiper-container">
+      <Swiper
+        {...swiperOptions}
+        className="thm-swiper__slider swiper-container"
+      >
         <SwiperSlide className="swiper-slide">
           {/*Start Project Three Single */}
           <div className="project-three__single">
@@ -61,7 +58,8 @@ export default function ProjectSlider2() {
                   <div
                     className="project-three__single-img"
                     style={{
-                      backgroundImage: "url(assets/img/project/project-v3-img1.jpg)",
+                      backgroundImage:
+                        "url(assets/img/project/project-v3-img1.jpg)",
                     }}
                   ></div>
                   <div className="bg-overlay"></div>
@@ -98,7 +96,8 @@ export default function ProjectSlider2() {
                   <div
                     className="project-three__single-img"
                     style={{
-                      backgroundImage: "url(assets/img/project/project-v3-img2.jpg)",
+                      backgroundImage:
+                        "url(assets/img/project/project-v3-img2.jpg)",
                     }}
                   ></div>
                   <div className="bg-overlay"></div>
@@ -135,7 +134,8 @@ export default function ProjectSlider2() {
                   <div
                     className="project-three__single-img"
                     style={{
-                      backgroundImage: "url(assets/img/project/project-v3-img3.jpg)",
+                      backgroundImage:
+                        "url(assets/img/project/project-v3-img3.jpg)",
                     }}
                   ></div>
                   <div className="bg-overlay"></div>
@@ -180,7 +180,8 @@ export default function ProjectSlider2() {
                   <div
                     className="project-three__single-img"
                     style={{
-                      backgroundImage: "url(assets/img/project/project-v3-img1.jpg)",
+                      backgroundImage:
+                        "url(assets/img/project/project-v3-img1.jpg)",
                     }}
                   ></div>
                   <div className="bg-overlay"></div>
@@ -217,7 +218,8 @@ export default function ProjectSlider2() {
                   <div
                     className="project-three__single-img"
                     style={{
-                      backgroundImage: "url(assets/img/project/project-v3-img2.jpg)",
+                      backgroundImage:
+                        "url(assets/img/project/project-v3-img2.jpg)",
                     }}
                   ></div>
                   <div className="bg-overlay"></div>
@@ -254,7 +256,8 @@ export default function ProjectSlider2() {
                   <div
                     className="project-three__single-img"
                     style={{
-                      backgroundImage: "url(assets/img/project/project-v3-img3.jpg)",
+                      backgroundImage:
+                        "url(assets/img/project/project-v3-img3.jpg)",
                     }}
                   ></div>
                   <div className="bg-overlay"></div>
@@ -299,7 +302,8 @@ export default function ProjectSlider2() {
                   <div
                     className="project-three__single-img"
                     style={{
-                      backgroundImage: "url(assets/img/project/project-v3-img1.jpg)",
+                      backgroundImage:
+                        "url(assets/img/project/project-v3-img1.jpg)",
                     }}
                   ></div>
                   <div className="bg-overlay"></div>
@@ -336,7 +340,8 @@ export default function ProjectSlider2() {
                   <div
                     className="project-three__single-img"
                     style={{
-                      backgroundImage: "url(assets/img/project/project-v3-img2.jpg)",
+                      backgroundImage:
+                        "url(assets/img/project/project-v3-img2.jpg)",
                     }}
                   ></div>
                   <div className="bg-overlay"></div>
@@ -373,7 +378,8 @@ export default function ProjectSlider2() {
                   <div
                     className="project-three__single-img"
                     style={{
-                      backgroundImage: "url(assets/img/project/project-v3-img3.jpg)",
+                      backgroundImage:
+                        "url(assets/img/project/project-v3-img3.jpg)",
                     }}
                   ></div>
                   <div className="bg-overlay"></div>
@@ -412,4 +418,3 @@ export default function ProjectSlider2() {
     </>
   );
 }
-

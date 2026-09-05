@@ -20,7 +20,7 @@ export default function Services() {
           <div className="row">
             {/*Start Service Two Single */}
             <div
-              className="col-xl-4 col-lg-4 wow animated fadeInUp"
+              className="col-xl-3 col-lg-6 wow animated fadeInUp"
               data-wow-delay="0.1s"
             >
               <div className="service-two__single">
@@ -31,7 +31,7 @@ export default function Services() {
                   className="service-two__single-bg"
                   style={{
                     backgroundImage:
-                      "url(assets/img/service/service-v2-single-bg.jpg)",
+                      "url(assets/img/service/service-v2-bg-architecture.jpg)",
                   }}
                 ></div>
                 <div className="service-two__single-icon">
@@ -56,7 +56,7 @@ export default function Services() {
 
             {/*Start Service Two Single */}
             <div
-              className="col-xl-4 col-lg-4 wow animated fadeInUp"
+              className="col-xl-3 col-lg-6 wow animated fadeInUp"
               data-wow-delay="0.3s"
             >
               <div className="service-two__single">
@@ -67,7 +67,7 @@ export default function Services() {
                   className="service-two__single-bg"
                   style={{
                     backgroundImage:
-                      "url(assets/img/service/service-v2-single-bg.jpg)",
+                      "url(assets/img/service/service-v2-bg-construction.jpg)",
                   }}
                 ></div>
                 <div className="service-two__single-icon">
@@ -92,7 +92,7 @@ export default function Services() {
 
             {/*Start Service Two Single */}
             <div
-              className="col-xl-4 col-lg-4 wow animated fadeInUp"
+              className="col-xl-3 col-lg-6 wow animated fadeInUp"
               data-wow-delay="0.5s"
             >
               <div className="service-two__single">
@@ -103,7 +103,7 @@ export default function Services() {
                   className="service-two__single-bg"
                   style={{
                     backgroundImage:
-                      "url(assets/img/service/service-v2-single-bg.jpg)",
+                      "url(assets/img/service/service-v2-bg-interior.jpg)",
                   }}
                 ></div>
                 <div className="service-two__single-icon">
@@ -122,6 +122,42 @@ export default function Services() {
 
                 <div className="btn-box">
                   <Link href="/interior-design">EXPLORE SERVICE</Link>
+                </div>
+              </div>
+            </div>
+            {/*End Service Two Single */}
+
+            {/*Start Service Two Single */}
+            <div
+              className="col-xl-3 col-lg-6 wow animated fadeInUp"
+              data-wow-delay="0.7s"
+            >
+              <div className="service-two__single">
+                <div className="shape2">
+                  <img src="assets/img/shape/service-v2-shape2.png" alt="" />
+                </div>
+                <div
+                  className="service-two__single-bg"
+                  style={{
+                    backgroundImage:
+                      "url(assets/img/service/service-v2-bg-renovation.jpg)",
+                  }}
+                ></div>
+                <div className="service-two__single-icon">
+                  <span className="icon-solution"></span>
+                </div>
+                <div className="service-two__single-text">
+                  <h2>
+                    <Link href="/building-renovation">Building Renovation</Link>
+                  </h2>
+                  <p>
+                    Energetic modernization, historic building restoration, and
+                    high-efficiency structural facade retrofits.
+                  </p>
+                </div>
+
+                <div className="btn-box">
+                  <Link href="/building-renovation">EXPLORE SERVICE</Link>
                 </div>
               </div>
             </div>

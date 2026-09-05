@@ -1,130 +1,144 @@
-'use client'
-import { Autoplay, Navigation, Pagination } from "swiper/modules"
-import { Swiper, SwiperSlide } from "swiper/react"
-import type { SwiperOptions } from "swiper/types"
+"use client";
+import { useState, useEffect } from "react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import type { SwiperOptions } from "swiper/types";
 
 const swiperOptions: SwiperOptions = {
-    modules: [Autoplay, Pagination, Navigation],
-    slidesPerView: 1,
-    // spaceBetween: 30,
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
-    loop: true,
+  modules: [Autoplay, Pagination, Navigation],
+  slidesPerView: 1,
+  spaceBetween: 0,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  loop: true,
 
-    // Navigation
-    navigation: {
-        nextEl: '.h1n',
-        prevEl: '.h1p',
-    },
+  // Navigation
+  navigation: {
+    nextEl: ".h1n",
+    prevEl: ".h1p",
+  },
 
-    // Pagination
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
+  // Pagination
+  pagination: {
+    el: "#testimonials-one__pagination",
+    clickable: true,
+  },
 
-    breakpoints: {
-        320: {
-            slidesPerView: 1,
-            // spaceBetween: 30,
-        },
-        575: {
-            slidesPerView: 1,
-            // spaceBetween: 30,
-        },
-        767: {
-            slidesPerView: 1,
-            // spaceBetween: 30,
-        },
-        991: {
-            slidesPerView: 1,
-            // spaceBetween: 30,
-        },
-        1199: {
-            slidesPerView: 1,
-            // spaceBetween: 30,
-        },
-        1350: {
-            slidesPerView: 1,
-            // spaceBetween: 30,
-        },
-    }
-}
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      // spaceBetween: 30,
+    },
+    575: {
+      slidesPerView: 1,
+      // spaceBetween: 30,
+    },
+    767: {
+      slidesPerView: 1,
+      // spaceBetween: 30,
+    },
+    991: {
+      slidesPerView: 1,
+      // spaceBetween: 30,
+    },
+    1199: {
+      slidesPerView: 1,
+      // spaceBetween: 30,
+    },
+    1350: {
+      slidesPerView: 1,
+      // spaceBetween: 30,
+    },
+  },
+};
+
+const reviews = [
+  "ARY GROUP transformed our residential villa beyond all expectations. Their focus on natural daylight, clean structural lines, and seamless indoor-outdoor transitions turned our architectural vision into a timeless, functional sanctuary.",
+  "From initial building permit documentation to bespoke interior millwork, their team executed our corporate campus with complete cost transparency, zero budget deviations, and impeccable German engineering standards.",
+  "Navigating complex zoning regulations and energetic retrofits for our historic property felt effortless with their 3D BIM modeling and dedicated on-site supervision. Truly an extraordinary architectural partner.",
+];
+
 export default function TestimonialSlider2() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
     return (
-        <>
-            <Swiper {...swiperOptions} className="swiper-container" id="testimonials-one__carousel">
-                {/*Start Swiper Slide */}
-                    <SwiperSlide className="swiper-slide">
-                        <div className="testimonials-one__content-single">
-                            <div className="rating-box">
-                                <a href="#"><i className="icon-star"></i></a>
-                                <a href="#"><i className="icon-star"></i></a>
-                                <a href="#"><i className="icon-star"></i></a>
-                                <a href="#"><i className="icon-star"></i></a>
-                                <a href="#"><i className="icon-star"></i></a>
-                            </div>
+      <div
+        className="swiper-container"
+        id="testimonials-one__carousel"
+        style={{ minHeight: "180px" }}
+      >
+        <div className="testimonials-one__content-single">
+          <div className="rating-box">
+            <a href="#">
+              <i className="icon-star"></i>
+            </a>
+            <a href="#">
+              <i className="icon-star"></i>
+            </a>
+            <a href="#">
+              <i className="icon-star"></i>
+            </a>
+            <a href="#">
+              <i className="icon-star"></i>
+            </a>
+            <a href="#">
+              <i className="icon-star"></i>
+            </a>
+          </div>
+          <div className="text-box">
+            <p>{reviews[0]}</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
-                            <div className="text-box">
-                                <p>We are an architecture firm with a focus on beautiful but
-                                    functional design. At its <br/> heart, we believe design is about
-                                    usability and accessibility — these are the guiding <br/>
-                                    principles for our work. Read projects, our <br/>
-                                    process and our team below.</p>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    {/*End Swiper Slide */}
+  return (
+    <>
+      <Swiper
+        {...swiperOptions}
+        className="swiper-container"
+        id="testimonials-one__carousel"
+      >
+        {reviews.map((text, index) => (
+          <SwiperSlide key={index} className="swiper-slide">
+            <div className="testimonials-one__content-single">
+              <div className="rating-box">
+                <a href="#">
+                  <i className="icon-star"></i>
+                </a>
+                <a href="#">
+                  <i className="icon-star"></i>
+                </a>
+                <a href="#">
+                  <i className="icon-star"></i>
+                </a>
+                <a href="#">
+                  <i className="icon-star"></i>
+                </a>
+                <a href="#">
+                  <i className="icon-star"></i>
+                </a>
+              </div>
 
-                    {/*Start Swiper Slide */}
-                    <SwiperSlide className="swiper-slide">
-                        <div className="testimonials-one__content-single">
-                            <div className="rating-box">
-                                <a href="#"><i className="icon-star"></i></a>
-                                <a href="#"><i className="icon-star"></i></a>
-                                <a href="#"><i className="icon-star"></i></a>
-                                <a href="#"><i className="icon-star"></i></a>
-                                <a href="#"><i className="icon-star"></i></a>
-                            </div>
-
-                            <div className="text-box">
-                                <p>We are an architecture firm with a focus on beautiful but
-                                    functional design. At its <br/> heart, we believe design is about
-                                    usability and accessibility — these are the guiding <br/>
-                                    principles for our work. Read projects, our <br/>
-                                    process and our team below.</p>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    {/*End Swiper Slide */}
-
-                    {/*Start Swiper Slide */}
-                    <SwiperSlide className="swiper-slide">
-                        <div className="testimonials-one__content-single">
-                            <div className="rating-box">
-                                <a href="#"><i className="icon-star"></i></a>
-                                <a href="#"><i className="icon-star"></i></a>
-                                <a href="#"><i className="icon-star"></i></a>
-                                <a href="#"><i className="icon-star"></i></a>
-                                <a href="#"><i className="icon-star"></i></a>
-                            </div>
-
-                            <div className="text-box">
-                                <p>We are an architecture firm with a focus on beautiful but
-                                    functional design. At its <br/> heart, we believe design is about
-                                    usability and accessibility — these are the guiding <br/>
-                                    principles for our work. Read projects, our <br/>
-                                    process and our team below.</p>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                     {/*End Swiper Slide */}
-                     <div className="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets" id="testimonials-one__pagination"><span className="swiper-pagination-bullet swiper-pagination-bullet-active" role="button" aria-label="Go to slide 1"></span><span className="swiper-pagination-bullet" role="button" aria-label="Go to slide 2"></span><span className="swiper-pagination-bullet"  role="button" aria-label="Go to slide 3"></span></div>
-               
-            </Swiper>
-                   
-        </>
-    )
+              <div className="text-box">
+                <p>{text}</p>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+        <div
+          className="swiper-pagination"
+          id="testimonials-one__pagination"
+        ></div>
+      </Swiper>
+    </>
+  );
 }

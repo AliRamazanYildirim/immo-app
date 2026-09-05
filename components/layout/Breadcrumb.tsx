@@ -9,6 +9,12 @@ export default function Breadcrumb({
   breadcrumbTitle,
   breadcrumbBg,
 }: BreadcrumbProps) {
+  const bgImage = breadcrumbBg
+    ? breadcrumbBg.startsWith("/")
+      ? breadcrumbBg
+      : `/${breadcrumbBg}`
+    : "/assets/img/background/page-header-bg.jpg";
+
   return (
     <>
       {/*Start Page Header */}
@@ -16,7 +22,7 @@ export default function Breadcrumb({
         <div
           className="page-header__bg"
           style={{
-            backgroundImage: `url(${breadcrumbBg || "assets/img/background/page-header-bg.jpg"})`,
+            backgroundImage: `url(${bgImage})`,
           }}
         ></div>
 

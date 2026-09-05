@@ -7,7 +7,10 @@ import Link from "next/link";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { SwiperOptions } from "swiper/types";
-import { SliderContactInfo, SocialLinks } from "@/components/elements/ContactInfo";
+import {
+  SliderContactInfo,
+  SocialLinks,
+} from "@/components/elements/ContactInfo";
 
 const swiperOptions: SwiperOptions = {
   modules: [Autoplay, Pagination, Navigation],
@@ -27,7 +30,7 @@ const swiperOptions: SwiperOptions = {
 
   // Pagination
   pagination: {
-    el: ".swiper-pagination",
+    el: "#main-slider-one__pagination",
     clickable: true,
   },
 };
@@ -177,25 +180,9 @@ export default function Banner() {
             </div>
           </SwiperSlide>
           <div
-            className="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"
+            className="swiper-pagination"
             id="main-slider-one__pagination"
-          >
-            <span
-              className="swiper-pagination-bullet swiper-pagination-bullet-active"
-              role="button"
-              aria-label="Go to slide 1"
-            ></span>
-            <span
-              className="swiper-pagination-bullet"
-              role="button"
-              aria-label="Go to slide 2"
-            ></span>
-            <span
-              className="swiper-pagination-bullet"
-              role="button"
-              aria-label="Go to slide 3"
-            ></span>
-          </div>
+          ></div>
         </Swiper>
       </section>
       <ModalVideo

@@ -32,6 +32,7 @@ export default function Home() {
         headerStyle={4}
         footerStyle={1}
         breadcrumbTitle="Building Architecture"
+        breadcrumbBg="assets/img/service/page-header-bg-architecture.jpg"
       >
         <div>
           {/*Start Services Details */}
@@ -129,7 +130,7 @@ export default function Home() {
 
                     <div className="services-details__content-img2">
                       <img
-                        src="assets/img/service/services-details-img2.jpg"
+                        src="assets/img/service/services-details-arch-img2.jpg"
                         alt="#"
                       />
                     </div>
@@ -407,7 +408,7 @@ export default function Home() {
                         className="sidebar__support-bg"
                         style={{
                           backgroundImage:
-                            "url(assets/img/resource/sidebar-support-bg.jpg)",
+                            "url(assets/img/service/sidebar-support-bg.jpg)",
                         }}
                       ></div>
                       <div className="sidebar__support__inner text-center">

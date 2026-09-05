@@ -9,7 +9,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import type { SwiperOptions } from "swiper/types";
 
 const swiperOptions: SwiperOptions = {
-  modules: [Autoplay, Pagination, Navigation],
+  modules: [Autoplay, Navigation],
   slidesPerView: 1,
   spaceBetween: 0,
   autoplay: {
@@ -22,12 +22,6 @@ const swiperOptions: SwiperOptions = {
   navigation: {
     nextEl: ".h1n",
     prevEl: ".h1p",
-  },
-
-  // Pagination
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
   },
 };
 

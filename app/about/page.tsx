@@ -8,7 +8,12 @@ import CounterUp from "@/components/elements/CounterUp";
 export default function Home() {
   return (
     <>
-      <Layout headerStyle={4} footerStyle={1} breadcrumbTitle="About Us">
+      <Layout
+        headerStyle={4}
+        footerStyle={1}
+        breadcrumbTitle="About Us"
+        breadcrumbBg="assets/img/about/page-header-bg.jpg"
+      >
         <div>
           {/*Start About One */}
           <section className="about-one about-one--about">
@@ -36,7 +41,7 @@ export default function Home() {
                         <p>
                           <span>YEARS</span>
                           <br />
-                          <span>WORKIGN</span>
+                          <span>WORKING</span>
                           <br />
                           <span>EXPERIENCE</span>
                         </p>
@@ -186,17 +191,11 @@ export default function Home() {
                   data-wow-delay="0.1s"
                 >
                   <div className="why-choose-us-one__img">
-                    <div className="shape1">
-                      <img
-                        src="assets/img/shape/why-choose-us-v1-shape1.png"
-                        alt=""
-                      />
-                    </div>
                     <ul>
                       <li>
                         <div className="img-box">
                           <img
-                            src="assets/img/resource/why-choose-us-v1-img1.jpg"
+                            src="assets/img/about/about-why-choose-img1.jpg"
                             alt=""
                           />
                         </div>
@@ -205,7 +204,7 @@ export default function Home() {
                       <li>
                         <div className="img-box">
                           <img
-                            src="assets/img/resource/why-choose-us-v1-img2.jpg"
+                            src="assets/img/about/about-why-choose-img2.jpg"
                             alt=""
                           />
                         </div>
@@ -279,19 +278,22 @@ export default function Home() {
           {/*End Why Choose Us One */}
 
           {/*Start Call To Action One */}
-          <section className="call-to-action-one">
+          <section className="call-to-action-one call-to-action-one--highlight">
             <div
               className="call-to-action-one__bg"
               style={{
-                backgroundImage:
-                  "url(assets/img/background/call-to-action-v1-bg.jpg)",
+                backgroundImage: "url(assets/img/about/about-cta-bg.jpg)",
               }}
             ></div>
             <div className="container">
               <div className="call-to-action-one__inner">
                 <div className="call-to-action-one__content text-center">
-                  <h2>Have a Project in Your Mind</h2>
-                  <h3>Don’t Hesitate to Say Hello </h3>
+                  <h2>
+                    <span>Have a Project in Your Mind</span>
+                  </h2>
+                  <h3>
+                    <span>Don’t Hesitate to Say Hello</span>
+                  </h3>
                   <div className="btn-box">
                     <a className="thm-btn" href="#">
                       <span className="txt">LET’S TALK WITH US</span>

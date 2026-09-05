@@ -1,11 +1,11 @@
 "use client";
 
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { SwiperOptions } from "swiper/types";
 
 const swiperOptions: SwiperOptions = {
-  modules: [Autoplay, Pagination, Navigation],
+  modules: [Autoplay, Navigation],
   slidesPerView: 5,
   spaceBetween: 30,
   autoplay: {
@@ -18,12 +18,6 @@ const swiperOptions: SwiperOptions = {
   navigation: {
     nextEl: ".h1n",
     prevEl: ".h1p",
-  },
-
-  // Pagination
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
   },
 
   breakpoints: {
@@ -57,7 +51,10 @@ const swiperOptions: SwiperOptions = {
 export default function BrandSlider2() {
   return (
     <>
-      <Swiper {...swiperOptions} className="thm-swiper__slider swiper-container">
+      <Swiper
+        {...swiperOptions}
+        className="thm-swiper__slider swiper-container"
+      >
         <SwiperSlide className="swiper-slide">
           <div className="img-box">
             <img src="assets/img/brand/brand-v2-img1.png" alt="#" />
@@ -161,4 +158,3 @@ export default function BrandSlider2() {
     </>
   );
 }
-

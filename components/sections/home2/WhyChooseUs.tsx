@@ -12,17 +12,11 @@ export default function WhyChooseUs() {
               data-wow-delay="0.1s"
             >
               <div className="why-choose-us-one__img">
-                <div className="shape1">
-                  <img
-                    src="assets/img/shape/why-choose-us-v1-shape1.png"
-                    alt=""
-                  />
-                </div>
                 <ul>
                   <li>
                     <div className="img-box">
                       <img
-                        src="assets/img/resource/why-choose-us-v1-img1.jpg"
+                        src="assets/img/service/service-why-choose-img1.jpg"
                         alt=""
                       />
                     </div>
@@ -31,7 +25,7 @@ export default function WhyChooseUs() {
                   <li>
                     <div className="img-box">
                       <img
-                        src="assets/img/resource/why-choose-us-v1-img2.jpg"
+                        src="assets/img/service/service-why-choose-img2.jpg"
                         alt=""
                       />
                     </div>

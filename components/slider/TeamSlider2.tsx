@@ -1,14 +1,14 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { SwiperOptions } from "swiper/types";
 
 const swiperOptions: SwiperOptions = {
-  modules: [Autoplay, Pagination, Navigation],
-  slidesPerView: 4,
-  // spaceBetween: 30,
+  modules: [Autoplay, Navigation],
+  slidesPerView: 3,
+  spaceBetween: 30,
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
@@ -19,12 +19,6 @@ const swiperOptions: SwiperOptions = {
   navigation: {
     nextEl: ".h1n",
     prevEl: ".h1p",
-  },
-
-  // Pagination
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
   },
 
   breakpoints: {

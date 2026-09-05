@@ -1,10 +1,11 @@
 "use client";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { useState, useEffect } from "react";
+import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { SwiperOptions } from "swiper/types";
 
 const swiperOptions: SwiperOptions = {
-  modules: [Autoplay, Pagination, Navigation],
+  modules: [Autoplay, Navigation],
   slidesPerView: 3,
   // spaceBetween: 30,
   autoplay: {
@@ -19,40 +20,96 @@ const swiperOptions: SwiperOptions = {
     prevEl: ".h1p",
   },
 
-  // Pagination
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-
   breakpoints: {
     320: {
       slidesPerView: 1,
-      // spaceBetween: 30,
     },
     575: {
       slidesPerView: 2,
-      // spaceBetween: 30,
     },
     767: {
       slidesPerView: 2,
-      // spaceBetween: 30,
     },
     991: {
       slidesPerView: 3,
-      // spaceBetween: 30,
     },
     1199: {
       slidesPerView: 3,
-      // spaceBetween: 30,
     },
     1350: {
       slidesPerView: 3,
-      // spaceBetween: 30,
     },
   },
 };
+
+const clientThumbs = [
+  {
+    name: "Julian Meier",
+    role: "Private Residence Client",
+    img: "assets/img/testimonial/testimonials-v1-img1.jpg",
+  },
+  {
+    name: "Annette Black",
+    role: "Residential Complex Client",
+    img: "assets/img/testimonial/testimonials-v1-img2.jpg",
+  },
+  {
+    name: "Lucas Hoffmann",
+    role: "Commercial Building Client",
+    img: "assets/img/testimonial/testimonials-v1-img3.jpg",
+  },
+  {
+    name: "Julian Meier",
+    role: "Private Residence Client",
+    img: "assets/img/testimonial/testimonials-v1-img1.jpg",
+  },
+  {
+    name: "Annette Black",
+    role: "Residential Complex Client",
+    img: "assets/img/testimonial/testimonials-v1-img2.jpg",
+  },
+  {
+    name: "Lucas Hoffmann",
+    role: "Commercial Building Client",
+    img: "assets/img/testimonial/testimonials-v1-img3.jpg",
+  },
+];
+
 export default function TestimonialSlider3() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <div
+        className="swiper-container"
+        id="testimonials-one__thumb"
+        style={{ minHeight: "100px" }}
+      >
+        <div className="row">
+          {clientThumbs.slice(0, 3).map((item, index) => (
+            <div key={index} className="col-4">
+              <div className="testimonials-one__thumb-single">
+                <div className="testimonials-one__thumb-img">
+                  <div className="inner">
+                    <img src={item.img} alt={item.name} />
+                  </div>
+                </div>
+                <div className="testimonials-one__thumb-single-text">
+                  <h2>{item.name}</h2>
+                  <p>{item.role}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
   return (
     <>
       <Swiper
@@ -60,119 +117,24 @@ export default function TestimonialSlider3() {
         className="swiper-container"
         id="testimonials-one__thumb"
       >
-        <SwiperSlide className="swiper-slide">
-          <div className="testimonials-one__thumb-single ml0">
-            <div className="testimonials-one__thumb-img">
-              <div className="inner">
-                <img
-                  src="assets/img/testimonial/testimonials-v1-img1.jpg"
-                  alt=""
-                />
+        {clientThumbs.map((item, index) => (
+          <SwiperSlide key={index} className="swiper-slide">
+            <div
+              className={`testimonials-one__thumb-single ${index % 3 === 0 ? "ml0" : ""}`}
+            >
+              <div className="testimonials-one__thumb-img">
+                <div className="inner">
+                  <img src={item.img} alt={item.name} />
+                </div>
+              </div>
+
+              <div className="testimonials-one__thumb-single-text">
+                <h2>{item.name}</h2>
+                <p>{item.role}</p>
               </div>
             </div>
-
-            <div className="testimonials-one__thumb-single-text">
-              <h2>Annete Black</h2>
-              <p>Engineer</p>
-            </div>
-          </div>
-        </SwiperSlide>
-        {/*/.swiper-slide */}
-
-        <SwiperSlide className="swiper-slide">
-          <div className="testimonials-one__thumb-single">
-            <div className="testimonials-one__thumb-img">
-              <div className="inner">
-                <img
-                  src="assets/img/testimonial/testimonials-v1-img2.jpg"
-                  alt=""
-                />
-              </div>
-            </div>
-
-            <div className="testimonials-one__thumb-single-text">
-              <h2>Robert Hazelhood</h2>
-              <p>CEO & Co Founder</p>
-            </div>
-          </div>
-        </SwiperSlide>
-        {/*/.swiper-slide */}
-
-        <SwiperSlide className="swiper-slide">
-          <div className="testimonials-one__thumb-single">
-            <div className="testimonials-one__thumb-img">
-              <div className="inner">
-                <img
-                  src="assets/img/testimonial/testimonials-v1-img3.jpg"
-                  alt=""
-                />
-              </div>
-            </div>
-
-            <div className="testimonials-one__thumb-single-text">
-              <h2>Anannya Islam</h2>
-              <p>Designer</p>
-            </div>
-          </div>
-        </SwiperSlide>
-        {/*/.swiper-slide */}
-
-        <SwiperSlide className="swiper-slide">
-          <div className="testimonials-one__thumb-single ml0">
-            <div className="testimonials-one__thumb-img">
-              <div className="inner">
-                <img
-                  src="assets/img/testimonial/testimonials-v1-img1.jpg"
-                  alt=""
-                />
-              </div>
-            </div>
-
-            <div className="testimonials-one__thumb-single-text">
-              <h2>Annete Black</h2>
-              <p>Engineer</p>
-            </div>
-          </div>
-        </SwiperSlide>
-        {/*/.swiper-slide */}
-
-        <SwiperSlide className="swiper-slide">
-          <div className="testimonials-one__thumb-single">
-            <div className="testimonials-one__thumb-img">
-              <div className="inner">
-                <img
-                  src="assets/img/testimonial/testimonials-v1-img2.jpg"
-                  alt=""
-                />
-              </div>
-            </div>
-
-            <div className="testimonials-one__thumb-single-text">
-              <h2>Robert Hazelhood</h2>
-              <p>CEO & Co Founder</p>
-            </div>
-          </div>
-        </SwiperSlide>
-        {/*/.swiper-slide */}
-
-        <SwiperSlide className="swiper-slide">
-          <div className="testimonials-one__thumb-single">
-            <div className="testimonials-one__thumb-img">
-              <div className="inner">
-                <img
-                  src="assets/img/testimonial/testimonials-v1-img3.jpg"
-                  alt=""
-                />
-              </div>
-            </div>
-
-            <div className="testimonials-one__thumb-single-text">
-              <h2>Anannya Islam</h2>
-              <p>Designer</p>
-            </div>
-          </div>
-        </SwiperSlide>
-        {/*/.swiper-slide */}
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );
