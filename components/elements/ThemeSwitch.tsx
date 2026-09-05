@@ -42,11 +42,11 @@ export default function ThemeSwitch() {
     <>
       <nav className="switcher__tab" onClick={handleToggle}>
         <span className="switcher__btn light-mode">
-          <i className="flaticon-sun" />
+          <i className="fas fa-sun" />
         </span>
         <span className="switcher__mode" />
         <span className="switcher__btn dark-mode">
-          <i className="flaticon-moon" />
+          <i className="fas fa-moon" />
         </span>
       </nav>
     </>

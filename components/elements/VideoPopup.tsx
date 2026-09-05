@@ -17,7 +17,7 @@ export default function VideoPopup({ style, text }: VideoPopupProps) {
           onClick={() => setOpen(true)}
           className="overlay-link lightbox-image video-fancybox ripple"
         >
-          <span className="icon-10" />
+          <span className="icon-play-button-1" />
         </a>
       )}
 
@@ -27,7 +27,7 @@ export default function VideoPopup({ style, text }: VideoPopupProps) {
             onClick={() => setOpen(true)}
             className="overlay-link lightbox-image video-fancybox ripple"
           >
-            <span className="icon-10" />{" "}
+            <span className="icon-play-button-1" />{" "}
           </a>
         </div>
       )}
@@ -37,7 +37,7 @@ export default function VideoPopup({ style, text }: VideoPopupProps) {
             onClick={() => setOpen(true)}
             className="overlay-link lightbox-image video-fancybox ripple"
           >
-            <span className="icon-10" />
+            <span className="icon-play-button-1" />
           </a>
           <h6>{text ? text : "Latest Program Video"}</h6>
         </div>
@@ -45,7 +45,7 @@ export default function VideoPopup({ style, text }: VideoPopupProps) {
       {style === 3 && (
         <div className="video-btn">
           <a onClick={() => setOpen(true)} className="lightbox-image">
-            <i className="customicon-play-button" />
+            <i className="icon-play-button-1" />
             <span className="border-animation border-1" />
             <span className="border-animation border-2" />
             <span className="border-animation border-3" />

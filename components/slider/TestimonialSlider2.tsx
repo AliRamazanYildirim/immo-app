@@ -7,9 +7,9 @@ import type { SwiperOptions } from "swiper/types";
 const swiperOptions: SwiperOptions = {
   modules: [Autoplay, Pagination, Navigation],
   slidesPerView: 1,
-  spaceBetween: 0,
+  spaceBetween: 30,
   autoplay: {
-    delay: 2500,
+    delay: 4500,
     disableOnInteraction: false,
   },
   loop: true,
@@ -72,9 +72,12 @@ export default function TestimonialSlider2() {
       <div
         className="swiper-container"
         id="testimonials-one__carousel"
-        style={{ minHeight: "180px" }}
+        style={{ minHeight: "180px", overflow: "hidden" }}
       >
-        <div className="testimonials-one__content-single">
+        <div
+          className="testimonials-one__content-single"
+          style={{ paddingRight: "65px" }}
+        >
           <div className="rating-box">
             <a href="#">
               <i className="icon-star"></i>
@@ -106,10 +109,14 @@ export default function TestimonialSlider2() {
         {...swiperOptions}
         className="swiper-container"
         id="testimonials-one__carousel"
+        style={{ overflow: "hidden" }}
       >
         {reviews.map((text, index) => (
           <SwiperSlide key={index} className="swiper-slide">
-            <div className="testimonials-one__content-single">
+            <div
+              className="testimonials-one__content-single"
+              style={{ paddingRight: "65px" }}
+            >
               <div className="rating-box">
                 <a href="#">
                   <i className="icon-star"></i>

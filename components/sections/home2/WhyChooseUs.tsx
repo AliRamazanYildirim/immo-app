@@ -61,7 +61,7 @@ export default function WhyChooseUs() {
                   <li>
                     <div className="inner">
                       <div className="icon-box">
-                        <span className="icon-bed"></span>
+                        <span className="icon-interior-design"></span>
                       </div>
                       <div className="content-box">
                         <h2>The Joy of Best Living</h2>

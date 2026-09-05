@@ -67,20 +67,6 @@ export default function Menu() {
             </li>
           </ul>
         </li>
-        <li className="menu-item-has-children">
-          <Link href="#">Blog</Link>
-          <ul className="sub-menu">
-            <li>
-              <Link href="/blog">Blog</Link>
-            </li>
-            <li>
-              <Link href="/blog-sidebar">Blog Sidebar</Link>
-            </li>
-            <li>
-              <Link href="/blog-details">Blog Details</Link>
-            </li>
-          </ul>
-        </li>
         <li>
           <Link href="/contact">Contact</Link>
         </li>

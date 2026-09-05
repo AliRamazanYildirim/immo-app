@@ -131,7 +131,7 @@ export default function Pricing() {
                 <div className="service-one__single-inner">
                   <div className="count-text">04</div>
                   <div className="icon-box">
-                    <span className="icon-construction"></span>
+                    <span className="icon-engineer"></span>
                   </div>
                   <div className="content-box">
                     <h2>

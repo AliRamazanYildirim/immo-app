@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { SwiperOptions } from "swiper/types";
+import siteConfig from "@/lib/siteConfig";
 
 const swiperOptions: SwiperOptions = {
   modules: [Autoplay, Navigation],
@@ -54,7 +55,7 @@ export default function Banner() {
                 </li>
                 <li>
                   <Link href="#">
-                    <span className="icon-twitter"></span>
+                    <span className="icon-x-twitter"></span>
                   </Link>
                 </li>
                 <li>
@@ -75,8 +76,8 @@ export default function Banner() {
                 <div className="main-slider-three__content">
                   <div className="logo-box">
                     <img
-                      src="assets/img/resource/main-slider-v3-logo.png"
-                      alt=""
+                      src={siteConfig.logos.redWhite}
+                      alt={siteConfig.company.name}
                     />
                   </div>
                   <div className="title">
@@ -126,7 +127,7 @@ export default function Banner() {
                 </li>
                 <li>
                   <Link href="#">
-                    <span className="icon-twitter"></span>
+                    <span className="icon-x-twitter"></span>
                   </Link>
                 </li>
                 <li>
@@ -147,8 +148,8 @@ export default function Banner() {
                 <div className="main-slider-three__content">
                   <div className="logo-box">
                     <img
-                      src="assets/img/resource/main-slider-v3-logo.png"
-                      alt=""
+                      src={siteConfig.logos.redWhite}
+                      alt={siteConfig.company.name}
                     />
                   </div>
                   <div className="title">
@@ -198,7 +199,7 @@ export default function Banner() {
                 </li>
                 <li>
                   <Link href="#">
-                    <span className="icon-twitter"></span>
+                    <span className="icon-x-twitter"></span>
                   </Link>
                 </li>
                 <li>
@@ -219,8 +220,8 @@ export default function Banner() {
                 <div className="main-slider-three__content">
                   <div className="logo-box">
                     <img
-                      src="assets/img/resource/main-slider-v3-logo.png"
-                      alt=""
+                      src={siteConfig.logos.redWhite}
+                      alt={siteConfig.company.name}
                     />
                   </div>
                   <div className="title">

@@ -182,36 +182,6 @@ export default function MobileMenu({
                   <span className="fa fa-angle-right" />
                 </div>
               </li>
-              <li className="menu-item-has-children">
-                <Link href="#" onClick={handleMobileMenu}>
-                  Blog
-                </Link>
-                <ul style={{ display: isActive.key === 4 ? "block" : "none" }}>
-                  <li>
-                    <Link href="/blog" onClick={handleMobileMenu}>
-                      Blog
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/blog-sidebar" onClick={handleMobileMenu}>
-                      Blog Sidebar
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/blog-details" onClick={handleMobileMenu}>
-                      Blog Details
-                    </Link>
-                  </li>
-                </ul>
-                <div
-                  className={
-                    isActive.key === 4 ? "dropdown-btn open" : "dropdown-btn"
-                  }
-                  onClick={() => handleToggle(4)}
-                >
-                  <span className="fa fa-angle-right" />
-                </div>
-              </li>
               <li>
                 <Link href="/contact" onClick={handleMobileMenu}>
                   Contact
@@ -236,7 +206,7 @@ export default function MobileMenu({
               </li>
               <li>
                 <Link href="#">
-                  <i className="fab fa-twitter"></i>
+                  <i className="fa-brands fa-x-twitter"></i>
                 </Link>
               </li>
               <li>

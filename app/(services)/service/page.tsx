@@ -1,6 +1,6 @@
 "use client";
 import Layout from "@/components/layout/Layout";
-import BrandSlider2 from "@/components/slider/BrandSlider2";
+import FeatureExplore from "@/components/sections/common/FeatureExplore";
 import Link from "next/link";
 import { useState } from "react";
 export default function Home() {
@@ -214,14 +214,6 @@ export default function Home() {
           </section>
           {/*End Call To Action One */}
 
-          {/*Start Brand Two */}
-          <div className="brand-one brand-one--two about">
-            <div className="container">
-              <BrandSlider2 />
-            </div>
-          </div>
-          {/*End Brand Two  */}
-
           {/*Start Why Choose Us One */}
           <div className="why-choose-us-one">
             <div className="container">
@@ -281,7 +273,7 @@ export default function Home() {
                       <li>
                         <div className="inner">
                           <div className="icon-box">
-                            <span className="icon-bed"></span>
+                            <span className="icon-interior-design"></span>
                           </div>
                           <div className="content-box">
                             <h2>Interior Spatial Harmony</h2>
@@ -460,7 +452,7 @@ export default function Home() {
                     <div className="service-one__single-inner">
                       <div className="count-text">04</div>
                       <div className="icon-box">
-                        <span className="icon-construction"></span>
+                        <span className="icon-engineer"></span>
                       </div>
                       <div className="content-box">
                         <h2>
@@ -486,63 +478,7 @@ export default function Home() {
           </section>
           {/*End Service One */}
 
-          {/*Start Feauture Three */}
-          <section className="feauture-three">
-            <div className="shape1 float-bob-y">
-              <img src="assets/img/shape/feauture-v3-shape1.png" alt="" />
-            </div>
-            <div className="container">
-              <div className="row">
-                {/*Start Feauture Three Img */}
-                <div
-                  className="col-xl-5 wow animated fadeInLeft"
-                  data-wow-delay="0.1s"
-                >
-                  <div className="feauture-three__img">
-                    <div className="inner clearfix">
-                      <img
-                        src="assets/img/service/service-feauture-img1.jpg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
-                {/*End Feauture Three Img */}
-
-                {/*Start Feauture Three Content */}
-                <div className="col-xl-7">
-                  <div className="feauture-three__content">
-                    <div className="sec-title">
-                      <div className="sub-title">
-                        <h5>EXPLORE OUR FEAUTURE</h5>
-                      </div>
-                      <h2>
-                        We provide the best <br />
-                        architect & interior design
-                      </h2>
-                    </div>
-
-                    <div className="text-box">
-                      <p>
-                        We deliver innovative, sustainable architectural
-                        designs, bespoke interior atmospheres, and robust
-                        construction management. Our integrated team combines
-                        visionary creativity with precise engineering to bring
-                        exceptional spaces to life.
-                      </p>
-                    </div>
-                    <div className="btn-box">
-                      <Link className="thm-btn" href="#">
-                        <span className="txt">Discover More</span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-                {/*End Feauture Three Content */}
-              </div>
-            </div>
-          </section>
-          {/*End Feauture Three */}
+          <FeatureExplore />
         </div>
       </Layout>
     </>

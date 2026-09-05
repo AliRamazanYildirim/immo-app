@@ -62,7 +62,7 @@ export default function Services() {
                   <li>
                     <div className="inner">
                       <div className="icon-box">
-                        <span className="icon-bed"></span>
+                        <span className="icon-interior-design"></span>
                       </div>
                       <div className="content-box">
                         <h2>Interior Spatial Harmony</h2>

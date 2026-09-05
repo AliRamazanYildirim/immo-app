@@ -4,7 +4,6 @@ import Banner from "@/components/sections/home2/Banner";
 import Services from "@/components/sections/home2/Services";
 import Projects from "@/components/sections/home2/Projects";
 import Features from "@/components/sections/home2/Features";
-import News from "@/components/sections/home2/News";
 import Action from "@/components/sections/home2/Action";
 import Contact from "@/components/sections/home2/Contact";
 import Brand from "@/components/sections/home2/Brand";
@@ -22,7 +21,6 @@ export default function Home() {
         <Brand />
         <WhyChooseUs />
         <Action />
-        <News />
       </Layout>
     </>
   );

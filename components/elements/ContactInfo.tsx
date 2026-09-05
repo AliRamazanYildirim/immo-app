@@ -70,7 +70,7 @@ export function FooterSocialLinks({
 }: ClassNameProps) {
   return (
     <div className={className}>
-      <Link href={siteConfig.social.twitter}>tw</Link>
+      <Link href={siteConfig.social.twitter}>x</Link>
       <Link href={siteConfig.social.instagram}>in</Link>
       <Link href={siteConfig.social.dribbble}>db</Link>
       <Link href={siteConfig.social.instagram}>ig</Link>

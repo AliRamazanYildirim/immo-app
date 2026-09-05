@@ -68,7 +68,7 @@ export default function Home() {
                         </li>
                         <li>
                           <Link className="tw" href={siteConfig.social.twitter}>
-                            <span className="icon-twitter"></span>
+                            <span className="icon-x-twitter"></span>
                           </Link>
                         </li>
                         <li>

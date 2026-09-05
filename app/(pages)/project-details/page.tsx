@@ -52,7 +52,7 @@ export default function Home() {
                           <span className="icon-facebook"></span>
                         </Link>
                         <Link className="tw" href="#">
-                          <span className="icon-twitter"></span>
+                          <span className="icon-x-twitter"></span>
                         </Link>
                         <Link className="ins" href="#">
                           <span className="icon-instagram"></span>

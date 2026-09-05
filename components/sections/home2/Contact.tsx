@@ -46,7 +46,10 @@ export default function Contact() {
           }}
         ></div>
         <div className="contact-one__img">
-          <img src="assets/img/resource/contact-v1-img1.png" alt="" />
+          <img
+            src="assets/img/resource/contact-v1-img1.png"
+            alt="Contact Modern Architecture"
+          />
         </div>
         <div className="container clearfix">
           <div className="contact-one__inner">
@@ -95,7 +98,7 @@ export default function Contact() {
                         type="submit"
                         data-loading-text="Please wait..."
                       >
-                        <span className="txt">SEND YOUR MEASSAGE</span>
+                        <span className="txt">SEND YOUR MESSAGE</span>
                       </button>
                     </div>
                   </div>

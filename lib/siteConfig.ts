@@ -108,7 +108,7 @@ const siteConfig: SiteConfig = {
   social: {
     facebook: "https://facebook.com/",
     instagram: "https://instagram.com/",
-    twitter: "https://twitter.com/",
+    twitter: "https://x.com/",
     tiktok: "https://tiktok.com/",
     youtube: "https://youtube.com/",
     linkedin: "https://linkedin.com/",

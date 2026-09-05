@@ -30,7 +30,10 @@ export default function Header3({
                     <div className="main-header-one__left">
                       <div className="logo-box">
                         <Link href="/">
-                          <img src={siteConfig.logos.light} alt="" />
+                          <img
+                            src={siteConfig.logos.light}
+                            alt={siteConfig.company.name}
+                          />
                         </Link>
                       </div>
                     </div>
@@ -64,4 +67,3 @@ export default function Header3({
     </>
   );
 }
-

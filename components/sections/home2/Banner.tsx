@@ -52,7 +52,7 @@ export default function Banner() {
                 <span className="icon-letter-v"></span>
               </Link>
               <Link href="#">
-                <span className="icon-twitter"></span>
+                <span className="icon-x-twitter"></span>
               </Link>
               <Link href="#">
                 <span className="icon-dribbble"></span>
@@ -113,7 +113,7 @@ export default function Banner() {
                 <span className="icon-letter-v"></span>
               </Link>
               <Link href="#">
-                <span className="icon-twitter"></span>
+                <span className="icon-x-twitter"></span>
               </Link>
               <Link href="#">
                 <span className="icon-dribbble"></span>
@@ -174,7 +174,7 @@ export default function Banner() {
                 <span className="icon-letter-v"></span>
               </Link>
               <Link href="#">
-                <span className="icon-twitter"></span>
+                <span className="icon-x-twitter"></span>
               </Link>
               <Link href="#">
                 <span className="icon-dribbble"></span>

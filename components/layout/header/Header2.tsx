@@ -50,7 +50,7 @@ export default function Header2({
                         className="nav-sidebar__toggler"
                         onClick={handleSidebar}
                       >
-                        <i className="flaticon-menu"></i>
+                        <i className="fas fa-bars"></i>
                       </div>
                     </div>
                   </div>
@@ -68,4 +68,3 @@ export default function Header2({
     </>
   );
 }
-
