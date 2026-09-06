@@ -1,6 +1,5 @@
 "use client";
 import Layout from "@/components/layout/Layout";
-import Link from "next/link";
 import { useState } from "react";
 interface AccordionState {
   status: boolean;

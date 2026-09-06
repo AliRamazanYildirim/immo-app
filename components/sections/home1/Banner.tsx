@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import ReactCurvedText from "react-curved-text";
 import ModalVideo from "react-modal-video";
 import React from "react";
 import Link from "next/link";

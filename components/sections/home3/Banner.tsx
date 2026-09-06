@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { SwiperOptions } from "swiper/types";
 import siteConfig from "@/lib/siteConfig";

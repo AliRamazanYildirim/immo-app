@@ -15,13 +15,16 @@ export default function Home() {
               <div className="row">
                 {/* Start Team Two Single */}
                 <div
-                  className="col-xl-4 col-lg-4 wow fadeInUp"
+                  className="col-xl-4 col-lg-4 col-md-6 col-sm-12 wow fadeInUp"
                   data-wow-delay=".3s"
                 >
                   <div className="team-two__single">
                     <div className="team-two__single-img">
                       <div className="inner">
-                        <img src="assets/img/team/team-v2-img1.jpg" alt="" />
+                        <img
+                          src="assets/img/team/team-v2-img1.jpg"
+                          alt="Marcus Vance - Senior Architect"
+                        />
                       </div>
 
                       <div className="content-box">
@@ -61,13 +64,16 @@ export default function Home() {
 
                 {/* Start Team Two Single */}
                 <div
-                  className="col-xl-4 col-lg-4 wow fadeInDown"
+                  className="col-xl-4 col-lg-4 col-md-6 col-sm-12 wow fadeInDown"
                   data-wow-delay=".3s"
                 >
                   <div className="team-two__single">
                     <div className="team-two__single-img">
                       <div className="inner">
-                        <img src="assets/img/team/team-v2-img2.jpg" alt="" />
+                        <img
+                          src="assets/img/team/team-v2-img2.jpg"
+                          alt="Janes Cooper - Lead Interior Designer"
+                        />
                       </div>
 
                       <div className="content-box">
@@ -107,13 +113,16 @@ export default function Home() {
 
                 {/* Start Team Two Single */}
                 <div
-                  className="col-xl-4 col-lg-4 wow fadeInUp"
+                  className="col-xl-4 col-lg-4 col-md-6 col-sm-12 wow fadeInUp"
                   data-wow-delay=".3s"
                 >
                   <div className="team-two__single">
                     <div className="team-two__single-img">
                       <div className="inner">
-                        <img src="assets/img/team/team-v2-img3.jpg" alt="" />
+                        <img
+                          src="assets/img/team/team-v2-img3.jpg"
+                          alt="David Miller - Structural Engineer"
+                        />
                       </div>
 
                       <div className="content-box">
@@ -153,13 +162,16 @@ export default function Home() {
 
                 {/* Start Team Two Single */}
                 <div
-                  className="col-xl-4 col-lg-4 wow fadeInUp"
+                  className="col-xl-4 col-lg-4 col-md-6 col-sm-12 wow fadeInUp"
                   data-wow-delay=".3s"
                 >
                   <div className="team-two__single">
                     <div className="team-two__single-img">
                       <div className="inner">
-                        <img src="assets/img/team/team-v2-img4.jpg" alt="" />
+                        <img
+                          src="assets/img/team/team-v2-img4.jpg"
+                          alt="Sophia Laurent - Landscape Architect"
+                        />
                       </div>
 
                       <div className="content-box">
@@ -199,13 +211,16 @@ export default function Home() {
 
                 {/* Start Team Two Single */}
                 <div
-                  className="col-xl-4 col-lg-4 wow fadeInDown"
+                  className="col-xl-4 col-lg-4 col-md-6 col-sm-12 wow fadeInDown"
                   data-wow-delay=".3s"
                 >
                   <div className="team-two__single">
                     <div className="team-two__single-img">
                       <div className="inner">
-                        <img src="assets/img/team/team-v2-img5.jpg" alt="" />
+                        <img
+                          src="assets/img/team/team-v2-img5.jpg"
+                          alt="Alexander Wright - Construction Manager"
+                        />
                       </div>
 
                       <div className="content-box">
@@ -245,13 +260,16 @@ export default function Home() {
 
                 {/* Start Team Two Single */}
                 <div
-                  className="col-xl-4 col-lg-4 wow fadeInUp"
+                  className="col-xl-4 col-lg-4 col-md-6 col-sm-12 wow fadeInUp"
                   data-wow-delay=".3s"
                 >
                   <div className="team-two__single">
                     <div className="team-two__single-img">
                       <div className="inner">
-                        <img src="assets/img/team/team-v2-img6.jpg" alt="" />
+                        <img
+                          src="assets/img/team/team-v2-img6.jpg"
+                          alt="Clara Schmidt - Interior Concepts Specialist"
+                        />
                       </div>
 
                       <div className="content-box">

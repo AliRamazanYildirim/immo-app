@@ -1,4 +1,3 @@
-import Link from "next/link"
 import ProjectSlider2 from '@/components/slider/ProjectSlider2'
 
 export default function Projects() {

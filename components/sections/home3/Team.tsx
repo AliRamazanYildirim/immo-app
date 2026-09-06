@@ -18,13 +18,16 @@ export default function Team() {
           <div className="row">
             {/*Start Team Two Single */}
             <div
-              className="col-xl-4 col-lg-4 wow fadeInUp"
+              className="col-xl-4 col-lg-4 col-md-6 col-sm-12 wow fadeInUp"
               data-wow-delay=".3s"
             >
               <div className="team-two__single">
                 <div className="team-two__single-img">
                   <div className="inner">
-                    <img src="assets/img/team/team-v2-img1.jpg" alt="" />
+                    <img
+                      src="assets/img/team/team-v2-img1.jpg"
+                      alt="Marcus Vance - Senior Architect"
+                    />
                   </div>
 
                   <div className="content-box">
@@ -64,13 +67,16 @@ export default function Team() {
 
             {/*Start Team Two Single */}
             <div
-              className="col-xl-4 col-lg-4 wow fadeInDown"
+              className="col-xl-4 col-lg-4 col-md-6 col-sm-12 wow fadeInDown"
               data-wow-delay=".3s"
             >
               <div className="team-two__single">
                 <div className="team-two__single-img">
                   <div className="inner">
-                    <img src="assets/img/team/team-v2-img2.jpg" alt="" />
+                    <img
+                      src="assets/img/team/team-v2-img2.jpg"
+                      alt="Janes Cooper - Lead Interior Designer"
+                    />
                   </div>
 
                   <div className="content-box">
@@ -110,13 +116,16 @@ export default function Team() {
 
             {/*Start Team Two Single */}
             <div
-              className="col-xl-4 col-lg-4 wow fadeInUp"
+              className="col-xl-4 col-lg-4 col-md-6 col-sm-12 wow fadeInUp"
               data-wow-delay=".3s"
             >
               <div className="team-two__single">
                 <div className="team-two__single-img">
                   <div className="inner">
-                    <img src="assets/img/team/team-v2-img3.jpg" alt="" />
+                    <img
+                      src="assets/img/team/team-v2-img3.jpg"
+                      alt="David Miller - Structural Engineer"
+                    />
                   </div>
 
                   <div className="content-box">

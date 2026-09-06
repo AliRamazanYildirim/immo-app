@@ -1,4 +1,3 @@
-import Link from "next/link";
 import CounterUp from "@/components/elements/CounterUp";
 
 export default function Contact() {

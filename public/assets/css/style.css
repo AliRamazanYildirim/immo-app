@@ -5766,6 +5766,16 @@ Project Four Css
     max-width: 480px;
     width: 100%;
     margin-left: 120px;
+    margin-left: 60px;
+  }
+
+  .about-one__img .experience-box {
+    left: 0;
+    bottom: -15px;
+  }
+
+  .about-one__img .experience-box .counter-box h2 {
+    font-size: 130px;
   }
 
   .about-one .shape1 {
@@ -6039,6 +6049,16 @@ Project Four Css
     max-width: 480px;
     width: 100%;
     margin-left: 120px;
+    margin: 0 auto 40px;
+  }
+
+  .about-one__img .experience-box {
+    left: 0;
+    bottom: -15px;
+  }
+
+  .about-one__img .experience-box .counter-box h2 {
+    font-size: 110px;
   }
 
   .about-one .shape1 {
@@ -6364,6 +6384,11 @@ Project Four Css
     width: 100%;
   }
 
+  .team-details__top-img .inner {
+    border-top-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+  }
+
   .team-details__top-content {
     margin-left: 0px;
     margin-top: 30px;
@@ -6430,10 +6455,17 @@ Project Four Css
     left: 0px;
     bottom: 0px;
     margin-top: 10px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
   .about-one__img .experience-box .counter-box h2 {
     font-size: 120px;
+    font-size: 85px;
+    line-height: 1em;
   }
 
   .about-one__img {
@@ -6481,6 +6513,7 @@ Project Four Css
 
   .team-one__single {
     max-width: 500px;
+    max-width: 350px;
     width: 100%;
     margin: 0 auto 30px;
   }
@@ -6818,6 +6851,7 @@ Project Four Css
 
   .team-two__single {
     max-width: 400px;
+    max-width: 360px;
     width: 100%;
     margin: 0 auto 30px;
   }
@@ -7188,6 +7222,11 @@ Project Four Css
     width: 100%;
   }
 
+  .team-details__top-img .inner {
+    border-top-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+  }
+
   .team-details__top-content {
     margin-left: 0px;
     margin-top: 30px;
@@ -7419,6 +7458,11 @@ Project Four Css
     padding-left: 150px;
   }
 
+  .main-slider-one__content .shape2 {
+    right: 175px;
+    bottom: 18px;
+  }
+
   .main-slider-two__social-links {
     display: none;
   }
@@ -7452,7 +7496,21 @@ Project Four Css
   }
 
   .main-slider-one .container {
-    padding-left: 140px;
+    padding-left: 100px;
+    padding-right: 30px;
+  }
+
+  .main-slider-one__content .shape2 {
+    right: 140px;
+    bottom: 15px;
+  }
+
+  .main-slider-one__content .social-links a + a {
+    margin-left: 20px;
+  }
+
+  .main-slider-one__content .contact-info ul li {
+    margin-right: 30px;
   }
 
   .main-slider-one__single {
@@ -7483,6 +7541,20 @@ Project Four Css
 
   .main-slider-one__content .contact-info {
     display: none;
+  }
+
+  .main-slider-one__content .social-links {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .main-slider-one__content .social-links a + a {
+    margin-left: 20px;
   }
 
   .main-slider-one__content .shape2 {

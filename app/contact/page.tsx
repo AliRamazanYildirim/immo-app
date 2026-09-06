@@ -1,5 +1,4 @@
 import Layout from "@/components/layout/Layout";
-import Link from "next/link";
 import siteConfig, { getMailtoLink, getTelLink } from "@/lib/siteConfig";
 
 export default function Home() {

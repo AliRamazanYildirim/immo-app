@@ -2,7 +2,6 @@
 import Layout from "@/components/layout/Layout";
 import FeatureExplore from "@/components/sections/common/FeatureExplore";
 import Link from "next/link";
-import { useState } from "react";
 export default function Home() {
   return (
     <>

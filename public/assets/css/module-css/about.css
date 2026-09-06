@@ -64,16 +64,24 @@
   width: 100%;
   transition: 0.5s ease;
   transform: scale(1.05);
+  transform: none;
 }
 
 .about-one__img:hover .inner img {
   transform: scale(1);
+}
+@media (hover: hover) and (pointer: fine) {
+  .about-one__img:hover .inner img {
+    transform: scale(1.03);
+  }
 }
 
 .about-one__img .experience-box {
   position: absolute;
   left: -130px;
   bottom: -36px;
+  left: 0;
+  bottom: -20px;
   display: flex;
   align-items: center;
   z-index: 5;

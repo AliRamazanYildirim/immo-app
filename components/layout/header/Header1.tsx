@@ -14,7 +14,7 @@ export interface HeaderProps {
 
 export default function Header1({
   scroll,
-  isMobileMenu,
+  isMobileMenu: _isMobileMenu,
   handleMobileMenu,
   isSidebar,
   handlePopup,
@@ -67,4 +67,3 @@ export default function Header1({
     </>
   );
 }
-

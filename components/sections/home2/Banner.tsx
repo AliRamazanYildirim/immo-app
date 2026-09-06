@@ -1,10 +1,9 @@
 "use client";
 import { useState } from "react";
-import ReactCurvedText from "react-curved-text";
 import ModalVideo from "react-modal-video";
 import React from "react";
 import Link from "next/link";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { SwiperOptions } from "swiper/types";
 

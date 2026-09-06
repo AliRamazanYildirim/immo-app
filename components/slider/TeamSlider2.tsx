@@ -80,6 +80,46 @@ export default function TeamSlider2() {
 
   useEffect(() => {
     setMounted(true);
+
+    const handleClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement | null;
+      const shareBtn = target?.closest(
+        ".team-one__single-icon .social-links li.share > a",
+      );
+      if (shareBtn) {
+        e.preventDefault();
+        const shareLi = shareBtn.closest("li.share");
+        if (shareLi) {
+          const wasActive = shareLi.classList.contains("active");
+          document
+            .querySelectorAll(
+              ".team-one__single-icon .social-links li.share.active",
+            )
+            .forEach((el) => {
+              el.classList.remove("active");
+            });
+          if (!wasActive) {
+            shareLi.classList.add("active");
+          }
+        }
+        return;
+      }
+
+      if (!target?.closest(".team-one__single-icon .social-links li.share")) {
+        document
+          .querySelectorAll(
+            ".team-one__single-icon .social-links li.share.active",
+          )
+          .forEach((el) => {
+            el.classList.remove("active");
+          });
+      }
+    };
+
+    document.addEventListener("click", handleClick);
+    return () => {
+      document.removeEventListener("click", handleClick);
+    };
   }, []);
 
   if (!mounted) {
@@ -107,9 +147,9 @@ export default function TeamSlider2() {
                   <div className="team-one__single-icon">
                     <ul className="social-links clearfix">
                       <li className="share">
-                        <Link href="#">
+                        <a href="#share" role="button" aria-label="Share">
                           <span className="icon-share"></span>
-                        </Link>
+                        </a>
                         <ul className="social-links-inner">
                           <li>
                             <Link className="fb" href="#">

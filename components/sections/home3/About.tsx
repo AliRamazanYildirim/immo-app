@@ -13,7 +13,10 @@ export default function About() {
               <div className="about-three__img">
                 <div className="about-three__img1">
                   <div className="inner">
-                    <img src="assets/img/about/about-v3-img1.jpg" alt="" />
+                    <img
+                      src="assets/img/about/about-v3-img1.jpg"
+                      alt="Architecture project overview"
+                    />
                   </div>
 
                   <div className="experience-box">
@@ -25,7 +28,7 @@ export default function About() {
                     <div className="text-box">
                       <p>
                         YEARS <br />
-                        WORKIGN <br />
+                        WORKING <br />
                         EXPERIENCE
                       </p>
                     </div>
@@ -36,13 +39,19 @@ export default function About() {
                   <ul>
                     <li>
                       <div className="about-three__img2-single">
-                        <img src="assets/img/about/about-v3-img2.jpg" alt="" />
+                        <img
+                          src="assets/img/about/about-v3-img2.jpg"
+                          alt="Interior architectural design detail"
+                        />
                       </div>
                     </li>
 
                     <li>
                       <div className="about-three__img2-single">
-                        <img src="assets/img/about/about-v3-img3.jpg" alt="" />
+                        <img
+                          src="assets/img/about/about-v3-img3.jpg"
+                          alt="Modern building construction"
+                        />
                       </div>
                     </li>
                   </ul>
@@ -104,17 +113,23 @@ export default function About() {
 
                     <div className="author-info">
                       <div className="img-box">
-                        <img src="assets/img/about/about-v3-img4.jpg" alt="" />
+                        <img
+                          src="assets/img/about/about-v3-img4.jpg"
+                          alt="Company founder portrait"
+                        />
                       </div>
                       <div className="signature-box">
-                        <img src="assets/img/about/signature-1.png" alt="" />
+                        <img
+                          src="assets/img/about/signature-1.png"
+                          alt="Founder signature"
+                        />
                       </div>
                     </div>
                   </div>
                   <div className="text">
                     <h4>
                       Do you have any project on your mind? Call Us:{" "}
-                      <a href="tel:123456789">+123 456789</a>
+                      <a href="tel:123456789">+49 151 67145187</a>
                     </h4>
                   </div>
                 </div>

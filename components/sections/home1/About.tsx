@@ -17,7 +17,10 @@ export default function About() {
             >
               <div className="about-one__img">
                 <div className="inner">
-                  <img src="assets/img/about/about-v1-img1.jpg" alt="" />
+                  <img
+                    src="assets/img/about/about-v1-img1.jpg"
+                    alt="Architectural construction site with engineers"
+                  />
                 </div>
                 <div className="experience-box">
                   <div className="counter-box">
@@ -29,7 +32,7 @@ export default function About() {
                     <p>
                       <span>YEARS</span>
                       <br />
-                      <span>WORKIGN</span>
+                      <span>WORKING</span>
                       <br />
                       <span>EXPERIENCE</span>
                     </p>
@@ -98,17 +101,23 @@ export default function About() {
 
                     <div className="author-info">
                       <div className="img-box">
-                        <img src="assets/img/about/about-v1-img2.jpg" alt="" />
+                        <img
+                          src="assets/img/about/about-v1-img2.jpg"
+                          alt="Company founder portrait"
+                        />
                       </div>
                       <div className="signature-box">
-                        <img src="assets/img/about/signature-1.png" alt="" />
+                        <img
+                          src="assets/img/about/signature-1.png"
+                          alt="Founder signature"
+                        />
                       </div>
                     </div>
                   </div>
                   <div className="text">
                     <h4>
                       Do you have any project on your mind? Call Us:{" "}
-                      <Link href="tel:123456789">+123 456789</Link>
+                      <Link href="tel:123456789">+49 151 67145187</Link>
                     </h4>
                   </div>
                 </div>

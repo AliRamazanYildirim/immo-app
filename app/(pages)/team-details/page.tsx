@@ -24,7 +24,10 @@ export default function Home() {
                       <h2>ARY GROUP</h2>
                     </div>
                     <div className="inner">
-                      <img src="assets/img/team/team-details-img1.jpg" alt="" />
+                      <img
+                        src="assets/img/team/team-details-img1.jpg"
+                        alt="Elena Rostova - Lead Architect & Project Director"
+                      />
                     </div>
                   </div>
                 </div>

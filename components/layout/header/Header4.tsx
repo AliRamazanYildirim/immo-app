@@ -6,7 +6,7 @@ import { HeaderProps } from "./Header1";
 
 export default function Header4({
   scroll,
-  isMobileMenu,
+  isMobileMenu: _isMobileMenu,
   handleMobileMenu,
   isSidebar,
   handlePopup,
@@ -25,7 +25,9 @@ export default function Header4({
                 <div className="header-contact-box">
                   <ul>
                     <li>
-                      <Link href={`tel:${siteConfig.contact.phoneRaw}`}>{siteConfig.contact.phone}</Link>
+                      <Link href={`tel:${siteConfig.contact.phoneRaw}`}>
+                        {siteConfig.contact.phone}
+                      </Link>
                     </li>
                     <li>
                       <Link href={`mailto:${siteConfig.contact.email}`}>
@@ -114,4 +116,3 @@ export default function Header4({
     </>
   );
 }
-

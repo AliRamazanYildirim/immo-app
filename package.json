@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "oxlint",
     "type-check": "tsc --noEmit",
     "sass": "sass --watch public/assets/scss/main.scss:public/assets/css/main.css"
   },
@@ -25,6 +25,7 @@
     "@types/node": "^26.4.1",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.7",
+    "oxlint": "^1.81.0",
     "typescript": "^7.0.2"
   }
 }

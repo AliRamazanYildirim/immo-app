@@ -1,5 +1,4 @@
 import Layout from "@/components/layout/Layout";
-import Link from "next/link";
 const testimonialsData = [
   {
     name: "Marcus Vance",

@@ -6,7 +6,7 @@ import { HeaderProps } from "./Header1";
 
 export default function Header3({
   scroll,
-  isMobileMenu,
+  isMobileMenu: _isMobileMenu,
   handleMobileMenu,
   isSidebar,
   handlePopup,

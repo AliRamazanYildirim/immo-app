@@ -25,7 +25,7 @@ export interface LayoutProps {
 export default function Layout({
   headerStyle,
   footerStyle,
-  headTitle,
+  headTitle: _headTitle,
   breadcrumbTitle,
   breadcrumbBg,
   children,
@@ -36,9 +36,11 @@ export default function Layout({
   const [isMobileMenu, setMobileMenu] = useState<boolean>(false);
   const handleMobileMenu = () => {
     setMobileMenu(!isMobileMenu);
-    !isMobileMenu
-      ? document.body.classList.add("mobile-menu-visible")
-      : document.body.classList.remove("mobile-menu-visible");
+    if (!isMobileMenu) {
+      document.body.classList.add("mobile-menu-visible");
+    } else {
+      document.body.classList.remove("mobile-menu-visible");
+    }
   };
 
   // Popup

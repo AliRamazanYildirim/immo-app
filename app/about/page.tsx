@@ -29,7 +29,10 @@ export default function Home() {
                 >
                   <div className="about-one__img">
                     <div className="inner">
-                      <img src="assets/img/about/about-v1-img1.jpg" alt="" />
+                      <img
+                        src="assets/img/about/about-v1-img1.jpg"
+                        alt="Architectural construction site with engineers"
+                      />
                     </div>
                     <div className="experience-box">
                       <div className="counter-box">
@@ -118,13 +121,13 @@ export default function Home() {
                           <div className="img-box">
                             <img
                               src="assets/img/about/about-v1-img2.jpg"
-                              alt=""
+                              alt="Company founder portrait"
                             />
                           </div>
                           <div className="signature-box">
                             <img
                               src="assets/img/about/signature-1.png"
-                              alt=""
+                              alt="Founder signature"
                             />
                           </div>
                         </div>
@@ -132,7 +135,7 @@ export default function Home() {
                       <div className="text">
                         <h4>
                           Do you have any project on your mind? Call Us:{" "}
-                          <Link href="tel:123456789">+123 456789</Link>
+                          <Link href="tel:123456789">+49 151 67145187</Link>
                         </h4>
                       </div>
                     </div>
@@ -196,7 +199,7 @@ export default function Home() {
                         <div className="img-box">
                           <img
                             src="assets/img/about/about-why-choose-img1.jpg"
-                            alt=""
+                            alt="Modern architectural design model"
                           />
                         </div>
                       </li>
@@ -205,7 +208,7 @@ export default function Home() {
                         <div className="img-box">
                           <img
                             src="assets/img/about/about-why-choose-img2.jpg"
-                            alt=""
+                            alt="Architectural blueprints and materials"
                           />
                         </div>
                       </li>
@@ -320,13 +323,16 @@ export default function Home() {
               <div className="row">
                 {/*Start Team Two Single */}
                 <div
-                  className="col-xl-4 col-lg-4 wow fadeInUp"
+                  className="col-xl-4 col-lg-4 col-md-6 col-sm-12 wow fadeInUp"
                   data-wow-delay=".3s"
                 >
                   <div className="team-two__single">
                     <div className="team-two__single-img">
                       <div className="inner">
-                        <img src="assets/img/team/team-v2-img1.jpg" alt="" />
+                        <img
+                          src="assets/img/team/team-v2-img1.jpg"
+                          alt="Marcus Vance - Senior Architect"
+                        />
                       </div>
 
                       <div className="content-box">
@@ -366,13 +372,16 @@ export default function Home() {
 
                 {/*Start Team Two Single */}
                 <div
-                  className="col-xl-4 col-lg-4 wow fadeInDown"
+                  className="col-xl-4 col-lg-4 col-md-6 col-sm-12 wow fadeInDown"
                   data-wow-delay=".3s"
                 >
                   <div className="team-two__single">
                     <div className="team-two__single-img">
                       <div className="inner">
-                        <img src="assets/img/team/team-v2-img2.jpg" alt="" />
+                        <img
+                          src="assets/img/team/team-v2-img2.jpg"
+                          alt="Janes Cooper - Lead Interior Designer"
+                        />
                       </div>
 
                       <div className="content-box">
@@ -412,13 +421,16 @@ export default function Home() {
 
                 {/*Start Team Two Single */}
                 <div
-                  className="col-xl-4 col-lg-4 wow fadeInUp"
+                  className="col-xl-4 col-lg-4 col-md-6 col-sm-12 wow fadeInUp"
                   data-wow-delay=".3s"
                 >
                   <div className="team-two__single">
                     <div className="team-two__single-img">
                       <div className="inner">
-                        <img src="assets/img/team/team-v2-img3.jpg" alt="" />
+                        <img
+                          src="assets/img/team/team-v2-img3.jpg"
+                          alt="David Miller - Structural Engineer"
+                        />
                       </div>
 
                       <div className="content-box">

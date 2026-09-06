@@ -1,4 +1,3 @@
-import Link from "next/link"
 import TeamSlider2 from '@/components/slider/TeamSlider2'
 
 
