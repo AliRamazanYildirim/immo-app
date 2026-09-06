@@ -95,7 +95,12 @@ export default function TestimonialSlider3() {
               <div className="testimonials-one__thumb-single">
                 <div className="testimonials-one__thumb-img">
                   <div className="inner">
-                    <img src={item.img} alt={item.name} />
+                    <img
+                      src={item.img}
+                      alt={item.name}
+                      loading="lazy"
+                      decoding="async"
+                    />
                   </div>
                 </div>
                 <div className="testimonials-one__thumb-single-text">
@@ -124,7 +129,12 @@ export default function TestimonialSlider3() {
             >
               <div className="testimonials-one__thumb-img">
                 <div className="inner">
-                  <img src={item.img} alt={item.name} />
+                  <img
+                    src={item.img}
+                    alt={item.name}
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
               </div>
 

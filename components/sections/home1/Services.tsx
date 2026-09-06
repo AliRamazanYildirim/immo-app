@@ -27,7 +27,12 @@ export default function Pricing() {
             >
               <div className="service-one__single">
                 <div className="shape1">
-                  <img src="assets/img/shape/service-v1-shape1.png" alt="" />
+                  <img
+                    src="assets/img/shape/service-v1-shape1.png"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
                 <div className="service-one__single-inner">
                   <div className="count-text">01</div>
@@ -59,7 +64,12 @@ export default function Pricing() {
             >
               <div className="service-one__single">
                 <div className="shape1">
-                  <img src="assets/img/shape/service-v1-shape1.png" alt="" />
+                  <img
+                    src="assets/img/shape/service-v1-shape1.png"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
                 <div className="service-one__single-inner">
                   <div className="count-text">02</div>
@@ -91,7 +101,12 @@ export default function Pricing() {
             >
               <div className="service-one__single">
                 <div className="shape1">
-                  <img src="assets/img/shape/service-v1-shape1.png" alt="" />
+                  <img
+                    src="assets/img/shape/service-v1-shape1.png"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
                 <div className="service-one__single-inner">
                   <div className="count-text">03</div>
@@ -125,7 +140,12 @@ export default function Pricing() {
             >
               <div className="service-one__single">
                 <div className="shape1">
-                  <img src="assets/img/shape/service-v1-shape1.png" alt="" />
+                  <img
+                    src="assets/img/shape/service-v1-shape1.png"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
                 <div className="service-one__single-inner">
                   <div className="count-text">04</div>

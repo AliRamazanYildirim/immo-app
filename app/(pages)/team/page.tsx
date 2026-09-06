@@ -23,8 +23,7 @@ export default function Home() {
                       <div className="inner">
                         <img
                           src="assets/img/team/team-v2-img1.jpg"
-                          alt="Marcus Vance - Senior Architect"
-                        />
+                          alt="Marcus Vance - Senior Architect" decoding="async" loading="lazy" />
                       </div>
 
                       <div className="content-box">
@@ -72,8 +71,7 @@ export default function Home() {
                       <div className="inner">
                         <img
                           src="assets/img/team/team-v2-img2.jpg"
-                          alt="Janes Cooper - Lead Interior Designer"
-                        />
+                          alt="Janes Cooper - Lead Interior Designer" decoding="async" loading="lazy" />
                       </div>
 
                       <div className="content-box">
@@ -121,8 +119,7 @@ export default function Home() {
                       <div className="inner">
                         <img
                           src="assets/img/team/team-v2-img3.jpg"
-                          alt="David Miller - Structural Engineer"
-                        />
+                          alt="David Miller - Structural Engineer" decoding="async" loading="lazy" />
                       </div>
 
                       <div className="content-box">
@@ -170,8 +167,7 @@ export default function Home() {
                       <div className="inner">
                         <img
                           src="assets/img/team/team-v2-img4.jpg"
-                          alt="Sophia Laurent - Landscape Architect"
-                        />
+                          alt="Sophia Laurent - Landscape Architect" decoding="async" loading="lazy" />
                       </div>
 
                       <div className="content-box">
@@ -219,8 +215,7 @@ export default function Home() {
                       <div className="inner">
                         <img
                           src="assets/img/team/team-v2-img5.jpg"
-                          alt="Alexander Wright - Construction Manager"
-                        />
+                          alt="Alexander Wright - Construction Manager" decoding="async" loading="lazy" />
                       </div>
 
                       <div className="content-box">
@@ -268,8 +263,7 @@ export default function Home() {
                       <div className="inner">
                         <img
                           src="assets/img/team/team-v2-img6.jpg"
-                          alt="Clara Schmidt - Interior Concepts Specialist"
-                        />
+                          alt="Clara Schmidt - Interior Concepts Specialist" decoding="async" loading="lazy" />
                       </div>
 
                       <div className="content-box">

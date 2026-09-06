@@ -48,7 +48,12 @@ export default function MobileMenu({
           </div>
           <div className="nav-logo">
             <Link href="/">
-              <img src={siteConfig.logos.light} alt="Logo" />
+              <img
+                src={siteConfig.logos.light}
+                alt="Logo"
+                loading="lazy"
+                decoding="async"
+              />
             </Link>
           </div>
           <div className="menu-outer">

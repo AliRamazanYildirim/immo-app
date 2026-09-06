@@ -29,6 +29,8 @@ export default function Footer2() {
                       <img
                         src={siteConfig.logos.main}
                         alt=""
+                        loading="lazy"
+                        decoding="async"
                         style={{ maxHeight: "70px", width: "auto" }}
                       />
                     </Link>

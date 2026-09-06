@@ -106,7 +106,7 @@ export default function TestimonialSlider4() {
               <div className="testimonials-two__single">
                 <div className="testimonials-two__single-top">
                   <div className="img-box">
-                    <img src={item.img} alt={item.name} />
+                    <img src={item.img} alt={item.name} decoding="async" loading="lazy" />
                   </div>
                   <div className="icon-box">
                     <span className="icon-quote"></span>
@@ -138,7 +138,7 @@ export default function TestimonialSlider4() {
             <div className="testimonials-two__single">
               <div className="testimonials-two__single-top">
                 <div className="img-box">
-                  <img src={item.img} alt={item.name} />
+                  <img src={item.img} alt={item.name} decoding="async" loading="lazy" />
                 </div>
 
                 <div className="icon-box">

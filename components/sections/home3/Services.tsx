@@ -16,8 +16,7 @@ export default function Services() {
                     <div className="img-box">
                       <img
                         src="assets/img/service/service-why-choose-img1.jpg"
-                        alt=""
-                      />
+                        alt="" decoding="async" loading="lazy" />
                     </div>
                   </li>
 
@@ -25,8 +24,7 @@ export default function Services() {
                     <div className="img-box">
                       <img
                         src="assets/img/service/service-why-choose-img2.jpg"
-                        alt=""
-                      />
+                        alt="" decoding="async" loading="lazy" />
                     </div>
                   </li>
                 </ul>

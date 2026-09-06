@@ -31,7 +31,12 @@ export default function FeatureExplore({
       {/*Start Feauture Three */}
       <section className="feauture-three">
         <div className="shape1 float-bob-y">
-          <img src="/assets/img/shape/feauture-v3-shape1.png" alt="" />
+          <img
+            src="/assets/img/shape/feauture-v3-shape1.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <div className="container">
           <div className="row">
@@ -42,7 +47,12 @@ export default function FeatureExplore({
             >
               <div className="feauture-three__img">
                 <div className="inner clearfix">
-                  <img src={resolvedImg} alt={imgAlt} />
+                  <img
+                    src={resolvedImg}
+                    alt={imgAlt}
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
               </div>
             </div>

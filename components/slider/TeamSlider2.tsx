@@ -143,7 +143,7 @@ export default function TeamSlider2() {
             <div className="team-one__single">
               <div className="team-one__single-img">
                 <div className="inner">
-                  <img src={member.image} alt={member.name} />
+                  <img src={member.image} alt={member.name} decoding="async" loading="lazy" />
                   <div className="team-one__single-icon">
                     <ul className="social-links clearfix">
                       <li className="share">

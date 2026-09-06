@@ -7,7 +7,7 @@ export default function Testimonial() {
             <section className="testimonials-two">
                 <div className="testimonials-two__pattern"
                     style={{backgroundImage: 'url(assets/img/pattern/testimonials-v2-pattern.png)'}}></div>
-                <div className="shape1 float-bob-x"><img src="assets/img/shape/testimonials-v2-shape1.png" alt=""/></div>
+                <div className="shape1 float-bob-x"><img src="assets/img/shape/testimonials-v2-shape1.png" alt="" decoding="async" loading="lazy" /></div>
                 <div className="container">
                     <div className="sec-title text-center">
                         <div className="sub-title">

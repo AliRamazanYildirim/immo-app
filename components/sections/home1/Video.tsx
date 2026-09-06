@@ -10,12 +10,22 @@ export default function Video() {
       {/*Start Video One */}
       <section className="video-one">
         <div className="video-one__pattern">
-          <img src="/assets/img/pattern/video-v1-pattern.png" alt="" />
+          <img
+            src="/assets/img/pattern/video-v1-pattern.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <div className="auto-container">
           <div className="video-one__inner text-center">
             <div className="shape1 float-bob-x">
-              <img src="/assets/img/shape/video-v1-shape1.png" alt="" />
+              <img
+                src="/assets/img/shape/video-v1-shape1.png"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div
               className="video-one__bg"

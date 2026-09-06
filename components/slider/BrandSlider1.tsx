@@ -69,11 +69,25 @@ export default function BrandSlider1() {
         {slides.map((brand, index) => (
           <SwiperSlide key={`${brand.name}-${index}`} className="swiper-slide">
             <div className="img-box">
-              <img src={brand.src} alt={brand.name} width={130} height={60} />
+              <img
+                src={brand.src}
+                alt={brand.name}
+                width={130}
+                height={60}
+                loading="lazy"
+                decoding="async"
+              />
             </div>
 
             <div className="img-box2">
-              <img src={brand.src} alt={brand.name} width={130} height={60} />
+              <img
+                src={brand.src}
+                alt={brand.name}
+                width={130}
+                height={60}
+                loading="lazy"
+                decoding="async"
+              />
             </div>
           </SwiperSlide>
         ))}

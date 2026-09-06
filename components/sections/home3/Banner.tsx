@@ -33,12 +33,24 @@ export default function Banner() {
         >
           {/*Start Swiper Slide Single */}
           <SwiperSlide className="swiper-slide">
-            <div
-              className="image-layer"
-              style={{
-                backgroundImage: "url(assets/img/slider/slider-v3-img1.jpg)",
-              }}
-            ></div>
+            <div className="image-layer">
+              <picture>
+                <source
+                  srcSet="/assets/img/slider/slider-v3-img1.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="/assets/img/slider/slider-v3-img1.jpg"
+                  alt="NEW WAY OF LIVING"
+                  className="image-layer__img"
+                  fetchPriority="high"
+                  loading="eager"
+                  decoding="async"
+                  width={1920}
+                  height={960}
+                />
+              </picture>
+            </div>
             <div className="main-slider-three__social-links">
               <div className="title-box">
                 <div className="text">
@@ -78,6 +90,8 @@ export default function Banner() {
                     <img
                       src={siteConfig.logos.redWhite}
                       alt={siteConfig.company.name}
+                      loading="eager"
+                      decoding="async"
                     />
                   </div>
                   <div className="title">
@@ -105,12 +119,23 @@ export default function Banner() {
 
           {/*Start Swiper Slide Single */}
           <SwiperSlide className="swiper-slide">
-            <div
-              className="image-layer"
-              style={{
-                backgroundImage: "url(assets/img/slider/slider-v3-img2.jpg)",
-              }}
-            ></div>
+            <div className="image-layer">
+              <picture>
+                <source
+                  srcSet="/assets/img/slider/slider-v3-img2.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="/assets/img/slider/slider-v3-img2.jpg"
+                  alt="NEW WAY OF LIVING"
+                  className="image-layer__img"
+                  loading="lazy"
+                  decoding="async"
+                  width={1920}
+                  height={960}
+                />
+              </picture>
+            </div>
             <div className="main-slider-three__social-links">
               <div className="title-box">
                 <div className="text">
@@ -150,6 +175,8 @@ export default function Banner() {
                     <img
                       src={siteConfig.logos.redWhite}
                       alt={siteConfig.company.name}
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <div className="title">
@@ -177,12 +204,23 @@ export default function Banner() {
 
           {/*Start Swiper Slide Single */}
           <SwiperSlide className="swiper-slide">
-            <div
-              className="image-layer"
-              style={{
-                backgroundImage: "url(assets/img/slider/slider-v3-img3.jpg)",
-              }}
-            ></div>
+            <div className="image-layer">
+              <picture>
+                <source
+                  srcSet="/assets/img/slider/slider-v3-img3.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="/assets/img/slider/slider-v3-img3.jpg"
+                  alt="NEW WAY OF LIVING"
+                  className="image-layer__img"
+                  loading="lazy"
+                  decoding="async"
+                  width={1920}
+                  height={960}
+                />
+              </picture>
+            </div>
             <div className="main-slider-three__social-links">
               <div className="title-box">
                 <div className="text">
@@ -222,6 +260,8 @@ export default function Banner() {
                     <img
                       src={siteConfig.logos.redWhite}
                       alt={siteConfig.company.name}
+                      decoding="async"
+                      loading="lazy"
                     />
                   </div>
                   <div className="title">

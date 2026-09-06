@@ -15,16 +15,27 @@ export default function Breadcrumb({
       : `/${breadcrumbBg}`
     : "/assets/img/background/page-header-bg.jpg";
 
+  const webpImage = bgImage.replace(/\.(jpg|jpeg|png)$/i, ".webp");
+
   return (
     <>
       {/*Start Page Header */}
       <section className="page-header">
-        <div
-          className="page-header__bg"
-          style={{
-            backgroundImage: `url(${bgImage})`,
-          }}
-        ></div>
+        <div className="page-header__bg">
+          <picture>
+            <source srcSet={webpImage} type="image/webp" />
+            <img
+              src={bgImage}
+              alt={breadcrumbTitle}
+              className="page-header__bg-img"
+              fetchPriority="high"
+              loading="eager"
+              decoding="async"
+              width={1920}
+              height={500}
+            />
+          </picture>
+        </div>
 
         <div className="container">
           <div className="page-header__inner text-center">

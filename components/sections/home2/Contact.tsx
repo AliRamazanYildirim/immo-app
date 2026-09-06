@@ -47,8 +47,7 @@ export default function Contact() {
         <div className="contact-one__img">
           <img
             src="assets/img/resource/contact-v1-img1.png"
-            alt="Contact Modern Architecture"
-          />
+            alt="Contact Modern Architecture" decoding="async" loading="lazy" />
         </div>
         <div className="container clearfix">
           <div className="contact-one__inner">

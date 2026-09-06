@@ -55,7 +55,7 @@ export default function VideoPopup({ style, text }: VideoPopupProps) {
       {style === 4 && (
         <div className="video-btn">
           <a onClick={() => setOpen(true)} className="lightbox-image">
-            <img src="/assets/images-4/icons/video-btn-1.png" alt="" />
+            <img src="/assets/images-4/icons/video-btn-1.png" alt="" decoding="async" loading="lazy" />
           </a>
         </div>
       )}

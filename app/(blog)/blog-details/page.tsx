@@ -17,7 +17,7 @@ export default function Home() {
               <div className="col-xl-8">
                 <div className="blog-details__content">
                   <div className="blog-details__content-img1">
-                    <img src="assets/img/blog/blog-details-img1.jpg" alt="" />
+                    <img src="assets/img/blog/blog-details-img1.jpg" alt="" decoding="async" loading="lazy" />
                   </div>
 
                   <div className="blog-details__content-text1">
@@ -50,8 +50,7 @@ export default function Home() {
                         <div className="blog-details__content-img2-single">
                           <img
                             src="assets/img/blog/blog-details-img2.jpg"
-                            alt=""
-                          />
+                            alt="" decoding="async" loading="lazy" />
                         </div>
                       </div>
 
@@ -59,8 +58,7 @@ export default function Home() {
                         <div className="blog-details__content-img2-single">
                           <img
                             src="assets/img/blog/blog-details-img3.jpg"
-                            alt=""
-                          />
+                            alt="" decoding="async" loading="lazy" />
                         </div>
                       </div>
                     </div>
@@ -127,8 +125,7 @@ export default function Home() {
                       <div className="comment-one__image">
                         <img
                           src="assets/img/blog/blog-details-img4.jpg"
-                          alt=""
-                        />
+                          alt="" decoding="async" loading="lazy" />
                       </div>
                       <div className="comment-one__content">
                         <h3>Saiful Islam</h3>
@@ -150,8 +147,7 @@ export default function Home() {
                       <div className="comment-one__image">
                         <img
                           src="assets/img/blog/blog-details-img5.jpg"
-                          alt=""
-                        />
+                          alt="" decoding="async" loading="lazy" />
                       </div>
                       <div className="comment-one__content">
                         <h3>Jhon Smith</h3>
@@ -308,8 +304,7 @@ export default function Home() {
                           <div className="img-box">
                             <img
                               src="assets/img/blog/sidebar-img1.jpg"
-                              alt=""
-                            />
+                              alt="" decoding="async" loading="lazy" />
                           </div>
 
                           <div className="content-box">
@@ -331,8 +326,7 @@ export default function Home() {
                           <div className="img-box">
                             <img
                               src="assets/img/blog/sidebar-img2.jpg"
-                              alt=""
-                            />
+                              alt="" decoding="async" loading="lazy" />
                           </div>
 
                           <div className="content-box">
@@ -355,8 +349,7 @@ export default function Home() {
                           <div className="img-box">
                             <img
                               src="assets/img/blog/sidebar-img3.jpg"
-                              alt=""
-                            />
+                              alt="" decoding="async" loading="lazy" />
                           </div>
 
                           <div className="content-box">

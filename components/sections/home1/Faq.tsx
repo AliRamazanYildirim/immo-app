@@ -28,7 +28,12 @@ export default function Faq() {
       {/*Start Faq One */}
       <section className="faq-one">
         <div className="shape1">
-          <img src="assets/img/shape/faq-v1-shape1.png" alt="" />
+          <img
+            src="assets/img/shape/faq-v1-shape1.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <div className="container clearfix">
           <div className="faq-one__inner">

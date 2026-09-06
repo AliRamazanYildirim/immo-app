@@ -57,7 +57,7 @@ export default function Home() {
                     <div className="testimonials-two__single">
                       <div className="testimonials-two__single-top">
                         <div className="img-box">
-                          <img src={item.img} alt={item.name} />
+                          <img src={item.img} alt={item.name} decoding="async" loading="lazy" />
                         </div>
 
                         <div className="icon-box">

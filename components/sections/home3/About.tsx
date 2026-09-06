@@ -15,8 +15,7 @@ export default function About() {
                   <div className="inner">
                     <img
                       src="assets/img/about/about-v3-img1.jpg"
-                      alt="Architecture project overview"
-                    />
+                      alt="Architecture project overview" decoding="async" loading="lazy" />
                   </div>
 
                   <div className="experience-box">
@@ -41,8 +40,7 @@ export default function About() {
                       <div className="about-three__img2-single">
                         <img
                           src="assets/img/about/about-v3-img2.jpg"
-                          alt="Interior architectural design detail"
-                        />
+                          alt="Interior architectural design detail" decoding="async" loading="lazy" />
                       </div>
                     </li>
 
@@ -50,8 +48,7 @@ export default function About() {
                       <div className="about-three__img2-single">
                         <img
                           src="assets/img/about/about-v3-img3.jpg"
-                          alt="Modern building construction"
-                        />
+                          alt="Modern building construction" decoding="async" loading="lazy" />
                       </div>
                     </li>
                   </ul>
@@ -115,14 +112,12 @@ export default function About() {
                       <div className="img-box">
                         <img
                           src="assets/img/about/about-v3-img4.jpg"
-                          alt="Company founder portrait"
-                        />
+                          alt="Company founder portrait" decoding="async" loading="lazy" />
                       </div>
                       <div className="signature-box">
                         <img
                           src="assets/img/about/signature-1.png"
-                          alt="Founder signature"
-                        />
+                          alt="Founder signature" decoding="async" loading="lazy" />
                       </div>
                     </div>
                   </div>

@@ -44,20 +44,42 @@ export default function Banner() {
           className="banner-carousel owl-theme owl-carousel owl-nav-none owl-dots-none"
         >
           <SwiperSlide className="swiper-slide">
-            <div
-              className="image-layer"
-              style={{
-                backgroundImage: "url(assets/img/slider/slider-v1-img1.jpg)",
-              }}
-            ></div>
+            <div className="image-layer">
+              <picture>
+                <source
+                  srcSet="/assets/img/slider/slider-v1-img1.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="/assets/img/slider/slider-v1-img1.jpg"
+                  alt="Creative Architecture"
+                  className="image-layer__img"
+                  fetchPriority="high"
+                  loading="eager"
+                  decoding="async"
+                  width={1920}
+                  height={960}
+                />
+              </picture>
+            </div>
             <div className="shape1">
-              <img src="assets/img/shape/slider-v1-shape1.png" alt="" />
+              <img
+                src="assets/img/shape/slider-v1-shape1.png"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div className="container">
               <div className="main-slider-one__single">
                 <div className="main-slider-one__content">
                   <div className="shape2 float-bob-x">
-                    <img src="assets/img/shape/slider-v1-shape2.png" alt="" />
+                    <img
+                      src="assets/img/shape/slider-v1-shape2.png"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
                   </div>
                   <h3>Creative</h3>
                   <h2>Architecture</h2>
@@ -88,20 +110,41 @@ export default function Banner() {
             </div>
           </SwiperSlide>
           <SwiperSlide className="swiper-slide">
-            <div
-              className="image-layer"
-              style={{
-                backgroundImage: "url(assets/img/slider/slider-v1-img2.jpg)",
-              }}
-            ></div>
+            <div className="image-layer">
+              <picture>
+                <source
+                  srcSet="/assets/img/slider/slider-v1-img2.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="/assets/img/slider/slider-v1-img2.jpg"
+                  alt="Creative Architecture"
+                  className="image-layer__img"
+                  loading="lazy"
+                  decoding="async"
+                  width={1920}
+                  height={960}
+                />
+              </picture>
+            </div>
             <div className="shape1">
-              <img src="assets/img/shape/slider-v1-shape1.png" alt="" />
+              <img
+                src="assets/img/shape/slider-v1-shape1.png"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div className="container">
               <div className="main-slider-one__single">
                 <div className="main-slider-one__content">
                   <div className="shape2 float-bob-x">
-                    <img src="assets/img/shape/slider-v1-shape2.png" alt="" />
+                    <img
+                      src="assets/img/shape/slider-v1-shape2.png"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
                   </div>
                   <h3>Creative</h3>
                   <h2>Architecture</h2>
@@ -132,23 +175,42 @@ export default function Banner() {
             </div>
           </SwiperSlide>
           <SwiperSlide className="swiper-slide">
-            <div
-              className="image-layer"
-              style={{
-                backgroundImage: "url(assets/img/slider/slider-v1-img3.jpg)",
-              }}
-            >
-              {" "}
+            <div className="image-layer">
+              <picture>
+                <source
+                  srcSet="/assets/img/slider/slider-v1-img3.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="/assets/img/slider/slider-v1-img3.jpg"
+                  alt="Creative Architecture"
+                  className="image-layer__img"
+                  loading="lazy"
+                  decoding="async"
+                  width={1920}
+                  height={960}
+                />
+              </picture>
             </div>
             <div className="shape1">
-              <img src="assets/img/shape/slider-v1-shape1.png" alt="" />
+              <img
+                src="assets/img/shape/slider-v1-shape1.png"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
             </div>
 
             <div className="container">
               <div className="main-slider-one__single">
                 <div className="main-slider-one__content">
                   <div className="shape2 float-bob-x">
-                    <img src="assets/img/shape/slider-v1-shape2.png" alt="" />
+                    <img
+                      src="assets/img/shape/slider-v1-shape2.png"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
                   </div>
                   <h3>Creative</h3>
                   <h2>Architecture</h2>

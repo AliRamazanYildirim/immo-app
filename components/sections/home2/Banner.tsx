@@ -32,12 +32,24 @@ export default function Banner() {
         <Swiper {...swiperOptions} className="swiper-wrapper">
           {/* Start Swiper Slide Single*/}
           <SwiperSlide className="swiper-slide">
-            <div
-              className="image-layer"
-              style={{
-                backgroundImage: "url(assets/img/slider/slider-v2-img1.jpg)",
-              }}
-            ></div>
+            <div className="image-layer">
+              <picture>
+                <source
+                  srcSet="/assets/img/slider/slider-v2-img1.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="/assets/img/slider/slider-v2-img1.jpg"
+                  alt="Architecture is Inhabited Sculpture"
+                  className="image-layer__img"
+                  fetchPriority="high"
+                  loading="eager"
+                  decoding="async"
+                  width={1920}
+                  height={960}
+                />
+              </picture>
+            </div>
             <div
               className="main-slider-two__pattern"
               style={{
@@ -93,12 +105,23 @@ export default function Banner() {
           {/*End Swiper Slide Single */}
           {/* Start Swiper Slide Single*/}
           <SwiperSlide className="swiper-slide">
-            <div
-              className="image-layer"
-              style={{
-                backgroundImage: "url(assets/img/slider/slider-v2-img2.jpg)",
-              }}
-            ></div>
+            <div className="image-layer">
+              <picture>
+                <source
+                  srcSet="/assets/img/slider/slider-v2-img2.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="/assets/img/slider/slider-v2-img2.jpg"
+                  alt="Architecture is Inhabited Sculpture"
+                  className="image-layer__img"
+                  loading="lazy"
+                  decoding="async"
+                  width={1920}
+                  height={960}
+                />
+              </picture>
+            </div>
             <div
               className="main-slider-two__pattern"
               style={{
@@ -154,12 +177,23 @@ export default function Banner() {
           {/*End Swiper Slide Single */}
           {/* Start Swiper Slide Single*/}
           <SwiperSlide className="swiper-slide">
-            <div
-              className="image-layer"
-              style={{
-                backgroundImage: "url(assets/img/slider/slider-v2-img3.jpg)",
-              }}
-            ></div>
+            <div className="image-layer">
+              <picture>
+                <source
+                  srcSet="/assets/img/slider/slider-v2-img3.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="/assets/img/slider/slider-v2-img3.jpg"
+                  alt="Architecture is Inhabited Sculpture"
+                  className="image-layer__img"
+                  loading="lazy"
+                  decoding="async"
+                  width={1920}
+                  height={960}
+                />
+              </picture>
+            </div>
             <div
               className="main-slider-two__pattern"
               style={{

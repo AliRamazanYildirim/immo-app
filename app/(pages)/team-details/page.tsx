@@ -26,8 +26,7 @@ export default function Home() {
                     <div className="inner">
                       <img
                         src="assets/img/team/team-details-img1.jpg"
-                        alt="Elena Rostova - Lead Architect & Project Director"
-                      />
+                        alt="Elena Rostova - Lead Architect & Project Director" decoding="async" loading="lazy" />
                     </div>
                   </div>
                 </div>

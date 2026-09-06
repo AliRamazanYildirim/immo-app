@@ -11,6 +11,13 @@ import WhyChooseUs from "@/components/sections/home2/WhyChooseUs";
 export default function Home() {
   return (
     <>
+      <link
+        rel="preload"
+        href="/assets/img/slider/slider-v2-img1.webp"
+        as="image"
+        type="image/webp"
+        fetchPriority="high"
+      />
       <Layout headerStyle={2} footerStyle={1}>
         <Banner />
         <Features />

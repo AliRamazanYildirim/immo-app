@@ -25,8 +25,7 @@ export default function Home() {
                     <div className="shape2">
                       <img
                         src="assets/img/shape/service-v2-shape2.png"
-                        alt=""
-                      />
+                        alt="" decoding="async" loading="lazy" />
                     </div>
                     <div
                       className="service-two__single-bg"
@@ -67,8 +66,7 @@ export default function Home() {
                     <div className="shape2">
                       <img
                         src="assets/img/shape/service-v2-shape2.png"
-                        alt=""
-                      />
+                        alt="" decoding="async" loading="lazy" />
                     </div>
                     <div
                       className="service-two__single-bg"
@@ -109,8 +107,7 @@ export default function Home() {
                     <div className="shape2">
                       <img
                         src="assets/img/shape/service-v2-shape2.png"
-                        alt=""
-                      />
+                        alt="" decoding="async" loading="lazy" />
                     </div>
                     <div
                       className="service-two__single-bg"
@@ -149,8 +146,7 @@ export default function Home() {
                     <div className="shape2">
                       <img
                         src="assets/img/shape/service-v2-shape2.png"
-                        alt=""
-                      />
+                        alt="" decoding="async" loading="lazy" />
                     </div>
                     <div
                       className="service-two__single-bg"
@@ -228,8 +224,7 @@ export default function Home() {
                         <div className="img-box">
                           <img
                             src="assets/img/service/service-why-choose-img1.jpg"
-                            alt=""
-                          />
+                            alt="" decoding="async" loading="lazy" />
                         </div>
                       </li>
 
@@ -237,8 +232,7 @@ export default function Home() {
                         <div className="img-box">
                           <img
                             src="assets/img/service/service-why-choose-img2.jpg"
-                            alt=""
-                          />
+                            alt="" decoding="async" loading="lazy" />
                         </div>
                       </li>
                     </ul>
@@ -334,8 +328,7 @@ export default function Home() {
                     <div className="shape1">
                       <img
                         src="assets/img/shape/service-v1-shape1.png"
-                        alt=""
-                      />
+                        alt="" decoding="async" loading="lazy" />
                     </div>
                     <div className="service-one__single-inner">
                       <div className="count-text">01</div>
@@ -371,8 +364,7 @@ export default function Home() {
                     <div className="shape1">
                       <img
                         src="assets/img/shape/service-v1-shape1.png"
-                        alt=""
-                      />
+                        alt="" decoding="async" loading="lazy" />
                     </div>
                     <div className="service-one__single-inner">
                       <div className="count-text">02</div>
@@ -406,8 +398,7 @@ export default function Home() {
                     <div className="shape1">
                       <img
                         src="assets/img/shape/service-v1-shape1.png"
-                        alt=""
-                      />
+                        alt="" decoding="async" loading="lazy" />
                     </div>
                     <div className="service-one__single-inner">
                       <div className="count-text">03</div>
@@ -445,8 +436,7 @@ export default function Home() {
                     <div className="shape1">
                       <img
                         src="assets/img/shape/service-v1-shape1.png"
-                        alt=""
-                      />
+                        alt="" decoding="async" loading="lazy" />
                     </div>
                     <div className="service-one__single-inner">
                       <div className="count-text">04</div>

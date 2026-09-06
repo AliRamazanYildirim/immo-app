@@ -17,8 +17,7 @@ export default function Home() {
                 <div className="inner">
                   <img
                     src="assets/img/project/project-details-img1.jpg"
-                    alt=""
-                  />
+                    alt="" decoding="async" loading="lazy" />
                 </div>
               </div>
 

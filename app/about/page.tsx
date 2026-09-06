@@ -18,7 +18,7 @@ export default function Home() {
           {/*Start About One */}
           <section className="about-one about-one--about">
             <div className="shape1 float-bob-y">
-              <img src="assets/img/shape/about-v1-shape1.png" alt="" />
+              <img src="assets/img/shape/about-v1-shape1.png" alt="" decoding="async" loading="lazy" />
             </div>
             <div className="container">
               <div className="row">
@@ -31,8 +31,7 @@ export default function Home() {
                     <div className="inner">
                       <img
                         src="assets/img/about/about-v1-img1.jpg"
-                        alt="Architectural construction site with engineers"
-                      />
+                        alt="Architectural construction site with engineers" decoding="async" loading="lazy" />
                     </div>
                     <div className="experience-box">
                       <div className="counter-box">
@@ -121,14 +120,12 @@ export default function Home() {
                           <div className="img-box">
                             <img
                               src="assets/img/about/about-v1-img2.jpg"
-                              alt="Company founder portrait"
-                            />
+                              alt="Company founder portrait" decoding="async" loading="lazy" />
                           </div>
                           <div className="signature-box">
                             <img
                               src="assets/img/about/signature-1.png"
-                              alt="Founder signature"
-                            />
+                              alt="Founder signature" decoding="async" loading="lazy" />
                           </div>
                         </div>
                       </div>
@@ -157,7 +154,7 @@ export default function Home() {
               }}
             ></div>
             <div className="shape1 float-bob-x">
-              <img src="assets/img/shape/testimonials-v2-shape1.png" alt="" />
+              <img src="assets/img/shape/testimonials-v2-shape1.png" alt="" decoding="async" loading="lazy" />
             </div>
             <div className="container">
               <div className="sec-title text-center">
@@ -199,8 +196,7 @@ export default function Home() {
                         <div className="img-box">
                           <img
                             src="assets/img/about/about-why-choose-img1.jpg"
-                            alt="Modern architectural design model"
-                          />
+                            alt="Modern architectural design model" decoding="async" loading="lazy" />
                         </div>
                       </li>
 
@@ -208,8 +204,7 @@ export default function Home() {
                         <div className="img-box">
                           <img
                             src="assets/img/about/about-why-choose-img2.jpg"
-                            alt="Architectural blueprints and materials"
-                          />
+                            alt="Architectural blueprints and materials" decoding="async" loading="lazy" />
                         </div>
                       </li>
                     </ul>
@@ -331,8 +326,7 @@ export default function Home() {
                       <div className="inner">
                         <img
                           src="assets/img/team/team-v2-img1.jpg"
-                          alt="Marcus Vance - Senior Architect"
-                        />
+                          alt="Marcus Vance - Senior Architect" decoding="async" loading="lazy" />
                       </div>
 
                       <div className="content-box">
@@ -380,8 +374,7 @@ export default function Home() {
                       <div className="inner">
                         <img
                           src="assets/img/team/team-v2-img2.jpg"
-                          alt="Janes Cooper - Lead Interior Designer"
-                        />
+                          alt="Janes Cooper - Lead Interior Designer" decoding="async" loading="lazy" />
                       </div>
 
                       <div className="content-box">
@@ -429,8 +422,7 @@ export default function Home() {
                       <div className="inner">
                         <img
                           src="assets/img/team/team-v2-img3.jpg"
-                          alt="David Miller - Structural Engineer"
-                        />
+                          alt="David Miller - Structural Engineer" decoding="async" loading="lazy" />
                       </div>
 
                       <div className="content-box">

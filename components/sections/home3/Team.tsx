@@ -26,8 +26,7 @@ export default function Team() {
                   <div className="inner">
                     <img
                       src="assets/img/team/team-v2-img1.jpg"
-                      alt="Marcus Vance - Senior Architect"
-                    />
+                      alt="Marcus Vance - Senior Architect" decoding="async" loading="lazy" />
                   </div>
 
                   <div className="content-box">
@@ -75,8 +74,7 @@ export default function Team() {
                   <div className="inner">
                     <img
                       src="assets/img/team/team-v2-img2.jpg"
-                      alt="Janes Cooper - Lead Interior Designer"
-                    />
+                      alt="Janes Cooper - Lead Interior Designer" decoding="async" loading="lazy" />
                   </div>
 
                   <div className="content-box">
@@ -124,8 +122,7 @@ export default function Team() {
                   <div className="inner">
                     <img
                       src="assets/img/team/team-v2-img3.jpg"
-                      alt="David Miller - Structural Engineer"
-                    />
+                      alt="David Miller - Structural Engineer" decoding="async" loading="lazy" />
                   </div>
 
                   <div className="content-box">

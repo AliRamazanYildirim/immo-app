@@ -45,8 +45,7 @@ export default function Home() {
                     <div className="services-details__content-img1">
                       <img
                         src="assets/img/service/services-details-img6.jpg"
-                        alt="#"
-                      />
+                        alt="#" decoding="async" loading="lazy" />
                     </div>
 
                     <div className="text-box1">
@@ -133,8 +132,7 @@ export default function Home() {
                     <div className="services-details__content-img2">
                       <img
                         src="assets/img/service/services-details-const-img2.jpg"
-                        alt="#"
-                      />
+                        alt="#" decoding="async" loading="lazy" />
                     </div>
 
                     <div className="text-box3">

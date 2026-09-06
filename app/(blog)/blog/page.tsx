@@ -23,7 +23,7 @@ export default function Home() {
                   <div className="blog-one__single">
                     <div className="blog-one__single-img">
                       <div className="inner">
-                        <img src="assets/img/blog/blog-v1-img1.jpg" alt="" />
+                        <img src="assets/img/blog/blog-v1-img1.jpg" alt="" decoding="async" loading="lazy" />
                         <div className="overlay-icon">
                           <Link href="#">
                             <span className="icon-plus"></span>
@@ -67,7 +67,7 @@ export default function Home() {
                   <div className="blog-one__single">
                     <div className="blog-one__single-img">
                       <div className="inner">
-                        <img src="assets/img/blog/blog-v1-img2.jpg" alt="" />
+                        <img src="assets/img/blog/blog-v1-img2.jpg" alt="" decoding="async" loading="lazy" />
                         <div className="overlay-icon">
                           <Link href="#">
                             <span className="icon-plus"></span>
@@ -111,7 +111,7 @@ export default function Home() {
                   <div className="blog-one__single">
                     <div className="blog-one__single-img">
                       <div className="inner">
-                        <img src="assets/img/blog/blog-v1-img3.jpg" alt="" />
+                        <img src="assets/img/blog/blog-v1-img3.jpg" alt="" decoding="async" loading="lazy" />
                         <div className="overlay-icon">
                           <Link href="#">
                             <span className="icon-plus"></span>
@@ -155,7 +155,7 @@ export default function Home() {
                   <div className="blog-one__single">
                     <div className="blog-one__single-img">
                       <div className="inner">
-                        <img src="assets/img/blog/blog-v1-img4.jpg" alt="" />
+                        <img src="assets/img/blog/blog-v1-img4.jpg" alt="" decoding="async" loading="lazy" />
                         <div className="overlay-icon">
                           <Link href="#">
                             <span className="icon-plus"></span>
@@ -199,7 +199,7 @@ export default function Home() {
                   <div className="blog-one__single">
                     <div className="blog-one__single-img">
                       <div className="inner">
-                        <img src="assets/img/blog/blog-v1-img5.jpg" alt="" />
+                        <img src="assets/img/blog/blog-v1-img5.jpg" alt="" decoding="async" loading="lazy" />
                         <div className="overlay-icon">
                           <Link href="#">
                             <span className="icon-plus"></span>
@@ -243,7 +243,7 @@ export default function Home() {
                   <div className="blog-one__single">
                     <div className="blog-one__single-img">
                       <div className="inner">
-                        <img src="assets/img/blog/blog-v1-img6.jpg" alt="" />
+                        <img src="assets/img/blog/blog-v1-img6.jpg" alt="" decoding="async" loading="lazy" />
                         <div className="overlay-icon">
                           <Link href="#">
                             <span className="icon-plus"></span>

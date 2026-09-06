@@ -23,8 +23,7 @@ export default function Home() {
                         <div className="inner">
                           <img
                             src="assets/img/blog/blog-sidebar-img1.jpg"
-                            alt=""
-                          />
+                            alt="" decoding="async" loading="lazy" />
                         </div>
                       </div>
 
@@ -120,8 +119,7 @@ export default function Home() {
                                 <div className="inner">
                                   <img
                                     src="assets/img/blog/blog-sidebar-img2.jpg"
-                                    alt=""
-                                  />
+                                    alt="" decoding="async" loading="lazy" />
                                 </div>
                               </div>
                             </div>
@@ -131,8 +129,7 @@ export default function Home() {
                                 <div className="inner">
                                   <img
                                     src="assets/img/blog/blog-sidebar-img2.jpg"
-                                    alt=""
-                                  />
+                                    alt="" decoding="async" loading="lazy" />
                                 </div>
                               </div>
                             </div>
@@ -142,8 +139,7 @@ export default function Home() {
                                 <div className="inner">
                                   <img
                                     src="assets/img/blog/blog-sidebar-img2.jpg"
-                                    alt=""
-                                  />
+                                    alt="" decoding="async" loading="lazy" />
                                 </div>
                               </div>
                             </div>
@@ -219,8 +215,7 @@ export default function Home() {
                         <div className="inner">
                           <img
                             src="assets/img/blog/blog-sidebar-img3.jpg"
-                            alt=""
-                          />
+                            alt="" decoding="async" loading="lazy" />
                         </div>
                       </div>
 
@@ -270,8 +265,7 @@ export default function Home() {
                         <div className="inner">
                           <img
                             src="assets/img/blog/blog-sidebar-img4.jpg"
-                            alt=""
-                          />
+                            alt="" decoding="async" loading="lazy" />
                         </div>
                       </div>
 
@@ -405,8 +399,7 @@ export default function Home() {
                             <div className="img-box">
                               <img
                                 src="assets/img/blog/sidebar-img1.jpg"
-                                alt=""
-                              />
+                                alt="" decoding="async" loading="lazy" />
                             </div>
 
                             <div className="content-box">
@@ -428,8 +421,7 @@ export default function Home() {
                             <div className="img-box">
                               <img
                                 src="assets/img/blog/sidebar-img2.jpg"
-                                alt=""
-                              />
+                                alt="" decoding="async" loading="lazy" />
                             </div>
 
                             <div className="content-box">
@@ -452,8 +444,7 @@ export default function Home() {
                             <div className="img-box">
                               <img
                                 src="assets/img/blog/sidebar-img3.jpg"
-                                alt=""
-                              />
+                                alt="" decoding="async" loading="lazy" />
                             </div>
 
                             <div className="content-box">

@@ -7,7 +7,7 @@ export default function Services() {
       {/*Start Service Two */}
       <section className="service-two">
         <div className="shape1 float-bob-y">
-          <img src="assets/img/shape/service-v2-shape1.png" alt="" />
+          <img src="assets/img/shape/service-v2-shape1.png" alt="" decoding="async" loading="lazy" />
         </div>
         <div className="container">
           <div className="sec-title text-center">
@@ -24,7 +24,7 @@ export default function Services() {
             >
               <div className="service-two__single">
                 <div className="shape2">
-                  <img src="assets/img/shape/service-v2-shape2.png" alt="" />
+                  <img src="assets/img/shape/service-v2-shape2.png" alt="" decoding="async" loading="lazy" />
                 </div>
                 <div
                   className="service-two__single-bg"
@@ -60,7 +60,7 @@ export default function Services() {
             >
               <div className="service-two__single">
                 <div className="shape2">
-                  <img src="assets/img/shape/service-v2-shape2.png" alt="" />
+                  <img src="assets/img/shape/service-v2-shape2.png" alt="" decoding="async" loading="lazy" />
                 </div>
                 <div
                   className="service-two__single-bg"
@@ -96,7 +96,7 @@ export default function Services() {
             >
               <div className="service-two__single">
                 <div className="shape2">
-                  <img src="assets/img/shape/service-v2-shape2.png" alt="" />
+                  <img src="assets/img/shape/service-v2-shape2.png" alt="" decoding="async" loading="lazy" />
                 </div>
                 <div
                   className="service-two__single-bg"
@@ -133,7 +133,7 @@ export default function Services() {
             >
               <div className="service-two__single">
                 <div className="shape2">
-                  <img src="assets/img/shape/service-v2-shape2.png" alt="" />
+                  <img src="assets/img/shape/service-v2-shape2.png" alt="" decoding="async" loading="lazy" />
                 </div>
                 <div
                   className="service-two__single-bg"

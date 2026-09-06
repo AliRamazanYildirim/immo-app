@@ -6,7 +6,12 @@ export default function About() {
       {/*Start About One */}
       <section className="about-one">
         <div className="shape1 float-bob-y">
-          <img src="assets/img/shape/about-v1-shape1.png" alt="" />
+          <img
+            src="assets/img/shape/about-v1-shape1.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <div className="container">
           <div className="row">
@@ -20,6 +25,8 @@ export default function About() {
                   <img
                     src="assets/img/about/about-v1-img1.jpg"
                     alt="Architectural construction site with engineers"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div className="experience-box">
@@ -104,12 +111,16 @@ export default function About() {
                         <img
                           src="assets/img/about/about-v1-img2.jpg"
                           alt="Company founder portrait"
+                          loading="lazy"
+                          decoding="async"
                         />
                       </div>
                       <div className="signature-box">
                         <img
                           src="assets/img/about/signature-1.png"
                           alt="Founder signature"
+                          loading="lazy"
+                          decoding="async"
                         />
                       </div>
                     </div>

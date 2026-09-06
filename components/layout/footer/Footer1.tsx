@@ -12,6 +12,8 @@ export default function Footer1() {
             className="float-bob-y"
             src="/assets/img/shape/footer-v1-shape1.png"
             alt=""
+            loading="lazy"
+            decoding="async"
           />
         </div>
         {/*Start Footer Main */}
@@ -26,7 +28,12 @@ export default function Footer1() {
                 <div className="single-footer-widget footer-widget__about">
                   <div className="logo-box">
                     <Link href="/">
-                      <img src={siteConfig.logos.main} alt="" />
+                      <img
+                        src={siteConfig.logos.main}
+                        alt=""
+                        loading="lazy"
+                        decoding="async"
+                      />
                     </Link>
                   </div>
 
