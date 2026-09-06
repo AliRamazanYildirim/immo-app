@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/node_modules/react-modal-video/css/modal-video.css";
 import "../public/assets/css/style.css";
+import "../public/assets/css/main.css";
 import "swiper/css";
 // import "swiper/css/navigation"
 import "swiper/css/pagination";
@@ -23,7 +24,7 @@ export default function RootLayout({
       className={`${dM_Sans.variable}`}
       data-scroll-behavior="smooth"
     >
-      <body suppressHydrationWarning={true} >{children}</body>
+      <body suppressHydrationWarning={true}>{children}</body>
     </html>
   );
 }

@@ -57,101 +57,201 @@ export default function BrandSlider2() {
       >
         <SwiperSlide className="swiper-slide">
           <div className="img-box">
-            <img src="assets/img/brand/brand-v2-img1.png" alt="#" />
+            <img
+              src="assets/img/brand/brand-v2-img1.png"
+              alt="Chrome"
+              width={110}
+              height={110}
+            />
           </div>
 
           <div className="img-box2">
-            <img src="assets/img/brand/brand-v2-img6.png" alt="#" />
+            <img
+              src="assets/img/brand/brand-v2-img6.png"
+              alt="Chrome"
+              width={110}
+              height={110}
+            />
           </div>
         </SwiperSlide>
 
         <SwiperSlide className="swiper-slide">
           <div className="img-box">
-            <img src="assets/img/brand/brand-v2-img2.png" alt="#" />
+            <img
+              src="assets/img/brand/brand-v2-img2.png"
+              alt="Figma"
+              width={110}
+              height={110}
+            />
           </div>
 
           <div className="img-box2">
-            <img src="assets/img/brand/brand-v2-img7.png" alt="#" />
+            <img
+              src="assets/img/brand/brand-v2-img7.png"
+              alt="Figma"
+              width={110}
+              height={110}
+            />
           </div>
         </SwiperSlide>
 
         <SwiperSlide className="swiper-slide">
           <div className="img-box">
-            <img src="assets/img/brand/brand-v2-img3.png" alt="#" />
+            <img
+              src="assets/img/brand/brand-v2-img3.png"
+              alt="GitLab"
+              width={110}
+              height={110}
+            />
           </div>
 
           <div className="img-box2">
-            <img src="assets/img/brand/brand-v2-img8.png" alt="#" />
+            <img
+              src="assets/img/brand/brand-v2-img8.png"
+              alt="GitLab"
+              width={110}
+              height={110}
+            />
           </div>
         </SwiperSlide>
 
         <SwiperSlide className="swiper-slide">
           <div className="img-box">
-            <img src="assets/img/brand/brand-v2-img4.png" alt="#" />
+            <img
+              src="assets/img/brand/brand-v2-img4.png"
+              alt="Dribbble"
+              width={110}
+              height={110}
+            />
           </div>
 
           <div className="img-box2">
-            <img src="assets/img/brand/brand-v2-img9.png" alt="#" />
+            <img
+              src="assets/img/brand/brand-v2-img9.png"
+              alt="Dribbble"
+              width={110}
+              height={110}
+            />
           </div>
         </SwiperSlide>
 
         <SwiperSlide className="swiper-slide">
           <div className="img-box">
-            <img src="assets/img/brand/brand-v2-img5.png" alt="#" />
+            <img
+              src="assets/img/brand/brand-v2-img5.png"
+              alt="CodePen"
+              width={110}
+              height={110}
+            />
           </div>
 
           <div className="img-box2">
-            <img src="assets/img/brand/brand-v2-img10.png" alt="#" />
+            <img
+              src="assets/img/brand/brand-v2-img10.png"
+              alt="CodePen"
+              width={110}
+              height={110}
+            />
           </div>
         </SwiperSlide>
 
         <SwiperSlide className="swiper-slide">
           <div className="img-box">
-            <img src="assets/img/brand/brand-v2-img1.png" alt="#" />
+            <img
+              src="assets/img/brand/brand-v2-img1.png"
+              alt="Chrome"
+              width={110}
+              height={110}
+            />
           </div>
 
           <div className="img-box2">
-            <img src="assets/img/brand/brand-v2-img6.png" alt="#" />
+            <img
+              src="assets/img/brand/brand-v2-img6.png"
+              alt="Chrome"
+              width={110}
+              height={110}
+            />
           </div>
         </SwiperSlide>
 
         <SwiperSlide className="swiper-slide">
           <div className="img-box">
-            <img src="assets/img/brand/brand-v2-img2.png" alt="#" />
+            <img
+              src="assets/img/brand/brand-v2-img2.png"
+              alt="Figma"
+              width={110}
+              height={110}
+            />
           </div>
 
           <div className="img-box2">
-            <img src="assets/img/brand/brand-v2-img7.png" alt="#" />
+            <img
+              src="assets/img/brand/brand-v2-img7.png"
+              alt="Figma"
+              width={110}
+              height={110}
+            />
           </div>
         </SwiperSlide>
 
         <SwiperSlide className="swiper-slide">
           <div className="img-box">
-            <img src="assets/img/brand/brand-v2-img3.png" alt="#" />
+            <img
+              src="assets/img/brand/brand-v2-img3.png"
+              alt="GitLab"
+              width={110}
+              height={110}
+            />
           </div>
 
           <div className="img-box2">
-            <img src="assets/img/brand/brand-v2-img8.png" alt="#" />
+            <img
+              src="assets/img/brand/brand-v2-img8.png"
+              alt="GitLab"
+              width={110}
+              height={110}
+            />
           </div>
         </SwiperSlide>
 
         <SwiperSlide className="swiper-slide">
           <div className="img-box">
-            <img src="assets/img/brand/brand-v2-img4.png" alt="#" />
+            <img
+              src="assets/img/brand/brand-v2-img4.png"
+              alt="Dribbble"
+              width={110}
+              height={110}
+            />
           </div>
 
           <div className="img-box2">
-            <img src="assets/img/brand/brand-v2-img9.png" alt="#" />
+            <img
+              src="assets/img/brand/brand-v2-img9.png"
+              alt="Dribbble"
+              width={110}
+              height={110}
+            />
           </div>
         </SwiperSlide>
 
         <SwiperSlide className="swiper-slide">
           <div className="img-box">
-            <img src="assets/img/brand/brand-v2-img5.png" alt="#" />
+            <img
+              src="assets/img/brand/brand-v2-img5.png"
+              alt="CodePen"
+              width={110}
+              height={110}
+            />
           </div>
 
           <div className="img-box2">
-            <img src="assets/img/brand/brand-v2-img10.png" alt="#" />
+            <img
+              src="assets/img/brand/brand-v2-img10.png"
+              alt="CodePen"
+              width={110}
+              height={110}
+            />
           </div>
         </SwiperSlide>
       </Swiper>

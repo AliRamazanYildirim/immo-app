@@ -48,111 +48,35 @@ const swiperOptions: SwiperOptions = {
   },
 };
 
+const brands = [
+  { name: "Chrome", src: "assets/img/brand/brand-chrome.png" },
+  { name: "Figma", src: "assets/img/brand/brand-figma.png" },
+  { name: "GitLab", src: "assets/img/brand/brand-gitlab.png" },
+  { name: "Dribbble", src: "assets/img/brand/brand-dribbble.png" },
+  { name: "CodePen", src: "assets/img/brand/brand-codepen.png" },
+  { name: "CodePen Solid", src: "assets/img/brand/brand-codepen-solid.png" },
+];
+
 export default function BrandSlider1() {
+  const slides = [...brands, ...brands];
+
   return (
     <>
       <Swiper
         {...swiperOptions}
         className="thm-swiper__slider swiper-container"
       >
-        <SwiperSlide className="swiper-slide">
-          <div className="img-box">
-            <img src="assets/img/brand/brand-v1-img1.png" alt="#" />
-          </div>
+        {slides.map((brand, index) => (
+          <SwiperSlide key={`${brand.name}-${index}`} className="swiper-slide">
+            <div className="img-box">
+              <img src={brand.src} alt={brand.name} width={130} height={60} />
+            </div>
 
-          <div className="img-box2">
-            <img src="assets/img/brand/brand-v1-img1.png" alt="#" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="swiper-slide">
-          <div className="img-box">
-            <img src="assets/img/brand/brand-v1-img2.png" alt="#" />
-          </div>
-
-          <div className="img-box2">
-            <img src="assets/img/brand/brand-v1-img2.png" alt="#" />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className="swiper-slide">
-          <div className="img-box">
-            <img src="assets/img/brand/brand-v1-img3.png" alt="#" />
-          </div>
-
-          <div className="img-box2">
-            <img src="assets/img/brand/brand-v1-img3.png" alt="#" />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className="swiper-slide">
-          <div className="img-box">
-            <img src="assets/img/brand/brand-v1-img4.png" alt="#" />
-          </div>
-
-          <div className="img-box2">
-            <img src="assets/img/brand/brand-v1-img4.png" alt="#" />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className="swiper-slide">
-          <div className="img-box">
-            <img src="assets/img/brand/brand-v1-img5.png" alt="#" />
-          </div>
-
-          <div className="img-box2">
-            <img src="assets/img/brand/brand-v1-img5.png" alt="#" />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className="swiper-slide">
-          <div className="img-box">
-            <img src="assets/img/brand/brand-v1-img1.png" alt="#" />
-          </div>
-
-          <div className="img-box2">
-            <img src="assets/img/brand/brand-v1-img1.png" alt="#" />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className="swiper-slide">
-          <div className="img-box">
-            <img src="assets/img/brand/brand-v1-img2.png" alt="#" />
-          </div>
-
-          <div className="img-box2">
-            <img src="assets/img/brand/brand-v1-img2.png" alt="#" />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className="swiper-slide">
-          <div className="img-box">
-            <img src="assets/img/brand/brand-v1-img3.png" alt="#" />
-          </div>
-
-          <div className="img-box2">
-            <img src="assets/img/brand/brand-v1-img3.png" alt="#" />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className="swiper-slide">
-          <div className="img-box">
-            <img src="assets/img/brand/brand-v1-img4.png" alt="#" />
-          </div>
-
-          <div className="img-box2">
-            <img src="assets/img/brand/brand-v1-img4.png" alt="#" />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className="swiper-slide">
-          <div className="img-box">
-            <img src="assets/img/brand/brand-v1-img5.png" alt="#" />
-          </div>
-
-          <div className="img-box2">
-            <img src="assets/img/brand/brand-v1-img5.png" alt="#" />
-          </div>
-        </SwiperSlide>
+            <div className="img-box2">
+              <img src={brand.src} alt={brand.name} width={130} height={60} />
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );

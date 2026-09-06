@@ -5813,6 +5813,17 @@ Project Four Css
     padding: 120px 0px 120px;
   }
 
+  .faq-one__inner .big-title {
+    display: none;
+  }
+
+  .faq-one__accrodion {
+    max-width: 100%;
+    width: 100%;
+    float: none;
+    margin: 0 auto;
+  }
+
   .video-one__inner .shape1 {
     display: none;
   }
@@ -6080,6 +6091,21 @@ Project Four Css
 
   .faq-one__inner .big-title {
     display: none;
+  }
+
+  .faq-one__accrodion {
+    max-width: 100%;
+    width: 100%;
+    float: none;
+    margin: 0 auto;
+  }
+
+  .faq-one__accrodion .accrodion .accrodion-title {
+    padding-right: 70px;
+  }
+
+  .faq-one__accrodion .accrodion .accrodion-title h3::before {
+    right: 25px;
   }
 
   .video-one__inner .shape1 {
@@ -6532,6 +6558,13 @@ Project Four Css
 
   .faq-one__inner .big-title {
     display: none;
+  }
+
+  .faq-one__accrodion {
+    max-width: 100%;
+    width: 100%;
+    float: none;
+    margin: 0 auto;
   }
 
   .video-one__inner .shape1 {

@@ -30,7 +30,10 @@ export default function Header2({
                     <div className="main-header-one__left">
                       <div className="logo-box">
                         <Link href="/">
-                          <img src={siteConfig.logos.light} alt="" />
+                          <img
+                            src={siteConfig.logos.light}
+                            alt={siteConfig.company.name}
+                          />
                         </Link>
                       </div>
                     </div>
@@ -46,11 +49,10 @@ export default function Header2({
                         <a className="main-menu__search search-toggler icon-search-interface-symbol"></a>
                       </div>
 
-                      <div
-                        className="nav-sidebar__toggler"
-                        onClick={handleSidebar}
-                      >
-                        <i className="fas fa-bars"></i>
+                      <div className="btn-box">
+                        <Link className="thm-btn" href="/about">
+                          <span className="txt">Discover More</span>
+                        </Link>
                       </div>
                     </div>
                   </div>
