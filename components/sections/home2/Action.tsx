@@ -5,7 +5,7 @@ export default function Action() {
         {/*Start Call To Action One */}
         <section className="call-to-action-one">
             <div className="call-to-action-one__bg"
-                style={{backgroundImage: 'url(assets/img/background/call-to-action-v1-bg.jpg)'}}></div>
+                style={{backgroundImage: 'url(/assets/img/background/call-to-action-v1-bg.webp)'}}></div>
             <div className="container">
                 <div className="call-to-action-one__inner">
                     <div className="call-to-action-one__content text-center">

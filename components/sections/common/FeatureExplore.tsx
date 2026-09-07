@@ -12,7 +12,7 @@ export interface FeatureExploreProps {
 }
 
 export default function FeatureExplore({
-  imgSrc = "/assets/img/service/service-feauture-img1.jpg",
+  imgSrc = "/assets/img/service/service-feauture-img1.webp",
   imgAlt = "Architectural & Interior Design",
   subTitle = "EXPLORE OUR FEATURE",
   title = (
@@ -31,12 +31,10 @@ export default function FeatureExplore({
       {/*Start Feauture Three */}
       <section className="feauture-three">
         <div className="shape1 float-bob-y">
-          <img
-            src="/assets/img/shape/feauture-v3-shape1.png"
+          <img src="/assets/img/shape/feauture-v3-shape1.webp"
             alt=""
             loading="lazy"
-            decoding="async"
-          />
+            decoding="async" width={311} height={337} />
         </div>
         <div className="container">
           <div className="row">
@@ -47,12 +45,7 @@ export default function FeatureExplore({
             >
               <div className="feauture-three__img">
                 <div className="inner clearfix">
-                  <img
-                    src={resolvedImg}
-                    alt={imgAlt}
-                    loading="lazy"
-                    decoding="async"
-                  />
+                  <img src={resolvedImg} alt={imgAlt} loading="lazy" decoding="async" width={510} height={590} />
                 </div>
               </div>
             </div>

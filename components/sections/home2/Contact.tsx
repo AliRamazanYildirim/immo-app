@@ -8,7 +8,7 @@ export default function Contact() {
         <div
           className="contact-one__bg"
           style={{
-            backgroundImage: "url(assets/img/background/contact-v1-bg.jpg)",
+            backgroundImage: "url(/assets/img/background/contact-v1-bg.webp)",
           }}
         >
           <div className="contact-one__counter">
@@ -41,13 +41,12 @@ export default function Contact() {
         <div
           className="contact-one__pattern"
           style={{
-            backgroundImage: "url(assets/img/pattern/contact-v1-pattern.jpg)",
+            backgroundImage: "url(/assets/img/pattern/contact-v1-pattern.webp)",
           }}
         ></div>
         <div className="contact-one__img">
-          <img
-            src="assets/img/resource/contact-v1-img1.png"
-            alt="Contact Modern Architecture" decoding="async" loading="lazy" />
+          <img src="/assets/img/resource/contact-v1-img1.webp"
+            alt="Contact Modern Architecture" decoding="async" loading="lazy" width={502} height={690} />
         </div>
         <div className="container clearfix">
           <div className="contact-one__inner">

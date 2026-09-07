@@ -7,12 +7,10 @@ export default function Testimonial() {
       {/*Start Testimonials One */}
       <section className="testimonials-one">
         <div className="shape1">
-          <img
-            src="assets/img/shape/testimonials-v1-shape1.png"
+          <img src="/assets/img/shape/testimonials-v1-shape1.webp"
             alt=""
             loading="lazy"
-            decoding="async"
-          />
+            decoding="async" width={944} height={735} />
         </div>
         <div className="container">
           <div className="sec-title text-center">

@@ -39,16 +39,14 @@ export default function Banner() {
                   srcSet="/assets/img/slider/slider-v3-img1.webp"
                   type="image/webp"
                 />
-                <img
-                  src="/assets/img/slider/slider-v3-img1.jpg"
+                <img src="/assets/img/slider/slider-v3-img1.webp"
                   alt="NEW WAY OF LIVING"
                   className="image-layer__img"
                   fetchPriority="high"
                   loading="eager"
                   decoding="async"
                   width={1920}
-                  height={960}
-                />
+                  height={960} />
               </picture>
             </div>
             <div className="main-slider-three__social-links">
@@ -87,12 +85,7 @@ export default function Banner() {
               <div className="main-slider-three__single text-center">
                 <div className="main-slider-three__content">
                   <div className="logo-box">
-                    <img
-                      src={siteConfig.logos.redWhite}
-                      alt={siteConfig.company.name}
-                      loading="eager"
-                      decoding="async"
-                    />
+                    <img src={siteConfig.logos.redWhite} alt={siteConfig.company.name} loading="eager" decoding="async" width={459} height={508} />
                   </div>
                   <div className="title">
                     <h2>NEW WAY OF LIVING</h2>
@@ -125,15 +118,13 @@ export default function Banner() {
                   srcSet="/assets/img/slider/slider-v3-img2.webp"
                   type="image/webp"
                 />
-                <img
-                  src="/assets/img/slider/slider-v3-img2.jpg"
+                <img src="/assets/img/slider/slider-v3-img2.webp"
                   alt="NEW WAY OF LIVING"
                   className="image-layer__img"
                   loading="lazy"
                   decoding="async"
                   width={1920}
-                  height={960}
-                />
+                  height={960} />
               </picture>
             </div>
             <div className="main-slider-three__social-links">
@@ -172,12 +163,7 @@ export default function Banner() {
               <div className="main-slider-three__single text-center">
                 <div className="main-slider-three__content">
                   <div className="logo-box">
-                    <img
-                      src={siteConfig.logos.redWhite}
-                      alt={siteConfig.company.name}
-                      loading="lazy"
-                      decoding="async"
-                    />
+                    <img src={siteConfig.logos.redWhite} alt={siteConfig.company.name} loading="lazy" decoding="async" width={459} height={508} />
                   </div>
                   <div className="title">
                     <h2>NEW WAY OF LIVING</h2>
@@ -210,15 +196,13 @@ export default function Banner() {
                   srcSet="/assets/img/slider/slider-v3-img3.webp"
                   type="image/webp"
                 />
-                <img
-                  src="/assets/img/slider/slider-v3-img3.jpg"
+                <img src="/assets/img/slider/slider-v3-img3.webp"
                   alt="NEW WAY OF LIVING"
                   className="image-layer__img"
                   loading="lazy"
                   decoding="async"
                   width={1920}
-                  height={960}
-                />
+                  height={960} />
               </picture>
             </div>
             <div className="main-slider-three__social-links">
@@ -257,12 +241,7 @@ export default function Banner() {
               <div className="main-slider-three__single text-center">
                 <div className="main-slider-three__content">
                   <div className="logo-box">
-                    <img
-                      src={siteConfig.logos.redWhite}
-                      alt={siteConfig.company.name}
-                      decoding="async"
-                      loading="lazy"
-                    />
+                    <img src={siteConfig.logos.redWhite} alt={siteConfig.company.name} loading="lazy" decoding="async" width={459} height={508} />
                   </div>
                   <div className="title">
                     <h2>NEW WAY OF LIVING</h2>

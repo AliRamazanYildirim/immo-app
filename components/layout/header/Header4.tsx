@@ -77,7 +77,7 @@ export default function Header4({
                       <div className="main-header-one__left">
                         <div className="logo-box">
                           <Link href="/">
-                            <img src={siteConfig.logos.light} alt="" />
+                            <img src={siteConfig.logos.light} alt={siteConfig.company.name} width={459} height={508} fetchPriority="high" loading="eager" decoding="async" />
                           </Link>
                         </div>
                       </div>

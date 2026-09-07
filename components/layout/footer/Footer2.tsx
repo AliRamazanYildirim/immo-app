@@ -26,13 +26,7 @@ export default function Footer2() {
                 <div className="logo-widget footer-widget">
                   <figure className="footer-logo">
                     <Link href="/#">
-                      <img
-                        src={siteConfig.logos.main}
-                        alt=""
-                        loading="lazy"
-                        decoding="async"
-                        style={{ maxHeight: "70px", width: "auto" }}
-                      />
+                      <img src={siteConfig.logos.main} alt={siteConfig.company.name} loading="lazy" decoding="async" width={459} height={508} style={{ maxHeight: "70px", width: "auto" }} />
                     </Link>
                   </figure>
                   <div className="text">

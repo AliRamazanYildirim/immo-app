@@ -9,7 +9,7 @@ export default function Home() {
         headerStyle={4}
         footerStyle={1}
         breadcrumbTitle="Service Page"
-        breadcrumbBg="assets/img/service/page-header-bg.jpg"
+        breadcrumbBg="/assets/img/service/page-header-bg.webp"
       >
         <div>
           {/*Start Service Two */}
@@ -23,15 +23,14 @@ export default function Home() {
                 >
                   <div className="service-two__single">
                     <div className="shape2">
-                      <img
-                        src="assets/img/shape/service-v2-shape2.png"
-                        alt="" decoding="async" loading="lazy" />
+                      <img src="/assets/img/shape/service-v2-shape2.webp"
+                        alt="" decoding="async" loading="lazy" width={76} height={133} />
                     </div>
                     <div
                       className="service-two__single-bg"
                       style={{
                         backgroundImage:
-                          "url(assets/img/service/service-v2-bg-architecture.jpg)",
+                          "url(/assets/img/service/service-v2-bg-architecture.webp)",
                       }}
                     ></div>
                     <div className="service-two__single-icon">
@@ -64,15 +63,14 @@ export default function Home() {
                 >
                   <div className="service-two__single">
                     <div className="shape2">
-                      <img
-                        src="assets/img/shape/service-v2-shape2.png"
-                        alt="" decoding="async" loading="lazy" />
+                      <img src="/assets/img/shape/service-v2-shape2.webp"
+                        alt="" decoding="async" loading="lazy" width={76} height={133} />
                     </div>
                     <div
                       className="service-two__single-bg"
                       style={{
                         backgroundImage:
-                          "url(assets/img/service/service-v2-bg-construction.jpg)",
+                          "url(/assets/img/service/service-v2-bg-construction.webp)",
                       }}
                     ></div>
                     <div className="service-two__single-icon">
@@ -105,15 +103,14 @@ export default function Home() {
                 >
                   <div className="service-two__single">
                     <div className="shape2">
-                      <img
-                        src="assets/img/shape/service-v2-shape2.png"
-                        alt="" decoding="async" loading="lazy" />
+                      <img src="/assets/img/shape/service-v2-shape2.webp"
+                        alt="" decoding="async" loading="lazy" width={76} height={133} />
                     </div>
                     <div
                       className="service-two__single-bg"
                       style={{
                         backgroundImage:
-                          "url(assets/img/service/service-v2-bg-interior.jpg)",
+                          "url(/assets/img/service/service-v2-bg-interior.webp)",
                       }}
                     ></div>
                     <div className="service-two__single-icon">
@@ -144,15 +141,14 @@ export default function Home() {
                 >
                   <div className="service-two__single">
                     <div className="shape2">
-                      <img
-                        src="assets/img/shape/service-v2-shape2.png"
-                        alt="" decoding="async" loading="lazy" />
+                      <img src="/assets/img/shape/service-v2-shape2.webp"
+                        alt="" decoding="async" loading="lazy" width={76} height={133} />
                     </div>
                     <div
                       className="service-two__single-bg"
                       style={{
                         backgroundImage:
-                          "url(assets/img/service/service-v2-bg-renovation.jpg)",
+                          "url(/assets/img/service/service-v2-bg-renovation.webp)",
                       }}
                     ></div>
                     <div className="service-two__single-icon">
@@ -186,7 +182,7 @@ export default function Home() {
             <div
               className="call-to-action-one__bg"
               style={{
-                backgroundImage: "url(assets/img/service/service-cta-bg.jpg)",
+                backgroundImage: "url(/assets/img/service/service-cta-bg.webp)",
               }}
             ></div>
             <div className="container">
@@ -222,17 +218,15 @@ export default function Home() {
                     <ul>
                       <li>
                         <div className="img-box">
-                          <img
-                            src="assets/img/service/service-why-choose-img1.jpg"
-                            alt="" decoding="async" loading="lazy" />
+                          <img src="/assets/img/service/service-why-choose-img1.webp"
+                            alt="" decoding="async" loading="lazy" width={280} height={535} />
                         </div>
                       </li>
 
                       <li>
                         <div className="img-box">
-                          <img
-                            src="assets/img/service/service-why-choose-img2.jpg"
-                            alt="" decoding="async" loading="lazy" />
+                          <img src="/assets/img/service/service-why-choose-img2.webp"
+                            alt="" decoding="async" loading="lazy" width={280} height={535} />
                         </div>
                       </li>
                     </ul>
@@ -308,7 +302,7 @@ export default function Home() {
             <div
               className="service-one__shape2"
               style={{
-                backgroundImage: "url(assets/img/shape/service-v1-shape2.png)",
+                backgroundImage: "url(/assets/img/shape/service-v1-shape2.webp)",
               }}
             ></div>
             <div className="container">
@@ -326,9 +320,8 @@ export default function Home() {
                 >
                   <div className="service-one__single">
                     <div className="shape1">
-                      <img
-                        src="assets/img/shape/service-v1-shape1.png"
-                        alt="" decoding="async" loading="lazy" />
+                      <img src="/assets/img/shape/service-v1-shape1.webp"
+                        alt="" decoding="async" loading="lazy" width={181} height={244} />
                     </div>
                     <div className="service-one__single-inner">
                       <div className="count-text">01</div>
@@ -362,9 +355,8 @@ export default function Home() {
                 >
                   <div className="service-one__single">
                     <div className="shape1">
-                      <img
-                        src="assets/img/shape/service-v1-shape1.png"
-                        alt="" decoding="async" loading="lazy" />
+                      <img src="/assets/img/shape/service-v1-shape1.webp"
+                        alt="" decoding="async" loading="lazy" width={181} height={244} />
                     </div>
                     <div className="service-one__single-inner">
                       <div className="count-text">02</div>
@@ -396,9 +388,8 @@ export default function Home() {
                 >
                   <div className="service-one__single">
                     <div className="shape1">
-                      <img
-                        src="assets/img/shape/service-v1-shape1.png"
-                        alt="" decoding="async" loading="lazy" />
+                      <img src="/assets/img/shape/service-v1-shape1.webp"
+                        alt="" decoding="async" loading="lazy" width={181} height={244} />
                     </div>
                     <div className="service-one__single-inner">
                       <div className="count-text">03</div>
@@ -434,9 +425,8 @@ export default function Home() {
                 >
                   <div className="service-one__single">
                     <div className="shape1">
-                      <img
-                        src="assets/img/shape/service-v1-shape1.png"
-                        alt="" decoding="async" loading="lazy" />
+                      <img src="/assets/img/shape/service-v1-shape1.webp"
+                        alt="" decoding="async" loading="lazy" width={181} height={244} />
                     </div>
                     <div className="service-one__single-inner">
                       <div className="count-text">04</div>

@@ -8,7 +8,7 @@ export default function Home() {
         headerStyle={4}
         footerStyle={1}
         breadcrumbTitle="Our Projects"
-        breadcrumbBg="assets/img/project/page-header-bg.jpg"
+        breadcrumbBg="/assets/img/project/page-header-bg.webp"
       >
         <div>
           {/*Start Project Three */}
@@ -23,7 +23,7 @@ export default function Home() {
                         className="project-three__single-img"
                         style={{
                           backgroundImage:
-                            "url(assets/img/project/project-v3-img4.jpg)",
+                            "url(/assets/img/project/project-v3-img4.webp)",
                         }}
                       ></div>
                       <div className="bg-overlay"></div>
@@ -33,7 +33,7 @@ export default function Home() {
                           <li>
                             <Link
                               className="img-popup"
-                              href="assets/img/project/project-v3-img4.jpg"
+                              href="/assets/img/project/project-v3-img4.webp"
                             >
                               <span className="icon-search-interface-symbol"></span>
                             </Link>
@@ -67,7 +67,7 @@ export default function Home() {
                         className="project-three__single-img"
                         style={{
                           backgroundImage:
-                            "url(assets/img/project/project-v3-img5.jpg)",
+                            "url(/assets/img/project/project-v3-img5.webp)",
                         }}
                       ></div>
                       <div className="bg-overlay"></div>
@@ -77,7 +77,7 @@ export default function Home() {
                           <li>
                             <Link
                               className="img-popup"
-                              href="assets/img/project/project-v3-img5.jpg"
+                              href="/assets/img/project/project-v3-img5.webp"
                             >
                               <span className="icon-search-interface-symbol"></span>
                             </Link>
@@ -111,7 +111,7 @@ export default function Home() {
                         className="project-three__single-img"
                         style={{
                           backgroundImage:
-                            "url(assets/img/project/project-v3-img6.jpg)",
+                            "url(/assets/img/project/project-v3-img6.webp)",
                         }}
                       ></div>
                       <div className="bg-overlay"></div>
@@ -121,7 +121,7 @@ export default function Home() {
                           <li>
                             <Link
                               className="img-popup"
-                              href="assets/img/project/project-v3-img6.jpg"
+                              href="/assets/img/project/project-v3-img6.webp"
                             >
                               <span className="icon-search-interface-symbol"></span>
                             </Link>
@@ -155,7 +155,7 @@ export default function Home() {
                         className="project-three__single-img"
                         style={{
                           backgroundImage:
-                            "url(assets/img/project/project-v3-img7.jpg)",
+                            "url(/assets/img/project/project-v3-img7.webp)",
                         }}
                       ></div>
                       <div className="bg-overlay"></div>
@@ -165,7 +165,7 @@ export default function Home() {
                           <li>
                             <Link
                               className="img-popup"
-                              href="assets/img/project/project-v3-img7.jpg"
+                              href="/assets/img/project/project-v3-img7.webp"
                             >
                               <span className="icon-search-interface-symbol"></span>
                             </Link>
@@ -199,7 +199,7 @@ export default function Home() {
                         className="project-three__single-img"
                         style={{
                           backgroundImage:
-                            "url(assets/img/project/project-v3-img8.jpg)",
+                            "url(/assets/img/project/project-v3-img8.webp)",
                         }}
                       ></div>
                       <div className="bg-overlay"></div>
@@ -209,7 +209,7 @@ export default function Home() {
                           <li>
                             <Link
                               className="img-popup"
-                              href="assets/img/project/project-v3-img8.jpg"
+                              href="/assets/img/project/project-v3-img8.webp"
                             >
                               <span className="icon-search-interface-symbol"></span>
                             </Link>
@@ -243,7 +243,7 @@ export default function Home() {
                         className="project-three__single-img"
                         style={{
                           backgroundImage:
-                            "url(assets/img/project/project-v3-img9.jpg)",
+                            "url(/assets/img/project/project-v3-img9.webp)",
                         }}
                       ></div>
                       <div className="bg-overlay"></div>
@@ -253,7 +253,7 @@ export default function Home() {
                           <li>
                             <Link
                               className="img-popup"
-                              href="assets/img/project/project-v3-img9.jpg"
+                              href="/assets/img/project/project-v3-img9.webp"
                             >
                               <span className="icon-search-interface-symbol"></span>
                             </Link>

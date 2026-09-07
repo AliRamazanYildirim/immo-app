@@ -32,7 +32,7 @@ export default function Home() {
         headerStyle={4}
         footerStyle={1}
         breadcrumbTitle="Interior Design"
-        breadcrumbBg="assets/img/service/page-header-bg-interior.jpg"
+        breadcrumbBg="/assets/img/service/page-header-bg-interior.webp"
       >
         <div>
           {/*Start Services Details */}
@@ -43,9 +43,8 @@ export default function Home() {
                 <div className="col-xl-8">
                   <div className="services-details__content">
                     <div className="services-details__content-img1">
-                      <img
-                        src="assets/img/service/services-details-img3.jpg"
-                        alt="#" decoding="async" loading="lazy" />
+                      <img src="/assets/img/service/services-details-img3.webp"
+                        alt="#" decoding="async" loading="lazy" width={740} height={370} />
                     </div>
 
                     <div className="text-box1">
@@ -126,9 +125,8 @@ export default function Home() {
                     </div>
 
                     <div className="services-details__content-img2">
-                      <img
-                        src="assets/img/service/services-details-interior-img2.jpg"
-                        alt="#" decoding="async" loading="lazy" />
+                      <img src="/assets/img/service/services-details-interior-img2.webp"
+                        alt="#" decoding="async" loading="lazy" width={740} height={370} />
                     </div>
 
                     <div className="text-box3">
@@ -401,7 +399,7 @@ export default function Home() {
                         className="sidebar__support-bg"
                         style={{
                           backgroundImage:
-                            "url(assets/img/service/sidebar-support-bg.jpg)",
+                            "url(/assets/img/service/sidebar-support-bg.webp)",
                         }}
                       ></div>
                       <div className="sidebar__support__inner text-center">

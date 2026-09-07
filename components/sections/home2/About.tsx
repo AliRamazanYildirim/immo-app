@@ -19,12 +19,12 @@ export default function About() {
                             <div className="about-two__img1 wow fadeInLeft" data-wow-delay="200ms"
                                 data-wow-duration="1500ms">
                                 <div className="inner">
-                                    <img src="assets/img/about/about-v2-img1.jpg" alt="" decoding="async" loading="lazy" />
+                                    <img src="/assets/img/about/about-v2-img1.webp" alt="" decoding="async" loading="lazy" width={690} height={695} />
                                 </div>
                             </div>
                             <div className="about-two__img2 wow fadeInRight" data-wow-delay="200ms"
                                 data-wow-duration="1500ms">
-                                <img src="assets/img/about/about-v2-img2.jpg" alt="" decoding="async" loading="lazy" />
+                                <img src="/assets/img/about/about-v2-img2.webp" alt="" decoding="async" loading="lazy" width={520} height={210} />
                                 <div className="about-two__video-btn">
                                     <a onClick={() => setOpen(true)} className="about-two__icon video-popup">
                                         <span className="icon-play-button-1"></span>
@@ -68,10 +68,10 @@ export default function About() {
                             <div className="about-two__content-bottom">
                                 <div className="author-box">
                                     <div className="img-box">
-                                        <img src="assets/img/about/about-v2-img3.jpg" alt="" decoding="async" loading="lazy" />
+                                        <img src="/assets/img/about/about-v2-img3.webp" alt="" decoding="async" loading="lazy" width={60} height={60} />
                                     </div>
                                     <div className="signature">
-                                        <img src="assets/img/about/signature-1.png" alt="" decoding="async" loading="lazy" />
+                                        <img src="/assets/img/about/signature-1.webp" alt="" decoding="async" loading="lazy" width={93} height={55} />
                                     </div>
                                 </div>
 

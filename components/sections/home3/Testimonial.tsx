@@ -6,8 +6,8 @@ export default function Testimonial() {
             {/*Start Testimonials Two */}
             <section className="testimonials-two">
                 <div className="testimonials-two__pattern"
-                    style={{backgroundImage: 'url(assets/img/pattern/testimonials-v2-pattern.png)'}}></div>
-                <div className="shape1 float-bob-x"><img src="assets/img/shape/testimonials-v2-shape1.png" alt="" decoding="async" loading="lazy" /></div>
+                    style={{backgroundImage: 'url(/assets/img/pattern/testimonials-v2-pattern.webp)'}}></div>
+                <div className="shape1 float-bob-x"><img src="/assets/img/shape/testimonials-v2-shape1.webp" alt="" decoding="async" loading="lazy" width={1297} height={481} /></div>
                 <div className="container">
                     <div className="sec-title text-center">
                         <div className="sub-title">

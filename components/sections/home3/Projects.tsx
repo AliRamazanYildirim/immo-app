@@ -5,7 +5,7 @@ export default function Projects() {
         <>
         {/*Start Project Three */}
         <section className="project-three">
-            <div className="shape1"><img src="assets/img/shape/project-v3-shape1.png" alt="" decoding="async" loading="lazy" /></div>
+            <div className="shape1"><img src="/assets/img/shape/project-v3-shape1.webp" alt="" decoding="async" loading="lazy" width={944} height={510} /></div>
             <div className="container">
                 <div className="project-three__top">
                     <div className="sec-title">

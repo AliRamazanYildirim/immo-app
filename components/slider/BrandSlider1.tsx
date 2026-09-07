@@ -49,12 +49,12 @@ const swiperOptions: SwiperOptions = {
 };
 
 const brands = [
-  { name: "Chrome", src: "assets/img/brand/brand-chrome.png" },
-  { name: "Figma", src: "assets/img/brand/brand-figma.png" },
-  { name: "GitLab", src: "assets/img/brand/brand-gitlab.png" },
-  { name: "Dribbble", src: "assets/img/brand/brand-dribbble.png" },
-  { name: "CodePen", src: "assets/img/brand/brand-codepen.png" },
-  { name: "CodePen Solid", src: "assets/img/brand/brand-codepen-solid.png" },
+  { name: "Chrome", src: "/assets/img/brand/brand-chrome.webp" },
+  { name: "Figma", src: "/assets/img/brand/brand-figma.webp" },
+  { name: "GitLab", src: "/assets/img/brand/brand-gitlab.webp" },
+  { name: "Dribbble", src: "/assets/img/brand/brand-dribbble.webp" },
+  { name: "CodePen", src: "/assets/img/brand/brand-codepen.webp" },
+  { name: "CodePen Solid", src: "/assets/img/brand/brand-codepen-solid.webp" },
 ];
 
 export default function BrandSlider1() {

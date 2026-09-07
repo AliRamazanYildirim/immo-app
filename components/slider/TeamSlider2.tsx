@@ -53,22 +53,22 @@ const teamMembers = [
   {
     name: "Julian Meier",
     role: "Project Architect",
-    image: "assets/img/team/team-v1-img1.jpg",
+    image: "/assets/img/team/team-v1-img1.webp",
   },
   {
     name: "Annette Black",
     role: "Interior Design Director",
-    image: "assets/img/team/team-v1-img2.jpg",
+    image: "/assets/img/team/team-v1-img2.webp",
   },
   {
     name: "Lucas Hoffmann",
     role: "BIM & 3D Specialist",
-    image: "assets/img/team/team-v1-img3.jpg",
+    image: "/assets/img/team/team-v1-img3.webp",
   },
   {
     name: "Hannah Weber",
     role: "Construction Manager",
-    image: "assets/img/team/team-v1-img4.jpg",
+    image: "/assets/img/team/team-v1-img4.webp",
   },
 ];
 
@@ -143,7 +143,7 @@ export default function TeamSlider2() {
             <div className="team-one__single">
               <div className="team-one__single-img">
                 <div className="inner">
-                  <img src={member.image} alt={member.name} decoding="async" loading="lazy" />
+                  <img src={member.image} alt={member.name} decoding="async" loading="lazy" width={270} height={400} />
                   <div className="team-one__single-icon">
                     <ul className="social-links clearfix">
                       <li className="share">

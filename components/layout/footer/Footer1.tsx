@@ -8,13 +8,11 @@ export default function Footer1() {
       {/*Start Footer One */}
       <footer className="footer-one">
         <div className="shape1">
-          <img
-            className="float-bob-y"
-            src="/assets/img/shape/footer-v1-shape1.png"
+          <img className="float-bob-y"
+            src="/assets/img/shape/footer-v1-shape1.webp"
             alt=""
             loading="lazy"
-            decoding="async"
-          />
+            decoding="async" width={601} height={310} />
         </div>
         {/*Start Footer Main */}
         <div className="footer-main">
@@ -28,12 +26,7 @@ export default function Footer1() {
                 <div className="single-footer-widget footer-widget__about">
                   <div className="logo-box">
                     <Link href="/">
-                      <img
-                        src={siteConfig.logos.main}
-                        alt=""
-                        loading="lazy"
-                        decoding="async"
-                      />
+                      <img src={siteConfig.logos.main} alt={siteConfig.company.name} loading="lazy" decoding="async" width={459} height={508} />
                     </Link>
                   </div>
 

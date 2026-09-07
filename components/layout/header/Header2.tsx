@@ -30,10 +30,7 @@ export default function Header2({
                     <div className="main-header-one__left">
                       <div className="logo-box">
                         <Link href="/">
-                          <img
-                            src={siteConfig.logos.light}
-                            alt={siteConfig.company.name}
-                          />
+                          <img src={siteConfig.logos.light} alt={siteConfig.company.name} width={459} height={508} fetchPriority="high" loading="eager" decoding="async" />
                         </Link>
                       </div>
                     </div>

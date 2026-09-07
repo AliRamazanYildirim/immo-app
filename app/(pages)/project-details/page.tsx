@@ -7,7 +7,7 @@ export default function Home() {
         headerStyle={4}
         footerStyle={1}
         breadcrumbTitle="Project Details"
-        breadcrumbBg="assets/img/project/page-header-bg.jpg"
+        breadcrumbBg="/assets/img/project/page-header-bg.webp"
       >
         {/*Start Project Details */}
         <section className="project-details">
@@ -15,9 +15,8 @@ export default function Home() {
             <div className="project-details__inner">
               <div className="project-details-img">
                 <div className="inner">
-                  <img
-                    src="assets/img/project/project-details-img1.jpg"
-                    alt="" decoding="async" loading="lazy" />
+                  <img src="/assets/img/project/project-details-img1.webp"
+                    alt="" decoding="async" loading="lazy" width={1170} height={540} />
                 </div>
               </div>
 
@@ -159,7 +158,7 @@ export default function Home() {
                       className="project-three__single-img"
                       style={{
                         backgroundImage:
-                          "url(assets/img/project/project-v3-img4.jpg)",
+                          "url(/assets/img/project/project-v3-img4.webp)",
                       }}
                     ></div>
                     <div className="bg-overlay"></div>
@@ -169,7 +168,7 @@ export default function Home() {
                         <li>
                           <Link
                             className="img-popup"
-                            href="assets/img/project/project-v3-img4.jpg"
+                            href="/assets/img/project/project-v3-img4.webp"
                           >
                             <span className="icon-search-interface-symbol"></span>
                           </Link>
@@ -201,7 +200,7 @@ export default function Home() {
                       className="project-three__single-img"
                       style={{
                         backgroundImage:
-                          "url(assets/img/project/project-v3-img5.jpg)",
+                          "url(/assets/img/project/project-v3-img5.webp)",
                       }}
                     ></div>
                     <div className="bg-overlay"></div>
@@ -211,7 +210,7 @@ export default function Home() {
                         <li>
                           <Link
                             className="img-popup"
-                            href="assets/img/project/project-v3-img5.jpg"
+                            href="/assets/img/project/project-v3-img5.webp"
                           >
                             <span className="icon-search-interface-symbol"></span>
                           </Link>
@@ -243,7 +242,7 @@ export default function Home() {
                       className="project-three__single-img"
                       style={{
                         backgroundImage:
-                          "url(assets/img/project/project-v3-img6.jpg)",
+                          "url(/assets/img/project/project-v3-img6.webp)",
                       }}
                     ></div>
                     <div className="bg-overlay"></div>
@@ -253,7 +252,7 @@ export default function Home() {
                         <li>
                           <Link
                             className="img-popup"
-                            href="assets/img/project/project-v3-img6.jpg"
+                            href="/assets/img/project/project-v3-img6.webp"
                           >
                             <span className="icon-search-interface-symbol"></span>
                           </Link>

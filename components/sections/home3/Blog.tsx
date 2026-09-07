@@ -6,7 +6,7 @@ export default function Blog() {
         <>
             {/*Start Blog One */}
         <section className="blog-one style2">
-            <div className="blog-two__bg" style={{backgroundImage: 'url(assets/img/background/blog-v2-bg.jpg)'}}></div>
+            <div className="blog-two__bg" style={{backgroundImage: 'url(/assets/img/background/blog-v2-bg.webp)'}}></div>
             <div className="container">
                 <div className="sec-title text-center">
                     <div className="sub-title">
@@ -20,7 +20,7 @@ export default function Blog() {
                         <div className="blog-one__single">
                             <div className="blog-one__single-img">
                                 <div className="inner">
-                                    <img src="assets/img/blog/blog-v2-img1.jpg" alt="" decoding="async" loading="lazy" />
+                                    <img src="/assets/img/blog/blog-v2-img1.webp" alt="" decoding="async" loading="lazy" width={370} height={300} />
                                     <div className="overlay-icon">
                                         <Link href="#"><span className="icon-plus"></span></Link>
                                     </div>
@@ -49,7 +49,7 @@ export default function Blog() {
                         <div className="blog-one__single">
                             <div className="blog-one__single-img">
                                 <div className="inner">
-                                    <img src="assets/img/blog/blog-v2-img2.jpg" alt="" decoding="async" loading="lazy" />
+                                    <img src="/assets/img/blog/blog-v2-img2.webp" alt="" decoding="async" loading="lazy" width={370} height={300} />
                                     <div className="overlay-icon">
                                         <Link href="#"><span className="icon-plus"></span></Link>
                                     </div>
@@ -79,7 +79,7 @@ export default function Blog() {
                         <div className="blog-one__single">
                             <div className="blog-one__single-img">
                                 <div className="inner">
-                                    <img src="assets/img/blog/blog-v2-img3.jpg" alt="" decoding="async" loading="lazy" />
+                                    <img src="/assets/img/blog/blog-v2-img3.webp" alt="" decoding="async" loading="lazy" width={370} height={300} />
                                     <div className="overlay-icon">
                                         <Link href="#"><span className="icon-plus"></span></Link>
                                     </div>

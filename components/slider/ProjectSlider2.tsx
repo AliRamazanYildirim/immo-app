@@ -59,7 +59,7 @@ export default function ProjectSlider2() {
                     className="project-three__single-img"
                     style={{
                       backgroundImage:
-                        "url(assets/img/project/project-v3-img1.jpg)",
+                        "url(/assets/img/project/project-v3-img1.webp)",
                     }}
                   ></div>
                   <div className="bg-overlay"></div>
@@ -69,7 +69,7 @@ export default function ProjectSlider2() {
                       <li>
                         <Link
                           className="img-popup"
-                          href="assets/img/project/project-v3-img1.jpg"
+                          href="/assets/img/project/project-v3-img1.webp"
                         >
                           <span className="icon-search-interface-symbol"></span>
                         </Link>
@@ -97,7 +97,7 @@ export default function ProjectSlider2() {
                     className="project-three__single-img"
                     style={{
                       backgroundImage:
-                        "url(assets/img/project/project-v3-img2.jpg)",
+                        "url(/assets/img/project/project-v3-img2.webp)",
                     }}
                   ></div>
                   <div className="bg-overlay"></div>
@@ -107,7 +107,7 @@ export default function ProjectSlider2() {
                       <li>
                         <Link
                           className="img-popup"
-                          href="assets/img/project/project-v3-img2.jpg"
+                          href="/assets/img/project/project-v3-img2.webp"
                         >
                           <span className="icon-search-interface-symbol"></span>
                         </Link>
@@ -135,7 +135,7 @@ export default function ProjectSlider2() {
                     className="project-three__single-img"
                     style={{
                       backgroundImage:
-                        "url(assets/img/project/project-v3-img3.jpg)",
+                        "url(/assets/img/project/project-v3-img3.webp)",
                     }}
                   ></div>
                   <div className="bg-overlay"></div>
@@ -145,7 +145,7 @@ export default function ProjectSlider2() {
                       <li>
                         <Link
                           className="img-popup"
-                          href="assets/img/project/project-v3-img3.jpg"
+                          href="/assets/img/project/project-v3-img3.webp"
                         >
                           <span className="icon-search-interface-symbol"></span>
                         </Link>
@@ -181,7 +181,7 @@ export default function ProjectSlider2() {
                     className="project-three__single-img"
                     style={{
                       backgroundImage:
-                        "url(assets/img/project/project-v3-img1.jpg)",
+                        "url(/assets/img/project/project-v3-img1.webp)",
                     }}
                   ></div>
                   <div className="bg-overlay"></div>
@@ -191,7 +191,7 @@ export default function ProjectSlider2() {
                       <li>
                         <Link
                           className="img-popup"
-                          href="assets/img/project/project-v3-img1.jpg"
+                          href="/assets/img/project/project-v3-img1.webp"
                         >
                           <span className="icon-search-interface-symbol"></span>
                         </Link>
@@ -219,7 +219,7 @@ export default function ProjectSlider2() {
                     className="project-three__single-img"
                     style={{
                       backgroundImage:
-                        "url(assets/img/project/project-v3-img2.jpg)",
+                        "url(/assets/img/project/project-v3-img2.webp)",
                     }}
                   ></div>
                   <div className="bg-overlay"></div>
@@ -229,7 +229,7 @@ export default function ProjectSlider2() {
                       <li>
                         <Link
                           className="img-popup"
-                          href="assets/img/project/project-v3-img2.jpg"
+                          href="/assets/img/project/project-v3-img2.webp"
                         >
                           <span className="icon-search-interface-symbol"></span>
                         </Link>
@@ -257,7 +257,7 @@ export default function ProjectSlider2() {
                     className="project-three__single-img"
                     style={{
                       backgroundImage:
-                        "url(assets/img/project/project-v3-img3.jpg)",
+                        "url(/assets/img/project/project-v3-img3.webp)",
                     }}
                   ></div>
                   <div className="bg-overlay"></div>
@@ -267,7 +267,7 @@ export default function ProjectSlider2() {
                       <li>
                         <Link
                           className="img-popup"
-                          href="assets/img/project/project-v3-img3.jpg"
+                          href="/assets/img/project/project-v3-img3.webp"
                         >
                           <span className="icon-search-interface-symbol"></span>
                         </Link>
@@ -303,7 +303,7 @@ export default function ProjectSlider2() {
                     className="project-three__single-img"
                     style={{
                       backgroundImage:
-                        "url(assets/img/project/project-v3-img1.jpg)",
+                        "url(/assets/img/project/project-v3-img1.webp)",
                     }}
                   ></div>
                   <div className="bg-overlay"></div>
@@ -313,7 +313,7 @@ export default function ProjectSlider2() {
                       <li>
                         <Link
                           className="img-popup"
-                          href="assets/img/project/project-v3-img1.jpg"
+                          href="/assets/img/project/project-v3-img1.webp"
                         >
                           <span className="icon-search-interface-symbol"></span>
                         </Link>
@@ -341,7 +341,7 @@ export default function ProjectSlider2() {
                     className="project-three__single-img"
                     style={{
                       backgroundImage:
-                        "url(assets/img/project/project-v3-img2.jpg)",
+                        "url(/assets/img/project/project-v3-img2.webp)",
                     }}
                   ></div>
                   <div className="bg-overlay"></div>
@@ -351,7 +351,7 @@ export default function ProjectSlider2() {
                       <li>
                         <Link
                           className="img-popup"
-                          href="assets/img/project/project-v3-img2.jpg"
+                          href="/assets/img/project/project-v3-img2.webp"
                         >
                           <span className="icon-search-interface-symbol"></span>
                         </Link>
@@ -379,7 +379,7 @@ export default function ProjectSlider2() {
                     className="project-three__single-img"
                     style={{
                       backgroundImage:
-                        "url(assets/img/project/project-v3-img3.jpg)",
+                        "url(/assets/img/project/project-v3-img3.webp)",
                     }}
                   ></div>
                   <div className="bg-overlay"></div>
@@ -389,7 +389,7 @@ export default function ProjectSlider2() {
                       <li>
                         <Link
                           className="img-popup"
-                          href="assets/img/project/project-v3-img3.jpg"
+                          href="/assets/img/project/project-v3-img3.webp"
                         >
                           <span className="icon-search-interface-symbol"></span>
                         </Link>

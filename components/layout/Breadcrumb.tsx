@@ -13,7 +13,7 @@ export default function Breadcrumb({
     ? breadcrumbBg.startsWith("/")
       ? breadcrumbBg
       : `/${breadcrumbBg}`
-    : "/assets/img/background/page-header-bg.jpg";
+    : "/assets/img/background/page-header-bg.webp";
 
   const webpImage = bgImage.replace(/\.(jpg|jpeg|png)$/i, ".webp");
 

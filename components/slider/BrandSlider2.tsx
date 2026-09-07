@@ -57,16 +57,14 @@ export default function BrandSlider2() {
       >
         <SwiperSlide className="swiper-slide">
           <div className="img-box">
-            <img
-              src="assets/img/brand/brand-v2-img1.png"
+            <img src="/assets/img/brand/brand-v2-img1.webp"
               alt="Chrome"
               width={110}
               height={110} decoding="async" loading="lazy" />
           </div>
 
           <div className="img-box2">
-            <img
-              src="assets/img/brand/brand-v2-img6.png"
+            <img src="/assets/img/brand/brand-v2-img6.webp"
               alt="Chrome"
               width={110}
               height={110} decoding="async" loading="lazy" />
@@ -75,16 +73,14 @@ export default function BrandSlider2() {
 
         <SwiperSlide className="swiper-slide">
           <div className="img-box">
-            <img
-              src="assets/img/brand/brand-v2-img2.png"
+            <img src="/assets/img/brand/brand-v2-img2.webp"
               alt="Figma"
               width={110}
               height={110} decoding="async" loading="lazy" />
           </div>
 
           <div className="img-box2">
-            <img
-              src="assets/img/brand/brand-v2-img7.png"
+            <img src="/assets/img/brand/brand-v2-img7.webp"
               alt="Figma"
               width={110}
               height={110} decoding="async" loading="lazy" />
@@ -93,16 +89,14 @@ export default function BrandSlider2() {
 
         <SwiperSlide className="swiper-slide">
           <div className="img-box">
-            <img
-              src="assets/img/brand/brand-v2-img3.png"
+            <img src="/assets/img/brand/brand-v2-img3.webp"
               alt="GitLab"
               width={110}
               height={110} decoding="async" loading="lazy" />
           </div>
 
           <div className="img-box2">
-            <img
-              src="assets/img/brand/brand-v2-img8.png"
+            <img src="/assets/img/brand/brand-v2-img8.webp"
               alt="GitLab"
               width={110}
               height={110} decoding="async" loading="lazy" />
@@ -111,16 +105,14 @@ export default function BrandSlider2() {
 
         <SwiperSlide className="swiper-slide">
           <div className="img-box">
-            <img
-              src="assets/img/brand/brand-v2-img4.png"
+            <img src="/assets/img/brand/brand-v2-img4.webp"
               alt="Dribbble"
               width={110}
               height={110} decoding="async" loading="lazy" />
           </div>
 
           <div className="img-box2">
-            <img
-              src="assets/img/brand/brand-v2-img9.png"
+            <img src="/assets/img/brand/brand-v2-img9.webp"
               alt="Dribbble"
               width={110}
               height={110} decoding="async" loading="lazy" />
@@ -129,16 +121,14 @@ export default function BrandSlider2() {
 
         <SwiperSlide className="swiper-slide">
           <div className="img-box">
-            <img
-              src="assets/img/brand/brand-v2-img5.png"
+            <img src="/assets/img/brand/brand-v2-img5.webp"
               alt="CodePen"
               width={110}
               height={110} decoding="async" loading="lazy" />
           </div>
 
           <div className="img-box2">
-            <img
-              src="assets/img/brand/brand-v2-img10.png"
+            <img src="/assets/img/brand/brand-v2-img10.webp"
               alt="CodePen"
               width={110}
               height={110} decoding="async" loading="lazy" />
@@ -147,16 +137,14 @@ export default function BrandSlider2() {
 
         <SwiperSlide className="swiper-slide">
           <div className="img-box">
-            <img
-              src="assets/img/brand/brand-v2-img1.png"
+            <img src="/assets/img/brand/brand-v2-img1.webp"
               alt="Chrome"
               width={110}
               height={110} decoding="async" loading="lazy" />
           </div>
 
           <div className="img-box2">
-            <img
-              src="assets/img/brand/brand-v2-img6.png"
+            <img src="/assets/img/brand/brand-v2-img6.webp"
               alt="Chrome"
               width={110}
               height={110} decoding="async" loading="lazy" />
@@ -165,16 +153,14 @@ export default function BrandSlider2() {
 
         <SwiperSlide className="swiper-slide">
           <div className="img-box">
-            <img
-              src="assets/img/brand/brand-v2-img2.png"
+            <img src="/assets/img/brand/brand-v2-img2.webp"
               alt="Figma"
               width={110}
               height={110} decoding="async" loading="lazy" />
           </div>
 
           <div className="img-box2">
-            <img
-              src="assets/img/brand/brand-v2-img7.png"
+            <img src="/assets/img/brand/brand-v2-img7.webp"
               alt="Figma"
               width={110}
               height={110} decoding="async" loading="lazy" />
@@ -183,16 +169,14 @@ export default function BrandSlider2() {
 
         <SwiperSlide className="swiper-slide">
           <div className="img-box">
-            <img
-              src="assets/img/brand/brand-v2-img3.png"
+            <img src="/assets/img/brand/brand-v2-img3.webp"
               alt="GitLab"
               width={110}
               height={110} decoding="async" loading="lazy" />
           </div>
 
           <div className="img-box2">
-            <img
-              src="assets/img/brand/brand-v2-img8.png"
+            <img src="/assets/img/brand/brand-v2-img8.webp"
               alt="GitLab"
               width={110}
               height={110} decoding="async" loading="lazy" />
@@ -201,16 +185,14 @@ export default function BrandSlider2() {
 
         <SwiperSlide className="swiper-slide">
           <div className="img-box">
-            <img
-              src="assets/img/brand/brand-v2-img4.png"
+            <img src="/assets/img/brand/brand-v2-img4.webp"
               alt="Dribbble"
               width={110}
               height={110} decoding="async" loading="lazy" />
           </div>
 
           <div className="img-box2">
-            <img
-              src="assets/img/brand/brand-v2-img9.png"
+            <img src="/assets/img/brand/brand-v2-img9.webp"
               alt="Dribbble"
               width={110}
               height={110} decoding="async" loading="lazy" />
@@ -219,16 +201,14 @@ export default function BrandSlider2() {
 
         <SwiperSlide className="swiper-slide">
           <div className="img-box">
-            <img
-              src="assets/img/brand/brand-v2-img5.png"
+            <img src="/assets/img/brand/brand-v2-img5.webp"
               alt="CodePen"
               width={110}
               height={110} decoding="async" loading="lazy" />
           </div>
 
           <div className="img-box2">
-            <img
-              src="assets/img/brand/brand-v2-img10.png"
+            <img src="/assets/img/brand/brand-v2-img10.webp"
               alt="CodePen"
               width={110}
               height={110} decoding="async" loading="lazy" />

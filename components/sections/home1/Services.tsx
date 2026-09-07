@@ -9,7 +9,7 @@ export default function Pricing() {
         <div
           className="service-one__shape2"
           style={{
-            backgroundImage: "url(assets/img/shape/service-v1-shape2.png)",
+            backgroundImage: "url(/assets/img/shape/service-v1-shape2.webp)",
           }}
         ></div>
         <div className="container">
@@ -27,12 +27,10 @@ export default function Pricing() {
             >
               <div className="service-one__single">
                 <div className="shape1">
-                  <img
-                    src="assets/img/shape/service-v1-shape1.png"
+                  <img src="/assets/img/shape/service-v1-shape1.webp"
                     alt=""
                     loading="lazy"
-                    decoding="async"
-                  />
+                    decoding="async" width={181} height={244} />
                 </div>
                 <div className="service-one__single-inner">
                   <div className="count-text">01</div>
@@ -64,12 +62,10 @@ export default function Pricing() {
             >
               <div className="service-one__single">
                 <div className="shape1">
-                  <img
-                    src="assets/img/shape/service-v1-shape1.png"
+                  <img src="/assets/img/shape/service-v1-shape1.webp"
                     alt=""
                     loading="lazy"
-                    decoding="async"
-                  />
+                    decoding="async" width={181} height={244} />
                 </div>
                 <div className="service-one__single-inner">
                   <div className="count-text">02</div>
@@ -101,12 +97,10 @@ export default function Pricing() {
             >
               <div className="service-one__single">
                 <div className="shape1">
-                  <img
-                    src="assets/img/shape/service-v1-shape1.png"
+                  <img src="/assets/img/shape/service-v1-shape1.webp"
                     alt=""
                     loading="lazy"
-                    decoding="async"
-                  />
+                    decoding="async" width={181} height={244} />
                 </div>
                 <div className="service-one__single-inner">
                   <div className="count-text">03</div>
@@ -140,12 +134,10 @@ export default function Pricing() {
             >
               <div className="service-one__single">
                 <div className="shape1">
-                  <img
-                    src="assets/img/shape/service-v1-shape1.png"
+                  <img src="/assets/img/shape/service-v1-shape1.webp"
                     alt=""
                     loading="lazy"
-                    decoding="async"
-                  />
+                    decoding="async" width={181} height={244} />
                 </div>
                 <div className="service-one__single-inner">
                   <div className="count-text">04</div>

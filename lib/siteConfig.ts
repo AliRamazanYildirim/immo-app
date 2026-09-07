@@ -117,12 +117,12 @@ const siteConfig: SiteConfig = {
 
   // Logo Yolları (Tüm logolar tek bir klasörde: /assets/img/logo/)
   logos: {
-    main: "/assets/img/logo/logo-red-white.png", // Aktif Koyu Başlık Logosu (Kırmızı Üçgen + Beyaz Yazı)
-    light: "/assets/img/logo/logo-red.png", // Açık Başlık Logosu (Tam Kırmızı)
-    redWhite: "/assets/img/logo/logo-red-white.png", // 1. Varyant: Kırmızı Üçgen + Beyaz Yazı
-    whiteRed: "/assets/img/logo/logo-white-red.png", // 2. Varyant: Beyaz Üçgen + Kırmızı Yazı
-    white: "/assets/img/logo/logo-white.png", // 3. Varyant: Tam Beyaz
-    red: "/assets/img/logo/logo-red.png", // 4. Varyant: Tam Kırmızı
+    main: "/assets/img/logo/logo-red-white.webp", // Aktif Koyu Başlık Logosu (Kırmızı Üçgen + Beyaz Yazı)
+    light: "/assets/img/logo/logo-red.webp", // Açık Başlık Logosu (Tam Kırmızı)
+    redWhite: "/assets/img/logo/logo-red-white.webp", // 1. Varyant: Kırmızı Üçgen + Beyaz Yazı
+    whiteRed: "/assets/img/logo/logo-white-red.webp", // 2. Varyant: Beyaz Üçgen + Kırmızı Yazı
+    white: "/assets/img/logo/logo-white.webp", // 3. Varyant: Tam Beyaz
+    red: "/assets/img/logo/logo-red.webp", // 4. Varyant: Tam Kırmızı
     favicon: "/favicon.ico",
   },
 
@@ -132,7 +132,7 @@ const siteConfig: SiteConfig = {
     titleTemplate: "%s | ARY Tech Solutions",
     description: "Professional architecture and design services in Germany",
     keywords: ["architecture", "design", "construction", "Germany", "Sasbach"],
-    ogImage: "/assets/img/og-image.jpg",
+    ogImage: "/assets/img/og-image.webp",
     siteUrl: "https://example.com",
   },
 };

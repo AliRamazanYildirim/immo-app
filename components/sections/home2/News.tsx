@@ -21,7 +21,7 @@ export default function News() {
                         <div className="blog-one__single">
                             <div className="blog-one__single-img">
                                 <div className="inner">
-                                    <img src="assets/img/blog/blog-v1-img1.jpg" alt="" decoding="async" loading="lazy" />
+                                    <img src="/assets/img/blog/blog-v1-img1.webp" alt="" decoding="async" loading="lazy" width={370} height={330} />
                                     <div className="overlay-icon">
                                         <Link href="#"><span className="icon-plus"></span></Link>
                                     </div>
@@ -51,7 +51,7 @@ export default function News() {
                         <div className="blog-one__single">
                             <div className="blog-one__single-img">
                                 <div className="inner">
-                                    <img src="assets/img/blog/blog-v1-img2.jpg" alt="" decoding="async" loading="lazy" />
+                                    <img src="/assets/img/blog/blog-v1-img2.webp" alt="" decoding="async" loading="lazy" width={370} height={330} />
                                     <div className="overlay-icon">
                                         <Link href="#"><span className="icon-plus"></span></Link>
                                     </div>
@@ -81,7 +81,7 @@ export default function News() {
                         <div className="blog-one__single">
                             <div className="blog-one__single-img">
                                 <div className="inner">
-                                    <img src="assets/img/blog/blog-v1-img3.jpg" alt="" decoding="async" loading="lazy" />
+                                    <img src="/assets/img/blog/blog-v1-img3.webp" alt="" decoding="async" loading="lazy" width={370} height={330} />
                                     <div className="overlay-icon">
                                         <Link href="#"><span className="icon-plus"></span></Link>
                                     </div>

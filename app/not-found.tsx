@@ -8,7 +8,7 @@ export default function Error404() {
         {/*Start Error Page */}
         <section className="error-page">
           <div className="error-page__shape1">
-            <img src="assets/img/shape/error-page-bg.png" alt="" decoding="async" loading="lazy" />
+            <img src="/assets/img/shape/error-page-bg.webp" alt="" decoding="async" loading="lazy" width={1368} height={673} />
           </div>
           <div className="container">
             <div className="row">

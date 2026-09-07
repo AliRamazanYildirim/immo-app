@@ -23,16 +23,14 @@ export default function Projects() {
             >
               <div className="project-one__single">
                 <div className="project-one__single-img">
-                  <img
-                    src="assets/img/project/project-v1-img1.jpg"
+                  <img src="/assets/img/project/project-v1-img1.webp"
                     alt=""
                     loading="lazy"
-                    decoding="async"
-                  />
+                    decoding="async" width={470} height={625} />
                   <div className="overlay-btn">
                     <Link
                       className="img-popup"
-                      href="assets/img/project/project-v1-img1.jpg"
+                      href="/assets/img/project/project-v1-img1.webp"
                     >
                       <span className="icon-search-interface-symbol"></span>
                     </Link>
@@ -59,16 +57,14 @@ export default function Projects() {
             >
               <div className="project-one__single">
                 <div className="project-one__single-img">
-                  <img
-                    src="assets/img/project/project-v1-img2.jpg"
+                  <img src="/assets/img/project/project-v1-img2.webp"
                     alt=""
                     loading="lazy"
-                    decoding="async"
-                  />
+                    decoding="async" width={470} height={625} />
                   <div className="overlay-btn">
                     <Link
                       className="img-popup"
-                      href="assets/img/project/project-v1-img2.jpg"
+                      href="/assets/img/project/project-v1-img2.webp"
                     >
                       <span className="icon-search-interface-symbol"></span>
                     </Link>
@@ -95,16 +91,14 @@ export default function Projects() {
             >
               <div className="project-one__single">
                 <div className="project-one__single-img">
-                  <img
-                    src="assets/img/project/project-v1-img3.jpg"
+                  <img src="/assets/img/project/project-v1-img3.webp"
                     alt=""
                     loading="lazy"
-                    decoding="async"
-                  />
+                    decoding="async" width={470} height={625} />
                   <div className="overlay-btn">
                     <Link
                       className="img-popup"
-                      href="assets/img/project/project-v1-img3.jpg"
+                      href="/assets/img/project/project-v1-img3.webp"
                     >
                       <span className="icon-search-interface-symbol"></span>
                     </Link>
@@ -131,16 +125,14 @@ export default function Projects() {
             >
               <div className="project-one__single">
                 <div className="project-one__single-img">
-                  <img
-                    src="assets/img/project/project-v1-img4.jpg"
+                  <img src="/assets/img/project/project-v1-img4.webp"
                     alt=""
                     loading="lazy"
-                    decoding="async"
-                  />
+                    decoding="async" width={470} height={625} />
                   <div className="overlay-btn">
                     <Link
                       className="img-popup"
-                      href="assets/img/project/project-v1-img4.jpg"
+                      href="/assets/img/project/project-v1-img4.webp"
                     >
                       <span className="icon-search-interface-symbol"></span>
                     </Link>

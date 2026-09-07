@@ -7,7 +7,7 @@ export default function Home() {
         headerStyle={4}
         footerStyle={1}
         breadcrumbTitle="Our Team"
-        breadcrumbBg="assets/img/team/page-header-bg.jpg"
+        breadcrumbBg="/assets/img/team/page-header-bg.webp"
       >
         <div>
           <section className="team-two">
@@ -21,9 +21,8 @@ export default function Home() {
                   <div className="team-two__single">
                     <div className="team-two__single-img">
                       <div className="inner">
-                        <img
-                          src="assets/img/team/team-v2-img1.jpg"
-                          alt="Marcus Vance - Senior Architect" decoding="async" loading="lazy" />
+                        <img src="/assets/img/team/team-v2-img1.webp"
+                          alt="Marcus Vance - Senior Architect" decoding="async" loading="lazy" width={370} height={540} />
                       </div>
 
                       <div className="content-box">
@@ -69,9 +68,8 @@ export default function Home() {
                   <div className="team-two__single">
                     <div className="team-two__single-img">
                       <div className="inner">
-                        <img
-                          src="assets/img/team/team-v2-img2.jpg"
-                          alt="Janes Cooper - Lead Interior Designer" decoding="async" loading="lazy" />
+                        <img src="/assets/img/team/team-v2-img2.webp"
+                          alt="Janes Cooper - Lead Interior Designer" decoding="async" loading="lazy" width={370} height={540} />
                       </div>
 
                       <div className="content-box">
@@ -117,9 +115,8 @@ export default function Home() {
                   <div className="team-two__single">
                     <div className="team-two__single-img">
                       <div className="inner">
-                        <img
-                          src="assets/img/team/team-v2-img3.jpg"
-                          alt="David Miller - Structural Engineer" decoding="async" loading="lazy" />
+                        <img src="/assets/img/team/team-v2-img3.webp"
+                          alt="David Miller - Structural Engineer" decoding="async" loading="lazy" width={370} height={540} />
                       </div>
 
                       <div className="content-box">
@@ -165,9 +162,8 @@ export default function Home() {
                   <div className="team-two__single">
                     <div className="team-two__single-img">
                       <div className="inner">
-                        <img
-                          src="assets/img/team/team-v2-img4.jpg"
-                          alt="Sophia Laurent - Landscape Architect" decoding="async" loading="lazy" />
+                        <img src="/assets/img/team/team-v2-img4.webp"
+                          alt="Sophia Laurent - Landscape Architect" decoding="async" loading="lazy" width={370} height={540} />
                       </div>
 
                       <div className="content-box">
@@ -213,9 +209,8 @@ export default function Home() {
                   <div className="team-two__single">
                     <div className="team-two__single-img">
                       <div className="inner">
-                        <img
-                          src="assets/img/team/team-v2-img5.jpg"
-                          alt="Alexander Wright - Construction Manager" decoding="async" loading="lazy" />
+                        <img src="/assets/img/team/team-v2-img5.webp"
+                          alt="Alexander Wright - Construction Manager" decoding="async" loading="lazy" width={370} height={540} />
                       </div>
 
                       <div className="content-box">
@@ -261,9 +256,8 @@ export default function Home() {
                   <div className="team-two__single">
                     <div className="team-two__single-img">
                       <div className="inner">
-                        <img
-                          src="assets/img/team/team-v2-img6.jpg"
-                          alt="Clara Schmidt - Interior Concepts Specialist" decoding="async" loading="lazy" />
+                        <img src="/assets/img/team/team-v2-img6.webp"
+                          alt="Clara Schmidt - Interior Concepts Specialist" decoding="async" loading="lazy" width={370} height={540} />
                       </div>
 
                       <div className="content-box">

@@ -7,7 +7,7 @@ export default function Home() {
         headerStyle={1}
         footerStyle={1}
         breadcrumbTitle="Blog Details"
-        breadcrumbBg="assets/img/blog/page-header-bg.jpg"
+        breadcrumbBg="/assets/img/blog/page-header-bg.webp"
       >
         {/*Start Blog Details */}
         <section className="blog-details">
@@ -17,7 +17,7 @@ export default function Home() {
               <div className="col-xl-8">
                 <div className="blog-details__content">
                   <div className="blog-details__content-img1">
-                    <img src="assets/img/blog/blog-details-img1.jpg" alt="" decoding="async" loading="lazy" />
+                    <img src="/assets/img/blog/blog-details-img1.webp" alt="" decoding="async" loading="lazy" width={740} height={450} />
                   </div>
 
                   <div className="blog-details__content-text1">
@@ -48,17 +48,15 @@ export default function Home() {
                     <div className="row">
                       <div className="col-xl-6 col-lg-6 col-md-6">
                         <div className="blog-details__content-img2-single">
-                          <img
-                            src="assets/img/blog/blog-details-img2.jpg"
-                            alt="" decoding="async" loading="lazy" />
+                          <img src="/assets/img/blog/blog-details-img2.webp"
+                            alt="" decoding="async" loading="lazy" width={355} height={240} />
                         </div>
                       </div>
 
                       <div className="col-xl-6 col-lg-6 col-md-6">
                         <div className="blog-details__content-img2-single">
-                          <img
-                            src="assets/img/blog/blog-details-img3.jpg"
-                            alt="" decoding="async" loading="lazy" />
+                          <img src="/assets/img/blog/blog-details-img3.webp"
+                            alt="" decoding="async" loading="lazy" width={355} height={240} />
                         </div>
                       </div>
                     </div>
@@ -123,9 +121,8 @@ export default function Home() {
                     <h3 className="comment-one__title">Comments (2)</h3>
                     <div className="comment-one__single">
                       <div className="comment-one__image">
-                        <img
-                          src="assets/img/blog/blog-details-img4.jpg"
-                          alt="" decoding="async" loading="lazy" />
+                        <img src="/assets/img/blog/blog-details-img4.webp"
+                          alt="" decoding="async" loading="lazy" width={100} height={100} />
                       </div>
                       <div className="comment-one__content">
                         <h3>Saiful Islam</h3>
@@ -145,9 +142,8 @@ export default function Home() {
 
                     <div className="comment-one__single">
                       <div className="comment-one__image">
-                        <img
-                          src="assets/img/blog/blog-details-img5.jpg"
-                          alt="" decoding="async" loading="lazy" />
+                        <img src="/assets/img/blog/blog-details-img5.webp"
+                          alt="" decoding="async" loading="lazy" width={100} height={100} />
                       </div>
                       <div className="comment-one__content">
                         <h3>Jhon Smith</h3>
@@ -302,9 +298,8 @@ export default function Home() {
                       <li>
                         <div className="inner">
                           <div className="img-box">
-                            <img
-                              src="assets/img/blog/sidebar-img1.jpg"
-                              alt="" decoding="async" loading="lazy" />
+                            <img src="/assets/img/blog/sidebar-img1.webp"
+                              alt="" decoding="async" loading="lazy" width={95} height={95} />
                           </div>
 
                           <div className="content-box">
@@ -324,9 +319,8 @@ export default function Home() {
                       <li>
                         <div className="inner">
                           <div className="img-box">
-                            <img
-                              src="assets/img/blog/sidebar-img2.jpg"
-                              alt="" decoding="async" loading="lazy" />
+                            <img src="/assets/img/blog/sidebar-img2.webp"
+                              alt="" decoding="async" loading="lazy" width={95} height={95} />
                           </div>
 
                           <div className="content-box">
@@ -347,9 +341,8 @@ export default function Home() {
                       <li>
                         <div className="inner">
                           <div className="img-box">
-                            <img
-                              src="assets/img/blog/sidebar-img3.jpg"
-                              alt="" decoding="async" loading="lazy" />
+                            <img src="/assets/img/blog/sidebar-img3.webp"
+                              alt="" decoding="async" loading="lazy" width={95} height={95} />
                           </div>
 
                           <div className="content-box">

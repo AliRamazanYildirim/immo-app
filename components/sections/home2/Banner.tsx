@@ -38,23 +38,21 @@ export default function Banner() {
                   srcSet="/assets/img/slider/slider-v2-img1.webp"
                   type="image/webp"
                 />
-                <img
-                  src="/assets/img/slider/slider-v2-img1.jpg"
+                <img src="/assets/img/slider/slider-v2-img1.webp"
                   alt="Architecture is Inhabited Sculpture"
                   className="image-layer__img"
                   fetchPriority="high"
                   loading="eager"
                   decoding="async"
                   width={1920}
-                  height={960}
-                />
+                  height={960} />
               </picture>
             </div>
             <div
               className="main-slider-two__pattern"
               style={{
                 backgroundImage:
-                  "url(assets/img/pattern/main-slider-v2-pattern.png)",
+                  "url(/assets/img/pattern/main-slider-v2-pattern.webp)",
               }}
             ></div>
 
@@ -111,22 +109,20 @@ export default function Banner() {
                   srcSet="/assets/img/slider/slider-v2-img2.webp"
                   type="image/webp"
                 />
-                <img
-                  src="/assets/img/slider/slider-v2-img2.jpg"
+                <img src="/assets/img/slider/slider-v2-img2.webp"
                   alt="Architecture is Inhabited Sculpture"
                   className="image-layer__img"
                   loading="lazy"
                   decoding="async"
                   width={1920}
-                  height={960}
-                />
+                  height={960} />
               </picture>
             </div>
             <div
               className="main-slider-two__pattern"
               style={{
                 backgroundImage:
-                  "url(assets/img/pattern/main-slider-v2-pattern.png)",
+                  "url(/assets/img/pattern/main-slider-v2-pattern.webp)",
               }}
             ></div>
 
@@ -183,22 +179,20 @@ export default function Banner() {
                   srcSet="/assets/img/slider/slider-v2-img3.webp"
                   type="image/webp"
                 />
-                <img
-                  src="/assets/img/slider/slider-v2-img3.jpg"
+                <img src="/assets/img/slider/slider-v2-img3.webp"
                   alt="Architecture is Inhabited Sculpture"
                   className="image-layer__img"
                   loading="lazy"
                   decoding="async"
                   width={1920}
-                  height={960}
-                />
+                  height={960} />
               </picture>
             </div>
             <div
               className="main-slider-two__pattern"
               style={{
                 backgroundImage:
-                  "url(assets/img/pattern/main-slider-v2-pattern.png)",
+                  "url(/assets/img/pattern/main-slider-v2-pattern.webp)",
               }}
             ></div>
 

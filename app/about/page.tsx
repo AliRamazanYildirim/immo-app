@@ -12,13 +12,13 @@ export default function Home() {
         headerStyle={4}
         footerStyle={1}
         breadcrumbTitle="About Us"
-        breadcrumbBg="assets/img/about/page-header-bg.jpg"
+        breadcrumbBg="/assets/img/about/page-header-bg.webp"
       >
         <div>
           {/*Start About One */}
           <section className="about-one about-one--about">
             <div className="shape1 float-bob-y">
-              <img src="assets/img/shape/about-v1-shape1.png" alt="" decoding="async" loading="lazy" />
+              <img src="/assets/img/shape/about-v1-shape1.webp" alt="" decoding="async" loading="lazy" width={508} height={688} />
             </div>
             <div className="container">
               <div className="row">
@@ -29,9 +29,8 @@ export default function Home() {
                 >
                   <div className="about-one__img">
                     <div className="inner">
-                      <img
-                        src="assets/img/about/about-v1-img1.jpg"
-                        alt="Architectural construction site with engineers" decoding="async" loading="lazy" />
+                      <img src="/assets/img/about/about-v1-img1.webp"
+                        alt="Architectural construction site with engineers" decoding="async" loading="lazy" width={460} height={600} />
                     </div>
                     <div className="experience-box">
                       <div className="counter-box">
@@ -118,14 +117,12 @@ export default function Home() {
 
                         <div className="author-info">
                           <div className="img-box">
-                            <img
-                              src="assets/img/about/about-v1-img2.jpg"
-                              alt="Company founder portrait" decoding="async" loading="lazy" />
+                            <img src="/assets/img/about/about-v1-img2.webp"
+                              alt="Company founder portrait" decoding="async" loading="lazy" width={60} height={60} />
                           </div>
                           <div className="signature-box">
-                            <img
-                              src="assets/img/about/signature-1.png"
-                              alt="Founder signature" decoding="async" loading="lazy" />
+                            <img src="/assets/img/about/signature-1.webp"
+                              alt="Founder signature" decoding="async" loading="lazy" width={93} height={55} />
                           </div>
                         </div>
                       </div>
@@ -150,11 +147,11 @@ export default function Home() {
               className="testimonials-two__pattern"
               style={{
                 backgroundImage:
-                  "url(assets/img/pattern/testimonials-v2-pattern.png)",
+                  "url(/assets/img/pattern/testimonials-v2-pattern.webp)",
               }}
             ></div>
             <div className="shape1 float-bob-x">
-              <img src="assets/img/shape/testimonials-v2-shape1.png" alt="" decoding="async" loading="lazy" />
+              <img src="/assets/img/shape/testimonials-v2-shape1.webp" alt="" decoding="async" loading="lazy" width={1297} height={481} />
             </div>
             <div className="container">
               <div className="sec-title text-center">
@@ -194,17 +191,15 @@ export default function Home() {
                     <ul>
                       <li>
                         <div className="img-box">
-                          <img
-                            src="assets/img/about/about-why-choose-img1.jpg"
-                            alt="Modern architectural design model" decoding="async" loading="lazy" />
+                          <img src="/assets/img/about/about-why-choose-img1.webp"
+                            alt="Modern architectural design model" decoding="async" loading="lazy" width={280} height={535} />
                         </div>
                       </li>
 
                       <li>
                         <div className="img-box">
-                          <img
-                            src="assets/img/about/about-why-choose-img2.jpg"
-                            alt="Architectural blueprints and materials" decoding="async" loading="lazy" />
+                          <img src="/assets/img/about/about-why-choose-img2.webp"
+                            alt="Architectural blueprints and materials" decoding="async" loading="lazy" width={280} height={535} />
                         </div>
                       </li>
                     </ul>
@@ -280,7 +275,7 @@ export default function Home() {
             <div
               className="call-to-action-one__bg"
               style={{
-                backgroundImage: "url(assets/img/about/about-cta-bg.jpg)",
+                backgroundImage: "url(/assets/img/about/about-cta-bg.webp)",
               }}
             ></div>
             <div className="container">
@@ -324,9 +319,8 @@ export default function Home() {
                   <div className="team-two__single">
                     <div className="team-two__single-img">
                       <div className="inner">
-                        <img
-                          src="assets/img/team/team-v2-img1.jpg"
-                          alt="Marcus Vance - Senior Architect" decoding="async" loading="lazy" />
+                        <img src="/assets/img/team/team-v2-img1.webp"
+                          alt="Marcus Vance - Senior Architect" decoding="async" loading="lazy" width={370} height={540} />
                       </div>
 
                       <div className="content-box">
@@ -372,9 +366,8 @@ export default function Home() {
                   <div className="team-two__single">
                     <div className="team-two__single-img">
                       <div className="inner">
-                        <img
-                          src="assets/img/team/team-v2-img2.jpg"
-                          alt="Janes Cooper - Lead Interior Designer" decoding="async" loading="lazy" />
+                        <img src="/assets/img/team/team-v2-img2.webp"
+                          alt="Janes Cooper - Lead Interior Designer" decoding="async" loading="lazy" width={370} height={540} />
                       </div>
 
                       <div className="content-box">
@@ -420,9 +413,8 @@ export default function Home() {
                   <div className="team-two__single">
                     <div className="team-two__single-img">
                       <div className="inner">
-                        <img
-                          src="assets/img/team/team-v2-img3.jpg"
-                          alt="David Miller - Structural Engineer" decoding="async" loading="lazy" />
+                        <img src="/assets/img/team/team-v2-img3.webp"
+                          alt="David Miller - Structural Engineer" decoding="async" loading="lazy" width={370} height={540} />
                       </div>
 
                       <div className="content-box">

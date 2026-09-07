@@ -344,7 +344,7 @@ export default function Home() {
             <div
               className="cta-one__pattern"
               style={{
-                backgroundImage: "url(assets/img/pattern/cta-v1-pattern.png)",
+                backgroundImage: "url(/assets/img/pattern/cta-v1-pattern.webp)",
               }}
             ></div>
             <div className="container">

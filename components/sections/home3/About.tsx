@@ -13,9 +13,8 @@ export default function About() {
               <div className="about-three__img">
                 <div className="about-three__img1">
                   <div className="inner">
-                    <img
-                      src="assets/img/about/about-v3-img1.jpg"
-                      alt="Architecture project overview" decoding="async" loading="lazy" />
+                    <img src="/assets/img/about/about-v3-img1.webp"
+                      alt="Architecture project overview" decoding="async" loading="lazy" width={390} height={500} />
                   </div>
 
                   <div className="experience-box">
@@ -38,17 +37,15 @@ export default function About() {
                   <ul>
                     <li>
                       <div className="about-three__img2-single">
-                        <img
-                          src="assets/img/about/about-v3-img2.jpg"
-                          alt="Interior architectural design detail" decoding="async" loading="lazy" />
+                        <img src="/assets/img/about/about-v3-img2.webp"
+                          alt="Interior architectural design detail" decoding="async" loading="lazy" width={275} height={160} />
                       </div>
                     </li>
 
                     <li>
                       <div className="about-three__img2-single">
-                        <img
-                          src="assets/img/about/about-v3-img3.jpg"
-                          alt="Modern building construction" decoding="async" loading="lazy" />
+                        <img src="/assets/img/about/about-v3-img3.webp"
+                          alt="Modern building construction" decoding="async" loading="lazy" width={275} height={335} />
                       </div>
                     </li>
                   </ul>
@@ -110,14 +107,12 @@ export default function About() {
 
                     <div className="author-info">
                       <div className="img-box">
-                        <img
-                          src="assets/img/about/about-v3-img4.jpg"
-                          alt="Company founder portrait" decoding="async" loading="lazy" />
+                        <img src="/assets/img/about/about-v3-img4.webp"
+                          alt="Company founder portrait" decoding="async" loading="lazy" width={60} height={60} />
                       </div>
                       <div className="signature-box">
-                        <img
-                          src="assets/img/about/signature-1.png"
-                          alt="Founder signature" decoding="async" loading="lazy" />
+                        <img src="/assets/img/about/signature-1.webp"
+                          alt="Founder signature" decoding="async" loading="lazy" width={93} height={55} />
                       </div>
                     </div>
                   </div>

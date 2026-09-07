@@ -10,7 +10,7 @@ export default function Home() {
         headerStyle={4}
         footerStyle={1}
         breadcrumbTitle="Team Details"
-        breadcrumbBg="assets/img/team/page-header-bg.jpg"
+        breadcrumbBg="/assets/img/team/page-header-bg.webp"
       >
         <section className="team-details">
           {/* Start Team Details Top */}
@@ -24,9 +24,8 @@ export default function Home() {
                       <h2>ARY GROUP</h2>
                     </div>
                     <div className="inner">
-                      <img
-                        src="assets/img/team/team-details-img1.jpg"
-                        alt="Elena Rostova - Lead Architect & Project Director" decoding="async" loading="lazy" />
+                      <img src="/assets/img/team/team-details-img1.webp"
+                        alt="Elena Rostova - Lead Architect & Project Director" decoding="async" loading="lazy" width={470} height={550} />
                     </div>
                   </div>
                 </div>

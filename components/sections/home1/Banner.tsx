@@ -50,36 +50,30 @@ export default function Banner() {
                   srcSet="/assets/img/slider/slider-v1-img1.webp"
                   type="image/webp"
                 />
-                <img
-                  src="/assets/img/slider/slider-v1-img1.jpg"
+                <img src="/assets/img/slider/slider-v1-img1.webp"
                   alt="Creative Architecture"
                   className="image-layer__img"
                   fetchPriority="high"
                   loading="eager"
                   decoding="async"
                   width={1920}
-                  height={960}
-                />
+                  height={960} />
               </picture>
             </div>
             <div className="shape1">
-              <img
-                src="assets/img/shape/slider-v1-shape1.png"
+              <img src="/assets/img/shape/slider-v1-shape1.webp"
                 alt=""
                 loading="lazy"
-                decoding="async"
-              />
+                decoding="async" width={1043} height={960} />
             </div>
             <div className="container">
               <div className="main-slider-one__single">
                 <div className="main-slider-one__content">
                   <div className="shape2 float-bob-x">
-                    <img
-                      src="assets/img/shape/slider-v1-shape2.png"
+                    <img src="/assets/img/shape/slider-v1-shape2.webp"
                       alt=""
                       loading="lazy"
-                      decoding="async"
-                    />
+                      decoding="async" width={60} height={35} />
                   </div>
                   <h3>Creative</h3>
                   <h2>Architecture</h2>
@@ -116,35 +110,29 @@ export default function Banner() {
                   srcSet="/assets/img/slider/slider-v1-img2.webp"
                   type="image/webp"
                 />
-                <img
-                  src="/assets/img/slider/slider-v1-img2.jpg"
+                <img src="/assets/img/slider/slider-v1-img2.webp"
                   alt="Creative Architecture"
                   className="image-layer__img"
                   loading="lazy"
                   decoding="async"
                   width={1920}
-                  height={960}
-                />
+                  height={960} />
               </picture>
             </div>
             <div className="shape1">
-              <img
-                src="assets/img/shape/slider-v1-shape1.png"
+              <img src="/assets/img/shape/slider-v1-shape1.webp"
                 alt=""
                 loading="lazy"
-                decoding="async"
-              />
+                decoding="async" width={1043} height={960} />
             </div>
             <div className="container">
               <div className="main-slider-one__single">
                 <div className="main-slider-one__content">
                   <div className="shape2 float-bob-x">
-                    <img
-                      src="assets/img/shape/slider-v1-shape2.png"
+                    <img src="/assets/img/shape/slider-v1-shape2.webp"
                       alt=""
                       loading="lazy"
-                      decoding="async"
-                    />
+                      decoding="async" width={60} height={35} />
                   </div>
                   <h3>Creative</h3>
                   <h2>Architecture</h2>
@@ -181,36 +169,30 @@ export default function Banner() {
                   srcSet="/assets/img/slider/slider-v1-img3.webp"
                   type="image/webp"
                 />
-                <img
-                  src="/assets/img/slider/slider-v1-img3.jpg"
+                <img src="/assets/img/slider/slider-v1-img3.webp"
                   alt="Creative Architecture"
                   className="image-layer__img"
                   loading="lazy"
                   decoding="async"
                   width={1920}
-                  height={960}
-                />
+                  height={960} />
               </picture>
             </div>
             <div className="shape1">
-              <img
-                src="assets/img/shape/slider-v1-shape1.png"
+              <img src="/assets/img/shape/slider-v1-shape1.webp"
                 alt=""
                 loading="lazy"
-                decoding="async"
-              />
+                decoding="async" width={1043} height={960} />
             </div>
 
             <div className="container">
               <div className="main-slider-one__single">
                 <div className="main-slider-one__content">
                   <div className="shape2 float-bob-x">
-                    <img
-                      src="assets/img/shape/slider-v1-shape2.png"
+                    <img src="/assets/img/shape/slider-v1-shape2.webp"
                       alt=""
                       loading="lazy"
-                      decoding="async"
-                    />
+                      decoding="async" width={60} height={35} />
                   </div>
                   <h3>Creative</h3>
                   <h2>Architecture</h2>

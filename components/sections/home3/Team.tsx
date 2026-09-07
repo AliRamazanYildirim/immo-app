@@ -24,9 +24,8 @@ export default function Team() {
               <div className="team-two__single">
                 <div className="team-two__single-img">
                   <div className="inner">
-                    <img
-                      src="assets/img/team/team-v2-img1.jpg"
-                      alt="Marcus Vance - Senior Architect" decoding="async" loading="lazy" />
+                    <img src="/assets/img/team/team-v2-img1.webp"
+                      alt="Marcus Vance - Senior Architect" decoding="async" loading="lazy" width={370} height={540} />
                   </div>
 
                   <div className="content-box">
@@ -72,9 +71,8 @@ export default function Team() {
               <div className="team-two__single">
                 <div className="team-two__single-img">
                   <div className="inner">
-                    <img
-                      src="assets/img/team/team-v2-img2.jpg"
-                      alt="Janes Cooper - Lead Interior Designer" decoding="async" loading="lazy" />
+                    <img src="/assets/img/team/team-v2-img2.webp"
+                      alt="Janes Cooper - Lead Interior Designer" decoding="async" loading="lazy" width={370} height={540} />
                   </div>
 
                   <div className="content-box">
@@ -120,9 +118,8 @@ export default function Team() {
               <div className="team-two__single">
                 <div className="team-two__single-img">
                   <div className="inner">
-                    <img
-                      src="assets/img/team/team-v2-img3.jpg"
-                      alt="David Miller - Structural Engineer" decoding="async" loading="lazy" />
+                    <img src="/assets/img/team/team-v2-img3.webp"
+                      alt="David Miller - Structural Engineer" decoding="async" loading="lazy" width={370} height={540} />
                   </div>
 
                   <div className="content-box">

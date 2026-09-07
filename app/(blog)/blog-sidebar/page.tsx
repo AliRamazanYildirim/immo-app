@@ -7,7 +7,7 @@ export default function Home() {
         headerStyle={1}
         footerStyle={1}
         breadcrumbTitle="BLOG SIDEBAR"
-        breadcrumbBg="assets/img/blog/page-header-bg.jpg"
+        breadcrumbBg="/assets/img/blog/page-header-bg.webp"
       >
         <div>
           {/*Start Blog Sidebar */}
@@ -21,9 +21,8 @@ export default function Home() {
                     <div className="blog-sidebar__single">
                       <div className="blog-sidebar__single-img">
                         <div className="inner">
-                          <img
-                            src="assets/img/blog/blog-sidebar-img1.jpg"
-                            alt="" decoding="async" loading="lazy" />
+                          <img src="/assets/img/blog/blog-sidebar-img1.webp"
+                            alt="" decoding="async" loading="lazy" width={740} height={450} />
                         </div>
                       </div>
 
@@ -117,9 +116,8 @@ export default function Home() {
                             <div className="swiper-slide">
                               <div className="single-img-box">
                                 <div className="inner">
-                                  <img
-                                    src="assets/img/blog/blog-sidebar-img2.jpg"
-                                    alt="" decoding="async" loading="lazy" />
+                                  <img src="/assets/img/blog/blog-sidebar-img2.webp"
+                                    alt="" decoding="async" loading="lazy" width={740} height={450} />
                                 </div>
                               </div>
                             </div>
@@ -127,9 +125,8 @@ export default function Home() {
                             <div className="swiper-slide">
                               <div className="single-img-box">
                                 <div className="inner">
-                                  <img
-                                    src="assets/img/blog/blog-sidebar-img2.jpg"
-                                    alt="" decoding="async" loading="lazy" />
+                                  <img src="/assets/img/blog/blog-sidebar-img2.webp"
+                                    alt="" decoding="async" loading="lazy" width={740} height={450} />
                                 </div>
                               </div>
                             </div>
@@ -137,9 +134,8 @@ export default function Home() {
                             <div className="swiper-slide">
                               <div className="single-img-box">
                                 <div className="inner">
-                                  <img
-                                    src="assets/img/blog/blog-sidebar-img2.jpg"
-                                    alt="" decoding="async" loading="lazy" />
+                                  <img src="/assets/img/blog/blog-sidebar-img2.webp"
+                                    alt="" decoding="async" loading="lazy" width={740} height={450} />
                                 </div>
                               </div>
                             </div>
@@ -213,9 +209,8 @@ export default function Home() {
                     <div className="blog-sidebar__single">
                       <div className="blog-sidebar__single-img">
                         <div className="inner">
-                          <img
-                            src="assets/img/blog/blog-sidebar-img3.jpg"
-                            alt="" decoding="async" loading="lazy" />
+                          <img src="/assets/img/blog/blog-sidebar-img3.webp"
+                            alt="" decoding="async" loading="lazy" width={740} height={450} />
                         </div>
                       </div>
 
@@ -263,9 +258,8 @@ export default function Home() {
                     <div className="blog-sidebar__single">
                       <div className="blog-sidebar__single-img">
                         <div className="inner">
-                          <img
-                            src="assets/img/blog/blog-sidebar-img4.jpg"
-                            alt="" decoding="async" loading="lazy" />
+                          <img src="/assets/img/blog/blog-sidebar-img4.webp"
+                            alt="" decoding="async" loading="lazy" width={740} height={450} />
                         </div>
                       </div>
 
@@ -397,9 +391,8 @@ export default function Home() {
                         <li>
                           <div className="inner">
                             <div className="img-box">
-                              <img
-                                src="assets/img/blog/sidebar-img1.jpg"
-                                alt="" decoding="async" loading="lazy" />
+                              <img src="/assets/img/blog/sidebar-img1.webp"
+                                alt="" decoding="async" loading="lazy" width={95} height={95} />
                             </div>
 
                             <div className="content-box">
@@ -419,9 +412,8 @@ export default function Home() {
                         <li>
                           <div className="inner">
                             <div className="img-box">
-                              <img
-                                src="assets/img/blog/sidebar-img2.jpg"
-                                alt="" decoding="async" loading="lazy" />
+                              <img src="/assets/img/blog/sidebar-img2.webp"
+                                alt="" decoding="async" loading="lazy" width={95} height={95} />
                             </div>
 
                             <div className="content-box">
@@ -442,9 +434,8 @@ export default function Home() {
                         <li>
                           <div className="inner">
                             <div className="img-box">
-                              <img
-                                src="assets/img/blog/sidebar-img3.jpg"
-                                alt="" decoding="async" loading="lazy" />
+                              <img src="/assets/img/blog/sidebar-img3.webp"
+                                alt="" decoding="async" loading="lazy" width={95} height={95} />
                             </div>
 
                             <div className="content-box">

@@ -28,12 +28,10 @@ export default function Faq() {
       {/*Start Faq One */}
       <section className="faq-one">
         <div className="shape1">
-          <img
-            src="assets/img/shape/faq-v1-shape1.png"
+          <img src="/assets/img/shape/faq-v1-shape1.webp"
             alt=""
             loading="lazy"
-            decoding="async"
-          />
+            decoding="async" width={469} height={736} />
         </div>
         <div className="container clearfix">
           <div className="faq-one__inner">

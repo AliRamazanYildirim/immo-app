@@ -48,7 +48,7 @@ export default function ProjectSlider0() {
     <>
       <Swiper {...swiperOptions} className="theme_carousel owl-theme">
         <SwiperSlide className="swiper-slide">
-          <img src="assets/img/project/project-v2-img1.jpg" alt="#" decoding="async" loading="lazy" />
+          <img src="/assets/img/project/project-v2-img1.webp" alt="#" decoding="async" loading="lazy" width={770} height={520} />
           <div className="overlay-content">
             <p>San Fransisco</p>
             <h2>
@@ -57,7 +57,7 @@ export default function ProjectSlider0() {
           </div>
         </SwiperSlide>
         <SwiperSlide className="swiper-slide">
-          <img src="assets/img/project/project-v2-img2.jpg" alt="#" decoding="async" loading="lazy" />
+          <img src="/assets/img/project/project-v2-img2.webp" alt="#" decoding="async" loading="lazy" width={770} height={520} />
           <div className="overlay-content">
             <p>San Fransisco</p>
             <h2>
@@ -66,7 +66,7 @@ export default function ProjectSlider0() {
           </div>
         </SwiperSlide>
         <SwiperSlide className="swiper-slide">
-          <img src="assets/img/project/project-v2-img1.jpg" alt="#" decoding="async" loading="lazy" />
+          <img src="/assets/img/project/project-v2-img1.webp" alt="#" decoding="async" loading="lazy" width={770} height={520} />
           <div className="overlay-content">
             <p>San Fransisco</p>
             <h2>
@@ -75,7 +75,7 @@ export default function ProjectSlider0() {
           </div>
         </SwiperSlide>
         <SwiperSlide className="swiper-slide">
-          <img src="assets/img/project/project-v2-img2.jpg" alt="#" decoding="async" loading="lazy" />
+          <img src="/assets/img/project/project-v2-img2.webp" alt="#" decoding="async" loading="lazy" width={770} height={520} />
           <div className="overlay-content">
             <p>San Fransisco</p>
             <h2>

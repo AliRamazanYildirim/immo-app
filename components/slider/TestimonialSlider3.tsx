@@ -46,32 +46,32 @@ const clientThumbs = [
   {
     name: "Julian Meier",
     role: "Private Residence Client",
-    img: "assets/img/testimonial/testimonials-v1-img1.jpg",
+    img: "/assets/img/testimonial/testimonials-v1-img1.webp",
   },
   {
     name: "Annette Black",
     role: "Residential Complex Client",
-    img: "assets/img/testimonial/testimonials-v1-img2.jpg",
+    img: "/assets/img/testimonial/testimonials-v1-img2.webp",
   },
   {
     name: "Lucas Hoffmann",
     role: "Commercial Building Client",
-    img: "assets/img/testimonial/testimonials-v1-img3.jpg",
+    img: "/assets/img/testimonial/testimonials-v1-img3.webp",
   },
   {
     name: "Julian Meier",
     role: "Private Residence Client",
-    img: "assets/img/testimonial/testimonials-v1-img1.jpg",
+    img: "/assets/img/testimonial/testimonials-v1-img1.webp",
   },
   {
     name: "Annette Black",
     role: "Residential Complex Client",
-    img: "assets/img/testimonial/testimonials-v1-img2.jpg",
+    img: "/assets/img/testimonial/testimonials-v1-img2.webp",
   },
   {
     name: "Lucas Hoffmann",
     role: "Commercial Building Client",
-    img: "assets/img/testimonial/testimonials-v1-img3.jpg",
+    img: "/assets/img/testimonial/testimonials-v1-img3.webp",
   },
 ];
 
@@ -95,12 +95,7 @@ export default function TestimonialSlider3() {
               <div className="testimonials-one__thumb-single">
                 <div className="testimonials-one__thumb-img">
                   <div className="inner">
-                    <img
-                      src={item.img}
-                      alt={item.name}
-                      loading="lazy"
-                      decoding="async"
-                    />
+                    <img src={item.img} alt={item.name} loading="lazy" decoding="async" width={80} height={80} />
                   </div>
                 </div>
                 <div className="testimonials-one__thumb-single-text">
@@ -129,12 +124,7 @@ export default function TestimonialSlider3() {
             >
               <div className="testimonials-one__thumb-img">
                 <div className="inner">
-                  <img
-                    src={item.img}
-                    alt={item.name}
-                    loading="lazy"
-                    decoding="async"
-                  />
+                  <img src={item.img} alt={item.name} loading="lazy" decoding="async" width={80} height={80} />
                 </div>
               </div>
 

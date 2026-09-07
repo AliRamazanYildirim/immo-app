@@ -36,7 +36,7 @@ export default function Header1({
                     <div className="main-header-one__left">
                       <div className="logo-box">
                         <Link href="/">
-                          <img src={siteConfig.logos.main} alt="" />
+                          <img src={siteConfig.logos.main} alt={siteConfig.company.name} width={459} height={508} fetchPriority="high" loading="eager" decoding="async" />
                         </Link>
                       </div>
                     </div>

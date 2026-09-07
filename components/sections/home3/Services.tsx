@@ -14,17 +14,15 @@ export default function Services() {
                 <ul>
                   <li>
                     <div className="img-box">
-                      <img
-                        src="assets/img/service/service-why-choose-img1.jpg"
-                        alt="" decoding="async" loading="lazy" />
+                      <img src="/assets/img/service/service-why-choose-img1.webp"
+                        alt="" decoding="async" loading="lazy" width={280} height={535} />
                     </div>
                   </li>
 
                   <li>
                     <div className="img-box">
-                      <img
-                        src="assets/img/service/service-why-choose-img2.jpg"
-                        alt="" decoding="async" loading="lazy" />
+                      <img src="/assets/img/service/service-why-choose-img2.webp"
+                        alt="" decoding="async" loading="lazy" width={280} height={535} />
                     </div>
                   </li>
                 </ul>
