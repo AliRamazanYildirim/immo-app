@@ -99,7 +99,7 @@ export default function Banner() {
                     </div>
 
                     <div className="btn-two">
-                      <Link className="thm-btn" href="contact">
+                      <Link className="thm-btn" href="/contact">
                         <span className="txt">GET STARTED NOW</span>
                       </Link>
                     </div>

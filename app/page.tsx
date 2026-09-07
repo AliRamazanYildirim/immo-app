@@ -13,15 +13,7 @@ import Brand from "@/components/sections/home1/Brand";
 import Testimonial from "@/components/sections/home1/Testimonial";
 export default function Home() {
   return (
-    <>
-      <link
-        rel="preload"
-        href="/assets/img/slider/slider-v1-img1.webp"
-        as="image"
-        type="image/webp"
-        fetchPriority="high"
-      />
-      <Layout headerStyle={1} footerStyle={1}>
+    <Layout headerStyle={1} footerStyle={1}>
         <Banner />
         <Features />
         <About />
@@ -35,6 +27,5 @@ export default function Home() {
         <FeatureExplore />
         <Testimonial />
       </Layout>
-    </>
   );
 }

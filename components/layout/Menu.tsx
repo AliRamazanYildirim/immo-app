@@ -62,9 +62,6 @@ export default function Menu() {
             <li>
               <Link href="/faq">Faq</Link>
             </li>
-            <li>
-              <Link href="/error">Error</Link>
-            </li>
           </ul>
         </li>
         <li>

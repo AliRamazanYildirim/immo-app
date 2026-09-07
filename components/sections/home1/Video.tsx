@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import ModalVideo from "react-modal-video";
-import React from "react";
 
 export default function Video() {
   const [isOpen, setOpen] = useState(false);

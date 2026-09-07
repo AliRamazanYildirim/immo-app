@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import siteConfig from "@/lib/siteConfig";
+import siteConfig, { getTelLink } from "@/lib/siteConfig";
 import { useState } from "react";
 
 export interface MobileMenuProps {
@@ -48,7 +48,7 @@ export default function MobileMenu({
           </div>
           <div className="nav-logo">
             <Link href="/">
-              <img src={siteConfig.logos.light} alt="Logo" loading="lazy" decoding="async" width={459} height={508} />
+              <img src={siteConfig.logos.light} alt={siteConfig.company.name} loading="lazy" decoding="async" width={459} height={508} />
             </Link>
           </div>
           <div className="menu-outer">
@@ -167,11 +167,6 @@ export default function MobileMenu({
                       Faq
                     </Link>
                   </li>
-                  <li>
-                    <Link href="/error" onClick={handleMobileMenu}>
-                      Error
-                    </Link>
-                  </li>
                 </ul>
                 <div
                   className={
@@ -194,33 +189,33 @@ export default function MobileMenu({
               <span className="icon-call"></span>
             </div>
             <p>
-              <Link href="tel:123456789">(629) 555-0129</Link>
+              <Link href={getTelLink()}>{siteConfig.contact.phone}</Link>
             </p>
           </div>
           <div className="social-links">
             <ul className="clearfix list-wrap">
               <li>
-                <Link href="#">
+                <Link href={siteConfig.social.facebook} target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-facebook-f"></i>
                 </Link>
               </li>
               <li>
-                <Link href="#">
+                <Link href={siteConfig.social.twitter} target="_blank" rel="noopener noreferrer">
                   <i className="fa-brands fa-x-twitter"></i>
                 </Link>
               </li>
               <li>
-                <Link href="#">
+                <Link href={siteConfig.social.instagram} target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-instagram"></i>
                 </Link>
               </li>
               <li>
-                <Link href="#">
+                <Link href={siteConfig.social.linkedin} target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-linkedin-in"></i>
                 </Link>
               </li>
               <li>
-                <Link href="#">
+                <Link href={siteConfig.social.youtube} target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-youtube"></i>
                 </Link>
               </li>

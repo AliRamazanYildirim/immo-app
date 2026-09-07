@@ -1,7 +1,6 @@
 'use client'
 import { useState } from 'react'
 import ModalVideo from 'react-modal-video'
-import React from 'react';
 import Link from "next/link"
 
 export default function About() {

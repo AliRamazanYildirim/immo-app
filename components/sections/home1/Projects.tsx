@@ -24,16 +24,18 @@ export default function Projects() {
               <div className="project-one__single">
                 <div className="project-one__single-img">
                   <img src="/assets/img/project/project-v1-img1.webp"
-                    alt=""
+                    alt="Hotel Joshna Villa architectural design project 1"
                     loading="lazy"
                     decoding="async" width={470} height={625} />
                   <div className="overlay-btn">
-                    <Link
+                    <a
                       className="img-popup"
                       href="/assets/img/project/project-v1-img1.webp"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <span className="icon-search-interface-symbol"></span>
-                    </Link>
+                    </a>
                     <Link href="/project-details">
                       <span className="icon-link"></span>
                     </Link>
@@ -58,16 +60,18 @@ export default function Projects() {
               <div className="project-one__single">
                 <div className="project-one__single-img">
                   <img src="/assets/img/project/project-v1-img2.webp"
-                    alt=""
+                    alt="Hotel Joshna Villa architectural design project 2"
                     loading="lazy"
                     decoding="async" width={470} height={625} />
                   <div className="overlay-btn">
-                    <Link
+                    <a
                       className="img-popup"
                       href="/assets/img/project/project-v1-img2.webp"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <span className="icon-search-interface-symbol"></span>
-                    </Link>
+                    </a>
                     <Link href="/project-details">
                       <span className="icon-link"></span>
                     </Link>
@@ -92,16 +96,18 @@ export default function Projects() {
               <div className="project-one__single">
                 <div className="project-one__single-img">
                   <img src="/assets/img/project/project-v1-img3.webp"
-                    alt=""
+                    alt="Hotel Joshna Villa architectural design project 3"
                     loading="lazy"
                     decoding="async" width={470} height={625} />
                   <div className="overlay-btn">
-                    <Link
+                    <a
                       className="img-popup"
                       href="/assets/img/project/project-v1-img3.webp"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <span className="icon-search-interface-symbol"></span>
-                    </Link>
+                    </a>
                     <Link href="/project-details">
                       <span className="icon-link"></span>
                     </Link>
@@ -126,16 +132,18 @@ export default function Projects() {
               <div className="project-one__single">
                 <div className="project-one__single-img">
                   <img src="/assets/img/project/project-v1-img4.webp"
-                    alt=""
+                    alt="Hotel Joshna Villa architectural design project 4"
                     loading="lazy"
                     decoding="async" width={470} height={625} />
                   <div className="overlay-btn">
-                    <Link
+                    <a
                       className="img-popup"
                       href="/assets/img/project/project-v1-img4.webp"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <span className="icon-search-interface-symbol"></span>
-                    </Link>
+                    </a>
                     <Link href="/project-details">
                       <span className="icon-link"></span>
                     </Link>

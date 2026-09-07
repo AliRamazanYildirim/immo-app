@@ -1,12 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { Autoplay, Navigation } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { SwiperOptions } from "swiper/types";
 
 const swiperOptions: SwiperOptions = {
-  modules: [Autoplay, Navigation],
+  modules: [Autoplay, Navigation, Pagination],
   slidesPerView: 1,
   autoplay: {
     delay: 2500,
@@ -18,6 +18,12 @@ const swiperOptions: SwiperOptions = {
   navigation: {
     nextEl: ".h1n",
     prevEl: ".h1p",
+  },
+
+  // Pagination
+  pagination: {
+    el: "#project-three__pagination",
+    clickable: true,
   },
 
   breakpoints: {
@@ -67,12 +73,14 @@ export default function ProjectSlider2() {
                   <div className="project-three__overlay-icon">
                     <ul>
                       <li>
-                        <Link
+                        <a
                           className="img-popup"
                           href="/assets/img/project/project-v3-img1.webp"
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
                           <span className="icon-search-interface-symbol"></span>
-                        </Link>
+                        </a>
                       </li>
                       <li>
                         <Link href="/project-details">
@@ -105,12 +113,14 @@ export default function ProjectSlider2() {
                   <div className="project-three__overlay-icon">
                     <ul>
                       <li>
-                        <Link
+                        <a
                           className="img-popup"
                           href="/assets/img/project/project-v3-img2.webp"
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
                           <span className="icon-search-interface-symbol"></span>
-                        </Link>
+                        </a>
                       </li>
                       <li>
                         <Link href="/project-details">
@@ -143,12 +153,14 @@ export default function ProjectSlider2() {
                   <div className="project-three__overlay-icon">
                     <ul>
                       <li>
-                        <Link
+                        <a
                           className="img-popup"
                           href="/assets/img/project/project-v3-img3.webp"
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
                           <span className="icon-search-interface-symbol"></span>
-                        </Link>
+                        </a>
                       </li>
                       <li>
                         <Link href="/project-details">
@@ -189,12 +201,14 @@ export default function ProjectSlider2() {
                   <div className="project-three__overlay-icon">
                     <ul>
                       <li>
-                        <Link
+                        <a
                           className="img-popup"
                           href="/assets/img/project/project-v3-img1.webp"
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
                           <span className="icon-search-interface-symbol"></span>
-                        </Link>
+                        </a>
                       </li>
                       <li>
                         <Link href="/project-details">
@@ -227,12 +241,14 @@ export default function ProjectSlider2() {
                   <div className="project-three__overlay-icon">
                     <ul>
                       <li>
-                        <Link
+                        <a
                           className="img-popup"
                           href="/assets/img/project/project-v3-img2.webp"
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
                           <span className="icon-search-interface-symbol"></span>
-                        </Link>
+                        </a>
                       </li>
                       <li>
                         <Link href="/project-details">
@@ -265,12 +281,14 @@ export default function ProjectSlider2() {
                   <div className="project-three__overlay-icon">
                     <ul>
                       <li>
-                        <Link
+                        <a
                           className="img-popup"
                           href="/assets/img/project/project-v3-img3.webp"
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
                           <span className="icon-search-interface-symbol"></span>
-                        </Link>
+                        </a>
                       </li>
                       <li>
                         <Link href="/project-details">
@@ -311,12 +329,14 @@ export default function ProjectSlider2() {
                   <div className="project-three__overlay-icon">
                     <ul>
                       <li>
-                        <Link
+                        <a
                           className="img-popup"
                           href="/assets/img/project/project-v3-img1.webp"
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
                           <span className="icon-search-interface-symbol"></span>
-                        </Link>
+                        </a>
                       </li>
                       <li>
                         <Link href="/project-details">
@@ -349,12 +369,14 @@ export default function ProjectSlider2() {
                   <div className="project-three__overlay-icon">
                     <ul>
                       <li>
-                        <Link
+                        <a
                           className="img-popup"
                           href="/assets/img/project/project-v3-img2.webp"
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
                           <span className="icon-search-interface-symbol"></span>
-                        </Link>
+                        </a>
                       </li>
                       <li>
                         <Link href="/project-details">
@@ -387,12 +409,14 @@ export default function ProjectSlider2() {
                   <div className="project-three__overlay-icon">
                     <ul>
                       <li>
-                        <Link
+                        <a
                           className="img-popup"
                           href="/assets/img/project/project-v3-img3.webp"
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
                           <span className="icon-search-interface-symbol"></span>
-                        </Link>
+                        </a>
                       </li>
                       <li>
                         <Link href="/project-details">

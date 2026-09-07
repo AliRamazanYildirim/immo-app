@@ -6,38 +6,18 @@ export default function Footer2() {
     <>
       <footer className="main-footer alternat-2">
         <div className="widget-section">
-          <div className="pattern-layer">
-            <div
-              className="pattern-1"
-              style={{
-                backgroundImage: "url(assets/images/shape/shape-27.png)",
-              }}
-            ></div>
-            <div
-              className="pattern-2"
-              style={{
-                backgroundImage: "url(assets/images/shape/shape-28.png)",
-              }}
-            ></div>
-          </div>
           <div className="auto-container">
             <div className="row clearfix">
               <div className="col-lg-3 col-md-6 col-sm-12 footer-column">
                 <div className="logo-widget footer-widget">
                   <figure className="footer-logo">
-                    <Link href="/#">
+                    <Link href="/">
                       <img src={siteConfig.logos.main} alt={siteConfig.company.name} loading="lazy" decoding="async" width={459} height={508} style={{ maxHeight: "70px", width: "auto" }} />
                     </Link>
                   </figure>
                   <div className="text">
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipiscing
-                      elitsollicit udin netus quis ornare. Massa pharetra in nec
-                      sed nunc.
-                    </p>
-                    <p>
-                      nisl viverra massa imperdiet. Dui mattis quis congue
-                      fames.
+                      {siteConfig.company.description}
                     </p>
                   </div>
                 </div>
@@ -50,16 +30,13 @@ export default function Footer2() {
                   <div className="widget-content">
                     <ul className="links-list clearfix">
                       <li>
-                        <Link href="/about-us">About Us</Link>
+                        <Link href="/about">About Us</Link>
                       </li>
                       <li>
-                        <Link href="/services1">Services</Link>
+                        <Link href="/service">Services</Link>
                       </li>
                       <li>
-                        <Link href="/career">Career</Link>
-                      </li>
-                      <li>
-                        <Link href="/pricing-table">Pricing</Link>
+                        <Link href="/projects">Projects</Link>
                       </li>
                       <li>
                         <Link href="/contact">Contact Us</Link>
@@ -76,19 +53,16 @@ export default function Footer2() {
                   <div className="widget-content">
                     <ul className="links-list clearfix">
                       <li>
-                        <Link href="/index-2">Privacy Policy</Link>
+                        <Link href="/impressum">Impressum</Link>
                       </li>
                       <li>
-                        <Link href="/index-2">Terms & Condition</Link>
-                      </li>
-                      <li>
-                        <Link href="/index-2">Support</Link>
-                      </li>
-                      <li>
-                        <Link href="/index-2">Disclaimer</Link>
+                        <Link href="/datenschutz">Datenschutz</Link>
                       </li>
                       <li>
                         <Link href="/faq">Faq</Link>
+                      </li>
+                      <li>
+                        <Link href="/contact">Support</Link>
                       </li>
                     </ul>
                   </div>
@@ -101,20 +75,20 @@ export default function Footer2() {
                     <h3>Contact</h3>
                   </div>
                   <div className="widget-content">
-                    <p>Tincidunt neque pretium lectus donec risus.</p>
+                    <p>{siteConfig.company.slogan}</p>
                     <ul className="info-list clearfix">
                       <li>
-                        <i className="icon-pin"></i>New Hyde Park, NY 11040
+                        <i className="icon-pin"></i>{siteConfig.address.full}
                       </li>
                       <li>
                         <i className="icon-envelope"></i>
-                        <Link href="mailto:example@info.com">
-                          example@info.com
+                        <Link href={`mailto:${siteConfig.contact.email}`}>
+                          {siteConfig.contact.email}
                         </Link>
                       </li>
                       <li>
                         <i className="icon-phone"></i>
-                        <Link href="tel:912136660027">333 666 0000</Link>
+                        <Link href={`tel:${siteConfig.contact.phoneRaw}`}>{siteConfig.contact.phone}</Link>
                       </li>
                     </ul>
                   </div>
@@ -127,14 +101,15 @@ export default function Footer2() {
           <div className="auto-container">
             <div className="copyright">
               <p>
-                Copyright © 2026{" "}
+                Copyright © {siteConfig.company.copyrightYear}{" "}
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://dev-portfolio-eight-khaki.vercel.app/"
                 >
-                  by ARY Tech Solutions
+                  by {siteConfig.company.name}
                 </a>{" "}
-                All Rights Reserved
+                All Rights Reserved | <Link href="/impressum">Impressum</Link> | <Link href="/datenschutz">Datenschutz</Link>
               </p>
             </div>
           </div>

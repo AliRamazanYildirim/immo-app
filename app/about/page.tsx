@@ -4,6 +4,7 @@ import TestimonialSlider4 from "@/components/slider/TestimonialSlider4";
 import BrandSlider2 from "@/components/slider/BrandSlider2";
 import Layout from "@/components/layout/Layout";
 import CounterUp from "@/components/elements/CounterUp";
+import siteConfig, { getTelLink } from "@/lib/siteConfig";
 
 export default function Home() {
   return (
@@ -110,7 +111,7 @@ export default function Home() {
                     <div className="about-one__content-bottom">
                       <div className="about-one__content-bottom-author-box">
                         <div className="btn-box">
-                          <Link className="thm-btn" href="about">
+                          <Link className="thm-btn" href="/about">
                             <span className="txt">Discover More</span>
                           </Link>
                         </div>
@@ -129,7 +130,7 @@ export default function Home() {
                       <div className="text">
                         <h4>
                           Do you have any project on your mind? Call Us:{" "}
-                          <Link href="tel:123456789">+49 151 67145187</Link>
+                          <Link href={getTelLink()}>{siteConfig.contact.phone}</Link>
                         </h4>
                       </div>
                     </div>

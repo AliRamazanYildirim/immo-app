@@ -45,7 +45,7 @@ export default function Breadcrumb({
               </li>
               <li className="active">{breadcrumbTitle}</li>
             </ul>
-            <h2>{breadcrumbTitle}</h2>
+            <h1>{breadcrumbTitle}</h1>
           </div>
         </div>
       </section>

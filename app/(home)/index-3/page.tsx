@@ -12,27 +12,18 @@ import Team from "@/components/sections/home3/Team";
 import Testimonial from "@/components/sections/home3/Testimonial";
 export default function Home() {
   return (
-    <>
-      <link
-        rel="preload"
-        href="/assets/img/slider/slider-v3-img1.webp"
-        as="image"
-        type="image/webp"
-        fetchPriority="high"
-      />
-      <Layout headerStyle={3} footerStyle={1}>
-        <Banner />
-        <Features />
-        <About />
-        <Projects />
-        <Awards />
-        <Brand />
-        <Services />
-        <Features1 />
-        <Video />
-        <Testimonial />
-        <Team />
-      </Layout>
-    </>
+    <Layout headerStyle={3} footerStyle={1}>
+      <Banner />
+      <Features />
+      <About />
+      <Projects />
+      <Awards />
+      <Brand />
+      <Services />
+      <Features1 />
+      <Video />
+      <Testimonial />
+      <Team />
+    </Layout>
   );
 }

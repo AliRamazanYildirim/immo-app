@@ -48,7 +48,7 @@ export default function Faq() {
                 onClick={() => handleToggle(1)}
               >
                 <div className="accrodion-title">
-                  <h3>How can we improve the lead generation process?</h3>
+                  <h3>How long does the architectural design and approval process take?</h3>
                 </div>
                 <div
                   className={
@@ -59,10 +59,7 @@ export default function Faq() {
                 >
                   <div className="inner">
                     <p>
-                      The main elements of a marketing strategy are your target
-                      audiance goals and objectives and the tax you will employ
-                      to acitvely markter to your achive the goals.Lorem ipsum
-                      dolor sit amet, consectetur adipiscing elit,
+                      Concept and preliminary design typically take 4 to 8 weeks. Municipal building permit reviews generally require 2 to 4 months depending on local authority schedules and project scale.
                     </p>
                   </div>
                 </div>
@@ -75,7 +72,7 @@ export default function Faq() {
                 onClick={() => handleToggle(2)}
               >
                 <div className="accrodion-title">
-                  <h3>What is content marketing stratagy?</h3>
+                  <h3>Do you provide turnkey construction and general contracting?</h3>
                 </div>
                 <div
                   className={
@@ -86,10 +83,7 @@ export default function Faq() {
                 >
                   <div className="inner">
                     <p>
-                      The main elements of a marketing strategy are your target
-                      audiance goals and objectives and the tax you will employ
-                      to acitvely markter to your achive the goals.Lorem ipsum
-                      dolor sit amet, consectetur adipiscing elit,
+                      Yes. We offer complete turnkey delivery — managing excavation, shell construction, building envelope, MEP engineering, and interior finishes under a single, accountable contract.
                     </p>
                   </div>
                 </div>
@@ -102,7 +96,7 @@ export default function Faq() {
                 onClick={() => handleToggle(3)}
               >
                 <div className="accrodion-title">
-                  <h3>What is the purpose of digital agency?</h3>
+                  <h3>What is included in your interior architecture services?</h3>
                 </div>
                 <div
                   className={
@@ -113,10 +107,7 @@ export default function Faq() {
                 >
                   <div className="inner">
                     <p>
-                      The main elements of a marketing strategy are your target
-                      audiance goals and objectives and the tax you will employ
-                      to acitvely markter to your achive the goals.Lorem ipsum
-                      dolor sit amet, consectetur adipiscing elit,
+                      We provide spatial flow optimization, bespoke millwork and cabinetry design, lighting plans, tactile material sourcing, photorealistic 3D renders, and full turnkey furniture installation.
                     </p>
                   </div>
                 </div>
@@ -129,7 +120,7 @@ export default function Faq() {
                 onClick={() => handleToggle(4)}
               >
                 <div className="accrodion-title">
-                  <h3>Can I success on this platform with my experience?</h3>
+                  <h3>How do you ensure budget compliance and prevent cost overruns?</h3>
                 </div>
                 <div
                   className={
@@ -140,10 +131,7 @@ export default function Faq() {
                 >
                   <div className="inner">
                     <p>
-                      The main elements of a marketing strategy are your target
-                      audiance goals and objectives and the tax you will employ
-                      to acitvely markter to your achive the goals.Lorem ipsum
-                      dolor sit amet, consectetur adipiscing elit,
+                      We utilize detailed bills of quantities (BoQ), competitive trade tenders, and guaranteed-maximum-price contracts, backed by milestone-based payment disbursements.
                     </p>
                   </div>
                 </div>

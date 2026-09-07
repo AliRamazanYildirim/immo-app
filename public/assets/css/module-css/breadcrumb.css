@@ -119,6 +119,7 @@
   color: var(--thm-primary);
 }
 
+.page-header__inner h1,
 .page-header__inner h2 {
   color: var(--thm-white);
   font-size: 55px;

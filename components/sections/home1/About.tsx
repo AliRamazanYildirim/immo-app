@@ -1,5 +1,6 @@
 import Link from "next/link";
 import CounterUp from "@/components/elements/CounterUp";
+import siteConfig, { getTelLink } from "@/lib/siteConfig";
 export default function About() {
   return (
     <>
@@ -120,7 +121,7 @@ export default function About() {
                   <div className="text">
                     <h4>
                       Do you have any project on your mind? Call Us:{" "}
-                      <Link href="tel:123456789">+49 151 67145187</Link>
+                      <Link href={getTelLink()}>{siteConfig.contact.phone}</Link>
                     </h4>
                   </div>
                 </div>

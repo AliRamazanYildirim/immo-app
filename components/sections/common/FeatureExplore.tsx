@@ -1,11 +1,11 @@
 import Link from "next/link";
-import React from "react";
+import type { ReactNode } from "react";
 
 export interface FeatureExploreProps {
   imgSrc?: string;
   imgAlt?: string;
   subTitle?: string;
-  title?: React.ReactNode;
+  title?: ReactNode;
   text?: string;
   btnLink?: string;
   btnText?: string;

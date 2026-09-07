@@ -172,7 +172,7 @@ export default function Home() {
                     </div>
 
                     <form
-                      action="assets/inc/sendemail.php"
+                      action="#"
                       className="contact-page__form contact-form-validated"
                     >
                       <div className="row">

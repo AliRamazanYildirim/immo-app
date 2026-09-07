@@ -93,16 +93,16 @@ export default function Footer1() {
                   <div className="footer-widget__links-box">
                     <ul>
                       <li>
-                        <Link href="/contact">Help</Link>
-                      </li>
-                      <li>
                         <Link href="/contact">Support</Link>
                       </li>
                       <li>
-                        <Link href="/contact">Clients</Link>
+                        <Link href="/projects">Portfolio</Link>
                       </li>
                       <li>
-                        <Link href="/projects">Portfolio</Link>
+                        <Link href="/impressum">Impressum</Link>
+                      </li>
+                      <li>
+                        <Link href="/datenschutz">Datenschutz</Link>
                       </li>
                     </ul>
                   </div>
@@ -128,7 +128,7 @@ export default function Footer1() {
                       </p>
                     </div>
 
-                    <form className="footer-widget__newsletter-form">
+                    <form action="#" className="footer-widget__newsletter-form">
                       <div className="input-box">
                         <input
                           type="email"
@@ -162,11 +162,14 @@ export default function Footer1() {
                   Copyright © {siteConfig.company.copyrightYear}{" "}
                   <a
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://dev-portfolio-eight-khaki.vercel.app/"
                   >
                     by {siteConfig.company.name}
                   </a>{" "}
-                  All Rights Reserved
+                  All Rights Reserved |{" "}
+                  <Link href="/impressum">Impressum</Link> |{" "}
+                  <Link href="/datenschutz">Datenschutz</Link>
                 </p>
               </div>
             </div>

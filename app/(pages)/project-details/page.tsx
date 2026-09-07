@@ -166,15 +166,17 @@ export default function Home() {
                     <div className="project-three__overlay-icon">
                       <ul>
                         <li>
-                          <Link
+                          <a
                             className="img-popup"
                             href="/assets/img/project/project-v3-img4.webp"
+                            target="_blank"
+                            rel="noopener noreferrer"
                           >
                             <span className="icon-search-interface-symbol"></span>
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link href="#">
+                          <Link href="/projects">
                             <span className="icon-link"></span>
                           </Link>
                         </li>
@@ -184,7 +186,7 @@ export default function Home() {
                     <div className="project-three__single-content">
                       <p>San Fransisco</p>
                       <h2>
-                        <Link href="#">Hotel Joshna Villa</Link>
+                        <Link href="/projects">Hotel Joshna Villa</Link>
                       </h2>
                     </div>
                   </div>
@@ -208,15 +210,17 @@ export default function Home() {
                     <div className="project-three__overlay-icon">
                       <ul>
                         <li>
-                          <Link
+                          <a
                             className="img-popup"
                             href="/assets/img/project/project-v3-img5.webp"
+                            target="_blank"
+                            rel="noopener noreferrer"
                           >
                             <span className="icon-search-interface-symbol"></span>
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link href="#">
+                          <Link href="/projects">
                             <span className="icon-link"></span>
                           </Link>
                         </li>
@@ -226,7 +230,7 @@ export default function Home() {
                     <div className="project-three__single-content">
                       <p>San Fransisco</p>
                       <h2>
-                        <Link href="#">Hotel Joshna Villa</Link>
+                        <Link href="/projects">Hotel Joshna Villa</Link>
                       </h2>
                     </div>
                   </div>
@@ -250,15 +254,17 @@ export default function Home() {
                     <div className="project-three__overlay-icon">
                       <ul>
                         <li>
-                          <Link
+                          <a
                             className="img-popup"
                             href="/assets/img/project/project-v3-img6.webp"
+                            target="_blank"
+                            rel="noopener noreferrer"
                           >
                             <span className="icon-search-interface-symbol"></span>
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link href="#">
+                          <Link href="/projects">
                             <span className="icon-link"></span>
                           </Link>
                         </li>
@@ -268,7 +274,7 @@ export default function Home() {
                     <div className="project-three__single-content">
                       <p>San Fransisco</p>
                       <h2>
-                        <Link href="#">Hotel Joshna Villa</Link>
+                        <Link href="/projects">Hotel Joshna Villa</Link>
                       </h2>
                     </div>
                   </div>

@@ -31,12 +31,14 @@ export default function Home() {
                       <div className="project-three__overlay-icon">
                         <ul>
                           <li>
-                            <Link
+                            <a
                               className="img-popup"
                               href="/assets/img/project/project-v3-img4.webp"
+                              target="_blank"
+                              rel="noopener noreferrer"
                             >
                               <span className="icon-search-interface-symbol"></span>
-                            </Link>
+                            </a>
                           </li>
                           <li>
                             <Link href="/project-details">
@@ -75,12 +77,14 @@ export default function Home() {
                       <div className="project-three__overlay-icon">
                         <ul>
                           <li>
-                            <Link
+                            <a
                               className="img-popup"
                               href="/assets/img/project/project-v3-img5.webp"
+                              target="_blank"
+                              rel="noopener noreferrer"
                             >
                               <span className="icon-search-interface-symbol"></span>
-                            </Link>
+                            </a>
                           </li>
                           <li>
                             <Link href="/project-details">
@@ -119,12 +123,14 @@ export default function Home() {
                       <div className="project-three__overlay-icon">
                         <ul>
                           <li>
-                            <Link
+                            <a
                               className="img-popup"
                               href="/assets/img/project/project-v3-img6.webp"
+                              target="_blank"
+                              rel="noopener noreferrer"
                             >
                               <span className="icon-search-interface-symbol"></span>
-                            </Link>
+                            </a>
                           </li>
                           <li>
                             <Link href="/project-details">
@@ -163,12 +169,14 @@ export default function Home() {
                       <div className="project-three__overlay-icon">
                         <ul>
                           <li>
-                            <Link
+                            <a
                               className="img-popup"
                               href="/assets/img/project/project-v3-img7.webp"
+                              target="_blank"
+                              rel="noopener noreferrer"
                             >
                               <span className="icon-search-interface-symbol"></span>
-                            </Link>
+                            </a>
                           </li>
                           <li>
                             <Link href="/project-details">
@@ -207,12 +215,14 @@ export default function Home() {
                       <div className="project-three__overlay-icon">
                         <ul>
                           <li>
-                            <Link
+                            <a
                               className="img-popup"
                               href="/assets/img/project/project-v3-img8.webp"
+                              target="_blank"
+                              rel="noopener noreferrer"
                             >
                               <span className="icon-search-interface-symbol"></span>
-                            </Link>
+                            </a>
                           </li>
                           <li>
                             <Link href="/project-details">
@@ -251,12 +261,14 @@ export default function Home() {
                       <div className="project-three__overlay-icon">
                         <ul>
                           <li>
-                            <Link
+                            <a
                               className="img-popup"
                               href="/assets/img/project/project-v3-img9.webp"
+                              target="_blank"
+                              rel="noopener noreferrer"
                             >
                               <span className="icon-search-interface-symbol"></span>
-                            </Link>
+                            </a>
                           </li>
                           <li>
                             <Link href="/project-details">

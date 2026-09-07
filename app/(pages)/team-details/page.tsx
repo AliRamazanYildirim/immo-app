@@ -1,4 +1,3 @@
-import React from "react";
 import Layout from "@/components/layout/Layout";
 import Link from "next/link";
 import siteConfig, { getMailtoLink, getTelLink } from "@/lib/siteConfig";
@@ -234,7 +233,7 @@ export default function Home() {
                 </div>
                 <div className="contact-two__inner-box">
                   <form
-                    action="assets/inc/sendemail.php"
+                    action="#"
                     className="contact-page__form contact-form-validated"
                   >
                     <div className="row">

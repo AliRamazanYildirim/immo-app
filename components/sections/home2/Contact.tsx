@@ -59,11 +59,11 @@ export default function Contact() {
                 <h2>Have Any Question?</h2>
               </div>
 
-              <form method="post" action="/">
+              <form action="#">
                 <div className="form-group">
                   <input
                     type="text"
-                    name="username"
+                    name="name"
                     placeholder="Your Name"
                     required
                   />
@@ -72,7 +72,7 @@ export default function Contact() {
                   <input
                     type="email"
                     placeholder="Email Address"
-                    name="form_email"
+                    name="email"
                     required
                   />
                 </div>
@@ -85,7 +85,7 @@ export default function Contact() {
                   />
                 </div>
                 <div className="form-group">
-                  <textarea placeholder="Write Your Message"></textarea>
+                  <textarea name="message" placeholder="Write Your Message" required></textarea>
                 </div>
                 <div className="row">
                   <div className="col-xl-12">

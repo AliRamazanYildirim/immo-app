@@ -1,6 +1,7 @@
 "use client";
 import Layout from "@/components/layout/Layout";
 import Link from "next/link";
+import siteConfig, { getTelLink } from "@/lib/siteConfig";
 import { useState } from "react";
 interface AccordionState {
   status: boolean;
@@ -44,7 +45,7 @@ export default function Home() {
                   <div className="services-details__content">
                     <div className="services-details__content-img1">
                       <img src="/assets/img/service/services-details-img6.webp"
-                        alt="#" decoding="async" loading="lazy" width={740} height={370} />
+                        alt="Turnkey construction management and on-site engineering" decoding="async" loading="lazy" width={740} height={370} />
                     </div>
 
                     <div className="text-box1">
@@ -130,7 +131,7 @@ export default function Home() {
 
                     <div className="services-details__content-img2">
                       <img src="/assets/img/service/services-details-const-img2.webp"
-                        alt="#" decoding="async" loading="lazy" width={740} height={370} />
+                        alt="On-site construction supervision and engineering inspection" decoding="async" loading="lazy" width={740} height={370} />
                     </div>
 
                     <div className="text-box3">
@@ -435,7 +436,7 @@ export default function Home() {
                           <p>You can call anytime </p>
                           <h4>
                             Free{" "}
-                            <Link href="tel:123456789">+99 (786) 8765</Link>
+                            <Link href={getTelLink()}>{siteConfig.contact.phone}</Link>
                           </h4>
                         </div>
                       </div>

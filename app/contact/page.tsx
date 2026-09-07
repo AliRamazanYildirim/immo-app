@@ -103,7 +103,7 @@ export default function Home() {
                     </div>
                     <div className="contact-two__inner-box">
                       <form
-                        action="/"
+                        action="#"
                         className="contact-page__form contact-form-validated"
                       >
                         <div className="row">
@@ -113,6 +113,7 @@ export default function Home() {
                                 type="text"
                                 placeholder="Your Name*"
                                 name="name"
+                                required
                               />
                             </div>
                           </div>
@@ -122,6 +123,7 @@ export default function Home() {
                                 type="email"
                                 placeholder="Your Email*"
                                 name="email"
+                                required
                               />
                             </div>
                           </div>
@@ -152,6 +154,7 @@ export default function Home() {
                               <textarea
                                 name="message"
                                 placeholder="Write Message*"
+                                required
                               ></textarea>
                             </div>
                             <div className="contact-page__btn">
@@ -160,7 +163,7 @@ export default function Home() {
                                 type="submit"
                                 data-loading-text="Please wait..."
                               >
-                                <span className="txt">SEND MEASSAGE</span>
+                                <span className="txt">SEND MESSAGE</span>
                               </button>
                             </div>
                           </div>

@@ -1,8 +1,7 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import BackToTop from "../elements/BackToTop";
-import DataBg from "../elements/DataBg";
 import Breadcrumb from "./Breadcrumb";
 import SearchPopup from "./SearchPopup";
 import Footer1 from "./footer/Footer1";
@@ -18,7 +17,7 @@ export interface LayoutProps {
   headTitle?: string;
   breadcrumbTitle?: string;
   breadcrumbBg?: string;
-  children: React.ReactNode;
+  children: ReactNode;
   wrapperCls?: string;
 }
 
@@ -71,8 +70,7 @@ export default function Layout({
 
   return (
     <>
-      <DataBg />
-      <div className={`body-dark-bg ${wrapperCls ? wrapperCls : ""}`} id="#top">
+      <div className={`body-dark-bg ${wrapperCls ? wrapperCls : ""}`} id="top">
         {!headerStyle && (
           <Header1
             scroll={scroll}
@@ -135,10 +133,8 @@ export default function Layout({
 
         {children}
 
-        {!footerStyle && <Footer1 />}
-        {footerStyle === 1 ? <Footer1 /> : null}
-        {!footerStyle && <Footer2 />}
-        {footerStyle === 2 ? <Footer2 /> : null}
+        {(!footerStyle || footerStyle === 1) && <Footer1 />}
+        {footerStyle === 2 && <Footer2 />}
       </div>
       <BackToTop scroll={scroll} />
     </>
