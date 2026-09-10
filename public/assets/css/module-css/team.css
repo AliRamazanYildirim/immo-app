@@ -5,8 +5,20 @@
   position: relative;
   display: block;
   background: var(--thm-white);
-  padding: 0px 0px 114px;
+  padding: clamp(60px, 8vw, 120px) 0 114px;
   z-index: 1;
+}
+
+@media (max-width: 991px) {
+  .team-one {
+    padding: 80px 0 80px;
+  }
+}
+
+@media (max-width: 767px) {
+  .team-one {
+    padding: 60px 0 60px;
+  }
 }
 
 .team-one__top {

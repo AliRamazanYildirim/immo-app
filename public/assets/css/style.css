@@ -52,7 +52,8 @@
 	1. Variable CSS
 ===============================*/
 :root {
-  --thm-font: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --thm-font:
+    "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --thm-primary: #e90b35;
   --thm-primary-rgb: 233, 11, 53;
   --thm-white: #ffffff;
@@ -1383,6 +1384,7 @@ Feauture Three
   background: var(--thm-white);
   padding: 120px 0px 120px;
   z-index: 1;
+  overflow: hidden;
 }
 
 .feauture-three .shape1 {
@@ -1413,6 +1415,13 @@ Feauture Three
   float: right;
   border-radius: 30px;
   border: 13px solid var(--thm-black);
+}
+
+@media only screen and (min-width: 1200px) {
+  .feauture-three__img .inner img {
+    width: min(720px, calc(50vw - 120px));
+    height: auto;
+  }
 }
 
 .feauture-three__content {
@@ -5666,6 +5675,8 @@ Project Four Css
 
   .feauture-three__img .inner img {
     float: left;
+    max-width: 100%;
+    height: auto;
   }
 
   .feauture-three__content {
@@ -5970,6 +5981,8 @@ Project Four Css
 
   .feauture-three__img .inner img {
     float: left;
+    max-width: 100%;
+    height: auto;
   }
 
   .feauture-three__content {
