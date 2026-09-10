@@ -13,9 +13,9 @@
   "dependencies": {
     "@thednp/dommatrix": "^3.1.2",
     "next": "^16.3.4",
-    "react": "^19.2.8",
+    "react": "19.3.0",
     "react-curved-text": "^3.0.1",
-    "react-dom": "^19.2.8",
+    "react-dom": "19.3.0",
     "react-modal-video": "^2.0.2",
     "sass": "^1.104.0",
     "swiper": "^14.2.0",
@@ -23,9 +23,9 @@
   },
   "devDependencies": {
     "@types/node": "^26.4.1",
-    "@types/react": "^19.2.18",
-    "@types/react-dom": "^19.2.7",
-    "oxlint": "^1.81.0",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "oxlint": "1.82.0",
     "typescript": "^7.0.2"
   }
 }

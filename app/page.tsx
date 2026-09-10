@@ -3,6 +3,7 @@ import About from "@/components/sections/home1/About";
 import Banner from "@/components/sections/home1/Banner";
 import Services from "@/components/sections/home1/Services";
 import Projects from "@/components/sections/home1/Projects";
+import BeforeAfter from "@/components/sections/home1/BeforeAfter";
 import Faq from "@/components/sections/home1/Faq";
 import Team from "@/components/sections/home1/Team";
 import Features from "@/components/sections/home1/Features";
@@ -19,6 +20,7 @@ export default function Home() {
         <About />
         <Services />
         <Projects />
+        <BeforeAfter />
         <Team />
         <Faq />
         <FeautureTwo />

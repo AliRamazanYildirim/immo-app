@@ -1,0 +1,443 @@
+/*==================================================
+  Before & After Comparison Section - Ultra Premium Architecture Styling
+====================================================*/
+
+.before-after-one {
+  position: relative;
+  display: block;
+  background: #0b0e14;
+  background: radial-gradient(circle at 50% 0%, #161c26 0%, #0b0e14 85%);
+  padding: 130px 0 130px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.before-after-one::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(233, 11, 53, 0.5) 50%,
+    transparent 100%
+  );
+}
+
+.before-after-one::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 100%
+  );
+}
+
+/* Section Header Typography */
+.before-after-one .sec-title .sub-title h5 {
+  color: var(--thm-primary, #e90b35);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.before-after-one .sec-title h2 {
+  color: #ffffff;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+}
+
+.before-after-one .sec-title p {
+  color: #949db0;
+  max-width: 660px;
+  margin: 18px auto 0;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+/* Minimalist Project Segment Switcher (Tabs) */
+.before-after__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0 45px;
+}
+
+.before-after__tabs {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 6px;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  gap: 6px;
+}
+
+.before-after__tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 26px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  background: transparent;
+  color: #8c96a8;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  user-select: none;
+}
+
+.before-after__tab-btn:hover {
+  color: #ffffff;
+}
+
+.before-after__tab-btn.active {
+  background: #ffffff;
+  color: #0b0e14;
+  border-color: #ffffff;
+  box-shadow: 0 4px 18px rgba(255, 255, 255, 0.2);
+}
+
+.before-after__tab-number {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  opacity: 0.7;
+}
+
+.before-after__tab-btn.active .before-after__tab-number {
+  color: var(--thm-primary, #e90b35);
+  opacity: 1;
+}
+
+/* Comparison Stage Wrapper */
+.before-after__stage-wrapper {
+  max-width: 1060px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.before-after__stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow:
+    0 30px 80px -15px rgba(0, 0, 0, 0.8),
+    0 0 0 1px rgba(255, 255, 255, 0.12);
+  touch-action: none;
+  user-select: none;
+  cursor: ew-resize;
+  background: #11161f;
+}
+
+/* Layers & Images */
+.before-after__layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.before-after__layer--after {
+  z-index: 1;
+}
+
+.before-after__layer--before {
+  z-index: 2;
+  will-change: clip-path;
+}
+
+.before-after__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+  display: block;
+}
+
+/* Elegant Floating Badges */
+.before-after__badge {
+  position: absolute;
+  top: 24px;
+  z-index: 5;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  pointer-events: none;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.before-after__badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.before-after__badge--before {
+  left: 24px;
+  background: rgba(11, 14, 20, 0.75);
+  color: #e2e8f0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.before-after__badge--before .before-after__badge-dot {
+  background: #f59e0b;
+  box-shadow: 0 0 10px #f59e0b;
+}
+
+.before-after__badge--after {
+  right: 24px;
+  background: rgba(11, 14, 20, 0.75);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.before-after__badge--after .before-after__badge-dot {
+  background: #10b981;
+  box-shadow: 0 0 10px #10b981;
+}
+
+/* Luminous Minimalist Divider Line */
+.before-after__divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #ffffff;
+  transform: translateX(-50%);
+  z-index: 10;
+  pointer-events: none;
+  box-shadow:
+    0 0 12px rgba(255, 255, 255, 0.8),
+    0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Minimalist Precision Floating Dial */
+.before-after__handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.98);
+  border: 2px solid #ffffff;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.45),
+    0 0 20px rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+  pointer-events: auto;
+  transition:
+    transform 0.2s cubic-bezier(0.2, 0, 0.2, 1),
+    box-shadow 0.2s ease;
+  outline: none;
+  user-select: none;
+}
+
+.before-after__handle:focus-visible {
+  box-shadow:
+    0 0 0 4px rgba(233, 11, 53, 0.6),
+    0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.before-after__handle.dragging {
+  cursor: grabbing;
+  transform: translate(-50%, -50%) scale(1.08);
+  box-shadow:
+    0 14px 40px rgba(0, 0, 0, 0.6),
+    0 0 25px rgba(233, 11, 53, 0.5);
+}
+
+.before-after__handle-svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  color: #11161f;
+  transition: transform 0.2s ease;
+}
+
+/* Luxury Interactive Control & Info Bar */
+.before-after__bar {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 16px 24px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
+}
+
+.before-after__meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.before-after__meta-title {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.before-after__meta-tag {
+  background: rgba(233, 11, 53, 0.12);
+  color: var(--thm-primary, #e90b35);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(233, 11, 53, 0.2);
+}
+
+/* Quick Toggle Preset Controls */
+.before-after__controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.before-after__preset-btn {
+  background: rgba(255, 255, 255, 0.05);
+  color: #a0a8b5;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.before-after__preset-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.before-after__preset-btn.active {
+  background: var(--thm-primary, #e90b35);
+  color: #ffffff;
+  border-color: var(--thm-primary, #e90b35);
+  box-shadow: 0 2px 10px rgba(233, 11, 53, 0.4);
+}
+
+.before-after__percentage {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #788292;
+  min-width: 60px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .before-after-one {
+    padding: 90px 0;
+  }
+  .before-after-one .sec-title h2 {
+    font-size: 34px;
+  }
+  .before-after__bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .before-after-one {
+    padding: 70px 0;
+  }
+  .before-after-one .sec-title h2 {
+    font-size: 26px;
+  }
+  .before-after__stage {
+    border-radius: 14px;
+  }
+  .before-after__tabs {
+    flex-direction: column;
+    border-radius: 20px;
+    width: 100%;
+  }
+  .before-after__tab-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+  .before-after__badge {
+    top: 14px;
+    padding: 6px 12px;
+    font-size: 10px;
+  }
+  .before-after__badge--before {
+    left: 14px;
+  }
+  .before-after__badge--after {
+    right: 14px;
+  }
+  .before-after__handle {
+    width: 40px;
+    height: 40px;
+  }
+  .before-after__handle-svg {
+    width: 16px;
+    height: 16px;
+  }
+  .before-after__controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
