@@ -1,100 +1,60 @@
-export default function Features() {
+"use client";
+
+import Link from "next/link";
+import {
+  useLocalizedHref,
+  useTranslation,
+} from "@/lib/i18n/TranslationProvider";
+
+export type FeaturesProps = {
+  /** home3 bölümü `style2` varyantını kullanır. */
+  variant?: "style2";
+};
+
+/** Üç özellik kartı — home1, home2 ve home3 aynı içeriği paylaşır. */
+export default function Features({ variant }: FeaturesProps) {
+  const { t } = useTranslation();
+  const href = useLocalizedHref();
+  const { eyebrow, items } = t.home.features;
+
+  // Kartların giriş animasyonu dönüşümlü: sol, sağ, sol
+  const animations = ["fadeInLeft", "fadeInRight", "fadeInLeft"];
+
   return (
-    <>
-      {/*Start Feauture One*/}
-      <section className="feauture-one">
-        <div className="container">
-          <div className="row">
-            {/*Start Feauture One Single */}
+    <section className={`feauture-one ${variant ?? ""}`.trim()}>
+      <div className="container">
+        <div className="row">
+          {items.map((item, index) => (
             <div
-              className="col-xl-4 col-lg-4 wow fadeInLeft"
-              data-wow-delay="0ms"
+              key={item.title}
+              className={`col-xl-4 col-lg-4 wow ${animations[index % animations.length]}`}
+              data-wow-delay={`${index * 100}ms`}
               data-wow-duration="1500ms"
             >
               <div className="feauture-one__single">
                 <div className="feauture-one__single-text">
-                  <p>EXPLORE FEATURE</p>
+                  <p>{eyebrow}</p>
                   <h2>
-                    <a href="#">Creative Solution</a>
+                    <Link href={href(item.href)}>{item.title}</Link>
                   </h2>
                 </div>
 
                 <div className="feauture-one__single-bottom">
                   <div className="btn-box">
-                    <a href="#">
-                      <span className="icon-plus"></span>
-                    </a>
+                    <Link href={href(item.href)} aria-label={item.title}>
+                      <span className="icon-plus" aria-hidden="true"></span>
+                    </Link>
                   </div>
 
                   <div className="icon-box">
-                    <span className="icon-solution"></span>
+                    <span className={item.icon} aria-hidden="true"></span>
                   </div>
                 </div>
               </div>
             </div>
-            {/*Start Feauture One Single */}
-
-            {/*Start Feauture One Single */}
-            <div
-              className="col-xl-4 col-lg-4  wow fadeInRight"
-              data-wow-delay="100ms"
-              data-wow-duration="1500ms"
-            >
-              <div className="feauture-one__single">
-                <div className="feauture-one__single-text">
-                  <p>EXPLORE FEATURE</p>
-                  <h2>
-                    <a href="#">Minimal Architect</a>
-                  </h2>
-                </div>
-
-                <div className="feauture-one__single-bottom">
-                  <div className="btn-box">
-                    <a href="#">
-                      <span className="icon-plus"></span>
-                    </a>
-                  </div>
-
-                  <div className="icon-box">
-                    <span className="icon-blueprint"></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/*Start Feauture One Single */}
-
-            {/*Start Feauture One Single */}
-            <div
-              className="col-xl-4 col-lg-4 wow fadeInLeft"
-              data-wow-delay="200ms"
-              data-wow-duration="1500ms"
-            >
-              <div className="feauture-one__single">
-                <div className="feauture-one__single-text">
-                  <p>EXPLORE FEATURE</p>
-                  <h2>
-                    <a href="#">Redesign Dream</a>
-                  </h2>
-                </div>
-
-                <div className="feauture-one__single-bottom">
-                  <div className="btn-box">
-                    <a href="#">
-                      <span className="icon-plus"></span>
-                    </a>
-                  </div>
-
-                  <div className="icon-box">
-                    <span className="icon-office-building"></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/*Start Feauture One Single */}
-          </div>
+          ))}
         </div>
-      </section>
-      {/*End Feauture One */}
-    </>
+      </div>
+    </section>
   );
 }

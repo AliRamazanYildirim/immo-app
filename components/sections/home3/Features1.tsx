@@ -1,73 +1,9 @@
-import Link from "next/link";
+import FeautureTwo from "../home1/FeautureTwo";
 
+/**
+ * home3 aynı iki kartı `style4` varyantıyla gösterir.
+ * İçerik tek yerden yönetilsin diye home1 bileşeni yeniden kullanılır.
+ */
 export default function Features1() {
-  return (
-    <>
-      {/*Start Feauture Two */}
-      <section className="feauture-two style4">
-        <div className="container">
-          <div className="row">
-            {/*Start Feauture Two Single */}
-            <div
-              className="col-xl-6 wow animated fadeInLeft"
-              data-wow-delay="0.1s"
-            >
-              <div className="feauture-two__single">
-                <div
-                  className="feauture-two__single-img"
-                  style={{
-                    backgroundImage:
-                      "url(/assets/img/resource/feauture-v2-img1.webp)",
-                  }}
-                >
-                  <div className="icon-box">
-                    <span className="icon-light-bulb"></span>
-                  </div>
-                </div>
-                <div className="feauture-two__single-content">
-                  <h2>
-                    <Link href="/service">
-                      We Will Provide You <br />
-                      By Best Design
-                    </Link>
-                  </h2>
-                </div>
-              </div>
-            </div>
-            {/*End Feauture Two Single */}
-
-            {/*Start Feauture Two Single */}
-            <div
-              className="col-xl-6 wow animated fadeInRight"
-              data-wow-delay="0.1s"
-            >
-              <div className="feauture-two__single">
-                <div
-                  className="feauture-two__single-img"
-                  style={{
-                    backgroundImage:
-                      "url(/assets/img/resource/feauture-v2-img2.webp)",
-                  }}
-                >
-                  <div className="icon-box">
-                    <span className="icon-engineer"></span>
-                  </div>
-                </div>
-                <div className="feauture-two__single-content">
-                  <h2>
-                    <Link href="/team">
-                      We Have Qualified <br />
-                      Engineer’s Team
-                    </Link>
-                  </h2>
-                </div>
-              </div>
-            </div>
-            {/*End Feauture Two Single */}
-          </div>
-        </div>
-      </section>
-      {/*End Feauture Two */}
-    </>
-  );
+  return <FeautureTwo variant="style4" />;
 }

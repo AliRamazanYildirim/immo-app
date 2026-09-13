@@ -1,8 +1,22 @@
+"use client";
+
 import Link from "next/link";
-import siteConfig from "@/lib/siteConfig";
+import siteConfig, { getMailtoLink, getTelLink } from "@/lib/siteConfig";
+import LanguageSwitcher from "@/components/elements/LanguageSwitcher";
+import {
+  useLocalizedHref,
+  useTranslation,
+} from "@/lib/i18n/TranslationProvider";
 import Menu from "../Menu";
 import MobileMenu from "../MobileMenu";
-import { HeaderProps } from "./Header1";
+import type { HeaderProps } from "./Header1";
+
+const socialNetworks = [
+  { key: "facebook", icon: "icon-facebook", label: "Facebook" },
+  { key: "instagram", icon: "icon-instagram", label: "Instagram" },
+  { key: "tiktok", icon: "icon-tik-tok", label: "TikTok" },
+  { key: "youtube", icon: "icon-youtube", label: "YouTube" },
+] as const;
 
 export default function Header4({
   scroll,
@@ -12,11 +26,12 @@ export default function Header4({
   handlePopup,
   handleSidebar,
 }: HeaderProps) {
+  const { t } = useTranslation();
+  const href = useLocalizedHref();
+
   return (
     <>
-      <header
-        className={`main-header main-header-one style4 ${scroll ? "" : ""}`}
-      >
+      <header className="main-header main-header-one style4">
         <div className={`menu-area ${scroll ? "sticky-menu" : ""}`}>
           {/* header-lower */}
           <div className="main-header-four__top">
@@ -25,12 +40,10 @@ export default function Header4({
                 <div className="header-contact-box">
                   <ul>
                     <li>
-                      <Link href={`tel:${siteConfig.contact.phoneRaw}`}>
-                        {siteConfig.contact.phone}
-                      </Link>
+                      <Link href={getTelLink()}>{siteConfig.contact.phone}</Link>
                     </li>
                     <li>
-                      <Link href={`mailto:${siteConfig.contact.email}`}>
+                      <Link href={getMailtoLink()}>
                         {siteConfig.contact.email}
                       </Link>
                     </li>
@@ -39,26 +52,21 @@ export default function Header4({
 
                 <div className="header-social-links">
                   <ul>
-                    <li>
-                      <Link href={siteConfig.social.facebook}>
-                        <span className="icon-facebook"></span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href={siteConfig.social.instagram}>
-                        <span className="icon-instagram"></span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href={siteConfig.social.tiktok}>
-                        <span className="icon-tik-tok"></span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href={siteConfig.social.youtube}>
-                        <span className="icon-youtube"></span>
-                      </Link>
-                    </li>
+                    {socialNetworks.map((network) => (
+                      <li key={network.key}>
+                        <Link
+                          href={siteConfig.social[network.key]}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={t.common.a11y.socialProfile.replace(
+                            "{network}",
+                            network.label,
+                          )}
+                        >
+                          <span className={network.icon} aria-hidden="true"></span>
+                        </Link>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -68,16 +76,29 @@ export default function Header4({
           <div className="main-header-four__bottom">
             <div className="container">
               <div className="menu-area__inner">
-                <div className="mobile-nav-toggler" onClick={handleMobileMenu}>
-                  <i className="fas fa-bars"></i>
-                </div>
+                <button
+                  type="button"
+                  className="mobile-nav-toggler"
+                  onClick={handleMobileMenu}
+                  aria-label={t.common.a11y.openMenu}
+                >
+                  <i className="fas fa-bars" aria-hidden="true"></i>
+                </button>
                 <div className="menu-wrap">
                   <nav className="menu-nav">
                     <div className="main-header-one__inner">
                       <div className="main-header-one__left">
                         <div className="logo-box">
-                          <Link href="/">
-                            <img src={siteConfig.logos.light} alt={siteConfig.company.name} width={459} height={508} fetchPriority="high" loading="eager" decoding="async" />
+                          <Link href={href("/")}>
+                            <img
+                              src={siteConfig.logos.light}
+                              alt={siteConfig.company.name}
+                              width={459}
+                              height={508}
+                              fetchPriority="high"
+                              loading="eager"
+                              decoding="async"
+                            />
                           </Link>
                         </div>
                       </div>
@@ -89,15 +110,16 @@ export default function Header4({
                       </div>
 
                       <div className="main-header-one__right">
-                        <div
-                          className="header-search-box"
-                          onClick={handlePopup}
-                        >
-                          <Link
-                            href="#"
+                        <div className="header-search-box">
+                          <button
+                            type="button"
                             className="main-menu__search search-toggler icon-search-interface-symbol"
-                          ></Link>
+                            onClick={handlePopup}
+                            aria-label={t.common.a11y.openSearch}
+                          ></button>
                         </div>
+
+                        <LanguageSwitcher tone="dark" />
                       </div>
                     </div>
                   </nav>

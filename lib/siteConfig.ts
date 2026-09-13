@@ -6,8 +6,6 @@
 
 export interface CompanyConfig {
   name: string;
-  slogan: string;
-  description: string;
   foundedYear: number;
   copyrightYear: number;
 }
@@ -51,11 +49,11 @@ export interface LogosConfig {
   favicon: string;
 }
 
+/**
+ * Dile bağlı SEO metinleri sözlükte (lib/i18n/locales/<dil>/pages.ts → meta).
+ * Burada yalnızca dilden bağımsız değerler tutulur.
+ */
 export interface SEOConfig {
-  defaultTitle: string;
-  titleTemplate: string;
-  description: string;
-  keywords: string[];
   ogImage: string;
   siteUrl: string;
 }
@@ -74,9 +72,6 @@ const siteConfig: SiteConfig = {
   // Şirket Bilgileri
   company: {
     name: "ARY Tech Solutions",
-    slogan: "Creative Architecture",
-    description:
-      "Delivering excellence in contemporary architecture, luxury interior design, and turnkey construction management across Germany and Europe.",
     foundedYear: 2020,
     copyrightYear: new Date().getFullYear(),
   },
@@ -126,12 +121,8 @@ const siteConfig: SiteConfig = {
     favicon: "/favicon.ico",
   },
 
-  // SEO ve Meta Bilgileri
+  // SEO — dilden bağımsız değerler (başlık/açıklama sözlükte)
   seo: {
-    defaultTitle: "ARY Tech Solutions - Creative Architecture",
-    titleTemplate: "%s | ARY Tech Solutions",
-    description: "Professional architecture and design services in Germany",
-    keywords: ["architecture", "design", "construction", "Germany", "Sasbach"],
     ogImage: "/assets/img/og-image.webp",
     siteUrl: "https://example.com",
   },

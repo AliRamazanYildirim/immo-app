@@ -1,26 +1,61 @@
 "use client";
+
 import { useState } from "react";
 import ModalVideo from "react-modal-video";
+import { useTranslation } from "@/lib/i18n/TranslationProvider";
 
-export default function Video() {
+const VIDEO_ID = "vfhzo499OeA";
+
+/** Kayan yazı şeridi üç kez tekrarlanarak kesintisiz akar. */
+const SCROLLING_REPEAT = 3;
+
+export type VideoProps = {
+  /** home3 bölümü üstte kayan yazı şeridi olan `video-one--two` varyantını kullanır. */
+  variant?: "two";
+};
+
+export default function Video({ variant }: VideoProps) {
+  const { t } = useTranslation();
   const [isOpen, setOpen] = useState(false);
+  const { titleLine1, titleLine2 } = t.home.video1;
+
+  const isVariantTwo = variant === "two";
+
   return (
     <>
-      {/*Start Video One */}
-      <section className="video-one">
+      <section className={`video-one ${isVariantTwo ? "video-one--two" : ""}`.trim()}>
+        {isVariantTwo && (
+          <div className="scrolling-text-one">
+            <div className="scrolling-text-one__wrap">
+              {Array.from({ length: SCROLLING_REPEAT }, (_, index) => (
+                <div key={index} className="scrolling-text-one__title">
+                  <h2>{t.home.video3.scrollingText}</h2>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
         <div className="video-one__pattern">
-          <img src="/assets/img/pattern/video-v1-pattern.webp"
+          <img
+            src="/assets/img/pattern/video-v1-pattern.webp"
             alt=""
             loading="lazy"
-            decoding="async" width={1889} height={716} />
+            decoding="async"
+            width={1889}
+            height={716}
+          />
         </div>
         <div className="auto-container">
           <div className="video-one__inner text-center">
             <div className="shape1 float-bob-x">
-              <img src="/assets/img/shape/video-v1-shape1.webp"
+              <img
+                src="/assets/img/shape/video-v1-shape1.webp"
                 alt=""
                 loading="lazy"
-                decoding="async" width={56} height={46} />
+                decoding="async"
+                width={56}
+                height={46}
+              />
             </div>
             <div
               className="video-one__bg"
@@ -30,29 +65,28 @@ export default function Video() {
             ></div>
             <div className="title-box">
               <h2>
-                We Are The Leader in <br />
-                the Architectural
+                {titleLine1} <br />
+                {titleLine2}
               </h2>
             </div>
             <div className="video-one__video-btn">
-              <a
+              <button
+                type="button"
                 onClick={() => setOpen(true)}
                 className="video-one__icon video-popup"
-                data-fancybox="video-1"
-                data-caption=""
+                aria-label={t.common.a11y.playVideo}
               >
-                <span className="icon-play-button-1"></span>
-              </a>
+                <span className="icon-play-button-1" aria-hidden="true"></span>
+              </button>
             </div>
           </div>
         </div>
       </section>
-      {/*End Video One */}
       <ModalVideo
         channel="youtube"
         autoplay
         isOpen={isOpen}
-        videoId="vfhzo499OeA"
+        videoId={VIDEO_ID}
         onClose={() => setOpen(false)}
       />
     </>

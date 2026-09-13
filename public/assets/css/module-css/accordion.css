@@ -1,0 +1,41 @@
+/*=============================
+    Accordion toggle
+    Akordeon başlığı artık <button> — Tab ile odaklanıp Enter/Space ile
+    açılabiliyor. Görsel olarak eski <h3> metniyle birebir aynı kalır.
+==============================*/
+
+.accrodion-title h3 .accrodion-toggle {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* Başlık satırının tamamı tıklanabilir kalsın (eski davranış korunur) */
+.accrodion-title h3 .accrodion-toggle::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.accrodion-title h3 .accrodion-toggle:focus-visible {
+  outline: 2px solid var(--thm-primary);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq-one__accrodion .accrodion .accrodion-title,
+  .faq-one__accrodion .accrodion .accrodion-title h3,
+  .faq-one__accrodion .accrodion .accrodion-title h3::before {
+    transition-duration: 0.01ms;
+  }
+}

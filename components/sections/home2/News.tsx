@@ -1,116 +1,121 @@
-import Link from "next/link"
+"use client";
 
+import Link from "next/link";
+import {
+  useLocalizedHref,
+  useTranslation,
+} from "@/lib/i18n/TranslationProvider";
 
-export default function News() {
-    return (
-        <> 
+export type NewsProps = {
+  /** Başlık bloğu gösterilsin mi (blog liste sayfasında gizlenir). */
+  showHeading?: boolean;
+  /** home3 bölümü arka planlı `style2` varyantını kullanır. */
+  variant?: "style2";
+};
 
-        {/*Start Blog One */}
-        <section className="blog-one">
-            <div className="container">
-                <div className="sec-title text-center">
-                    <div className="sub-title">
-                        <h5>OUR BLOG POST</h5>
-                    </div>
-                    <h2>Read Our Latest News</h2>
-                </div>
+/** style2 varyantı kendi görsel setini ve kart ölçüsünü kullanır. */
+const variantImages = [
+  "/assets/img/blog/blog-v2-img1.webp",
+  "/assets/img/blog/blog-v2-img2.webp",
+  "/assets/img/blog/blog-v2-img3.webp",
+];
 
-                <div className="row">
-                    {/*Start Blog One Single */}
-                    <div className="col-xl-4 col-lg-4 wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-                        <div className="blog-one__single">
-                            <div className="blog-one__single-img">
-                                <div className="inner">
-                                    <img src="/assets/img/blog/blog-v1-img1.webp" alt="" decoding="async" loading="lazy" width={370} height={330} />
-                                    <div className="overlay-icon">
-                                        <Link href="#"><span className="icon-plus"></span></Link>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="blog-one__single-content">
-                                <ul className="meta-info">
-                                    <li>
-                                        <p><Link href="#">Development</Link></p>
-                                    </li>
-                                    <li>
-                                        <p>02 July, 2023</p>
-                                    </li>
-                                </ul>
-                                <h2><Link href="/blog-details">Is Architecture a Good Career <br/>
-                                        in Our Daily Life? </Link></h2>
-                                <div className="btn-box">
-                                    <Link href="/blog-details">READ MORE <span className="icon-left-arrow"></span></Link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {/*End Blog One Single */}
+/** Blog kartları — home2, home3 ve blog listesi aynı içeriği paylaşır. */
+export default function News({ showHeading = true, variant }: NewsProps) {
+  const { t } = useTranslation();
+  const href = useLocalizedHref();
+  const { eyebrow, title } = t.home.news;
+  const posts = t.blog.posts;
 
-                    {/*Start Blog One Single */}
-                    <div className="col-xl-4 col-lg-4 wow fadeInRight" data-wow-delay="100ms" data-wow-duration="1500ms">
-                        <div className="blog-one__single">
-                            <div className="blog-one__single-img">
-                                <div className="inner">
-                                    <img src="/assets/img/blog/blog-v1-img2.webp" alt="" decoding="async" loading="lazy" width={370} height={330} />
-                                    <div className="overlay-icon">
-                                        <Link href="#"><span className="icon-plus"></span></Link>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="blog-one__single-content">
-                                <ul className="meta-info">
-                                    <li>
-                                        <p><Link href="#">Development</Link></p>
-                                    </li>
-                                    <li>
-                                        <p>02 July, 2023</p>
-                                    </li>
-                                </ul>
-                                <h2><Link href="/blog-details">Architecture is a Visual Art, and <br/>
-                                        the Buildings Speak For</Link></h2>
-                                <div className="btn-box">
-                                    <Link href="/blog-details">READ MORE <span className="icon-left-arrow"></span></Link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {/*End Blog One Single */}
+  const isStyle2 = variant === "style2";
+  const animations = ["fadeInLeft", "fadeInRight", "fadeInLeft"];
 
-                    {/*Start Blog One Single */}
-                    <div className="col-xl-4 col-lg-4 wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-                        <div className="blog-one__single">
-                            <div className="blog-one__single-img">
-                                <div className="inner">
-                                    <img src="/assets/img/blog/blog-v1-img3.webp" alt="" decoding="async" loading="lazy" width={370} height={330} />
-                                    <div className="overlay-icon">
-                                        <Link href="#"><span className="icon-plus"></span></Link>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="blog-one__single-content">
-                                <ul className="meta-info">
-                                    <li>
-                                        <p><Link href="#">Development</Link></p>
-                                    </li>
-                                    <li>
-                                        <p>02 July, 2023</p>
-                                    </li>
-                                </ul>
-                                <h2><Link href="/blog-details">We Stand for Quality, Safety <br/>
-                                        Credibility, so You Could be Trust </Link></h2>
-                                <div className="btn-box">
-                                    <Link href="/blog-details">READ MORE <span className="icon-left-arrow"></span></Link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {/*End Blog One Single */}
-                </div>
+  return (
+    <section className={`blog-one ${isStyle2 ? "style2" : ""}`.trim()}>
+      {isStyle2 && (
+        <div
+          className="blog-two__bg"
+          style={{
+            backgroundImage: "url(/assets/img/background/blog-v2-bg.webp)",
+          }}
+        ></div>
+      )}
+      <div className="container">
+        {showHeading && (
+          <div className="sec-title text-center">
+            <div className="sub-title">
+              <h5>{eyebrow}</h5>
             </div>
-        </section>
-        {/*End Blog One */}
+            <h2>{title}</h2>
+          </div>
+        )}
 
+        <div className="row">
+          {posts.map((post, index) => {
+            const image = isStyle2 ? variantImages[index] : post.image;
+            const postTitle = `${post.titleLine1} ${post.titleLine2}`;
 
-        </>
-    )
+            return (
+              <div
+                key={post.titleLine1}
+                className={`col-xl-4 col-lg-4 wow ${animations[index % animations.length]}`}
+                data-wow-delay={`${index * 100}ms`}
+                data-wow-duration="1500ms"
+              >
+                <div className="blog-one__single">
+                  <div className="blog-one__single-img">
+                    <div className="inner">
+                      <img
+                        src={image}
+                        alt={post.alt}
+                        decoding="async"
+                        loading="lazy"
+                        width={370}
+                        height={isStyle2 ? 300 : 330}
+                      />
+                      <div className="overlay-icon">
+                        <Link
+                          href={href("/blog-details")}
+                          aria-label={postTitle}
+                        >
+                          <span className="icon-plus" aria-hidden="true"></span>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="blog-one__single-content">
+                    <ul className="meta-info">
+                      <li>
+                        <p>
+                          <Link href={href("/blog")}>{post.category}</Link>
+                        </p>
+                      </li>
+                      <li>
+                        <p>{post.date}</p>
+                      </li>
+                    </ul>
+                    <h2>
+                      <Link href={href("/blog-details")}>
+                        {post.titleLine1} <br />
+                        {post.titleLine2}
+                      </Link>
+                    </h2>
+                    <div className="btn-box">
+                      <Link href={href("/blog-details")}>
+                        {t.common.actions.readMore}{" "}
+                        <span
+                          className={isStyle2 ? "icon-plus" : "icon-left-arrow"}
+                          aria-hidden="true"
+                        ></span>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
 }

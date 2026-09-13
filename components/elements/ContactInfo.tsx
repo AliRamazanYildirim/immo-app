@@ -1,24 +1,33 @@
+"use client";
+
 /**
- * Zentrale Kontaktinformationskomponente
- * Diese Komponente zeigt die Kontaktinformationen auf allen Seiten konsistent an.
+ * Merkezi iletişim bilgisi bileşenleri.
+ * Etiketler sözlükten gelir; adres/telefon gibi olgusal veriler siteConfig'ten.
  */
+
 import Link from "next/link";
 import siteConfig, { getMailtoLink, getTelLink } from "@/lib/siteConfig";
+import { useTranslation } from "@/lib/i18n/TranslationProvider";
 
 export interface ClassNameProps {
   className?: string;
 }
 
-/**
- * Kompakte Kontaktinformationen für Slider und Banner
- */
+const socialNetworks = [
+  { key: "facebook", icon: "icon-facebook", label: "Facebook" },
+  { key: "instagram", icon: "icon-instagram", label: "Instagram" },
+  { key: "tiktok", icon: "icon-tik-tok", label: "TikTok" },
+  { key: "youtube", icon: "icon-youtube", label: "YouTube" },
+] as const;
+
+/** Slider ve banner için kompakt iletişim bilgisi. */
 export function SliderContactInfo() {
   return (
     <div className="contact-info">
       <ul>
         <li>
           <div className="icon-box">
-            <span className="icon-pin"></span>
+            <span className="icon-pin" aria-hidden="true"></span>
           </div>
           <div className="text-box">
             <p>{siteConfig.address.full}</p>
@@ -27,7 +36,7 @@ export function SliderContactInfo() {
 
         <li>
           <div className="icon-box">
-            <span className="icon-envelope"></span>
+            <span className="icon-envelope" aria-hidden="true"></span>
           </div>
           <div className="text-box">
             <p>
@@ -40,58 +49,78 @@ export function SliderContactInfo() {
   );
 }
 
-/**
- * Soziale Medien Links
- */
+/** Sosyal medya bağlantıları. */
 export function SocialLinks({ className = "social-links" }: ClassNameProps) {
+  const { t } = useTranslation();
+
   return (
     <div className={className}>
-      <Link href={siteConfig.social.facebook}>
-        <span className="icon-facebook"></span>
-      </Link>
-      <Link href={siteConfig.social.instagram}>
-        <span className="icon-instagram"></span>
-      </Link>
-      <Link href={siteConfig.social.tiktok}>
-        <span className="icon-tik-tok"></span>
-      </Link>
-      <Link href={siteConfig.social.youtube}>
-        <span className="icon-youtube"></span>
-      </Link>
+      {socialNetworks.map((network) => (
+        <Link
+          key={network.key}
+          href={siteConfig.social[network.key]}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={t.common.a11y.socialProfile.replace(
+            "{network}",
+            network.label,
+          )}
+        >
+          <span className={network.icon} aria-hidden="true"></span>
+        </Link>
+      ))}
     </div>
   );
 }
 
-/**
- * Sozialen Medien Links für Footer (kurzes Textformat)
- */
+/** Footer için kısa metin formatında sosyal bağlantılar. */
 export function FooterSocialLinks({
   className = "footer-social-link",
 }: ClassNameProps) {
+  const { t } = useTranslation();
+
+  const shortLinks = [
+    { key: "twitter", text: "x", label: "X" },
+    { key: "instagram", text: "in", label: "Instagram" },
+    { key: "dribbble", text: "db", label: "Dribbble" },
+    { key: "instagram", text: "ig", label: "Instagram" },
+  ] as const;
+
   return (
     <div className={className}>
-      <Link href={siteConfig.social.twitter}>x</Link>
-      <Link href={siteConfig.social.instagram}>in</Link>
-      <Link href={siteConfig.social.dribbble}>db</Link>
-      <Link href={siteConfig.social.instagram}>ig</Link>
+      {shortLinks.map((link) => (
+        <Link
+          key={link.text}
+          href={siteConfig.social[link.key]}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={t.common.a11y.socialProfile.replace(
+            "{network}",
+            link.label,
+          )}
+        >
+          {link.text}
+        </Link>
+      ))}
     </div>
   );
 }
 
-/**
- * Detaillierte Kontaktinformationen für die Kontaktseite
- */
+/** İletişim sayfası için ayrıntılı bilgi listesi. */
 export function ContactPageInfo() {
+  const { t } = useTranslation();
+  const { labels } = t.common;
+
   return (
     <ul>
       <li>
         <div className="inner">
           <div className="icon-box">
-            <span className="icon-pin"></span>
+            <span className="icon-pin" aria-hidden="true"></span>
           </div>
 
           <div className="content-box">
-            <h4>Address</h4>
+            <h4>{labels.address}</h4>
             <p>{siteConfig.address.full}</p>
           </div>
         </div>
@@ -100,11 +129,11 @@ export function ContactPageInfo() {
       <li>
         <div className="inner">
           <div className="icon-box">
-            <span className="icon-phone"></span>
+            <span className="icon-phone" aria-hidden="true"></span>
           </div>
 
           <div className="content-box">
-            <h4>Phone</h4>
+            <h4>{labels.phone}</h4>
             <p>
               <Link href={getTelLink()}>{siteConfig.contact.phone}</Link>
             </p>
@@ -115,11 +144,11 @@ export function ContactPageInfo() {
       <li>
         <div className="inner">
           <div className="icon-box">
-            <span className="icon-envelope"></span>
+            <span className="icon-envelope" aria-hidden="true"></span>
           </div>
 
           <div className="content-box">
-            <h4>Email</h4>
+            <h4>{labels.email}</h4>
             <p>
               <Link href={getMailtoLink()}>{siteConfig.contact.email}</Link>
             </p>
@@ -130,9 +159,7 @@ export function ContactPageInfo() {
   );
 }
 
-/**
- * Adress-und Telefoninformationen für die Fußzeile
- */
+/** Footer için adres ve telefon bilgisi. */
 export function FooterContactInfo() {
   return (
     <div className="footer-widget__about-inner">
@@ -151,13 +178,3 @@ export function FooterContactInfo() {
     </div>
   );
 }
-
-const contactInfoComponents = {
-  SliderContactInfo,
-  SocialLinks,
-  FooterSocialLinks,
-  ContactPageInfo,
-  FooterContactInfo,
-};
-
-export default contactInfoComponents;

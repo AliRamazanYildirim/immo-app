@@ -929,3 +929,49 @@
 .main-header-one.style4 .menu-area .mobile-nav-toggler:hover {
   color: var(--thm-primary);
 }
+
+/*=============================
+    Search toggler as <button>
+    Tıklama hedefi <a href> değil <button> olduğu için (klavye erişimi),
+    mevcut <a> kurallarının eşdeğerleri buradan uygulanır.
+==============================*/
+.header-search-box button.main-menu__search {
+  position: relative;
+  display: block;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: var(--thm-white);
+  font-size: 20px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: color 0.3s linear;
+}
+
+.main-header-one.style2 .header-search-box button.main-menu__search,
+.main-header-one.style3 .header-search-box button.main-menu__search,
+.main-header-one.style4 .header-search-box button.main-menu__search {
+  color: var(--thm-black);
+  font-weight: 600;
+}
+
+.header-search-box button.main-menu__search:hover {
+  color: var(--thm-primary);
+}
+
+.header-search-box button.main-menu__search:focus-visible,
+.mobile-nav-toggler:focus-visible,
+.dropdown-btn:focus-visible {
+  outline: 2px solid var(--thm-primary);
+  outline-offset: 3px;
+}
+
+/* Mobil menü açma/kapama ve alt menü butonları <button> oldu */
+button.mobile-nav-toggler,
+button.close-btn,
+button.dropdown-btn {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}

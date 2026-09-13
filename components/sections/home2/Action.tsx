@@ -1,27 +1,49 @@
-export default function Action() {
-    return (
-        <> 
+"use client";
 
-        {/*Start Call To Action One */}
-        <section className="call-to-action-one">
-            <div className="call-to-action-one__bg"
-                style={{backgroundImage: 'url(/assets/img/background/call-to-action-v1-bg.webp)'}}></div>
-            <div className="container">
-                <div className="call-to-action-one__inner">
-                    <div className="call-to-action-one__content text-center">
-                        <h2>Have a Project in Your Mind</h2>
-                        <h3>Don’t Hesitate to Say Hello </h3>
-                        <div className="btn-box">
-                            <a className="thm-btn" href="#">
-                                <span className="txt">LET’S TALK WITH US</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+import Link from "next/link";
+import {
+  useLocalizedHref,
+  useTranslation,
+} from "@/lib/i18n/TranslationProvider";
+
+export type ActionProps = {
+  /** Sayfaya göre farklı arka plan görseli kullanılabilir. */
+  background?: string;
+  /** About ve hizmetler sayfaları vurgulu varyantı kullanır. */
+  highlight?: boolean;
+};
+
+export default function Action({
+  background = "/assets/img/background/call-to-action-v1-bg.webp",
+  highlight = false,
+}: ActionProps) {
+  const { t } = useTranslation();
+  const href = useLocalizedHref();
+  const { title, subtitle, cta } = t.home.action;
+
+  return (
+    <section
+      className={`call-to-action-one ${
+        highlight ? "call-to-action-one--highlight" : ""
+      }`.trim()}
+    >
+      <div
+        className="call-to-action-one__bg"
+        style={{ backgroundImage: `url(${background})` }}
+      ></div>
+      <div className="container">
+        <div className="call-to-action-one__inner">
+          <div className="call-to-action-one__content text-center">
+            <h2>{highlight ? <span>{title}</span> : title}</h2>
+            <h3>{highlight ? <span>{subtitle}</span> : subtitle}</h3>
+            <div className="btn-box">
+              <Link className="thm-btn" href={href("/contact")}>
+                <span className="txt">{cta}</span>
+              </Link>
             </div>
-        </section>
-        {/*End Call To Action One */}
-            
-        </>
-    )
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }

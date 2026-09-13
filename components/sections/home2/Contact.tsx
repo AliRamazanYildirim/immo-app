@@ -1,111 +1,135 @@
+"use client";
+
 import CounterUp from "@/components/elements/CounterUp";
+import { useTranslation } from "@/lib/i18n/TranslationProvider";
 
 export default function Contact() {
-  return (
-    <>
-      {/*Start Contact One */}
-      <section className="contact-one">
-        <div
-          className="contact-one__bg"
-          style={{
-            backgroundImage: "url(/assets/img/background/contact-v1-bg.webp)",
-          }}
-        >
-          <div className="contact-one__counter">
-            <ul>
-              <li>
-                <div className="content-box">
-                  <h2 className="count">
-                    <CounterUp end={48} /> <span className="plus">+</span>
-                  </h2>
-                  <p>
-                    Architects and <br />
-                    engineers
-                  </p>
-                </div>
-              </li>
-              <li>
-                <div className="content-box">
-                  <h2 className="count">
-                    <CounterUp end={256} /> <span className="plus">+</span>
-                  </h2>
-                  <p>
-                    Awards for architectural <br />
-                    excellence
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div
-          className="contact-one__pattern"
-          style={{
-            backgroundImage: "url(/assets/img/pattern/contact-v1-pattern.webp)",
-          }}
-        ></div>
-        <div className="contact-one__img">
-          <img src="/assets/img/resource/contact-v1-img1.webp"
-            alt="Contact Modern Architecture" decoding="async" loading="lazy" width={502} height={690} />
-        </div>
-        <div className="container clearfix">
-          <div className="contact-one__inner">
-            <div
-              className="contact-one__form wow animated fadeInRight"
-              data-wow-delay="0.1s"
-            >
-              <div className="title-box">
-                <p>WE READY TO HELP</p>
-                <h2>Have Any Question?</h2>
-              </div>
+  const { t } = useTranslation();
+  const form = t.home.contactForm;
 
-              <form action="#">
-                <div className="form-group">
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Your Name"
-                    required
-                  />
+  return (
+    <section className="contact-one">
+      <div
+        className="contact-one__bg"
+        style={{
+          backgroundImage: "url(/assets/img/background/contact-v1-bg.webp)",
+        }}
+      >
+        <div className="contact-one__counter">
+          <ul>
+            {form.counters.map((counter) => (
+              <li key={counter.labelLine1}>
+                <div className="content-box">
+                  <h2 className="count">
+                    <CounterUp end={counter.value} />{" "}
+                    <span className="plus">+</span>
+                  </h2>
+                  <p>
+                    {counter.labelLine1} <br />
+                    {counter.labelLine2}
+                  </p>
                 </div>
-                <div className="form-group">
-                  <input
-                    type="email"
-                    placeholder="Email Address"
-                    name="email"
-                    required
-                  />
-                </div>
-                <div className="form-group">
-                  <input
-                    type="text"
-                    name="phone"
-                    placeholder="Phone Number"
-                    required
-                  />
-                </div>
-                <div className="form-group">
-                  <textarea name="message" placeholder="Write Your Message" required></textarea>
-                </div>
-                <div className="row">
-                  <div className="col-xl-12">
-                    <div className="button-box">
-                      <button
-                        className="thm-btn"
-                        type="submit"
-                        data-loading-text="Please wait..."
-                      >
-                        <span className="txt">SEND YOUR MESSAGE</span>
-                      </button>
-                    </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <div
+        className="contact-one__pattern"
+        style={{
+          backgroundImage: "url(/assets/img/pattern/contact-v1-pattern.webp)",
+        }}
+      ></div>
+      <div className="contact-one__img">
+        <img
+          src="/assets/img/resource/contact-v1-img1.webp"
+          alt={form.imageAlt}
+          decoding="async"
+          loading="lazy"
+          width={502}
+          height={690}
+        />
+      </div>
+      <div className="container clearfix">
+        <div className="contact-one__inner">
+          <div
+            className="contact-one__form wow animated fadeInRight"
+            data-wow-delay="0.1s"
+          >
+            <div className="title-box">
+              <p>{form.eyebrow}</p>
+              <h2>{form.title}</h2>
+            </div>
+
+            <form action="#">
+              <div className="form-group">
+                <label htmlFor="home-contact-name" className="sr-only">
+                  {form.fields.name}
+                </label>
+                <input
+                  id="home-contact-name"
+                  type="text"
+                  name="name"
+                  autoComplete="name"
+                  placeholder={form.fields.name}
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="home-contact-email" className="sr-only">
+                  {form.fields.email}
+                </label>
+                <input
+                  id="home-contact-email"
+                  type="email"
+                  name="email"
+                  autoComplete="email"
+                  placeholder={form.fields.email}
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="home-contact-phone" className="sr-only">
+                  {form.fields.phone}
+                </label>
+                <input
+                  id="home-contact-phone"
+                  type="tel"
+                  name="phone"
+                  autoComplete="tel"
+                  inputMode="tel"
+                  placeholder={form.fields.phone}
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="home-contact-message" className="sr-only">
+                  {form.fields.message}
+                </label>
+                <textarea
+                  id="home-contact-message"
+                  name="message"
+                  placeholder={form.fields.message}
+                  required
+                ></textarea>
+              </div>
+              <div className="row">
+                <div className="col-xl-12">
+                  <div className="button-box">
+                    <button
+                      className="thm-btn"
+                      type="submit"
+                      data-loading-text={form.loading}
+                    >
+                      <span className="txt">{form.submit}</span>
+                    </button>
                   </div>
                 </div>
-              </form>
-            </div>
+              </div>
+            </form>
           </div>
         </div>
-      </section>
-      {/*End Contact One */}
-    </>
+      </div>
+    </section>
   );
 }

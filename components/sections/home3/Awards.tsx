@@ -1,94 +1,60 @@
+"use client";
+
+import { useTranslation } from "@/lib/i18n/TranslationProvider";
+
 export default function Awards() {
-    return (
-        <>
-            {/*Start Awards One */}
-            <section className="awards-one">
-                <div className="container">
-                    <div className="sec-title text-center">
-                        <div className="sub-title">
-                            <h5>International Awards</h5>
-                        </div>
-                        <h2>Awards & Achievements</h2>
-                    </div>
-                    <div className="awards-one__inner">
-                        <ul>
-                            <li className="awards-one__single">
-                                <div className="content-box">
-                                    <div className="date-box">
-                                        <span>OCT</span>
-                                        <h2>25</h2>
-                                    </div>
-                                    <div className="logo-box">
-                                        <img src="/assets/img/resource/awards-v1-logo1.webp" alt="Award logo" decoding="async" loading="lazy" width={80} height={77} />
-                                    </div>
-                                    <div className="text-box">
-                                        <p>Dainel Villa, Romania</p>
-                                        <h2><a href="#">Red to Dot Design Awards</a></h2>
-                                    </div>
-                                </div>
-                                <div className="awards-one__img"><img className="awards-one__img-hover"
-                                        src="/assets/img/resource/awards-v1-img1.webp" alt="Red Dot Design Award showcase project 1" decoding="async" loading="lazy" width={220} height={95} /></div>
-                            </li>
+  const { t } = useTranslation();
+  const awards = t.home.awards;
 
-                            <li className="awards-one__single">
-                                <div className="content-box">
-                                    <div className="date-box">
-                                        <span>OCT</span>
-                                        <h2>25</h2>
-                                    </div>
-                                    <div className="logo-box">
-                                        <img src="/assets/img/resource/awards-v1-logo1.webp" alt="Award logo" decoding="async" loading="lazy" width={80} height={77} />
-                                    </div>
-                                    <div className="text-box">
-                                        <p>Dainel Villa, Romania</p>
-                                        <h2><a href="#">Red to Dot Design Awards</a></h2>
-                                    </div>
-                                </div>
-                                <div className="awards-one__img"><img className="awards-one__img-hover"
-                                        src="/assets/img/resource/awards-v1-img2.webp" alt="Red Dot Design Award showcase project 2" decoding="async" loading="lazy" width={220} height={95} /></div>
-                            </li>
-
-                            <li className="awards-one__single">
-                                <div className="content-box">
-                                    <div className="date-box">
-                                        <span>OCT</span>
-                                        <h2>25</h2>
-                                    </div>
-                                    <div className="logo-box">
-                                        <img src="/assets/img/resource/awards-v1-logo1.webp" alt="Award logo" decoding="async" loading="lazy" width={80} height={77} />
-                                    </div>
-                                    <div className="text-box">
-                                        <p>Dainel Villa, Romania</p>
-                                        <h2><a href="#">Red to Dot Design Awards</a></h2>
-                                    </div>
-                                </div>
-                                <div className="awards-one__img"><img className="awards-one__img-hover"
-                                        src="/assets/img/resource/awards-v1-img3.webp" alt="Red Dot Design Award showcase project 3" decoding="async" loading="lazy" width={220} height={95} /></div>
-                            </li>
-
-                            <li className="awards-one__single">
-                                <div className="content-box">
-                                    <div className="date-box">
-                                        <span>OCT</span>
-                                        <h2>25</h2>
-                                    </div>
-                                    <div className="logo-box">
-                                        <img src="/assets/img/resource/awards-v1-logo1.webp" alt="Award logo" decoding="async" loading="lazy" width={80} height={77} />
-                                    </div>
-                                    <div className="text-box">
-                                        <p>Dainel Villa, Romania</p>
-                                        <h2><a href="#">Red to Dot Design Awards</a></h2>
-                                    </div>
-                                </div>
-                                <div className="awards-one__img"><img className="awards-one__img-hover"
-                                        src="/assets/img/resource/awards-v1-img4.webp" alt="Red Dot Design Award showcase project 4" decoding="async" loading="lazy" width={220} height={95} /></div>
-                            </li>
-                        </ul>
-                    </div>
+  return (
+    <section className="awards-one">
+      <div className="container">
+        <div className="sec-title text-center">
+          <div className="sub-title">
+            <h5>{awards.eyebrow}</h5>
+          </div>
+          <h2>{awards.title}</h2>
+        </div>
+        <div className="awards-one__inner">
+          <ul>
+            {awards.items.map((item) => (
+              <li key={item.project} className="awards-one__single">
+                <div className="content-box">
+                  <div className="date-box">
+                    <span>{awards.month}</span>
+                    <h2>{awards.day}</h2>
+                  </div>
+                  <div className="logo-box">
+                    <img
+                      src="/assets/img/resource/awards-v1-logo1.webp"
+                      alt={awards.logoAlt}
+                      decoding="async"
+                      loading="lazy"
+                      width={80}
+                      height={77}
+                    />
+                  </div>
+                  <div className="text-box">
+                    <p>{item.project}</p>
+                    <h2>{item.award}</h2>
+                  </div>
                 </div>
-            </section>
-            {/*End Awards One */}
-
-        </>
-    )
+                <div className="awards-one__img">
+                  <img
+                    className="awards-one__img-hover"
+                    src={item.image}
+                    alt={`${item.award} — ${item.project}`}
+                    decoding="async"
+                    loading="lazy"
+                    width={220}
+                    height={95}
+                  />
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
 }

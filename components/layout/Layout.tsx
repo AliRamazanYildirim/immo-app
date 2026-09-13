@@ -65,6 +65,9 @@ export default function Layout({
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      // Neden? Her sayfa kendi Layout'unu mount eder; menü açıkken
+      // navigasyon olursa state sıfırlanır ama <body> sınıfı kalırdı.
+      document.body.classList.remove("mobile-menu-visible");
     };
   }, []);
 

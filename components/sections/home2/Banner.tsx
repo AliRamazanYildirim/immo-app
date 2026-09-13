@@ -1,10 +1,16 @@
 "use client";
+
 import { useState } from "react";
 import ModalVideo from "react-modal-video";
 import Link from "next/link";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { SwiperOptions } from "swiper/types";
+import siteConfig from "@/lib/siteConfig";
+import {
+  useLocalizedHref,
+  useTranslation,
+} from "@/lib/i18n/TranslationProvider";
 
 const swiperOptions: SwiperOptions = {
   modules: [Autoplay, Navigation],
@@ -23,233 +29,119 @@ const swiperOptions: SwiperOptions = {
   },
 };
 
+const VIDEO_ID = "vfhzo499OeA";
+
+const slideImages = [
+  "/assets/img/slider/slider-v2-img1.webp",
+  "/assets/img/slider/slider-v2-img2.webp",
+  "/assets/img/slider/slider-v2-img3.webp",
+];
+
+const socialNetworks = [
+  { key: "facebook", icon: "icon-facebook-1", label: "Facebook" },
+  { key: "twitter", icon: "icon-x-twitter", label: "X" },
+  { key: "dribbble", icon: "icon-dribbble", label: "Dribbble" },
+  { key: "instagram", icon: "icon-letter-v", label: "Instagram" },
+] as const;
+
 export default function Banner() {
+  const { t } = useTranslation();
+  const href = useLocalizedHref();
   const [isOpen, setOpen] = useState<boolean>(false);
+  const banner = t.home.banner2;
+
   return (
     <>
       <section className="main-slider main-slider-two">
         <Swiper {...swiperOptions} className="swiper-wrapper">
-          {/* Start Swiper Slide Single*/}
-          <SwiperSlide className="swiper-slide">
-            <div className="image-layer">
-              <picture>
-                <source
-                  srcSet="/assets/img/slider/slider-v2-img1.webp"
-                  type="image/webp"
-                />
-                <img src="/assets/img/slider/slider-v2-img1.webp"
-                  alt="Architecture is Inhabited Sculpture"
-                  className="image-layer__img"
-                  fetchPriority="high"
-                  loading="eager"
-                  decoding="async"
-                  width={1920}
-                  height={960} />
-              </picture>
-            </div>
-            <div
-              className="main-slider-two__pattern"
-              style={{
-                backgroundImage:
-                  "url(/assets/img/pattern/main-slider-v2-pattern.webp)",
-              }}
-            ></div>
+          {slideImages.map((image, index) => (
+            <SwiperSlide key={image} className="swiper-slide">
+              <div className="image-layer">
+                <picture>
+                  <source srcSet={image} type="image/webp" />
+                  <img
+                    src={image}
+                    alt={banner.imageAlt}
+                    className="image-layer__img"
+                    fetchPriority={index === 0 ? "high" : undefined}
+                    loading={index === 0 ? "eager" : "lazy"}
+                    decoding="async"
+                    width={1920}
+                    height={960}
+                  />
+                </picture>
+              </div>
+              <div
+                className="main-slider-two__pattern"
+                style={{
+                  backgroundImage:
+                    "url(/assets/img/pattern/main-slider-v2-pattern.webp)",
+                }}
+              ></div>
 
-            <div className="main-slider-two__social-links">
-              <Link href="#">
-                <span className="icon-letter-v"></span>
-              </Link>
-              <Link href="#">
-                <span className="icon-x-twitter"></span>
-              </Link>
-              <Link href="#">
-                <span className="icon-dribbble"></span>
-              </Link>
-              <Link href="#">
-                <span className="icon-facebook-1"></span>
-              </Link>
-            </div>
+              <div className="main-slider-two__social-links">
+                {socialNetworks.map((network) => (
+                  <Link
+                    key={network.key}
+                    href={siteConfig.social[network.key]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={t.common.a11y.socialProfile.replace(
+                      "{network}",
+                      network.label,
+                    )}
+                  >
+                    <span className={network.icon} aria-hidden="true"></span>
+                  </Link>
+                ))}
+              </div>
 
-            <div className="container">
-              <div className="main-slider-two__single">
-                <div className="main-slider-two__content">
-                  <div className="big-title">
-                    <h2>ARY GROUP</h2>
-                  </div>
-                  <h2>
-                    Architecture is <br />
-                    Inhabited Sculpture
-                  </h2>
-                  <div className="btn-box">
-                    <div className="btn-one">
-                      <Link className="thm-btn" href="/contact">
-                        <span className="txt">Discover More</span>
-                      </Link>
+              <div className="container">
+                <div className="main-slider-two__single">
+                  <div className="main-slider-two__content">
+                    <div className="big-title">
+                      <h2>{banner.brandTitle}</h2>
                     </div>
-                    <div className="btn-two">
-                      <a onClick={() => setOpen(true)} className="video-popup">
-                        <div className="main-slider-one__icon">
-                          <i className="icon-play-button-1"></i>
-                          <span>Watch Our Videos</span>
-                        </div>
-                      </a>
+                    <h2>
+                      {banner.titleLine1} <br />
+                      {banner.titleLine2}
+                    </h2>
+                    <div className="btn-box">
+                      <div className="btn-one">
+                        <Link className="thm-btn" href={href("/contact")}>
+                          <span className="txt">
+                            {t.common.actions.discoverMore}
+                          </span>
+                        </Link>
+                      </div>
+                      <div className="btn-two">
+                        <button
+                          type="button"
+                          onClick={() => setOpen(true)}
+                          className="video-popup"
+                        >
+                          <div className="main-slider-one__icon">
+                            <i
+                              className="icon-play-button-1"
+                              aria-hidden="true"
+                            ></i>
+                            <span>{t.common.actions.watchOurVideos}</span>
+                          </div>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
-          {/*End Swiper Slide Single */}
-          {/* Start Swiper Slide Single*/}
-          <SwiperSlide className="swiper-slide">
-            <div className="image-layer">
-              <picture>
-                <source
-                  srcSet="/assets/img/slider/slider-v2-img2.webp"
-                  type="image/webp"
-                />
-                <img src="/assets/img/slider/slider-v2-img2.webp"
-                  alt="Architecture is Inhabited Sculpture"
-                  className="image-layer__img"
-                  loading="lazy"
-                  decoding="async"
-                  width={1920}
-                  height={960} />
-              </picture>
-            </div>
-            <div
-              className="main-slider-two__pattern"
-              style={{
-                backgroundImage:
-                  "url(/assets/img/pattern/main-slider-v2-pattern.webp)",
-              }}
-            ></div>
-
-            <div className="main-slider-two__social-links">
-              <Link href="#">
-                <span className="icon-letter-v"></span>
-              </Link>
-              <Link href="#">
-                <span className="icon-x-twitter"></span>
-              </Link>
-              <Link href="#">
-                <span className="icon-dribbble"></span>
-              </Link>
-              <Link href="#">
-                <span className="icon-facebook-1"></span>
-              </Link>
-            </div>
-
-            <div className="container">
-              <div className="main-slider-two__single">
-                <div className="main-slider-two__content">
-                  <div className="big-title">
-                    <h2>ARY GROUP</h2>
-                  </div>
-                  <h2>
-                    Architecture is <br />
-                    Inhabited Sculpture
-                  </h2>
-                  <div className="btn-box">
-                    <div className="btn-one">
-                      <Link className="thm-btn" href="/contact">
-                        <span className="txt">Discover More</span>
-                      </Link>
-                    </div>
-                    <div className="btn-two">
-                      <a onClick={() => setOpen(true)} className="video-popup">
-                        <div className="main-slider-one__icon">
-                          <i className="icon-play-button-1"></i>
-                          <span>Watch Our Videos</span>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          {/*End Swiper Slide Single */}
-          {/* Start Swiper Slide Single*/}
-          <SwiperSlide className="swiper-slide">
-            <div className="image-layer">
-              <picture>
-                <source
-                  srcSet="/assets/img/slider/slider-v2-img3.webp"
-                  type="image/webp"
-                />
-                <img src="/assets/img/slider/slider-v2-img3.webp"
-                  alt="Architecture is Inhabited Sculpture"
-                  className="image-layer__img"
-                  loading="lazy"
-                  decoding="async"
-                  width={1920}
-                  height={960} />
-              </picture>
-            </div>
-            <div
-              className="main-slider-two__pattern"
-              style={{
-                backgroundImage:
-                  "url(/assets/img/pattern/main-slider-v2-pattern.webp)",
-              }}
-            ></div>
-
-            <div className="main-slider-two__social-links">
-              <Link href="#">
-                <span className="icon-letter-v"></span>
-              </Link>
-              <Link href="#">
-                <span className="icon-x-twitter"></span>
-              </Link>
-              <Link href="#">
-                <span className="icon-dribbble"></span>
-              </Link>
-              <Link href="#">
-                <span className="icon-facebook-1"></span>
-              </Link>
-            </div>
-
-            <div className="container">
-              <div className="main-slider-two__single">
-                <div className="main-slider-two__content">
-                  <div className="big-title">
-                    <h2>ARY GROUP</h2>
-                  </div>
-                  <h2>
-                    Architecture is <br />
-                    Inhabited Sculpture
-                  </h2>
-                  <div className="btn-box">
-                    <div className="btn-one">
-                      <Link className="thm-btn" href="/contact">
-                        <span className="txt">Discover More</span>
-                      </Link>
-                    </div>
-                    <div className="btn-two">
-                      <a onClick={() => setOpen(true)} className="video-popup">
-                        <div className="main-slider-one__icon">
-                          <i className="icon-play-button-1"></i>
-                          <span>Watch Our Videos</span>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          {/*End Swiper Slide Single */}
-
-          {/*End Swiper Slide Single */}
-          {/* <div className="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal" id="main-slider-two__pagination"><span className="swiper-pagination-bullet swiper-pagination-bullet-active" role="button" aria-label="Go to slide 1" aria-current="true"></span><span className="swiper-pagination-bullet" role="button" aria-label="Go to slide 2"></span><span className="swiper-pagination-bullet" role="button" aria-label="Go to slide 3"></span></div> */}
+            </SwiperSlide>
+          ))}
         </Swiper>
       </section>
       <ModalVideo
         channel="youtube"
         autoplay
         isOpen={isOpen}
-        videoId="vfhzo499OeA"
+        videoId={VIDEO_ID}
         onClose={() => setOpen(false)}
       />
     </>

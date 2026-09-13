@@ -1,60 +1,13 @@
 "use client";
 
 import React, { useState, useRef, useCallback } from "react";
-
-interface TransformationProject {
-  id: string;
-  tabNumber: string;
-  tabTitle: string;
-  category: string;
-  title: string;
-  subtitle: string;
-  beforeImg: string;
-  beforeAlt: string;
-  beforeBadge: string;
-  afterImg: string;
-  afterAlt: string;
-  afterBadge: string;
-}
-
-const transformationProjects: TransformationProject[] = [
-  {
-    id: "luxury-villa-exterior",
-    tabNumber: "01",
-    tabTitle: "Exklusives Villenanwesen",
-    category: "Architektur & Rohbau",
-    title: "Vom Rohbau zur architektonischen Landmarke",
-    subtitle:
-      "Beton-Tragwerk & Poolaushub ➔ Bezugsfertige Luxusresidenz mit Infinity-Pool & Panoramaverglasung",
-    beforeImg: "/assets/img/project/villa-transformation-before.webp",
-    beforeAlt:
-      "Exklusive Villa während der Rohbauphase mit Betonstruktur, Gerüst und Pool-Aushub",
-    beforeBadge: "Rohbauphase",
-    afterImg: "/assets/img/project/villa-transformation-after.webp",
-    afterAlt:
-      "Vollendete Luxusvilla mit Swimmingpool, Glasgeländern und moderner Fassadengestaltung",
-    afterBadge: "Schlüsselfertig",
-  },
-  {
-    id: "luxury-living-interior",
-    tabNumber: "02",
-    tabTitle: "Meisterhafter Innenausbau",
-    category: "Interieur & Kernsanierung",
-    title: "Vom Installationsrohbau zum Luxus-Wohnsalon",
-    subtitle:
-      "Rohboden & Kamin-Rohbau ➔ Vollendete Raumkultur mit Travertin-Kamin & Fischgrätparkett",
-    beforeImg: "/assets/img/project/interior-transformation-before.webp",
-    beforeAlt:
-      "Wohnbereich in der Rohbauphase mit unverputzten Wänden und Fußbodenheizungsverrohrung",
-    beforeBadge: "Rohbauphase",
-    afterImg: "/assets/img/project/interior-transformation-after.webp",
-    afterAlt:
-      "Schlüsselfertiger Designer-Wohnsalon mit beleuchtetem Kamin und edlem Eichenparkett",
-    afterBadge: "Schlüsselfertig",
-  },
-];
+import { useTranslation } from "@/lib/i18n/TranslationProvider";
 
 export default function BeforeAfter() {
+  const { t } = useTranslation();
+  const section = t.home.beforeAfter;
+  const transformationProjects = section.projects;
+
   const [activeTab, setActiveTab] = useState<number>(0);
   const [sliderPosition, setSliderPosition] = useState<number>(50);
   const [isDragging, setIsDragging] = useState<boolean>(false);
@@ -120,17 +73,13 @@ export default function BeforeAfter() {
         {/* Section Title Header */}
         <div className="sec-title text-center">
           <div className="sub-title">
-            <h5>// TRANSFORMATION GALLERY</h5>
+            <h5>{section.eyebrow}</h5>
           </div>
           <h2>
-            Vom Rohbau zur Perfektion <br />
-            Erleben Sie unsere Bauqualität im Detail
+            {section.titleLine1} <br />
+            {section.titleLine2}
           </h2>
-          <p>
-            Verschieben Sie die vertikale Trennlinie mit der Maus oder per
-            Touch, um den 1:1 Unterschied zwischen der baulichen Rohbauphase und
-            der vollendeten, bezugsfertigen Architektur zu entdecken.
-          </p>
+          <p>{section.text}</p>
         </div>
 
         {/* Minimalist Segment Switcher */}
@@ -138,7 +87,7 @@ export default function BeforeAfter() {
           <div
             className="before-after__tabs"
             role="tablist"
-            aria-label="Transformations-Beispiele"
+            aria-label={section.tablistAria}
           >
             {transformationProjects.map((project, index) => (
               <button
@@ -232,7 +181,7 @@ export default function BeforeAfter() {
                 className={`before-after__handle ${isDragging ? "dragging" : ""}`}
                 role="slider"
                 tabIndex={0}
-                aria-label="Vorher-Nachher Vergleichs-Schieberegler"
+                aria-label={section.sliderAria}
                 aria-valuenow={Math.round(sliderPosition)}
                 aria-valuemin={0}
                 aria-valuemax={100}
@@ -279,25 +228,25 @@ export default function BeforeAfter() {
                 type="button"
                 className={`before-after__preset-btn ${sliderPosition === 100 ? "active" : ""}`}
                 onClick={() => setPreset(100)}
-                title="Vollständig Vorher (Rohbau)"
+                title={section.presets.beforeTitle}
               >
-                Vorher
+                {section.presets.before}
               </button>
               <button
                 type="button"
                 className={`before-after__preset-btn ${sliderPosition === 50 ? "active" : ""}`}
                 onClick={() => setPreset(50)}
-                title="50/50 Ansicht"
+                title={section.presets.splitTitle}
               >
-                50 / 50
+                {section.presets.split}
               </button>
               <button
                 type="button"
                 className={`before-after__preset-btn ${sliderPosition === 0 ? "active" : ""}`}
                 onClick={() => setPreset(0)}
-                title="Vollständig Nachher (Schlüsselfertig)"
+                title={section.presets.afterTitle}
               >
-                Nachher
+                {section.presets.after}
               </button>
               <div className="before-after__percentage">
                 {Math.round(sliderPosition)}% /{" "}

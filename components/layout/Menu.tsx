@@ -1,73 +1,58 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useLocalizedHref, useTranslation } from "@/lib/i18n/TranslationProvider";
+import { splitLocale } from "@/lib/i18n/routing";
+import { buildNavigation, isNavItemActive } from "./navigationItems";
 
 export default function Menu() {
+  const { t } = useTranslation();
+  const href = useLocalizedHref();
+  const pathname = usePathname() || "/";
+  const { pathWithoutLocale } = splitLocale(pathname);
+
+  const navigation = buildNavigation(t);
+
   return (
-    <>
-      <ul className="navigation">
-        <li className="active menu-item-has-children">
-          <Link href="#">Home</Link>
-          <ul className="sub-menu">
-            <li>
-              <Link href="/">Home One</Link>
-            </li>
-            <li>
-              <Link href="/index-2">Home Two</Link>
-            </li>
-            <li>
-              <Link href="/index-3">Home Three</Link>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <Link href="/about">About</Link>
-        </li>
-        <li className="menu-item-has-children">
-          <Link href="#">Services</Link>
-          <ul className="sub-menu">
-            <li>
-              <Link href="/service">Services</Link>
-            </li>
-            <li>
-              <Link href="/architecture">Architecture</Link>
-            </li>
-            <li>
-              <Link href="/interior-design">Interior Design</Link>
-            </li>
-            <li>
-              <Link href="/building-renovation">Building Renovation</Link>
-            </li>
-            <li>
-              <Link href="/construction-site">Construction Site</Link>
-            </li>
-          </ul>
-        </li>
-        <li className="menu-item-has-children">
-          <Link href="#">Pages</Link>
-          <ul className="sub-menu">
-            <li>
-              <Link href="/team">Team</Link>
-            </li>
-            <li>
-              <Link href="/team-details">Team Details</Link>
-            </li>
-            <li>
-              <Link href="/projects">Projects</Link>
-            </li>
-            <li>
-              <Link href="/project-details">Project Details</Link>
-            </li>
-            <li>
-              <Link href="/testimonials">Testimonials</Link>
-            </li>
-            <li>
-              <Link href="/faq">Faq</Link>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <Link href="/contact">Contact</Link>
-        </li>
-      </ul>
-    </>
+    <ul className="navigation">
+      {navigation.map((item) => {
+        const active = isNavItemActive(item, pathWithoutLocale);
+        const classNames = [
+          active ? "active" : "",
+          item.children ? "menu-item-has-children" : "",
+        ]
+          .filter(Boolean)
+          .join(" ");
+
+        return (
+          <li key={item.href} className={classNames || undefined}>
+            <Link
+              href={href(item.href)}
+              aria-current={active && !item.children ? "page" : undefined}
+            >
+              {item.label}
+            </Link>
+
+            {item.children && (
+              <ul className="sub-menu">
+                {item.children.map((child) => (
+                  <li key={child.href}>
+                    <Link
+                      href={href(child.href)}
+                      aria-current={
+                        child.href === pathWithoutLocale ? "page" : undefined
+                      }
+                    >
+                      {child.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+        );
+      })}
+    </ul>
   );
 }

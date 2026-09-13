@@ -1,0 +1,50 @@
+/*=============================
+    Interactive buttons
+    Tıklanabilir öğeler <a onClick> yerine <button> oldu (klavye erişimi).
+    Tarayıcının varsayılan button stilleri burada sıfırlanır; görünüm
+    mevcut sınıf kurallarından gelmeye devam eder.
+==============================*/
+
+button.video-one__icon,
+button.video-popup,
+button.about-two__icon,
+button.video-one__video-btn {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* .video-one__icon arka planı kendi kuralından gelir; diğerleri şeffaf kalır */
+button.video-popup:not(.video-one__icon):not(.about-two__icon) {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button.video-one__icon:focus-visible,
+button.video-popup:focus-visible,
+button.about-two__icon:focus-visible {
+  outline: 3px solid var(--thm-primary);
+  outline-offset: 4px;
+}
+
+/* Banner içindeki "Videoyu izle" butonu metin + ikon içerir */
+button.video-popup .main-slider-one__icon {
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .video-one__icon::before,
+  .video-one__icon::after,
+  .about-two__icon::before,
+  .about-two__icon::after {
+    animation: none;
+  }
+
+  .float-bob-x,
+  .float-bob-y {
+    animation: none;
+  }
+}

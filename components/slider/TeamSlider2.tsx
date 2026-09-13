@@ -1,9 +1,14 @@
 "use client";
+
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { SwiperOptions } from "swiper/types";
+import {
+  useLocalizedHref,
+  useTranslation,
+} from "@/lib/i18n/TranslationProvider";
 
 const swiperOptions: SwiperOptions = {
   modules: [Autoplay, Navigation],
@@ -24,7 +29,6 @@ const swiperOptions: SwiperOptions = {
   breakpoints: {
     320: {
       slidesPerView: 1,
-      // spaceBetween: 30,
     },
     575: {
       slidesPerView: 2,
@@ -49,34 +53,14 @@ const swiperOptions: SwiperOptions = {
   },
 };
 
-const teamMembers = [
-  {
-    name: "Julian Meier",
-    role: "Project Architect",
-    image: "/assets/img/team/team-v1-img1.webp",
-  },
-  {
-    name: "Annette Black",
-    role: "Interior Design Director",
-    image: "/assets/img/team/team-v1-img2.webp",
-  },
-  {
-    name: "Lucas Hoffmann",
-    role: "BIM & 3D Specialist",
-    image: "/assets/img/team/team-v1-img3.webp",
-  },
-  {
-    name: "Hannah Weber",
-    role: "Construction Manager",
-    image: "/assets/img/team/team-v1-img4.webp",
-  },
-];
-
-// 8 slides for smooth infinite looping with slidesPerView 4
-const slides = [...teamMembers, ...teamMembers];
-
 export default function TeamSlider2() {
+  const { t } = useTranslation();
+  const href = useLocalizedHref();
   const [mounted, setMounted] = useState(false);
+
+  const { members, shareAria } = t.shared.teamSlider;
+  // slidesPerView 4 ile sorunsuz sonsuz döngü için listeyi iki kez kullan
+  const slides = [...members, ...members];
 
   useEffect(() => {
     setMounted(true);
@@ -132,58 +116,60 @@ export default function TeamSlider2() {
   }
 
   return (
-    <>
-      <Swiper
-        {...swiperOptions}
-        className="thm-swiper__slider swiper-container"
-      >
-        {slides.map((member, index) => (
-          <SwiperSlide key={index} className="swiper-slide">
-            {/*Start Team One Single */}
-            <div className="team-one__single">
-              <div className="team-one__single-img">
-                <div className="inner">
-                  <img src={member.image} alt={member.name} decoding="async" loading="lazy" width={270} height={400} />
-                  <div className="team-one__single-icon">
-                    <ul className="social-links clearfix">
-                      <li className="share">
-                        <a href="#share" role="button" aria-label="Share">
-                          <span className="icon-share"></span>
-                        </a>
-                        <ul className="social-links-inner">
-                          <li>
-                            <Link className="fb" href="#">
-                              <i className="icon-facebook-1"></i>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link className="tw" href="#">
-                              <i className="icon-letter-v"></i>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link className="ins" href="#">
-                              <i className="icon-letter-x"></i>
-                            </Link>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
+    <Swiper {...swiperOptions} className="thm-swiper__slider swiper-container">
+      {slides.map((member, index) => (
+        <SwiperSlide key={`${member.name}-${index}`} className="swiper-slide">
+          {/*Start Team One Single */}
+          <div className="team-one__single">
+            <div className="team-one__single-img">
+              <div className="inner">
+                <img
+                  src={member.image}
+                  alt={`${member.name} — ${member.role}`}
+                  decoding="async"
+                  loading="lazy"
+                  width={270}
+                  height={400}
+                />
+                <div className="team-one__single-icon">
+                  <ul className="social-links clearfix">
+                    <li className="share">
+                      <a href="#share" role="button" aria-label={shareAria}>
+                        <span className="icon-share" aria-hidden="true"></span>
+                      </a>
+                      <ul className="social-links-inner">
+                        <li>
+                          <Link className="fb" href="#">
+                            <i className="icon-facebook-1" aria-hidden="true"></i>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link className="tw" href="#">
+                            <i className="icon-letter-v" aria-hidden="true"></i>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link className="ins" href="#">
+                            <i className="icon-letter-x" aria-hidden="true"></i>
+                          </Link>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
                 </div>
               </div>
-
-              <div className="team-one__single-content">
-                <h3>
-                  <Link href="/team-details">{member.name}</Link>
-                </h3>
-                <p>{member.role}</p>
-              </div>
             </div>
-            {/*End Team One Single */}
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </>
+
+            <div className="team-one__single-content">
+              <h3>
+                <Link href={href("/team-details")}>{member.name}</Link>
+              </h3>
+              <p>{member.role}</p>
+            </div>
+          </div>
+          {/*End Team One Single */}
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 }

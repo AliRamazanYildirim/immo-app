@@ -1,172 +1,72 @@
 "use client";
+
 import Link from "next/link";
+import {
+  useLocalizedHref,
+  useTranslation,
+} from "@/lib/i18n/TranslationProvider";
 
-export default function Pricing() {
+/** Numaralı hizmet kartları — home1 ve hizmetler sayfası paylaşır. */
+export default function Services() {
+  const { t } = useTranslation();
+  const href = useLocalizedHref();
+  const { eyebrow, title, items } = t.home.services1;
+
   return (
-    <>
-      {/*Start Service One */}
-      <section className="service-one">
-        <div
-          className="service-one__shape2"
-          style={{
-            backgroundImage: "url(/assets/img/shape/service-v1-shape2.webp)",
-          }}
-        ></div>
-        <div className="container">
-          <div className="sec-title text-center">
-            <div className="sub-title">
-              <h5>OUR SERVICE</h5>
-            </div>
-            <h2>Our Architecture Services</h2>
+    <section className="service-one">
+      <div
+        className="service-one__shape2"
+        style={{
+          backgroundImage: "url(/assets/img/shape/service-v1-shape2.webp)",
+        }}
+      ></div>
+      <div className="container">
+        <div className="sec-title text-center">
+          <div className="sub-title">
+            <h5>{eyebrow}</h5>
           </div>
-          <div className="row">
-            {/*Start Service One Single */}
-            <div
-              className="col-xl-6 col-lg-6 wow animated fadeInUp"
-              data-wow-delay="0.1s"
-            >
-              <div className="service-one__single">
-                <div className="shape1">
-                  <img src="/assets/img/shape/service-v1-shape1.webp"
-                    alt=""
-                    loading="lazy"
-                    decoding="async" width={181} height={244} />
-                </div>
-                <div className="service-one__single-inner">
-                  <div className="count-text">01</div>
-                  <div className="icon-box">
-                    <span className="icon-blueprint"></span>
-                  </div>
-                  <div className="content-box">
-                    <h2>
-                      <Link href="/architecture">Architecture & Planning</Link>
-                    </h2>
-                    <p>
-                      Forward-thinking architectural concepts, 3D BIM modeling,
-                      structural engineering, and complete statutory permit
-                      approvals.
-                    </p>
-                    <div className="btn-box">
-                      <Link href="/architecture">EXPLORE SERVICE</Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/*End Service One Single */}
-
-            {/*Start Service One Single */}
-            <div
-              className="col-xl-6 col-lg-6 wow animated fadeInUp"
-              data-wow-delay="0.2s"
-            >
-              <div className="service-one__single">
-                <div className="shape1">
-                  <img src="/assets/img/shape/service-v1-shape1.webp"
-                    alt=""
-                    loading="lazy"
-                    decoding="async" width={181} height={244} />
-                </div>
-                <div className="service-one__single-inner">
-                  <div className="count-text">02</div>
-                  <div className="icon-box">
-                    <span className="icon-interior-design"></span>
-                  </div>
-                  <div className="content-box">
-                    <h2>
-                      <Link href="/interior-design">Interior Design</Link>
-                    </h2>
-                    <p>
-                      Bespoke spatial design, high-end material selection,
-                      custom millwork details, and tailored turnkey interior
-                      styling.
-                    </p>
-                    <div className="btn-box">
-                      <Link href="/interior-design">EXPLORE SERVICE</Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/*End Service One Single */}
-
-            {/*Start Service One Single */}
-            <div
-              className="col-xl-6 col-lg-6 wow animated fadeInUp"
-              data-wow-delay="0.1s"
-            >
-              <div className="service-one__single">
-                <div className="shape1">
-                  <img src="/assets/img/shape/service-v1-shape1.webp"
-                    alt=""
-                    loading="lazy"
-                    decoding="async" width={181} height={244} />
-                </div>
-                <div className="service-one__single-inner">
-                  <div className="count-text">03</div>
-                  <div className="icon-box">
-                    <span className="icon-solution"></span>
-                  </div>
-                  <div className="content-box">
-                    <h2>
-                      <Link href="/building-renovation">
-                        Building Renovation
-                      </Link>
-                    </h2>
-                    <p>
-                      Energetic modernization, historic building restoration,
-                      structural remediation, and high-efficiency facade
-                      retrofits.
-                    </p>
-                    <div className="btn-box">
-                      <Link href="/building-renovation">EXPLORE SERVICE</Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/*End Service One Single */}
-
-            {/*Start Service One Single */}
-            <div
-              className="col-xl-6 col-lg-6 wow animated fadeInUp"
-              data-wow-delay="0.2s"
-            >
-              <div className="service-one__single">
-                <div className="shape1">
-                  <img src="/assets/img/shape/service-v1-shape1.webp"
-                    alt=""
-                    loading="lazy"
-                    decoding="async" width={181} height={244} />
-                </div>
-                <div className="service-one__single-inner">
-                  <div className="count-text">04</div>
-                  <div className="icon-box">
-                    <span className="icon-engineer"></span>
-                  </div>
-                  <div className="content-box">
-                    <h2>
-                      <Link href="/construction-site">
-                        Construction Management
-                      </Link>
-                    </h2>
-                    <p>
-                      Full-scope general contracting, site supervision, trade
-                      coordination, strict safety protocols, and on-time project
-                      handover.
-                    </p>
-                    <div className="btn-box">
-                      <Link href="/construction-site">EXPLORE SERVICE</Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/*End Service One Single */}
-          </div>
+          <h2>{title}</h2>
         </div>
-      </section>
-      {/*End Service One */}
-    </>
+        <div className="row">
+          {items.map((item, index) => (
+            <div
+              key={item.href}
+              className="col-xl-6 col-lg-6 wow animated fadeInUp"
+              data-wow-delay={`${index % 2 === 0 ? "0.1" : "0.2"}s`}
+            >
+              <div className="service-one__single">
+                <div className="shape1">
+                  <img
+                    src="/assets/img/shape/service-v1-shape1.webp"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                    width={181}
+                    height={244}
+                  />
+                </div>
+                <div className="service-one__single-inner">
+                  <div className="count-text">{item.number}</div>
+                  <div className="icon-box">
+                    <span className={item.icon} aria-hidden="true"></span>
+                  </div>
+                  <div className="content-box">
+                    <h2>
+                      <Link href={href(item.href)}>{item.title}</Link>
+                    </h2>
+                    <p>{item.text}</p>
+                    <div className="btn-box">
+                      <Link href={href(item.href)}>
+                        {t.common.actions.exploreService}
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }

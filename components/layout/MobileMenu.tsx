@@ -1,8 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import siteConfig, { getTelLink } from "@/lib/siteConfig";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
+import siteConfig, { getTelLink } from "@/lib/siteConfig";
+import {
+  useLocalizedHref,
+  useTranslation,
+} from "@/lib/i18n/TranslationProvider";
+import { splitLocale } from "@/lib/i18n/routing";
+import { LanguageSwitcherInline } from "@/components/elements/LanguageSwitcher";
+import { buildNavigation, isNavItemActive } from "./navigationItems";
 
 export interface MobileMenuProps {
   isSidebar?: boolean;
@@ -10,183 +18,111 @@ export interface MobileMenuProps {
   handleSidebar?: () => void;
 }
 
-interface ActiveState {
-  status: boolean;
-  key?: number | string;
-}
-
 export default function MobileMenu({
   isSidebar,
   handleMobileMenu,
   handleSidebar,
 }: MobileMenuProps) {
-  const [isActive, setIsActive] = useState<ActiveState>({
-    status: false,
-    key: "",
-  });
+  const { t } = useTranslation();
+  const href = useLocalizedHref();
+  const pathname = usePathname() || "/";
+  const { pathWithoutLocale } = splitLocale(pathname);
 
-  const handleToggle = (key: number | string) => {
-    if (isActive.key === key) {
-      setIsActive({
-        status: false,
-      });
-    } else {
-      setIsActive({
-        status: true,
-        key,
-      });
-    }
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const handleToggle = (index: number) => {
+    setOpenIndex((current) => (current === index ? null : index));
   };
+
+  const navigation = buildNavigation(t);
 
   return (
     <>
       {/*Mobile Menu */}
       <div className="mobile-menu">
         <nav className="menu-box">
-          <div className="close-btn" onClick={handleMobileMenu}>
-            <i className="fas fa-times"></i>
-          </div>
+          <button
+            type="button"
+            className="close-btn"
+            onClick={handleMobileMenu}
+            aria-label={t.common.a11y.closeMenu}
+          >
+            <i className="fas fa-times" aria-hidden="true"></i>
+          </button>
           <div className="nav-logo">
-            <Link href="/">
-              <img src={siteConfig.logos.light} alt={siteConfig.company.name} loading="lazy" decoding="async" width={459} height={508} />
+            <Link href={href("/")}>
+              <img
+                src={siteConfig.logos.light}
+                alt={siteConfig.company.name}
+                loading="lazy"
+                decoding="async"
+                width={459}
+                height={508}
+              />
             </Link>
           </div>
           <div className="menu-outer">
             <ul className="navigation clearfix">
-              <li className="active menu-item-has-children">
-                <Link href="#" onClick={handleMobileMenu}>
-                  Home
-                </Link>
-                <ul
-                  className="sub-menu"
-                  style={{ display: isActive.key === 1 ? "block" : "none" }}
-                >
-                  <li>
-                    <Link href="/" onClick={handleMobileMenu}>
-                      Home One
+              {navigation.map((item, index) => {
+                const isOpen = openIndex === index;
+                const active = isNavItemActive(item, pathWithoutLocale);
+
+                return (
+                  <li
+                    key={item.href}
+                    className={
+                      [
+                        active ? "active" : "",
+                        item.children ? "menu-item-has-children" : "",
+                      ]
+                        .filter(Boolean)
+                        .join(" ") || undefined
+                    }
+                  >
+                    <Link href={href(item.href)} onClick={handleMobileMenu}>
+                      {item.label}
                     </Link>
+
+                    {item.children && (
+                      <>
+                        <ul
+                          className="sub-menu"
+                          style={{ display: isOpen ? "block" : "none" }}
+                        >
+                          {item.children.map((child) => (
+                            <li key={child.href}>
+                              <Link
+                                href={href(child.href)}
+                                onClick={handleMobileMenu}
+                              >
+                                {child.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                        <button
+                          type="button"
+                          className={isOpen ? "dropdown-btn open" : "dropdown-btn"}
+                          onClick={() => handleToggle(index)}
+                          aria-expanded={isOpen}
+                          aria-label={t.common.a11y.toggleSubmenu}
+                        >
+                          <span className="fa fa-angle-right" aria-hidden="true" />
+                        </button>
+                      </>
+                    )}
                   </li>
-                  <li>
-                    <Link href="/index-2" onClick={handleMobileMenu}>
-                      Home Two
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/index-3" onClick={handleMobileMenu}>
-                      Home Three
-                    </Link>
-                  </li>
-                </ul>
-                <div
-                  className={
-                    isActive.key === 1 ? "dropdown-btn open" : "dropdown-btn"
-                  }
-                  onClick={() => handleToggle(1)}
-                >
-                  <span className="fa fa-angle-right" />
-                </div>
-              </li>
-              <li>
-                <Link href="/about">About</Link>
-              </li>
-              <li className="menu-item-has-children">
-                <Link href="#" onClick={handleMobileMenu}>
-                  Services
-                </Link>
-                <ul style={{ display: isActive.key === 2 ? "block" : "none" }}>
-                  <li>
-                    <Link href="/service" onClick={handleMobileMenu}>
-                      Services
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/architecture" onClick={handleMobileMenu}>
-                      Architecture
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/interior-design" onClick={handleMobileMenu}>
-                      Interior Design
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/building-renovation"
-                      onClick={handleMobileMenu}
-                    >
-                      Building Renovation
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/construction-site" onClick={handleMobileMenu}>
-                      Construction Site
-                    </Link>
-                  </li>
-                </ul>
-                <div
-                  className={
-                    isActive.key === 2 ? "dropdown-btn open" : "dropdown-btn"
-                  }
-                  onClick={() => handleToggle(2)}
-                >
-                  <span className="fa fa-angle-right" />
-                </div>
-              </li>
-              <li className="menu-item-has-children">
-                <Link href="#" onClick={handleMobileMenu}>
-                  Pages
-                </Link>
-                <ul style={{ display: isActive.key === 3 ? "block" : "none" }}>
-                  <li>
-                    <Link href="/team" onClick={handleMobileMenu}>
-                      Team
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/team-details" onClick={handleMobileMenu}>
-                      Team Details
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/projects" onClick={handleMobileMenu}>
-                      Projects
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/project-details" onClick={handleMobileMenu}>
-                      Project Details
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/testimonials" onClick={handleMobileMenu}>
-                      Testimonials
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/faq" onClick={handleMobileMenu}>
-                      Faq
-                    </Link>
-                  </li>
-                </ul>
-                <div
-                  className={
-                    isActive.key === 3 ? "dropdown-btn open" : "dropdown-btn"
-                  }
-                  onClick={() => handleToggle(3)}
-                >
-                  <span className="fa fa-angle-right" />
-                </div>
-              </li>
-              <li>
-                <Link href="/contact" onClick={handleMobileMenu}>
-                  Contact
-                </Link>
-              </li>
+                );
+              })}
             </ul>
           </div>
+
+          {/* Mobilde dil seçimi dropdown yerine doğrudan görünür */}
+          <LanguageSwitcherInline />
+
           <div className="contact-info">
             <div className="icon-box">
-              <span className="icon-call"></span>
+              <span className="icon-call" aria-hidden="true"></span>
             </div>
             <p>
               <Link href={getTelLink()}>{siteConfig.contact.phone}</Link>
@@ -195,28 +131,68 @@ export default function MobileMenu({
           <div className="social-links">
             <ul className="clearfix list-wrap">
               <li>
-                <Link href={siteConfig.social.facebook} target="_blank" rel="noopener noreferrer">
-                  <i className="fab fa-facebook-f"></i>
+                <Link
+                  href={siteConfig.social.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={t.common.a11y.socialProfile.replace(
+                    "{network}",
+                    "Facebook",
+                  )}
+                >
+                  <i className="fab fa-facebook-f" aria-hidden="true"></i>
                 </Link>
               </li>
               <li>
-                <Link href={siteConfig.social.twitter} target="_blank" rel="noopener noreferrer">
-                  <i className="fa-brands fa-x-twitter"></i>
+                <Link
+                  href={siteConfig.social.twitter}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={t.common.a11y.socialProfile.replace(
+                    "{network}",
+                    "X",
+                  )}
+                >
+                  <i className="fa-brands fa-x-twitter" aria-hidden="true"></i>
                 </Link>
               </li>
               <li>
-                <Link href={siteConfig.social.instagram} target="_blank" rel="noopener noreferrer">
-                  <i className="fab fa-instagram"></i>
+                <Link
+                  href={siteConfig.social.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={t.common.a11y.socialProfile.replace(
+                    "{network}",
+                    "Instagram",
+                  )}
+                >
+                  <i className="fab fa-instagram" aria-hidden="true"></i>
                 </Link>
               </li>
               <li>
-                <Link href={siteConfig.social.linkedin} target="_blank" rel="noopener noreferrer">
-                  <i className="fab fa-linkedin-in"></i>
+                <Link
+                  href={siteConfig.social.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={t.common.a11y.socialProfile.replace(
+                    "{network}",
+                    "LinkedIn",
+                  )}
+                >
+                  <i className="fab fa-linkedin-in" aria-hidden="true"></i>
                 </Link>
               </li>
               <li>
-                <Link href={siteConfig.social.youtube} target="_blank" rel="noopener noreferrer">
-                  <i className="fab fa-youtube"></i>
+                <Link
+                  href={siteConfig.social.youtube}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={t.common.a11y.socialProfile.replace(
+                    "{network}",
+                    "YouTube",
+                  )}
+                >
+                  <i className="fab fa-youtube" aria-hidden="true"></i>
                 </Link>
               </li>
             </ul>
