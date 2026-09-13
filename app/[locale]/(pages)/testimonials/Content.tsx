@@ -1,11 +1,9 @@
-"use client";
-
 import Layout from "@/components/layout/Layout";
 import CtaOne from "@/components/sections/common/CtaOne";
-import { useTranslation } from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
-export default function TestimonialsPage() {
-  const { t } = useTranslation();
+export default async function TestimonialsPage() {
+  const { t } = await getTranslations();
   const page = t.pages.testimonials;
   const testimonials = t.shared.testimonials;
 

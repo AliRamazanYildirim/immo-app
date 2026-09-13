@@ -1,16 +1,10 @@
-"use client";
-
 import Link from "next/link";
 import siteConfig, { getTelLink } from "@/lib/siteConfig";
 import { SocialLinks } from "@/components/elements/ContactInfo";
-import {
-  useLocalizedHref,
-  useTranslation,
-} from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
-export default function Footer1() {
-  const { t } = useTranslation();
-  const href = useLocalizedHref();
+export default async function Footer1() {
+  const { t, href } = await getTranslations();
   const { footer } = t.common;
 
   const navigationLinks = [
@@ -75,7 +69,10 @@ export default function Footer1() {
                   <div className="number-box">
                     <Link href={getTelLink()}>{siteConfig.contact.phone}</Link>
                   </div>
-                  <SocialLinks className="footer-social-link" />
+                  <SocialLinks
+                    className="footer-social-link"
+                    ariaLabelTemplate={t.common.a11y.socialProfile}
+                  />
                 </div>
               </div>
             </div>

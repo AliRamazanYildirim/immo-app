@@ -1,30 +1,8 @@
-"use client";
-
 import Link from "next/link";
 import Layout from "@/components/layout/Layout";
+import SocialLink, { socialIconSets } from "@/components/elements/SocialLink";
 import ProjectGrid from "@/components/sections/common/ProjectGrid";
-import siteConfig from "@/lib/siteConfig";
-import {
-  useLocalizedHref,
-  useTranslation,
-} from "@/lib/i18n/TranslationProvider";
-
-const socialNetworks = [
-  { key: "facebook", icon: "icon-facebook", className: "", label: "Facebook" },
-  { key: "twitter", icon: "icon-x-twitter", className: "tw", label: "X" },
-  {
-    key: "instagram",
-    icon: "icon-instagram",
-    className: "ins",
-    label: "Instagram",
-  },
-  {
-    key: "linkedin",
-    icon: "icon-linkedin-big-logo",
-    className: "in",
-    label: "LinkedIn",
-  },
-] as const;
+import { getTranslations } from "@/lib/i18n/server";
 
 const relatedImages = [
   "/assets/img/project/project-v3-img4.webp",
@@ -32,9 +10,8 @@ const relatedImages = [
   "/assets/img/project/project-v3-img6.webp",
 ];
 
-export default function ProjectDetailsPage() {
-  const { t } = useTranslation();
-  const href = useLocalizedHref();
+export default async function ProjectDetailsPage() {
+  const { t, href } = await getTranslations();
   const page = t.pages.projectDetails;
   const { labels } = page;
 
@@ -88,20 +65,12 @@ export default function ProjectDetailsPage() {
                 <li>
                   <ul className="social-links">
                     <li>
-                      {socialNetworks.map((network) => (
-                        <Link
-                          key={network.key}
-                          className={network.className || undefined}
-                          href={siteConfig.social[network.key]}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label={t.common.a11y.socialProfile.replace(
-                            "{network}",
-                            network.label,
-                          )}
-                        >
-                          <span className={network.icon} aria-hidden="true"></span>
-                        </Link>
+                      {socialIconSets.profile.map((item) => (
+                        <SocialLink
+                          key={item.network}
+                          {...item}
+                          ariaLabelTemplate={t.common.a11y.socialProfile}
+                        />
                       ))}
                     </li>
                   </ul>

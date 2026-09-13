@@ -3,7 +3,7 @@
  * Link değiştiğinde yalnızca burası güncellenir.
  */
 
-import type { Dictionary } from "@/lib/i18n/types";
+import type { ClientDictionary } from "@/lib/i18n/types";
 
 export type NavItem = {
   label: string;
@@ -19,7 +19,7 @@ export function isNavItemActive(item: NavItem, pathWithoutLocale: string): boole
   return item.href === pathWithoutLocale;
 }
 
-export function buildNavigation(t: Dictionary): NavItem[] {
+export function buildNavigation(t: ClientDictionary): NavItem[] {
   const { nav } = t.common;
 
   return [

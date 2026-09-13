@@ -1,12 +1,10 @@
-"use client";
-
 import Layout from "@/components/layout/Layout";
 import Accordion from "@/components/elements/Accordion";
 import CtaOne from "@/components/sections/common/CtaOne";
-import { useTranslation } from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
-export default function FaqPage() {
-  const { t } = useTranslation();
+export default async function FaqPage() {
+  const { t } = await getTranslations();
   const page = t.pages.faq;
 
   // Sorular iki kolona bölünür

@@ -4,10 +4,8 @@ import Link from "next/link";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { SwiperOptions } from "swiper/types";
-import {
-  useLocalizedHref,
-  useTranslation,
-} from "@/lib/i18n/TranslationProvider";
+import type { SharedDict } from "@/lib/i18n/locales/de/shared";
+import { useLocalizedHref } from "@/lib/i18n/TranslationProvider";
 
 const swiperOptions: SwiperOptions = {
   modules: [Autoplay, Navigation, Pagination],
@@ -41,10 +39,13 @@ const cardImages = [
 const SLIDE_COUNT = 3;
 const CARDS_PER_SLIDE = 3;
 
-export default function ProjectSlider2() {
-  const { t } = useTranslation();
+export type ProjectSlider2Props = {
+  projects: SharedDict["projects"];
+};
+
+export default function ProjectSlider2({ projects }: ProjectSlider2Props) {
   const href = useLocalizedHref();
-  const { items, detailsHref } = t.shared.projects;
+  const { items, detailsHref } = projects;
 
   return (
     <Swiper {...swiperOptions} className="thm-swiper__slider swiper-container">

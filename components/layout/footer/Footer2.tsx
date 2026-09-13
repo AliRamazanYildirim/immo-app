@@ -1,15 +1,9 @@
-"use client";
-
 import Link from "next/link";
 import siteConfig, { getMailtoLink, getTelLink } from "@/lib/siteConfig";
-import {
-  useLocalizedHref,
-  useTranslation,
-} from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
-export default function Footer2() {
-  const { t } = useTranslation();
-  const href = useLocalizedHref();
+export default async function Footer2() {
+  const { t, href } = await getTranslations();
   const { footer, company } = t.common;
 
   const quickLinks = [

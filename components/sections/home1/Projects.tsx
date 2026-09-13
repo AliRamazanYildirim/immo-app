@@ -1,14 +1,8 @@
-"use client";
-
 import Link from "next/link";
-import {
-  useLocalizedHref,
-  useTranslation,
-} from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
-export default function Projects() {
-  const { t } = useTranslation();
-  const href = useLocalizedHref();
+export default async function Projects() {
+  const { t, href } = await getTranslations();
   const { eyebrow, titleLine1, titleLine2, items } = t.home.projects1;
 
   return (

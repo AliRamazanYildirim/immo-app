@@ -1,15 +1,15 @@
-"use client";
-
 import TestimonialSlider4 from "@/components/slider/TestimonialSlider4";
-import { useTranslation } from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
 export type TestimonialProps = {
   /** Hakkımızda sayfası da aynı bölümü kullanır. */
   showPagination?: boolean;
 };
 
-export default function Testimonial({ showPagination = true }: TestimonialProps) {
-  const { t } = useTranslation();
+export default async function Testimonial({
+  showPagination = true,
+}: TestimonialProps) {
+  const { t } = await getTranslations();
   const { eyebrow, titleLine1, titleLine2 } = t.home.testimonial3;
 
   return (
@@ -42,7 +42,7 @@ export default function Testimonial({ showPagination = true }: TestimonialProps)
           </h2>
         </div>
 
-        <TestimonialSlider4 />
+        <TestimonialSlider4 testimonials={t.shared.testimonials} />
         {showPagination && (
           <div className="swiper-pagination" id="testimonials-two__pagination"></div>
         )}

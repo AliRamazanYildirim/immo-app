@@ -1,10 +1,5 @@
-"use client";
-
 import Link from "next/link";
-import {
-  useLocalizedHref,
-  useTranslation,
-} from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
 export type NewsProps = {
   /** Başlık bloğu gösterilsin mi (blog liste sayfasında gizlenir). */
@@ -21,9 +16,8 @@ const variantImages = [
 ];
 
 /** Blog kartları — home2, home3 ve blog listesi aynı içeriği paylaşır. */
-export default function News({ showHeading = true, variant }: NewsProps) {
-  const { t } = useTranslation();
-  const href = useLocalizedHref();
+export default async function News({ showHeading = true, variant }: NewsProps) {
+  const { t, href } = await getTranslations();
   const { eyebrow, title } = t.home.news;
   const posts = t.blog.posts;
 

@@ -1,21 +1,15 @@
-"use client";
-
 import Link from "next/link";
 import CounterUp from "@/components/elements/CounterUp";
 import siteConfig, { getTelLink } from "@/lib/siteConfig";
-import {
-  useLocalizedHref,
-  useTranslation,
-} from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
 export type AboutProps = {
   /** about sayfası aynı bölümü `about-one--about` varyantıyla kullanır. */
   variant?: "about";
 };
 
-export default function About({ variant }: AboutProps) {
-  const { t } = useTranslation();
-  const href = useLocalizedHref();
+export default async function About({ variant }: AboutProps) {
+  const { t, href } = await getTranslations();
   const about = t.home.about1;
 
   return (

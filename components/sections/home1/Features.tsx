@@ -1,10 +1,5 @@
-"use client";
-
 import Link from "next/link";
-import {
-  useLocalizedHref,
-  useTranslation,
-} from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
 export type FeaturesProps = {
   /** home3 bölümü `style2` varyantını kullanır. */
@@ -12,9 +7,8 @@ export type FeaturesProps = {
 };
 
 /** Üç özellik kartı — home1, home2 ve home3 aynı içeriği paylaşır. */
-export default function Features({ variant }: FeaturesProps) {
-  const { t } = useTranslation();
-  const href = useLocalizedHref();
+export default async function Features({ variant }: FeaturesProps) {
+  const { t, href } = await getTranslations();
   const { eyebrow, items } = t.home.features;
 
   // Kartların giriş animasyonu dönüşümlü: sol, sağ, sol

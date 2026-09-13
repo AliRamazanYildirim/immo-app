@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { createMetadata } from "@/lib/i18n/metadata";
+import { initRequestLocale, type LocalePageProps } from "@/lib/i18n/server";
 import Content from "./Content";
 
 export async function generateMetadata({
@@ -15,6 +16,8 @@ export async function generateMetadata({
   });
 }
 
-export default function Page() {
+export default async function Page({ params }: LocalePageProps) {
+  await initRequestLocale(params);
+
   return <Content />;
 }

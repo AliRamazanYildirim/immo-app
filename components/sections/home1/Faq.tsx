@@ -1,10 +1,8 @@
-"use client";
-
 import Accordion from "@/components/elements/Accordion";
-import { useTranslation } from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
-export default function Faq() {
-  const { t } = useTranslation();
+export default async function Faq() {
+  const { t } = await getTranslations();
   const { bigTitle, items } = t.home.faq1;
 
   return (

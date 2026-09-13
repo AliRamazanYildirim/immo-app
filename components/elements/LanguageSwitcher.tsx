@@ -19,6 +19,26 @@ import { useTranslation } from "@/lib/i18n/TranslationProvider";
 /** İmleç tetikleyiciden panele geçerken menünün kapanmaması için bekleme süresi. */
 const HOVER_CLOSE_DELAY_MS = 180;
 
+/** Listbox klavye gezinmesi: tuşa göre sıradaki seçenek; ilgisiz tuşta null. */
+function getNextOptionIndex(
+  key: string,
+  index: number,
+  lastIndex: number,
+): number | null {
+  switch (key) {
+    case "ArrowDown":
+      return index === lastIndex ? 0 : index + 1;
+    case "ArrowUp":
+      return index === 0 ? lastIndex : index - 1;
+    case "Home":
+      return 0;
+    case "End":
+      return lastIndex;
+    default:
+      return null;
+  }
+}
+
 export type LanguageSwitcherProps = {
   /** Header varyantına göre tetikleyici rengini ayarlar. */
   tone?: "light" | "dark";
@@ -126,31 +146,16 @@ export default function LanguageSwitcher({
   };
 
   const handleItemKeyDown = (event: React.KeyboardEvent, index: number) => {
-    const lastIndex = locales.length - 1;
-
-    switch (event.key) {
-      case "ArrowDown":
-        event.preventDefault();
-        setActiveIndex(index === lastIndex ? 0 : index + 1);
-        break;
-      case "ArrowUp":
-        event.preventDefault();
-        setActiveIndex(index === 0 ? lastIndex : index - 1);
-        break;
-      case "Home":
-        event.preventDefault();
-        setActiveIndex(0);
-        break;
-      case "End":
-        event.preventDefault();
-        setActiveIndex(lastIndex);
-        break;
-      case "Tab":
-        close();
-        break;
-      default:
-        break;
+    if (event.key === "Tab") {
+      close();
+      return;
     }
+
+    const nextIndex = getNextOptionIndex(event.key, index, locales.length - 1);
+    if (nextIndex === null) return;
+
+    event.preventDefault();
+    setActiveIndex(nextIndex);
   };
 
   const current = localeMeta[locale];
@@ -224,44 +229,5 @@ export default function LanguageSwitcher({
         })}
       </ul>
     </div>
-  );
-}
-
-/**
- * Mobil menü varyantı — dropdown yerine 4 dil de görünür.
- * Tek dokunuşla dil değişir, menü içinde iç içe açılır katman olmaz.
- */
-export function LanguageSwitcherInline({ className }: { className?: string }) {
-  const { locale, t } = useTranslation();
-  const pathname = usePathname() || "/";
-
-  return (
-    <nav
-      className={`lang-inline ${className ?? ""}`}
-      aria-label={t.common.language.switcherLabel}
-    >
-      <span className="lang-inline__label">{t.common.language.switcherLabel}</span>
-      <ul className="lang-inline__list">
-        {locales.map((item) => {
-          const meta = localeMeta[item];
-          const isActive = item === locale;
-
-          return (
-            <li key={item}>
-              <Link
-                href={switchLocalePath(pathname, item)}
-                hrefLang={meta.hrefLang}
-                lang={meta.htmlLang}
-                aria-current={isActive ? "true" : undefined}
-                className={`lang-inline__item ${isActive ? "is-active" : ""}`}
-              >
-                <span aria-hidden="true">{meta.shortCode}</span>
-                <span className="sr-only">{meta.nativeName}</span>
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
-    </nav>
   );
 }

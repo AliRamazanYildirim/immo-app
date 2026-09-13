@@ -1,10 +1,8 @@
-"use client";
-
 import ProjectSlider0 from "@/components/slider/ProjectSlider0";
-import { useTranslation } from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
-export default function Projects() {
-  const { t } = useTranslation();
+export default async function Projects() {
+  const { t } = await getTranslations();
   const { eyebrow, titleLine1, titleLine2 } = t.home.projects1;
 
   return (
@@ -19,7 +17,7 @@ export default function Projects() {
             {titleLine2}
           </h2>
         </div>
-        <ProjectSlider0 />
+        <ProjectSlider0 projects={t.shared.projects} />
       </div>
     </section>
   );

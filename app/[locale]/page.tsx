@@ -14,6 +14,7 @@ import Brand from "@/components/sections/home1/Brand";
 import Testimonial from "@/components/sections/home1/Testimonial";
 import type { Metadata } from "next";
 import { createMetadata } from "@/lib/i18n/metadata";
+import { initRequestLocale, type LocalePageProps } from "@/lib/i18n/server";
 
 export async function generateMetadata({
   params,
@@ -26,7 +27,9 @@ export async function generateMetadata({
     path: "/",
   });
 }
-export default function Home() {
+export default async function Home({ params }: LocalePageProps) {
+  await initRequestLocale(params);
+
   return (
     <Layout headerStyle={1} footerStyle={1}>
         <Banner />

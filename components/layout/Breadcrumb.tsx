@@ -1,22 +1,16 @@
-"use client";
-
 import Link from "next/link";
-import {
-  useLocalizedHref,
-  useTranslation,
-} from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
-export interface BreadcrumbProps {
+export type BreadcrumbProps = {
   breadcrumbTitle: string;
   breadcrumbBg?: string;
-}
+};
 
-export default function Breadcrumb({
+export default async function Breadcrumb({
   breadcrumbTitle,
   breadcrumbBg,
 }: BreadcrumbProps) {
-  const { t } = useTranslation();
-  const href = useLocalizedHref();
+  const { t, href } = await getTranslations();
 
   const bgImage = breadcrumbBg
     ? breadcrumbBg.startsWith("/")

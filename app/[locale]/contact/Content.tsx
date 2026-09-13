@@ -1,13 +1,11 @@
-"use client";
-
 import Layout from "@/components/layout/Layout";
 import { ContactPageInfo } from "@/components/elements/ContactInfo";
 import ContactForm from "@/components/sections/common/ContactForm";
 import siteConfig from "@/lib/siteConfig";
-import { useTranslation } from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
-export default function ContactPage() {
-  const { t } = useTranslation();
+export default async function ContactPage() {
+  const { t } = await getTranslations();
   const page = t.pages.contact;
 
   return (
@@ -30,7 +28,7 @@ export default function ContactPage() {
 
                   <div className="contact-page__top-content-bottom">
                     <h2>{page.contactInfoTitle}</h2>
-                    <ContactPageInfo />
+                    <ContactPageInfo labels={t.common.labels} />
                   </div>
                 </div>
               </div>

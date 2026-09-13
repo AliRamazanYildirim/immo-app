@@ -4,10 +4,8 @@ import Link from "next/link";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { SwiperOptions } from "swiper/types";
-import {
-  useLocalizedHref,
-  useTranslation,
-} from "@/lib/i18n/TranslationProvider";
+import type { SharedDict } from "@/lib/i18n/locales/de/shared";
+import { useLocalizedHref } from "@/lib/i18n/TranslationProvider";
 
 const swiperOptions: SwiperOptions = {
   modules: [Autoplay, Navigation],
@@ -42,10 +40,13 @@ const slideImages = [
   "/assets/img/project/project-v2-img2.webp",
 ];
 
-export default function ProjectSlider0() {
-  const { t } = useTranslation();
+export type ProjectSlider0Props = {
+  projects: SharedDict["projects"];
+};
+
+export default function ProjectSlider0({ projects }: ProjectSlider0Props) {
   const href = useLocalizedHref();
-  const { items, detailsHref } = t.shared.projects;
+  const { items, detailsHref } = projects;
 
   return (
     <Swiper {...swiperOptions} className="theme_carousel owl-theme">

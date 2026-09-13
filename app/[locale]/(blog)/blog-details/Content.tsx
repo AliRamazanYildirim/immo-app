@@ -1,16 +1,12 @@
-"use client";
-
 import Link from "next/link";
 import Layout from "@/components/layout/Layout";
 import BlogSidebar from "@/components/sections/blog/BlogSidebar";
-import {
-  useLocalizedHref,
-  useTranslation,
-} from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
+import CommentForm from "./CommentForm";
+import CommentList from "./CommentList";
 
-export default function BlogDetailsPage() {
-  const { t } = useTranslation();
-  const href = useLocalizedHref();
+export default async function BlogDetailsPage() {
+  const { t, href } = await getTranslations();
   const page = t.blog.details;
   const { comments, form, meta } = page;
 
@@ -125,124 +121,9 @@ export default function BlogDetailsPage() {
                   </div>
                 </div>
 
-                <div className="comment-one">
-                  <h3 className="comment-one__title">
-                    {comments.title.replace(
-                      "{count}",
-                      String(comments.items.length),
-                    )}
-                  </h3>
-                  {comments.items.map((comment) => (
-                    <div key={comment.author} className="comment-one__single">
-                      <div className="comment-one__image">
-                        <img
-                          src={comment.avatar}
-                          alt=""
-                          decoding="async"
-                          loading="lazy"
-                          width={100}
-                          height={100}
-                        />
-                      </div>
-                      <div className="comment-one__content">
-                        <h3>{comment.author}</h3>
-                        <p>{comment.text}</p>
-                        <span>
-                          {comment.date}{" "}
-                          <Link href="#" className="comment-one__btn">
-                            {comments.replyLabel}
-                          </Link>
-                        </span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                <CommentList comments={comments} />
 
-                <div className="blog-details__content-form">
-                  <div className="title-box">
-                    <h2>{form.title}</h2>
-                    <p>{form.note}</p>
-                  </div>
-
-                  <form
-                    action="#"
-                    className="contact-page__form contact-form-validated"
-                  >
-                    <div className="row">
-                      <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                        <div className="contact-page__input-box">
-                          <label htmlFor="comment-name" className="sr-only">
-                            {form.name}
-                          </label>
-                          <input
-                            id="comment-name"
-                            type="text"
-                            name="name"
-                            autoComplete="name"
-                            placeholder={form.name}
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                        <div className="contact-page__input-box">
-                          <label htmlFor="comment-email" className="sr-only">
-                            {form.email}
-                          </label>
-                          <input
-                            id="comment-email"
-                            type="email"
-                            name="email"
-                            autoComplete="email"
-                            placeholder={form.email}
-                            required
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                        <div className="contact-page__input-box">
-                          <label htmlFor="comment-website" className="sr-only">
-                            {form.website}
-                          </label>
-                          <input
-                            id="comment-website"
-                            type="url"
-                            name="website"
-                            autoComplete="url"
-                            inputMode="url"
-                            placeholder={form.website}
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                        <div className="contact-page__input-box">
-                          <label htmlFor="comment-message" className="sr-only">
-                            {form.message}
-                          </label>
-                          <textarea
-                            id="comment-message"
-                            name="message"
-                            placeholder={form.message}
-                            required
-                          ></textarea>
-                        </div>
-                        <div className="contact-page__btn">
-                          <button
-                            className="thm-btn"
-                            type="submit"
-                            data-loading-text={t.pages.contact.loading}
-                          >
-                            <span className="txt">{form.submit}</span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
+                <CommentForm form={form} loadingText={t.pages.contact.loading} />
               </div>
             </div>
             {/*End Blog Details Content */}

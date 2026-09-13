@@ -1,30 +1,12 @@
-"use client";
-
 import Link from "next/link";
 import Layout from "@/components/layout/Layout";
+import SocialLink, { socialIconSets } from "@/components/elements/SocialLink";
 import ContactForm from "@/components/sections/common/ContactForm";
 import siteConfig, { getMailtoLink, getTelLink } from "@/lib/siteConfig";
-import { useTranslation } from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
-const socialNetworks = [
-  { key: "facebook", icon: "icon-facebook", className: "", label: "Facebook" },
-  { key: "twitter", icon: "icon-x-twitter", className: "tw", label: "X" },
-  {
-    key: "instagram",
-    icon: "icon-instagram",
-    className: "ins",
-    label: "Instagram",
-  },
-  {
-    key: "linkedin",
-    icon: "icon-linkedin-big-logo",
-    className: "in",
-    label: "LinkedIn",
-  },
-] as const;
-
-export default function TeamDetailsPage() {
-  const { t } = useTranslation();
+export default async function TeamDetailsPage() {
+  const { t } = await getTranslations();
   const page = t.pages.teamDetails;
 
   return (
@@ -88,23 +70,12 @@ export default function TeamDetailsPage() {
 
                   <div className="social-links">
                     <ul>
-                      {socialNetworks.map((network) => (
-                        <li key={network.key}>
-                          <Link
-                            className={network.className || undefined}
-                            href={siteConfig.social[network.key]}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label={t.common.a11y.socialProfile.replace(
-                              "{network}",
-                              network.label,
-                            )}
-                          >
-                            <span
-                              className={network.icon}
-                              aria-hidden="true"
-                            ></span>
-                          </Link>
+                      {socialIconSets.profile.map((item) => (
+                        <li key={item.network}>
+                          <SocialLink
+                            {...item}
+                            ariaLabelTemplate={t.common.a11y.socialProfile}
+                          />
                         </li>
                       ))}
                     </ul>

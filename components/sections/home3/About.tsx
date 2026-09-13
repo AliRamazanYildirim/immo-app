@@ -1,16 +1,10 @@
-"use client";
-
 import Link from "next/link";
 import CounterUp from "@/components/elements/CounterUp";
 import siteConfig, { getTelLink } from "@/lib/siteConfig";
-import {
-  useLocalizedHref,
-  useTranslation,
-} from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
-export default function About() {
-  const { t } = useTranslation();
-  const href = useLocalizedHref();
+export default async function About() {
+  const { t, href } = await getTranslations();
   const about = t.home.about1;
   const alts = t.home.about3;
 

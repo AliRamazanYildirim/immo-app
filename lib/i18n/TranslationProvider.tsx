@@ -3,25 +3,27 @@
 /**
  * Client component'ler için çeviri context'i.
  *
- * Sözlük sunucuda (app/[locale]/layout.tsx) yüklenir ve buradan aşağıya
- * aktarılır; böylece 4 dilin tamamı bundle'a girmez, sadece aktif dil gelir.
+ * Neden yalnızca `common`? Context'e verilen her şey RSC payload'u ile her
+ * sayfada tarayıcıya gider. Sayfa ve bölüm metinleri Server Component'lerde
+ * `getTranslations()` ile okunur; etkileşimli client bileşenler ihtiyaç
+ * duydukları metni server parent'larından prop olarak alır.
  */
 
 import { createContext, useContext, type ReactNode } from "react";
 import type { Locale } from "./config";
 import { localizedHref } from "./routing";
-import type { Dictionary } from "./types";
+import type { ClientDictionary } from "./types";
 
 type TranslationContextValue = {
   locale: Locale;
-  t: Dictionary;
+  t: ClientDictionary;
 };
 
 const TranslationContext = createContext<TranslationContextValue | null>(null);
 
 export type TranslationProviderProps = {
   locale: Locale;
-  dictionary: Dictionary;
+  dictionary: ClientDictionary;
   children: ReactNode;
 };
 

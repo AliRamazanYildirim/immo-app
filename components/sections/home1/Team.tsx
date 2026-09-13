@@ -1,15 +1,9 @@
-"use client";
-
 import Link from "next/link";
 import TeamSlider2 from "@/components/slider/TeamSlider2";
-import {
-  useLocalizedHref,
-  useTranslation,
-} from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
-export default function Team() {
-  const { t } = useTranslation();
-  const href = useLocalizedHref();
+export default async function Team() {
+  const { t, href } = await getTranslations();
   const { eyebrow, titleLine1, titleLine2 } = t.home.team1;
 
   return (
@@ -32,7 +26,7 @@ export default function Team() {
           </div>
         </div>
 
-        <TeamSlider2 />
+        <TeamSlider2 content={t.shared.teamSlider} />
       </div>
     </section>
   );

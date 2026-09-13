@@ -1,11 +1,9 @@
-"use client";
-
 import TestimonialSlider2 from "@/components/slider/TestimonialSlider2";
 import TestimonialSlider3 from "@/components/slider/TestimonialSlider3";
-import { useTranslation } from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
-export default function Testimonial() {
-  const { t } = useTranslation();
+export default async function Testimonial() {
+  const { t } = await getTranslations();
   const { eyebrow, title } = t.home.testimonial1;
 
   return (
@@ -32,10 +30,10 @@ export default function Testimonial() {
           <div className="col-xl-12">
             <div className="testimonials-one__inner">
               <div className="testimonials-one__content">
-                <TestimonialSlider2 />
+                <TestimonialSlider2 reviews={t.shared.reviewsShort} />
               </div>
 
-              <TestimonialSlider3 />
+              <TestimonialSlider3 clients={t.shared.clientThumbs} />
             </div>
           </div>
         </div>

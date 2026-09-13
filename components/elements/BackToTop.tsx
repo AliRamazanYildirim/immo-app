@@ -1,15 +1,13 @@
 "use client";
 
+import { useScrolled } from "@/lib/hooks/useScrolled";
 import { useTranslation } from "@/lib/i18n/TranslationProvider";
 
-export interface BackToTopProps {
-  scroll?: boolean;
-}
-
-export default function BackToTop({ scroll }: BackToTopProps) {
+export default function BackToTop() {
   const { t } = useTranslation();
+  const isScrolled = useScrolled();
 
-  if (!scroll) return null;
+  if (!isScrolled) return null;
 
   return (
     <a

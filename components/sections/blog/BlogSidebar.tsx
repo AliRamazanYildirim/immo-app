@@ -1,19 +1,14 @@
-"use client";
-
 /** Blog kenar çubuğu — blog detayı ve kenar çubuklu liste paylaşır. */
 
 import Link from "next/link";
-import { useId } from "react";
-import {
-  useLocalizedHref,
-  useTranslation,
-} from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
-export default function BlogSidebar() {
-  const { t } = useTranslation();
-  const href = useLocalizedHref();
+/** Neden sabit? Server Component'te useId yok; sayfa başına tek kenar çubuğu var. */
+const SEARCH_INPUT_ID = "blog-sidebar-search";
+
+export default async function BlogSidebar() {
+  const { t, href } = await getTranslations();
   const sidebar = t.blog.details.sidebar;
-  const searchId = useId();
 
   return (
     <div className="sidebar">
@@ -21,11 +16,11 @@ export default function BlogSidebar() {
       <div className="sidebar__single sidebar__search">
         <h3 className="sidebar__title">{sidebar.searchTitle}</h3>
         <form action="#" className="sidebar__search-form">
-          <label htmlFor={searchId} className="sr-only">
+          <label htmlFor={SEARCH_INPUT_ID} className="sr-only">
             {sidebar.searchTitle}
           </label>
           <input
-            id={searchId}
+            id={SEARCH_INPUT_ID}
             type="search"
             name="search"
             placeholder={sidebar.searchPlaceholder}

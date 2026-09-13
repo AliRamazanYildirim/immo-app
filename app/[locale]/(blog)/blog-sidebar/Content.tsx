@@ -1,16 +1,10 @@
-"use client";
-
 import Link from "next/link";
 import Layout from "@/components/layout/Layout";
 import BlogSidebar from "@/components/sections/blog/BlogSidebar";
-import {
-  useLocalizedHref,
-  useTranslation,
-} from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
-export default function BlogSidebarPage() {
-  const { t } = useTranslation();
-  const href = useLocalizedHref();
+export default async function BlogSidebarPage() {
+  const { t, href } = await getTranslations();
   const page = t.blog.sidebarPage;
   const posts = t.blog.sidebarPosts;
 

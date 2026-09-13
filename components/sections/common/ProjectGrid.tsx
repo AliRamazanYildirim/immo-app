@@ -1,15 +1,10 @@
-"use client";
-
 /**
  * Proje ızgarası (`project-three`).
  * Projeler sayfası ve proje detayındaki "ilgili projeler" bloğu paylaşır.
  */
 
 import Link from "next/link";
-import {
-  useLocalizedHref,
-  useTranslation,
-} from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
 export type ProjectGridProps = {
   /** Kartlarda kullanılacak görseller; proje sayısını da belirler. */
@@ -22,14 +17,13 @@ export type ProjectGridProps = {
   variant?: "style4";
 };
 
-export default function ProjectGrid({
+export default async function ProjectGrid({
   images,
   linkTo,
   title,
   variant,
 }: ProjectGridProps) {
-  const { t } = useTranslation();
-  const href = useLocalizedHref();
+  const { t, href } = await getTranslations();
   const { items, detailsHref } = t.shared.projects;
 
   const target = linkTo ?? detailsHref;

@@ -5,10 +5,8 @@ import Link from "next/link";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { SwiperOptions } from "swiper/types";
-import {
-  useLocalizedHref,
-  useTranslation,
-} from "@/lib/i18n/TranslationProvider";
+import type { SharedDict } from "@/lib/i18n/locales/de/shared";
+import { useLocalizedHref } from "@/lib/i18n/TranslationProvider";
 
 const swiperOptions: SwiperOptions = {
   modules: [Autoplay, Navigation],
@@ -53,12 +51,15 @@ const swiperOptions: SwiperOptions = {
   },
 };
 
-export default function TeamSlider2() {
-  const { t } = useTranslation();
+export type TeamSlider2Props = {
+  content: SharedDict["teamSlider"];
+};
+
+export default function TeamSlider2({ content }: TeamSlider2Props) {
   const href = useLocalizedHref();
   const [mounted, setMounted] = useState(false);
 
-  const { members, shareAria } = t.shared.teamSlider;
+  const { members, shareAria } = content;
   // slidesPerView 4 ile sorunsuz sonsuz döngü için listeyi iki kez kullan
   const slides = [...members, ...members];
 

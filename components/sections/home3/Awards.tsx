@@ -1,9 +1,7 @@
-"use client";
+import { getTranslations } from "@/lib/i18n/server";
 
-import { useTranslation } from "@/lib/i18n/TranslationProvider";
-
-export default function Awards() {
-  const { t } = useTranslation();
+export default async function Awards() {
+  const { t } = await getTranslations();
   const awards = t.home.awards;
 
   return (

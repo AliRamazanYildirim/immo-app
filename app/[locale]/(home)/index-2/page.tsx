@@ -10,6 +10,7 @@ import Brand from "@/components/sections/home2/Brand";
 import WhyChooseUs from "@/components/sections/home2/WhyChooseUs";
 import type { Metadata } from "next";
 import { createMetadata } from "@/lib/i18n/metadata";
+import { initRequestLocale, type LocalePageProps } from "@/lib/i18n/server";
 
 export async function generateMetadata({
   params,
@@ -23,7 +24,9 @@ export async function generateMetadata({
     title: (t) => t.common.nav.homeTwo,
   });
 }
-export default function Home() {
+export default async function Home({ params }: LocalePageProps) {
+  await initRequestLocale(params);
+
   return (
     <Layout headerStyle={2} footerStyle={1}>
       <Banner />

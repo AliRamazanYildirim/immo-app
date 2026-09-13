@@ -1,15 +1,9 @@
-"use client";
-
 import Link from "next/link";
-import {
-  useLocalizedHref,
-  useTranslation,
-} from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
 /** Numaralı hizmet kartları — home1 ve hizmetler sayfası paylaşır. */
-export default function Services() {
-  const { t } = useTranslation();
-  const href = useLocalizedHref();
+export default async function Services() {
+  const { t, href } = await getTranslations();
   const { eyebrow, title, items } = t.home.services1;
 
   return (

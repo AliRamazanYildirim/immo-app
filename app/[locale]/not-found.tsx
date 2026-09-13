@@ -1,15 +1,13 @@
-"use client";
-
 import Link from "next/link";
 import Layout from "@/components/layout/Layout";
-import {
-  useLocalizedHref,
-  useTranslation,
-} from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
-export default function NotFound() {
-  const { t } = useTranslation();
-  const href = useLocalizedHref();
+/**
+ * Neden params yok? not-found.tsx route param'ı almaz; locale'i
+ * app/[locale]/layout.tsx'in ayarladığı istek deposundan okur.
+ */
+export default async function NotFound() {
+  const { t, href } = await getTranslations();
   const page = t.pages.notFound;
 
   return (

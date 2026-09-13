@@ -1,15 +1,9 @@
-"use client";
-
 import Link from "next/link";
 import ProjectSlider2 from "@/components/slider/ProjectSlider2";
-import {
-  useLocalizedHref,
-  useTranslation,
-} from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
-export default function Projects() {
-  const { t } = useTranslation();
-  const href = useLocalizedHref();
+export default async function Projects() {
+  const { t, href } = await getTranslations();
   const { eyebrow, title } = t.home.projects3;
 
   return (
@@ -41,7 +35,7 @@ export default function Projects() {
         </div>
 
         <div className="project-three__bottom">
-          <ProjectSlider2 />
+          <ProjectSlider2 projects={t.shared.projects} />
           <div className="swiper-pagination" id="project-three__pagination"></div>
         </div>
       </div>

@@ -1,10 +1,5 @@
-"use client";
-
 import Link from "next/link";
-import {
-  useLocalizedHref,
-  useTranslation,
-} from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
 export type ActionProps = {
   /** Sayfaya göre farklı arka plan görseli kullanılabilir. */
@@ -13,12 +8,11 @@ export type ActionProps = {
   highlight?: boolean;
 };
 
-export default function Action({
+export default async function Action({
   background = "/assets/img/background/call-to-action-v1-bg.webp",
   highlight = false,
 }: ActionProps) {
-  const { t } = useTranslation();
-  const href = useLocalizedHref();
+  const { t, href } = await getTranslations();
   const { title, subtitle, cta } = t.home.action;
 
   return (

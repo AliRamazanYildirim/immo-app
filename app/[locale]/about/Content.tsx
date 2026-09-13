@@ -1,5 +1,3 @@
-"use client";
-
 import Layout from "@/components/layout/Layout";
 import About from "@/components/sections/home1/About";
 import Action from "@/components/sections/home2/Action";
@@ -7,10 +5,10 @@ import Testimonial from "@/components/sections/home3/Testimonial";
 import WhyChooseUs from "@/components/sections/home2/WhyChooseUs";
 import TeamGrid from "@/components/sections/common/TeamGrid";
 import BrandSlider2 from "@/components/slider/BrandSlider2";
-import { useTranslation } from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
-export default function AboutPage() {
-  const { t } = useTranslation();
+export default async function AboutPage() {
+  const { t } = await getTranslations();
   const page = t.pages.about;
 
   return (

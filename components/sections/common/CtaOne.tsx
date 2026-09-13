@@ -1,16 +1,10 @@
-"use client";
-
 /** "Yardıma hazırız" CTA şeridi — SSS ve referanslar sayfaları paylaşır. */
 
 import Link from "next/link";
-import {
-  useLocalizedHref,
-  useTranslation,
-} from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
-export default function CtaOne() {
-  const { t } = useTranslation();
-  const href = useLocalizedHref();
+export default async function CtaOne() {
+  const { t, href } = await getTranslations();
   const faq = t.pages.faq;
 
   return (

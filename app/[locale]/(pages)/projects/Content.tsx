@@ -1,8 +1,6 @@
-"use client";
-
 import Layout from "@/components/layout/Layout";
 import ProjectGrid from "@/components/sections/common/ProjectGrid";
-import { useTranslation } from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
 /** Portföy ızgarasının görsel seti — proje metinleri sözlükten gelir. */
 const gridImages = [
@@ -14,8 +12,8 @@ const gridImages = [
   "/assets/img/project/project-v3-img9.webp",
 ];
 
-export default function ProjectsPage() {
-  const { t } = useTranslation();
+export default async function ProjectsPage() {
+  const { t } = await getTranslations();
   const page = t.pages.projects;
 
   return (

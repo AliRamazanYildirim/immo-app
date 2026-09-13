@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { SwiperOptions } from "swiper/types";
-import { useTranslation } from "@/lib/i18n/TranslationProvider";
+import type { SharedDict } from "@/lib/i18n/locales/de/shared";
 
 const swiperOptions: SwiperOptions = {
   modules: [Autoplay, Pagination, Navigation],
@@ -39,11 +39,12 @@ function RatingStars() {
   );
 }
 
-export default function TestimonialSlider2() {
-  const { t } = useTranslation();
-  const [mounted, setMounted] = useState(false);
+export type TestimonialSlider2Props = {
+  reviews: SharedDict["reviewsShort"];
+};
 
-  const reviews = t.shared.reviewsShort;
+export default function TestimonialSlider2({ reviews }: TestimonialSlider2Props) {
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import siteConfig, { getMailtoLink, getTelLink } from "@/lib/siteConfig";
 import LanguageSwitcher from "@/components/elements/LanguageSwitcher";
+import SocialLink, { socialIconSets } from "@/components/elements/SocialLink";
 import {
   useLocalizedHref,
   useTranslation,
@@ -10,13 +11,6 @@ import {
 import Menu from "../Menu";
 import MobileMenu from "../MobileMenu";
 import type { HeaderProps } from "./Header1";
-
-const socialNetworks = [
-  { key: "facebook", icon: "icon-facebook", label: "Facebook" },
-  { key: "instagram", icon: "icon-instagram", label: "Instagram" },
-  { key: "tiktok", icon: "icon-tik-tok", label: "TikTok" },
-  { key: "youtube", icon: "icon-youtube", label: "YouTube" },
-] as const;
 
 export default function Header4({
   scroll,
@@ -52,19 +46,12 @@ export default function Header4({
 
                 <div className="header-social-links">
                   <ul>
-                    {socialNetworks.map((network) => (
-                      <li key={network.key}>
-                        <Link
-                          href={siteConfig.social[network.key]}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label={t.common.a11y.socialProfile.replace(
-                            "{network}",
-                            network.label,
-                          )}
-                        >
-                          <span className={network.icon} aria-hidden="true"></span>
-                        </Link>
+                    {socialIconSets.outline.map((item) => (
+                      <li key={item.network}>
+                        <SocialLink
+                          {...item}
+                          ariaLabelTemplate={t.common.a11y.socialProfile}
+                        />
                       </li>
                     ))}
                   </ul>

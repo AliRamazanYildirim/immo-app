@@ -1,10 +1,5 @@
-"use client";
-
 import Link from "next/link";
-import {
-  useLocalizedHref,
-  useTranslation,
-} from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
 export type ServicesProps = {
   /** Hizmetler sayfasında üstteki dekoratif şekil gösterilmez. */
@@ -12,9 +7,8 @@ export type ServicesProps = {
 };
 
 /** Dört kartlı hizmet bölümü — home2 ve hizmetler sayfası paylaşır. */
-export default function Services({ showShape = true }: ServicesProps) {
-  const { t } = useTranslation();
-  const href = useLocalizedHref();
+export default async function Services({ showShape = true }: ServicesProps) {
+  const { t, href } = await getTranslations();
   const { eyebrow, title, items } = t.home.services2;
 
   return (

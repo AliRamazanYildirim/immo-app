@@ -1,11 +1,9 @@
-"use client";
-
 import Layout from "@/components/layout/Layout";
 import News from "@/components/sections/home2/News";
-import { useTranslation } from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
-export default function BlogPage() {
-  const { t } = useTranslation();
+export default async function BlogPage() {
+  const { t } = await getTranslations();
   const page = t.blog.list;
 
   return (

@@ -20,3 +20,6 @@ export type Dictionary = {
   blog: BlogDict;
   shared: SharedDict;
 };
+
+/** İstemciye giden kısım: yalnızca site geneli (header, menü, butonlar) metinleri. */
+export type ClientDictionary = Pick<Dictionary, "common">;

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Layout from "@/components/layout/Layout";
 import siteConfig, { getMailtoLink, getTelLink } from "@/lib/siteConfig";
 import { createMetadata } from "@/lib/i18n/metadata";
+import { initRequestLocale, type LocalePageProps } from "@/lib/i18n/server";
 
 export async function generateMetadata({
   params,
@@ -18,7 +19,9 @@ export async function generateMetadata({
   });
 }
 
-export default function ImpressumPage() {
+export default async function ImpressumPage({ params }: LocalePageProps) {
+  await initRequestLocale(params);
+
   return (
     <Layout
       headerStyle={4}

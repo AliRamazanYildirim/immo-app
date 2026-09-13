@@ -1,10 +1,8 @@
-"use client";
-
 import CounterUp from "@/components/elements/CounterUp";
-import { useTranslation } from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
-export default function Contact() {
-  const { t } = useTranslation();
+export default async function Contact() {
+  const { t } = await getTranslations();
   const form = t.home.contactForm;
 
   return (

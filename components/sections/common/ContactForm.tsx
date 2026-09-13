@@ -1,13 +1,10 @@
-"use client";
-
 /**
  * Paylaşılan iletişim formu (`contact-two`).
  * İletişim, ekip detayı ve blog detayı sayfalarında aynı işaretleme
  * kopyalanmıştı; alanlar artık parametreyle seçiliyor.
  */
 
-import { useId } from "react";
-import { useTranslation } from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
 /** İkili satırda gösterilecek alanlar ve tam genişlik mesaj alanı. */
 export type ContactFormField = "name" | "email" | "phone" | "subject" | "website";
@@ -19,6 +16,11 @@ export type ContactFormProps = {
   submitLabel?: string;
   title?: string;
   note?: string;
+  /**
+   * Input id'lerinin öneki. Neden useId değil? Bu bir Server Component;
+   * aynı sayfada iki form olursa farklı önek verilmeli.
+   */
+  idPrefix?: string;
 };
 
 const fieldInputProps: Record<
@@ -32,15 +34,15 @@ const fieldInputProps: Record<
   website: { type: "url", autoComplete: "url", inputMode: "url" },
 };
 
-export default function ContactForm({
+export default async function ContactForm({
   fields = ["name", "email", "phone", "subject"],
   submitLabel,
   title,
   note,
+  idPrefix = "contact-form",
 }: ContactFormProps) {
-  const { t } = useTranslation();
+  const { t } = await getTranslations();
   const page = t.pages.contact;
-  const baseId = useId();
 
   // İkili satırlara böl
   const rows: ContactFormField[][] = [];
@@ -64,7 +66,7 @@ export default function ContactForm({
               {rows.map((row, rowIndex) => (
                 <div key={rowIndex} className="row">
                   {row.map((field) => {
-                    const inputId = `${baseId}-${field}`;
+                    const inputId = `${idPrefix}-${field}`;
                     const label = page.fields[field];
 
                     return (
@@ -93,11 +95,11 @@ export default function ContactForm({
               <div className="row">
                 <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                   <div className="contact-page__input-box">
-                    <label htmlFor={`${baseId}-message`} className="sr-only">
+                    <label htmlFor={`${idPrefix}-message`} className="sr-only">
                       {page.fields.message}
                     </label>
                     <textarea
-                      id={`${baseId}-message`}
+                      id={`${idPrefix}-message`}
                       name="message"
                       placeholder={page.fields.message}
                       required

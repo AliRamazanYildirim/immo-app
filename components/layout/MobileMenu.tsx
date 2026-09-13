@@ -9,7 +9,8 @@ import {
   useTranslation,
 } from "@/lib/i18n/TranslationProvider";
 import { splitLocale } from "@/lib/i18n/routing";
-import { LanguageSwitcherInline } from "@/components/elements/LanguageSwitcher";
+import LanguageSwitcherInline from "@/components/elements/LanguageSwitcherInline";
+import SocialLink, { socialIconSets } from "@/components/elements/SocialLink";
 import { buildNavigation, isNavItemActive } from "./navigationItems";
 
 export interface MobileMenuProps {
@@ -130,71 +131,15 @@ export default function MobileMenu({
           </div>
           <div className="social-links">
             <ul className="clearfix list-wrap">
-              <li>
-                <Link
-                  href={siteConfig.social.facebook}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={t.common.a11y.socialProfile.replace(
-                    "{network}",
-                    "Facebook",
-                  )}
-                >
-                  <i className="fab fa-facebook-f" aria-hidden="true"></i>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href={siteConfig.social.twitter}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={t.common.a11y.socialProfile.replace(
-                    "{network}",
-                    "X",
-                  )}
-                >
-                  <i className="fa-brands fa-x-twitter" aria-hidden="true"></i>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href={siteConfig.social.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={t.common.a11y.socialProfile.replace(
-                    "{network}",
-                    "Instagram",
-                  )}
-                >
-                  <i className="fab fa-instagram" aria-hidden="true"></i>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href={siteConfig.social.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={t.common.a11y.socialProfile.replace(
-                    "{network}",
-                    "LinkedIn",
-                  )}
-                >
-                  <i className="fab fa-linkedin-in" aria-hidden="true"></i>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href={siteConfig.social.youtube}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={t.common.a11y.socialProfile.replace(
-                    "{network}",
-                    "YouTube",
-                  )}
-                >
-                  <i className="fab fa-youtube" aria-hidden="true"></i>
-                </Link>
-              </li>
+              {socialIconSets.fontAwesome.map((item) => (
+                <li key={item.network}>
+                  <SocialLink
+                    {...item}
+                    iconTag="i"
+                    ariaLabelTemplate={t.common.a11y.socialProfile}
+                  />
+                </li>
+              ))}
             </ul>
           </div>
         </nav>

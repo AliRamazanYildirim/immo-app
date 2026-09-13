@@ -1,15 +1,13 @@
-"use client";
-
 import Layout from "@/components/layout/Layout";
 import FeatureExplore from "@/components/sections/common/FeatureExplore";
 import Action from "@/components/sections/home2/Action";
 import ServiceCards from "@/components/sections/home2/Services";
 import NumberedServices from "@/components/sections/home1/Services";
 import WhyChooseUs from "@/components/sections/home2/WhyChooseUs";
-import { useTranslation } from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
-export default function ServicesPage() {
-  const { t } = useTranslation();
+export default async function ServicesPage() {
+  const { t } = await getTranslations();
   const page = t.services.overview;
 
   return (

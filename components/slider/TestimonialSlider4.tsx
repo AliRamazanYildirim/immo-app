@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { SwiperOptions } from "swiper/types";
-import { useTranslation } from "@/lib/i18n/TranslationProvider";
+import type { SharedDict } from "@/lib/i18n/locales/de/shared";
 
 const swiperOptions: SwiperOptions = {
   modules: [Autoplay, Navigation, Pagination],
@@ -56,11 +56,14 @@ const swiperOptions: SwiperOptions = {
 };
 
 
-export default function TestimonialSlider4() {
-  const { t } = useTranslation();
+export type TestimonialSlider4Props = {
+  testimonials: SharedDict["testimonials"];
+};
+
+export default function TestimonialSlider4({ testimonials }: TestimonialSlider4Props) {
   const [mounted, setMounted] = useState(false);
 
-  const testimonialsData = t.shared.testimonials;
+  const testimonialsData = testimonials;
 
   useEffect(() => {
     setMounted(true);

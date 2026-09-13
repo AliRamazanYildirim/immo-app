@@ -1,11 +1,6 @@
-"use client";
-
 import Link from "next/link";
 import type { ReactNode } from "react";
-import {
-  useLocalizedHref,
-  useTranslation,
-} from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
 export interface FeatureExploreProps {
   imgSrc?: string;
@@ -21,7 +16,7 @@ export interface FeatureExploreProps {
  * Varsayılan içerik sözlükten gelir; çağıran sayfa istediği alanı
  * prop ile geçersiz kılabilir.
  */
-export default function FeatureExplore({
+export default async function FeatureExplore({
   imgSrc = "/assets/img/service/service-feauture-img1.webp",
   imgAlt,
   subTitle,
@@ -30,8 +25,7 @@ export default function FeatureExplore({
   btnLink = "/about",
   btnText,
 }: FeatureExploreProps) {
-  const { t } = useTranslation();
-  const href = useLocalizedHref();
+  const { t, href } = await getTranslations();
   const section = t.home.featureExplore;
 
   const resolvedImg = imgSrc.startsWith("/") ? imgSrc : `/${imgSrc}`;

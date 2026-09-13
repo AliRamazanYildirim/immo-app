@@ -1,11 +1,9 @@
-"use client";
-
 import Layout from "@/components/layout/Layout";
 import TeamGrid from "@/components/sections/common/TeamGrid";
-import { useTranslation } from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
-export default function TeamPage() {
-  const { t } = useTranslation();
+export default async function TeamPage() {
+  const { t } = await getTranslations();
   const page = t.pages.team;
 
   return (

@@ -1,5 +1,3 @@
-"use client";
-
 /**
  * Ekip ızgarası (`team-two`).
  * Anasayfa 3, hakkımızda 3, ekip sayfası 6 üye gösteriyor — aynı işaretleme
@@ -7,10 +5,8 @@
  */
 
 import Link from "next/link";
-import {
-  useLocalizedHref,
-  useTranslation,
-} from "@/lib/i18n/TranslationProvider";
+import { socialProfileLabel } from "@/components/elements/SocialLink";
+import { getTranslations } from "@/lib/i18n/server";
 
 export type TeamGridProps = {
   /** Gösterilecek üye sayısı; verilmezse tümü listelenir. */
@@ -20,14 +16,16 @@ export type TeamGridProps = {
 };
 
 const socialIcons = [
-  { icon: "icon-linkedin-big-logo", label: "LinkedIn" },
-  { icon: "icon-instagram", label: "Instagram" },
-  { icon: "icon-facebook", label: "Facebook" },
+  { icon: "icon-linkedin-big-logo", network: "linkedin" },
+  { icon: "icon-instagram", network: "instagram" },
+  { icon: "icon-facebook", network: "facebook" },
 ] as const;
 
-export default function TeamGrid({ limit, showHeading = true }: TeamGridProps) {
-  const { t } = useTranslation();
-  const href = useLocalizedHref();
+export default async function TeamGrid({
+  limit,
+  showHeading = true,
+}: TeamGridProps) {
+  const { t, href } = await getTranslations();
   const team = t.pages.team;
 
   const members = limit ? team.members.slice(0, limit) : team.members;
@@ -83,9 +81,9 @@ export default function TeamGrid({ limit, showHeading = true }: TeamGridProps) {
                           <li key={social.icon}>
                             <Link
                               href="#"
-                              aria-label={t.common.a11y.socialProfile.replace(
-                                "{network}",
-                                social.label,
+                              aria-label={socialProfileLabel(
+                                t.common.a11y.socialProfile,
+                                social.network,
                               )}
                             >
                               <i className={social.icon} aria-hidden="true"></i>

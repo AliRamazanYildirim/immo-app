@@ -1,6 +1,4 @@
-"use client";
-
-import { useTranslation } from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
 export type WhyChooseUsProps = {
   /** Sayfaya göre farklı görsel çifti kullanılabilir. */
@@ -14,11 +12,11 @@ const defaultImages = [
   { src: "/assets/img/service/service-why-choose-img2.webp", alt: "" },
 ];
 
-export default function WhyChooseUs({
+export default async function WhyChooseUs({
   images = defaultImages,
   source = "whyChooseUs",
 }: WhyChooseUsProps) {
-  const { t } = useTranslation();
+  const { t } = await getTranslations();
   const items =
     source === "services3" ? t.home.services3.items : t.home.whyChooseUs.items;
 

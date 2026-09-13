@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { SwiperOptions } from "swiper/types";
-import { useTranslation } from "@/lib/i18n/TranslationProvider";
+import type { SharedDict } from "@/lib/i18n/locales/de/shared";
 
 const swiperOptions: SwiperOptions = {
   modules: [Autoplay, Navigation],
@@ -31,12 +31,15 @@ const swiperOptions: SwiperOptions = {
   },
 };
 
-export default function TestimonialSlider3() {
-  const { t } = useTranslation();
+export type TestimonialSlider3Props = {
+  clients: SharedDict["clientThumbs"];
+};
+
+export default function TestimonialSlider3({ clients }: TestimonialSlider3Props) {
   const [mounted, setMounted] = useState(false);
 
   // Sonsuz döngü için 3 müşteriyi iki kez göster
-  const thumbs = [...t.shared.clientThumbs, ...t.shared.clientThumbs];
+  const thumbs = [...clients, ...clients];
 
   useEffect(() => {
     setMounted(true);

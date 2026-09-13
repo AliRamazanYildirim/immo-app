@@ -1,19 +1,13 @@
-"use client";
-
 import Link from "next/link";
-import {
-  useLocalizedHref,
-  useTranslation,
-} from "@/lib/i18n/TranslationProvider";
+import { getTranslations } from "@/lib/i18n/server";
 
 export type FeautureTwoProps = {
   /** home3 bölümü `style4` varyantını ve ters animasyon yönünü kullanır. */
   variant?: "style4";
 };
 
-export default function FeautureTwo({ variant }: FeautureTwoProps) {
-  const { t } = useTranslation();
-  const href = useLocalizedHref();
+export default async function FeautureTwo({ variant }: FeautureTwoProps) {
+  const { t, href } = await getTranslations();
   const { items } = t.home.featureTwo;
 
   const isStyle4 = variant === "style4";
