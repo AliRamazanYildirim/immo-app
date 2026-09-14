@@ -220,9 +220,16 @@ Testimonials Two Css
   z-index: -1;
 }
 
+/* Yorum metni uzunluğu farklı olsa da kartlar (slider dahil) eşit yükseklikte kalsın */
+.testimonials-two .swiper-slide {
+  height: auto;
+}
+
 .testimonials-two__single {
   position: relative;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   background: var(--thm-white);
   box-shadow: 0px 2px 60px 0px rgba(18, 20, 31, 0.06);
   padding: 40px 40px 30px;
@@ -294,6 +301,7 @@ Testimonials Two Css
 .testimonials-two__single-text {
   position: relative;
   display: block;
+  flex: 1;
   margin-bottom: 24px;
   padding-right: 10px;
 }

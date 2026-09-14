@@ -22,6 +22,8 @@ const common: CommonDict = {
     faq: "SSS",
     contact: "İletişim",
     blog: "Blog",
+    blogSidebar: "Kenar Çubuklu Blog",
+    blogDetails: "Blog Detayı",
   },
 
   actions: {

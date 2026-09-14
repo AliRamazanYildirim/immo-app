@@ -25,6 +25,8 @@ const common = {
     faq: "FAQ",
     contact: "Kontakt",
     blog: "Blog",
+    blogSidebar: "Blog mit Sidebar",
+    blogDetails: "Blog-Details",
   },
 
   actions: {

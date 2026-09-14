@@ -9,9 +9,12 @@
     z-index: 1;
 }
 
+/* Başlık uzunluğu farklı olsa da "Weiterlesen" bağlantıları aynı hizada kalsın */
 .blog-one__single {
     position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 30px);
     margin-bottom: 30px;
 }
 
@@ -124,7 +127,9 @@
 
 .blog-one__single-content {
     position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     padding: 16px 0px 0px;
 }
 
@@ -171,7 +176,8 @@
 .blog-one__single-content .btn-box {
     position: relative;
     display: block;
-    margin-top: 21px;
+    margin-top: auto;
+    padding-top: 21px;
 }
 
 .blog-one__single-content .btn-box a {
@@ -1236,7 +1242,9 @@
 }
 
 .blog-details__content-form form input[type="text"],
-.blog-details__content-form form input[type="email"] {
+.blog-details__content-form form input[type="email"],
+.blog-details__content-form form input[type="tel"],
+.blog-details__content-form form input[type="url"] {
     color: var(--thm-gray);
     font-size: 16px;
     font-weight: 400;
@@ -1269,11 +1277,10 @@
 }
 
 
-.blog-details__content-form form input[type="text"]:focus {
-    color: var(--thm-gray);
-}
-
-.blog-details__content-form form input[type="email"]:focus {
+.blog-details__content-form form input[type="text"]:focus,
+.blog-details__content-form form input[type="email"]:focus,
+.blog-details__content-form form input[type="tel"]:focus,
+.blog-details__content-form form input[type="url"]:focus {
     color: var(--thm-gray);
 }
 
@@ -1282,35 +1289,10 @@
 }
 
 
-.blog-details__content-form form input[type="text"]::-webkit-input-placeholder {
-    color: var(--thm-gray);
-}
-
-.blog-details__content-form form input[type="text"]:-moz-placeholder {
-    color: var(--thm-gray);
-}
-
-.blog-details__content-form form input[type="text"]::-moz-placeholder {
-    color: var(--thm-gray);
-}
-
-.blog-details__content-form form input[type="text"]:-ms-input-placeholder {
-    color: var(--thm-gray);
-}
-
-.blog-details__content-form form input[type="email"]::-webkit-input-placeholder {
-    color: var(--thm-gray);
-}
-
-.blog-details__content-form form input[type="email"]:-moz-placeholder {
-    color: var(--thm-gray);
-}
-
-.blog-details__content-form form input[type="email"]::-moz-placeholder {
-    color: var(--thm-gray);
-}
-
-.blog-details__content-form form input[type="email"]:-ms-input-placeholder {
+.blog-details__content-form form input[type="text"]::placeholder,
+.blog-details__content-form form input[type="email"]::placeholder,
+.blog-details__content-form form input[type="tel"]::placeholder,
+.blog-details__content-form form input[type="url"]::placeholder {
     color: var(--thm-gray);
 }
 

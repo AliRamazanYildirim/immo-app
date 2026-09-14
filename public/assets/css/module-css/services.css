@@ -25,9 +25,13 @@
     color: var(--thm-white);
 }
 
+/* Aynı satırdaki kartlar metin uzunluğundan bağımsız eşit yükseklikte kalsın;
+   30px, kartın margin-bottom'ı. */
 .service-one__single {
     position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 30px);
     padding: 52px 60px 50px;
     margin-bottom: 30px;
     overflow: hidden;
@@ -87,7 +91,9 @@
 
 .service-one__single-inner {
     position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     padding-left: 100px;
     z-index: 5;
 }
@@ -96,7 +102,7 @@
     position: absolute;
     left: 0;
     bottom: 8px;
-    color: #202835;
+    color: #3a3b3d;
     font-size: 40px;
     line-height: 50px;
     font-weight: 700;
@@ -105,6 +111,12 @@
     width: max-content;
     writing-mode: vertical-rl;
     text-orientation: mixed;
+    transition: color 400ms linear;
+    transition-delay: 0.1s;
+}
+
+.service-one__single:hover .service-one__single-inner .count-text {
+    color: var(--thm-primary);
 }
 
 .service-one__single-inner .icon-box {
@@ -131,7 +143,9 @@
 
 .service-one__single-inner .content-box {
     position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .service-one__single-inner .content-box h2 {
@@ -158,7 +172,8 @@
 .service-one__single-inner .content-box .btn-box {
     position: relative;
     display: block;
-    margin-top: 20px;
+    margin-top: auto;
+    padding-top: 20px;
 }
 
 .service-one__single-inner .content-box .btn-box a {
@@ -197,9 +212,12 @@
     z-index: -1;
 }
 
+/* Dört kart da en uzun metne göre eşitlensin; buton alta sabitlenir */
 .service-two__single {
     position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 30px);
     overflow: hidden;
     background: var(--thm-white);
     box-shadow: 0px 4px 60px 0px rgba(21, 24, 32, 0.06);
@@ -312,7 +330,8 @@
 .service-two__single .btn-box {
     position: relative;
     display: block;
-    margin-top: 40px;
+    margin-top: auto;
+    padding-top: 40px;
 }
 
 .service-two__single .btn-box a {

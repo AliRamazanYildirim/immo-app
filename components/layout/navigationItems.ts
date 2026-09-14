@@ -54,7 +54,15 @@ export function buildNavigation(t: ClientDictionary): NavItem[] {
         { label: nav.projectDetails, href: "/project-details" },
         { label: nav.testimonials, href: "/testimonials" },
         { label: nav.faq, href: "/faq" },
+      ],
+    },
+    {
+      label: nav.blog,
+      href: "/blog",
+      children: [
         { label: nav.blog, href: "/blog" },
+        { label: nav.blogSidebar, href: "/blog-sidebar" },
+        { label: nav.blogDetails, href: "/blog-details" },
       ],
     },
     { label: nav.contact, href: "/contact" },

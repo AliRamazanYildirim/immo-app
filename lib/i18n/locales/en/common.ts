@@ -22,6 +22,8 @@ const common: CommonDict = {
     faq: "FAQ",
     contact: "Contact",
     blog: "Blog",
+    blogSidebar: "Blog with Sidebar",
+    blogDetails: "Blog Details",
   },
 
   actions: {

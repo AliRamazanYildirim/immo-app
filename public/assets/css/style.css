@@ -1246,9 +1246,12 @@ Feauture One
   z-index: 1;
 }
 
+/* Başlık iki satıra kırılsa bile satırdaki kartlar eşit yükseklikte kalsın */
 .feauture-one__single {
   position: relative;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 30px);
   background: var(--thm-gray-bg);
   padding: 31px 40px 40px;
   margin-bottom: 30px;
@@ -1319,6 +1322,7 @@ Feauture One
 .feauture-one__single-bottom {
   position: relative;
   display: flex;
+  margin-top: auto;
   align-items: center;
   justify-content: space-between;
 }
@@ -1614,6 +1618,18 @@ Feauture Two
   overflow: hidden;
   box-shadow: 0px 4px 60px 0px rgba(21, 24, 32, 0.06);
   z-index: 1;
+}
+
+/* Kartlar yalnızca xl'de yan yana; orada eşit yükseklik ve başlık dikeyde ortalı.
+   Daha dar ekranlarda kartlar alt alta ve görsel üstte dizildiği için dokunulmaz.
+   flex-end, içerikteki float: right davranışının karşılığı. */
+@media (min-width: 1200px) {
+  .feauture-two__single {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+  }
 }
 
 .feauture-two__single::before {
@@ -3355,6 +3371,7 @@ Testimonials Two Testimonials Css
 }
 
 .testimonials-two--testimonials .testimonials-two__single {
+  height: calc(100% - 30px);
   margin-bottom: 30px;
 }
 
