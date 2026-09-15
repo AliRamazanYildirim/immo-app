@@ -757,6 +757,52 @@
   background: #ffffff;
 }
 
+/* Hamburger modu (≤1199px): logo, arama, dil ve hamburger tek satırda.
+   Arama ve hamburger 44×44 dokunma alanı alır; logo sıkışıp küçülmez. */
+@media only screen and (max-width: 1199px) {
+  /* 100px: hamburgerin eski padding'inin verdiği header yüksekliği korunur */
+  .main-header-one.style2 .menu-area__inner {
+    gap: 8px;
+    min-height: 100px;
+  }
+
+  .main-header-one.style2 .menu-wrap {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .main-header-one.style2 .main-header-one__left {
+    flex-shrink: 0;
+  }
+
+  .main-header-one.style2 .main-header-one__right {
+    gap: 8px;
+  }
+
+  /* 44px arama alanı ikonun etrafına zaten boşluk katıyor; ayraç (-12px) iki öğenin ortasında kalır */
+  .main-header-one.style2 .lang-switch {
+    margin-left: 16px;
+  }
+
+  .main-header-one.style2 .header-search-box button.main-menu__search,
+  .main-header-one.style2 .menu-area .mobile-nav-toggler {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+  }
+}
+
+/* style.css ≤991px'te header CTA'sını gizliyor; style2'nin temel btn-box kuralı
+   daha özgül olduğu için bunu eziyordu. Mobil/tablette butonu kaldırır. */
+@media only screen and (max-width: 991px) {
+  .main-header-one.style2 .main-header-one__right .btn-box {
+    display: none;
+  }
+}
+
 /*=============================
 	Main Header Three Css
 ===============================*/

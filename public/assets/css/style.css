@@ -7578,17 +7578,9 @@ Project Four Css
     padding: 268px 0px 170px;
   }
 
-  .main-slider-two__social-links {
-    display: none;
-  }
-
   .main-slider-two__content h2 {
     font-size: 45px;
     line-height: 1.1em;
-  }
-
-  .main-slider-two__content .big-title {
-    display: none;
   }
 
   .main-slider__nav {
@@ -7611,5 +7603,205 @@ Project Four Css
 
   .main-slider-two__single {
     padding: 186px 0px 220px;
+  }
+}
+
+/* home2 hero sosyal ikonları — mobil (≤767px), yatay telefon (≤991px genişlik,
+   ≤500px yükseklik) ve dikey tablet (768–1199px). Tablet ve 992–1199px blokları
+   ikonları gizliyor; bu cihazlarda aynı yatay satır düzeni uygulanır.
+   orientation:portrait, 992–1199px'lik yatay pencereleri/masaüstünü dışarıda bırakır. */
+@media only screen and (max-width: 767px),
+  only screen and (max-width: 991px) and (orientation: landscape) and (max-height: 500px),
+  only screen and (min-width: 768px) and (max-width: 1199px) and (orientation: portrait) {
+  /* Masaüstündeki sol dikey sütun (left:80px) dar ekranda başlığa biniyor;
+     butonların altında, container ile hizalı yatay satır olur.
+     152px = __single padding-bottom (220) − 24px boşluk − 44px satır yüksekliği;
+     içerik her dilde padding çizgisinde bittiği için satır butonlara göre sabit kalır. */
+  .main-slider-two__social-links {
+    top: auto;
+    bottom: 152px;
+    left: 0;
+    right: 0;
+    display: flex;
+    gap: 8px;
+    padding-inline: 15px;
+    transform: none;
+  }
+
+  .main-slider-two__social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+  }
+
+  /* İkon 44px kutuda ortalı; ilk ikonu başlık metninin sol kenarına hizalar */
+  .main-slider-two__social-links a:first-child {
+    margin-left: -14px;
+  }
+
+  .main-slider-two__social-links a + a {
+    margin-top: 0;
+  }
+
+  .main-slider-two__social-links a span {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+/* "ARY GROUP" — mobil ve yatay telefon (dikey tablette tablet bloğunun gizlemesi korunur) */
+@media only screen and (max-width: 767px),
+  only screen and (max-width: 991px) and (orientation: landscape) and (max-height: 500px) {
+  /* Tek satırda içerik genişliğine sığar ("ARY GROUP" ≈ 6.06em; 6.4 pay bırakır).
+     Container bu aralıkta tam genişlik (15px padding); 110px masaüstündeki 160px'in altında kalır. */
+  .main-slider-two__content .big-title {
+    display: block;
+    top: -0.8em;
+    left: 0;
+    font-size: clamp(32px, calc((100vw - 30px) / 6.4), 110px);
+  }
+
+  .main-slider-two__content .big-title h2 {
+    font-size: 1em;
+    -webkit-text-stroke-width: 1px;
+  }
+}
+
+/* Yatay telefonda kısa ekran: "ARY GROUP" başlığa oranlı kalır
+   (masaüstündeki 160/100 = 1.6 oranı; 45px × 1.6 = 72px). */
+@media only screen and (max-width: 767px) and (orientation: landscape) and (max-height: 500px) {
+  .main-slider-two__content .big-title {
+    font-size: clamp(32px, calc((100vw - 30px) / 6.4), 72px);
+  }
+}
+
+/* 768px ve üstü (yatay telefon, dikey tablet): __single padding'i temel değerde (256/270).
+   202px = padding-bottom (270) − 24px boşluk − 44px satır yüksekliği */
+@media only screen and (min-width: 768px) and (max-width: 991px) and (orientation: landscape) and (max-height: 500px),
+  only screen and (min-width: 768px) and (max-width: 1199px) and (orientation: portrait) {
+  .main-slider-two__social-links {
+    bottom: 202px;
+  }
+}
+
+/* 768–991px yatay telefon: tablet bloğunun başlığı 65px */
+@media only screen and (min-width: 768px) and (max-width: 991px) and (orientation: landscape) and (max-height: 500px) {
+  /* 65px × 1.6 = 104px */
+  .main-slider-two__content .big-title {
+    font-size: clamp(32px, calc((100vw - 30px) / 6.4), 104px);
+  }
+}
+
+/*--------------------------------------------------------------
+# Alt alta dizilen bloklar (≤1199px)
+Kolonlar alt alta geçince şablon bloklara max-width verip sola yaslıyor; yatay
+telefon ve tablette sağda 120–600px boşluk kalıyor. Görseller ve altlarındaki
+metin blokları kolon içinde ortalanır (şablon 768–991px'te .about-one__img için
+zaten margin: 0 auto kullanıyor). Metin tam genişliğe yayılmaz; satır uzunluğu
+okunabilir kalır. Masaüstü (≥1200px) etkilenmez.
+--------------------------------------------------------------*/
+@media only screen and (max-width: 1199px) {
+  .why-choose-us-one__img,
+  .why-choose-us-one__content,
+  .about-one__img,
+  .about-one__content,
+  .about-two__content,
+  .feauture-three__content {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .feauture-three__img .inner img {
+    display: block;
+    float: none;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* li genişliği görselin kendi boyutuna bağlıydı: görsel yüklenene kadar 10px
+     kalıp sonra 290px'e zıplıyordu (CLS). Eşit paylaşım genişliği baştan sabitler;
+     570px sınırında görünüm aynı kalır (2 × 290px). */
+  .why-choose-us-one__img ul li {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  /* Bu aralıkta slider tek slayt gösteriyor; 770px'lik görsel geniş slaytta sola
+     yaslanıyor, slayt boyunca ortalı başlık katmanıyla hizası kayıyordu. */
+  .project-two .swiper-slide img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  /* img1 + img2 yan yana (flex); kompozisyon bir bütün olarak ortalanır */
+  .about-three__img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  /* Yüzde etiketi çubuğun dışına (right:-134px/-93px) konuyordu; dar ekranda sayfa
+     dışına düşüp tamamen kırpılıyordu. team-details çubuklarındaki gibi dolu kısmın
+     ucuna, üste alınır. .style2 seçicisi about.css'teki özgüllüğü karşılar. */
+  .about-one__content-progress-single .count-text,
+  .about-one__content-progress-single .count-text.style2 {
+    top: -28px;
+    right: 0;
+    bottom: auto;
+  }
+
+  /* img1 ve img2 alt alta; her biri ayrı ortalanır */
+  .about-three__img1,
+  .about-three__img2 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-two__img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Diğer footer widget'ları gibi tam genişlik */
+  .footer-widget__newsletter {
+    max-width: none;
+  }
+}
+
+/* .about-two__img2 masaüstünden kalan right:-260px ile kutunun dışına taşıyor;
+   düz ortalama onu ekran dışına iter. Kutu + 260px taşma birlikte ortalanır. */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  /* 730px = kutu (470) + taşma (260) */
+  .about-two__img {
+    margin-left: max(0px, calc((100% - 730px) / 2));
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  /* 950px = kutu (690) + taşma (260) */
+  .about-two__img {
+    margin-left: max(0px, calc((100% - 950px) / 2));
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .team-details__top-img,
+  .contact-one__form {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Altındaki harita ve form tam genişlikte; ortalanırsa sol hiza kopar */
+  .contact-page__top-content,
+  .team-details__middle-text2-progress {
+    max-width: none;
   }
 }

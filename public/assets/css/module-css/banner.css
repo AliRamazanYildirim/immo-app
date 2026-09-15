@@ -1024,6 +1024,97 @@
   color: var(--thm-primary);
 }
 
+/* Tablet ve mobil (≤991px): -90° döndürülmüş blok başlığın üstüne biniyordu
+   (dönüş merkezi ~106px; 768px'te de çakışıyor, 1024px'te çakışmıyor).
+   Dönüş kaldırılır, blok sol kenarda dikey raya dönüşür.
+   64px = ray (12px kenar + 44px ikon) + 8px boşluk; container iki yandan açılır
+   ki içerik ortalı kalsın ve raya binmesin. */
+@media only screen and (max-width: 991px) {
+  .main-slider-three .container {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+
+  /* 260px = container padding-top; ray logo hizasından başlar, ilk ekranda görünür */
+  .main-slider-three__social-links {
+    top: 260px;
+    bottom: auto;
+    left: 12px;
+    flex-direction: column-reverse;
+    gap: 8px;
+    transform: none;
+  }
+
+  .main-slider-three__social-links .title-box {
+    flex-direction: column-reverse;
+    gap: 8px;
+  }
+
+  /* Masaüstündeki gibi aşağıdan yukarı okunur */
+  .main-slider-three__social-links .title-box .text p {
+    margin: 0;
+    font-size: 14px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+
+  .main-slider-three__social-links .title-box .border-box {
+    width: 1px;
+    height: 24px;
+    margin-left: 0;
+  }
+
+  .main-slider-three__social-links .social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-left: 0;
+  }
+
+  .main-slider-three__social-links .social-links li {
+    display: block;
+    margin-right: 0;
+  }
+
+  .main-slider-three__social-links .social-links li a {
+    width: 44px;
+    height: 44px;
+  }
+
+  .main-slider-three__social-links .social-links li a span {
+    transform: none;
+  }
+}
+
+/* Mobil (≤767px): raya ayrılan 128px'ten sonra kalan dar alana başlık ve butonlar */
+@media only screen and (max-width: 767px) {
+  /* İçerik genişliği (100vw - 128px) en uzun kelimeyi ("NOUVELLE", ~5.6em) taşımalı;
+     başlık kutusu overflow:hidden olduğu için taşan harf kırpılır. */
+  .main-slider-three__content .title h2 {
+    font-size: clamp(30px, calc((100vw - 128px) / 5.6), 64px);
+  }
+
+  /* Yan yana butonlar dar alanda ekrandan taşıyordu; alt alta, tam genişlik */
+  .main-slider-three__content .btn-box {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .main-slider-three__content .btn-box .btn-one,
+  .main-slider-three__content .btn-box .btn-two {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .main-slider-three__content .btn-box .thm-btn {
+    width: 100%;
+    justify-content: center;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
 .main-slider-three__control-wrap {
   position: absolute;
   top: 50%;
